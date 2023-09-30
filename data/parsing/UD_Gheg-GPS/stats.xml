@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
+       words means "syntactic words", e.g. Spanish "vámonos" is split to two words, "vamos" and "nos"
+       fused is the number of tokens that are split to two or more syntactic words
+       The words and fused elements can be omitted if no token is split to smaller syntactic words. -->
+  <size>
+    <total><sentences>966</sentences><tokens>15990</tokens><words>15990</words><fused>0</fused></total>
+    <train><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></train>
+    <dev><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></dev>
+    <test><sentences>966</sentences><tokens>15990</tokens><words>15990</words><fused>0</fused></test>
+  </size>
+  <lemmas unique="975" /><!-- ., e, edhe, i, kam, me, dardhë, një, ëhm, jam, djalë, që, aj, a, n -->
+  <forms unique="2569" /><!-- ., e, i, me, edhe, ka, ni, aj, a, n, j, u, ëhm, tu, kan -->
+  <fusions unique="0" /><!--  -->
+  <!-- Statistics of universal POS tags. The comments show the most frequent lemmas. -->
+  <tags unique="15">
+    <tag name="ADJ">236</tag><!-- tjetër, vogël, pak, mbushur, re, pa, shumë, njëjtë, herët, shkurtë -->
+    <tag name="ADP">987</tag><!-- me, n, në, te, për, prej, per, nga, pi, pa -->
+    <tag name="ADV">1251</tag><!-- tani, aty, kur, si, apet, poshtë, tana, ku, pastaj, ka -->
+    <tag name="AUX">1154</tag><!-- kam, jam, tu, u, po, duke, _, do -->
+    <tag name="CCONJ">1063</tag><!-- edhe, e, dhe, po, a, ene, ama, ose, por, apo -->
+    <tag name="DET">750</tag><!-- një, e, të, i, së, a -->
+    <tag name="INTJ">479</tag><!-- ëhm, ë, ëh, ehm, mhm, eh, hej, a, ah, e -->
+    <tag name="NOUN">2473</tag><!-- dardhë, djalë, bicikëll, biçikletë, fmi, korpë, rrugë, shportë, njeri, burrë -->
+    <tag name="NUM">322</tag><!-- tre, dy, ni, njo, një, tret, nja, nji, treve, nje -->
+    <tag name="PART">504</tag><!-- me, nuk, të, s, ma, po, okej, jo, a, as -->
+    <tag name="PRON">2898</tag><!-- i, e, aj, j, a, ata, që, at, ato, ky -->
+    <tag name="PUNCT">966</tag><!-- . -->
+    <tag name="SCONJ">224</tag><!-- që, se, si, a, ama, kurse, megjithatë, nese, pse, çi -->
+    <tag name="VERB">2680</tag><!-- shoh, marr, mbledhi, vij, jam, kaloj, shkoj, bij, thom, ndihmoj -->
+    <tag name="X">3</tag><!-- kricendet, paja, pav -->
+  </tags>
+  <!-- Statistics of features and values. The comments show the most frequent word forms. -->
+  <feats unique="37">
+    <feat name="Case" value="Abl" upos="ADJ,DET,NOUN,PRON">133</feat><!-- rru:gës, lisit, rruges, ati, biciklete, biciklles, dardhës, pemes, rrugës, bicikletes -->
+    <feat name="Case" value="Acc" upos="ADJ,DET,NOUN,NUM,PRON">2757</feat><!-- e, i, a, da:rdha, at, dardha, dardhat, da:rdhat, bicikell, dardh -->
+    <feat name="Case" value="Dat" upos="ADJ,DET,NOUN,PRON">715</feat><!-- i, j, m, ati, e, djalit, t, dja:lit, ati:, kti -->
+    <feat name="Case" value="Gen" upos="DET,NOUN,PRON">46</feat><!-- e, tij, dardhes, kohës, ksi, rru:gës, t, ti, ti:j, veten -->
+    <feat name="Case" value="Nom" upos="ADJ,DET,NOUN,PRON">1664</feat><!-- aj, ata, ky, i, djem, djali, djal, djemt, kta, ajo -->
+    <feat name="Definite" value="Def" upos="ADJ,NOUN">1146</feat><!-- dardhat, da:rdhat, djali, djemt, dardha:t, kapuqin, rru:gës, burri, kapelen, rru:gën -->
+    <feat name="Definite" value="Ind" upos="ADJ,DET,NOUN">1377</feat><!-- da:rdha, dardha, një, djem, korp, djal, dardh, dardha:, bicikell, tok -->
+    <feat name="Degree" value="Cmp" upos="ADJ,ADV">7</feat><!-- herët, larti, ngat, shum, vo:gël, von -->
+    <feat name="Degree" value="Sup" upos="ADJ">1</feat><!-- pakti -->
+    <feat name="Foreign" value="Yes" upos="ADP,ADV,AUX,CCONJ,DET,NOUN,NUM,PART,PRON,VERB">49</feat><!-- birne, a, hend, ihm, isch, kappe, abecheit, am, baum, belo:nig -->
+    <feat name="Gender" value="Fem" upos="ADJ,DET,NOUN,NUM,PRON">1847</feat><!-- da:rdha, dardha, dardhat, da:rdhat, tri, ato, korp, dardh, bicikell, dardha: -->
+    <feat name="Gender" value="Masc" upos="ADJ,DET,NOUN,NUM,PRON">2030</feat><!-- aj, tre, ata, ky, djem, djali, djal, djemt, kta, i -->
+    <feat name="Mood" value="Adm" upos="AUX">2</feat><!-- paska -->
+    <feat name="Mood" value="Ind" upos="AUX,VERB">2436</feat><!-- ka, kan, u, osht, do, ishte, jan, kishte, kalon, sheh -->
+    <feat name="Mood" value="Sub" upos="AUX,VERB">19</feat><!-- shfrytzoj, akuzoj, binte, bëntë, fshihnin, japish, je:n, je:t, jep, jet -->
+    <feat name="Number" value="Plur" upos="ADJ,AUX,DET,NOUN,NUM,PRON,VERB">2010</feat><!-- i, ata, kan, da:rdha, dardha, dardhat, da:rdhat, djem, ato, djemt -->
+    <feat name="Number" value="Sing" upos="ADJ,AUX,DET,NOUN,NUM,PRON,VERB">5767</feat><!-- e, ka, i, aj, j, a, at, u, osht, ky -->
+    <feat name="NumType" value="Card" upos="NUM">300</feat><!-- tre, tri, ni, dy, tri:, një, nja, njo, tre:, dy: -->
+    <feat name="NumType" value="Ord" upos="NUM">19</feat><!-- tret, treve, dhe:ta, dyt, dyten, nodhe:ta, pa:r, pa:ri, tre:t, treta -->
+    <feat name="Person" value="1" upos="AUX,PRON,VERB">167</feat><!-- m, di, pash, kum, une, besoj, di:, kom, mu, pa:sh -->
+    <feat name="Person" value="2" upos="AUX,PRON,VERB">28</feat><!-- din, di, pa, ti, aj, ishe, ishte, ja, japish, ka -->
+    <feat name="Person" value="3" upos="AUX,PRON,VERB">4027</feat><!-- i, e, ka, j, a, aj, kan, u, osht, do -->
+    <feat name="Polarity" value="Neg" upos="PART">148</feat><!-- nuk, s, mos, nu:k -->
+    <feat name="PronType" value="Dem" upos="PRON">595</feat><!-- aj, at, ata, ky, ato, kta, ati, ato:, ajo, kjo -->
+    <feat name="PronType" value="Int" upos="PRON">45</feat><!-- qka, qysh, kush, qa, qfar, ku, qka:, shka, cilin, qfa:r -->
+    <feat name="PronType" value="Neg" upos="PRON">1</feat><!-- asni -->
+    <feat name="PronType" value="Prs" upos="PRON">398</feat><!-- aj, ata, vet, ai, ai:, ajo, veti, ata:, ti, tij -->
+    <feat name="PronType" value="Rel" upos="PRON">180</feat><!-- qe, që, qi, cili, që:, cilli, cili:, qe:, qysh, /sha -->
+    <feat name="Reflex" value="Yes" upos="AUX,PRON">182</feat><!-- u, vet, u:, veti, tij, ti:j, ve:te, ti, ve:t, ve:ti -->
+    <feat name="Tense" value="Imp" upos="AUX,VERB">203</feat><!-- ishte, kishte, ishin, kish, kishin, ish, kishe, ishte:, ishtë, kishtë -->
+    <feat name="Tense" value="Past" upos="AUX,VERB">695</feat><!-- pa, dha, erdh, kaloj, shkoj, ke, pash, mur, ra, erdhen -->
+    <feat name="Tense" value="Pres" upos="AUX,VERB">1561</feat><!-- ka, kan, u, osht, do, jan, kalon, sheh, merr, di -->
+    <feat name="VerbForm" value="Fin" upos="AUX,VERB">2458</feat><!-- ka, kan, u, osht, do, ishte, jan, kishte, kalon, sheh -->
+    <feat name="VerbForm" value="Inf" upos="VERB">152</feat><!-- thon, mledh, tho:n, marr, mar, than, mle:dh, kqyr, qu, shku -->
+    <feat name="VerbForm" value="Part" upos="AUX,VERB">820</feat><!-- mledh, pa, shku, kon, ardh, mar, pa:, vjedh, kan, ra -->
+    <feat name="Voice" value="Act" upos="AUX,VERB">2446</feat><!-- ka, kan, u, osht, do, ishte, jan, kishte, kalon, sheh -->
+    <feat name="Voice" value="Pass" upos="VERB">8</feat><!-- shihet, shihen, shifet, thohet, vilen -->
+  </feats>
+  <!-- Statistics of universal dependency relations. -->
+  <deps unique="35">
+    <dep name="acl">214</dep>
+    <dep name="advcl">78</dep>
+    <dep name="advmod">1268</dep>
+    <dep name="amod">159</dep>
+    <dep name="appos">3</dep>
+    <dep name="aux">610</dep>
+    <dep name="aux:part">386</dep>
+    <dep name="case">978</dep>
+    <dep name="cc">1047</dep>
+    <dep name="ccomp">233</dep>
+    <dep name="conj">893</dep>
+    <dep name="cop">121</dep>
+    <dep name="csubj">1</dep>
+    <dep name="dep">1</dep>
+    <dep name="det">1280</dep>
+    <dep name="discourse">605</dep>
+    <dep name="dislocated">2</dep>
+    <dep name="expl">800</dep>
+    <dep name="fixed">115</dep>
+    <dep name="flat">2</dep>
+    <dep name="iobj">245</dep>
+    <dep name="list">3</dep>
+    <dep name="mark">560</dep>
+    <dep name="nmod">389</dep>
+    <dep name="nsubj">1030</dep>
+    <dep name="nsubj:outer">1</dep>
+    <dep name="nummod">259</dep>
+    <dep name="obj">1439</dep>
+    <dep name="obl">746</dep>
+    <dep name="orphan">2</dep>
+    <dep name="parataxis">99</dep>
+    <dep name="punct">966</dep>
+    <dep name="reparandum">267</dep>
+    <dep name="root">966</dep>
+    <dep name="xcomp">222</dep>
+  </deps>
+</treebank>

@@ -1,0 +1,1477 @@
+1. - INTRODUÇÃO Recentemente o Brasil abriu novos campos de exploração de
+petróleo, mais especificamente na Amazônia azul, para empresas privadas através
+de leilões da Agência Nacional de Petróleo Gás e Biocombustível (ANP) e blocos
+de exploração na costa brasileira. Com a chegada dessas novas empresas aumentou
+consideravelmente o número de poços, e o volume de óleo extraído em águas sob
+jurisdição nacional. Neste sentido, a zona costeira constitui espaços
+fundamentais de desenvolvimento econômico e social, e sua exploração exige
+cuidados e atenção às questões ambientais, as consequências de acidentes que
+envolve petróleo são fatais, provocando danos aos seres vivos e ao homem (COSTA
+e LOPES, 2010; GRANZIERA e GONÇALVES, 2012). Quantitativamente a zona costeira
+se destaca pela sua importância. De acordo com o Ministério do Meio Ambiente
+(MMA), a zona costeira nacional compreende uma faixa que se estende por mais de
+8.500 km, levando em conta os recortes litorâneos como baías, reentrâncias,
+golfões etc., banhando seus 17 estados da costa, indo do Norte (Oiapoque, no
+Amapá) ao extremo sul do país (Chuí, no Rio Grande do Sul), possuindo uma das
+maiores faixas costeiras do mundo (MMA, 2015). Diante disto, a extração
+exacerbada dos recursos naturais, tem dois pontos extremos: na mesma proporção
+que gera riquezas, há também a degradação ambiental, onde hoje já se nota uma
+mudança climática drástica, que levou autoridades a organizar-se em busca de
+fontes alternativas de geração de energia e prevenção de acidentes contra o
+ecossistema. O petróleo pode ser liberado no mar de diversas formas, como
+acidentes durante o percurso dos navios transportadores, durante a lavagem dos
+tanques dos navios, devido a acidentes nos dutos que o conduzem aos tanques de
+refino ou por causa de vazamentos nas zonas de extração (GOMES, 2013). Um
+derramamento de óleo no mar pode ter um impacto imediato, médio ou a longo
+prazo. Esse derramamento possui as seguintes características: Negativo ou
+adverso: quando a ação resulta em um dano à qualidade de um fator ou parâmetro
+ambiental; Impacto imediato: quando o efeito surge no instante que se dá a ação;
+Impacto a médio ou longo prazo: quando o impacto se manifesta certo tempo após a
+ação; Impacto temporário: ocorre quando seus efeitos têm duração de tempo
+determinado; Impacto reversível: quando o fator ou parâmetro ambiental afeta a
+ação e retorna as suas condições originais; Impacto irreversível: quando, uma
+vez ocorrida a ação, o fator ou parâmetro ambiental afetado não retorna às suas
+condições originais em um prazo previsível (GOLDANI, 2006). Outro agravante, diz
+respeito ao impacto causado pelo óleo que depende da sua própria composição, bem
+como o volume vazado, as características da área atingida, condições
+meteorológicas e climáticas, das características da flora e da fauna e do tipo
+de ocupação econômica existente (DEVIDS, 2008). Fonseca (2009) fez uma análise
+de estratégia de contingência de óleo utilizando uma simulação numérica com o
+modelo OSCAR (Oil Spill Contingency and response), para possíveis vazamentos, no
+qual foi estabelecido uma estratégia de combate a um provável derramamento de
+óleo, utilizando para simulação do cenário dados meteorológicos oceanográficos
+da costa brasileira e para a elaboração de contenção e limpeza do ambiente
+afetado as diretrizes do CONAMA, 398/08. E determinando os cenários mais
+críticos no período do verão considerando vazamentos de 350.000m² e 35.000m²
+como pior caso para simulação. Onde concluiu que o comportamento do óleo está
+diretamente ligado as condições meteoceanograficas do local, onde o tempo de
+chegada do óleo a costa depende das condições do vento e correntes marítimas, e
+as diferentes estratégias de contenção e recolhimento apresentam grande eficácia
+no bloqueio do óleo a costa. Gobira (2008) apresentou modelos computacionais,
+como ferramentas de gerenciamento, onde se aplica os estudos de espalhamento de
+óleo em regiões de águas rasas, descrevendo os processos de hidrodinâmicas e
+dispersão de constituintes, utilizou-se o modelo langrangeano onde se aplicou os
+estudos do espalhamento do óleo, já o modelo Euleriana, esse o mais difundido,
+descreveu o comportamento das partículas discretas que se espalham atrás da
+lamina d’água concluindo que no modelo langrangeano observou-se uma conservação
+da massa e a ausência de problemas com a dispersão numérica. O MEAR - Modelo de
+Equação de Águas Rasas pode ser aplicado em bacias irregulares e áreas de
+forçastes hidrodinâmicas reais. Reynier (2003) em sua tese realizou um estudo
+(executando uma simulação de um derrame) sobre os efeitos do petróleo ARLE/URAL
+tratados com o dispersante químico Corexit 9500 (formulação desenvolvida em
+meado dos anos 90) sobre a comunidade fitoplanctonica presente na região
+costeira, bem como na comunidade zooplanctonica, onde se realizou testes de
+toxidades em laboratório. Também observou alterações físicas e químicas da água,
+bem como a redução da população dos seres marinhos atingidos pelo petróleo.
+Cantagallo, Milanelli e Dias-brito (2007), reuniram diversas informações sobre a
+limpeza de hidrocarbonetos de petróleo nos mais variados ambientes brasileiros
+como manguezais, marinas, praias, recife de coral e lagoas costeiras. Foram
+utilizadas as técnicas mais adequadas de acordo com os mapas de sensibilidade
+(Cartas SAO) que são indispensáveis neste contexto para minimização dos impactos
+ambientais, onde fez uma revisão bibliográfica sobre os métodos de limpezas,
+baseado em estudo de casos ocorridos nacionalmente e internacionalmente,
+concluindo que a opção pelo método a ser empregado vincula-se fortemente ao tipo
+de ecossistema impactado, levando-se em consideração suas características e
+sensibilidade do ambiente no qual há necessidade de ser realizado o
+monitoramento dos ambientes que sofreram contaminação por óleo e intervenções de
+limpeza, para que sejam obtidas informações mais detalhadas sobre os efeitos do
+óleo e da limpeza nos ambientes e nos organismos. Szewczyk (2006) apresentou em
+seu trabalho os tipos de métodos utilizados para remoção do petróleo em ambiente
+marinho, no qual se fez uma revisão bibliográfica mostrando os métodos de
+contenção e recuperação do óleo no mar, feito isso se colocou em prática de
+acordo com os fatores meteorológicos e ambientais os usos de barreiras e
+skimmers, dispersantes químicos, queima, in-situ e barreiras absorventes, onde
+durante o derrame Szewczyk (2006) apresentou as formas de contenção e o
+posicionamento dos barcos para auxiliar no processo. Concluindo que a toxidade a
+longo prazo afeta a vida marinha que não é imediatamente morta pelo derrame,
+mesmo assim podem ser interferidos em seus processos de reprodução, os efeitos
+de um derrame são determinados por fatores como: composição química do óleo,
+volume derramado e condições oceanográficas. Possobom (2012) Fez uma vasta
+pesquisa sobre o plano de contingência que envolve o derrame de óleo, aplicando
+dentro de um estuário uma proposta para o dimensionamento de barreiras, para a
+resposta a vazamentos de hidrocarbonetos que venha atingir estuários, e o
+comportamento do óleo vazado, nessa sua tese o autor também valida o critério
+proposto em um estuário real, através da comparação dos recursos utilizados na
+resposta a um vazamento com os recursos previstos pela aplicação do critério
+proposto. Diante dos trabalhos apresentados acima a respeito de vazamentos de
+óleo, nos mais variados ambientes, utilizando métodos para o aprofundamento dos
+estudos com simuladores de derrame de óleo, bem como observações no começo do
+processo de intemperização do mesmo, análises e verificações que o petróleo
+causa nos ambientes atingidos nas mais variadas espécies da fauna e flora e os
+ambientes mais sensíveis como as regiões estuarinas, este trabalho visa alertar
+sobre os impactos causados no meio ambiente caso ocorra um vazamento de óleo na
+região da Bacia Potiguar-Ceará e possa atingir o estuário Barra Grande no
+Município de Icapuí, localizado no estado do Ceará, Brasil. 1.1. Justificativa
+Um derrame de hidrocarboneto de petróleo pode causar diversos tipos de impactos
+ao meio ambiente, onde os efeitos desse derrame se tornam mais sérios em
+ambiente marinho, e principalmente dentro de estuários, afetando
+significativamente o habitat das espécies que vivem nesse meio, e causando a
+diminuição das mais variadas populações de seres marinhos ou seres que
+necessitam deste ambiente e de todo o local costeiro para reprodução e
+alimentação. O petróleo ao entrar em contato com recursos hídricos acaba
+sofrendo vários fenômenos físicos, químicos e biológicos, dentro destes
+fenômenos está o deslocamento das partículas desse óleo, onde altera sua
+composição bem como suas propriedades físico-químicas. A movimentação das
+partículas do óleo e as mudanças que ocorre enquanto esse óleo está em contato
+com a água, se dá o nome de intemperismo (POSSOBON, 2012). Depois que um
+vazamento de hidrocarbonetos ocorre no ambiente marinho, e sua mancha passa a se
+deslocar em direção aos vários ambientes costeiros; como praias, rios, lagos e
+estuários, nesse último o grau de impacto se torna maior pois esses ambientes
+apresentam áreas de grande sensibilidade ao óleo (Duarte & Vieira, 1997). Os
+estuários são bastante sensíveis a poluição por petróleo e derivados, dessa
+forma qualquer tipo de derrame de óleo que venha a atingir esse tipo de
+ecossistema sua proteção é prioridade, uma vez que a mancha de óleo chegue
+dentro das águas estuarinas, todos os métodos devem obrigatoriamente ser
+empreendidos na sua recuperação. De forma a conter a poluição ocasionada por
+petróleo e derivados, regulamentações nacionais e internacionais entram em vigor
+junto com as empresas para o melhor procedimento, afim de estruturar a melhor
+forma de resposta para vazamentos (BRASIL, 2002). Este trabalho traz uma
+performance de uma barreira de contenção feita com garrafas de tereftalato de
+etileno, conhecido com PET, dentro de uma piscina afim de ser aplicado ao
+estuário Barra Grande, no município de Icapuí no estado do Ceará, prevendo a
+aplicação da barreira contra um possível derramamento de óleo que possa vim a
+atingir a região do estuário causando o impactos severos aos seres vivos e a
+comunidade que vive em torno do ambiente estuarino, local de grande
+biodiversidade marinha, afim de auxiliar a comunidade acadêmica em posteriores
+estudos sobre a região da bacia Ceará-Potiguar e uma forma de prevenção contra
+supostos impactos ambientais por petróleo ocorridos dentro do estuário Barra
+Grande, em Icapuí-CE. Devido ao grande potencial de descobertas de jazidas de
+petróleo na região da bacia potiguar-ceara, e os riscos apresentados dentro do
+ambiente offshore no caso de transporte e exploração de petróleo em aguas rasas.
+Vendo a possibilidade de esse hidrocarboneto atingir o estuário de Barra Grande,
+que está localizado no município de Icapuí, no estado do Ceará, trazendo as
+formas de contenção também estarão presentes de uma forma mais sucinta, como o
+dimensionamento de barreiras aplicáveis em estuários, e seus posicionamentos
+dentro do mesmo. A finalidade desde trabalho para a academia e para sociedade é
+ressaltar a importância da prevenção dos ambientes sensíveis bem como alertar as
+empresas do setor petrolífero sobre o grau de impacto que um derrame de óleo
+pode trazer a comunidade marinha , principalmente quanto esse derrame atinge
+estuário e manguezais , local de grande biodiversidade onde a remoção do óleo s
+e torna difícil nesse tipo de habitat. . 1.2 Objetivo Geral Testar uma barreira
+de contenção construído com garrafa pet em uma piscina para aplicação no
+estuário Barra Grande em Icapuí-CE. 1.3 Objetivo Específico Os objetivos
+específicos são os seguintes: a) Construir uma barreira de contenção utilizando
+garrafa pet. b) Realizar um levantamento sobre os tipos de contenções
+existentes. c) Verificar a eficiência da barreira de contenção de garrafas PET
+em uma piscina , prevendo sua aplicação no estuário Barra Grande em Icapuí-CE. .
+1.3 Estrutura do trabalho Este trabalho abordará, em sua estrutura, além da
+introdução, no capítulo primeiro, o referencial t eórico apresentando o tema. O
+quarto sobre os resultados do experimento. Em seguida a conclusão, em que se faz
+menção aos objetivos e às referências. REFERENCIAL TEÓRICO Este capítulo traz
+cinco seções, onde a 1ª (primeiro) aborda sobre a origem do petróleo e suas
+propriedades físico químicas, bem como seu comportamento da macha de óleo no
+meio ambiente, na seção 2ª (segundo) aborda sobra a área de estudo,
+especificadamente o estuário barra grande, no município de Icapuí no estado do
+Ceará. Na 3ª (terceira) seção disserta sobre os diversos impactos que o petróleo
+pode causa no meio ambiente. 2.1 Origem do Petróleo Para um melhor entendimento
+sobre o que vem a ser o hidrocarboneto, faz-se necessário o conhecimento do
+produto “petróleo”, desde a sua formação às características e propriedades
+físicas e seu comportamento no meio ambiente. Somente depois dessa etapa,
+pode-se escolher a linha de ação adequada para conter a evolução do derramamento
+de hidrocarboneto no mar (VAZ, 2011). Admite-se que o petróleo foi formado há
+milhões de anos pelo acumulo de diferentes seres vivos como a decomposição de
+plânctons - seres que são geralmente encontrados na zona costeira, mares,
+oceanos e estuários - esses seres teriam se acumulados no fundo dos mares, rios
+e lagos e soterrados pela ação do movimento da crosta terrestre e posteriormente
+com o passar dos anos transformando-se em uma pasta oleosa que hoje se chama
+petróleo (VAZ, 2011). A força presente sobre as camadas dos sedimentos que se
+juntaram ao longo dos tempos, assim como as altas temperaturas, a falta de
+oxigênio, as condições geológicas, e as ações das bactérias anaeróbicas
+resultaram na decomposição da matéria orgânica formando substancias compostas de
+carbono e hidrogênio (VAZ, 2011). De acordo com Vaz (2011), para que o petróleo
+venha a existir é preciso ter sedimentos ricos em matéria orgânica, dentro de
+rochas denominadas rochas reservatórios ou rocha base que acumulam esses
+hidrocarbonetos. Devido as condições de pressão e temperatura, o petróleo pode
+ficar intacto em campos profundos sem que haja nenhum meio externo para mudar
+sua composição na plataforma continental, fundo do mar e em campos terrestres.
+Estudos paleontológicos e geoquímicos certificam que o petróleo se originou pela
+decomposição dos seres vivos (VAZ, 2011). Esse petróleo que se formou dentro das
+rochas há milhares de anos na superfície da terra, possui características
+físicas e químicas, devido aos presentes compostos, a seção a seguir abordará
+essas características presente nos hidrocarbonetos, onde algumas são impurezas e
+matérias que causa um maior impacto na natureza. 2.1.1 Características químicas
+e físicas do Petróleo O petróleo é uma substância viscosa, inflamável e menos
+denso que a água, sua cor varia do castanho escuro ao preto, com um cheiro
+característico, possui em sua maior parte grandes quantidades de Carbono (C) e
+Hidrogênio (H). Apresenta outros compostos em quantidade menor, como o Oxigênio
+(O), Nitrogênio (N) e Enxofre (S). Por apresentar grande quantidade de Carbonos
+e Hidrogênio, o petróleo também é conhecido como Hidrocarboneto, pois esses dois
+compostos (C e H) podem chegar a 90% (FAHIM,2011). No petróleo existem outras
+diferentes substâncias químicas, sendo que a maioria dos constituintes são
+hidrocarbonetos, ou seja, formado por aproximadamente 82 a 87% em carbono e 11 a
+15% em hidrogênio, no petróleo existe uma pequena quantidade de nitrogênio (zero
+a 1,0%), enxofre (0 a 8%) e de oxigênio (0 a 0,5%), bem como metais como vanádio
+(Va) e o níquel (Ni) e metais-traço, como ferro (Fe), cobre (Cu), alumínio (Al),
+cobalto (Co), titânio (Ti), zinco (Z) e outros (FAHIM, 2011). O petróleo é
+descrito conforme suas propriedades físicas. Estas propriedades quando
+combinadas com os mais variados fatores ambientais, servem para determinar como
+esse óleo que foi derramado na água reage sob condições ambientais. A densidade
+do petróleo como relação à água doce é basicamente expressa em termos de
+densidade específica ou densidade API. o es ul  Densidade Específica é a razão
+da massa de um dado material , por exemplo , o óleo em relação à massa da água
+doce , para o mesmo volume e a uma mesma temperatura . Um petróleo leve é
+considerado tendo o grau API maior. De acordo com o resultado obtido na formula
+o petróleo que apresenta seu grau API maior que 30 é considerado um óleo leve;
+se o resultado obtido for entre 22 e 30 graus API, esse óleo é considerado
+médios; e resultados abaixo de 22 graus API, são para os óleos pesados; e por
+último o óleo em que o resultado é um grau API igual ou inferior a 10, são
+petróleos extrapesados. Levando em consideração esses resultados, quanto maior o
+grau API, maior o valor do petróleo no mercado (THOMAS, 2011).  Ponto de
+Inflamação é a temperatura onde uma substância libera vapores no qual inflamam
+em contato com uma fonte de ignição. Óleos leves e produtos refinados apresentam
+um ponto de inflamação com mais facilidade que os óleos pesados. O petróleo
+apresenta um ponto de fluidez onde sua temperatura é inferior a -30ºC para os
+mais fluidos e +30ºC para os mais ricos em parafina. A solubilidade do petróleo
+no ambiente aquático é considerada baixa, onde se dissolve na água apenas uma
+porcentagem do hidrocarboneto solúveis e dos compostos presentes no óleo
+(THOMAS, 2011). Dentro dos parâmetros apresentados acima, o fator persistência
+ocorre no período em que um petróleo fica em determinado meio. Essa persistência
+é definida pela quantidade de hidrocarboneto que permanece na coluna d’água logo
+após o derrame. Os produtos não persistentes são aqueles produtos que foram
+refinados do petróleo bruto e que tendem a evaporar e dissipar com rapidez no
+meio (ITOPF, 2003). As formações desses produtos são de componentes com peso
+leve, somente impactos em que a duração é curta podem ser consequência de um
+derrame por óleos leves. Pois os produtos persistentes são os petróleos crus e
+os produtos no qual já foram refinados e que tendem a se dissipar com lentidão
+(CETESB, 2004). No meio ambiente, a composição do petróleo sofre diversas
+modificações, devido ao seu comportamento no meio, óleos leves e intermediários
+possui comportamento distintos dos outros óleos, como o óleo pesado, onde são
+removidos pelo processo de interperização. Conforme ITOPF (2003), a respeito do
+deslocamento da mancha em que o óleo derramado percorre no meio ambiente,
+acontece como resultado do processo de expansão, deslocando-se em para uma
+determinada direção onde é resultante da ação dos fatores oceanográficos e
+meteorológicos. De acordo com os fatores apresentado ele também poderá
+desaparecer ao longo do tempo bem como persistir no ambiente. O nome dado as
+transformações sofridas pelo óleo no meio ambiente é chamada de intemperização,
+os processos que envolve a intemperização que podem ser divididos em dois grupos
+segundo a tabela abaixo: Tabela 1: Evolução do processo de intemperização
+Engloba processos mais lentos que podem se estender de meses a anos atuando
+sobre o produto já envelhecido. Os processos atuantes sobre as moléculas nesta
+fase são a oxidação química ou fotoquímica microbiana. As condições específicas
+locais, como por exemplo, condições de tempo, profundidade, correntes, energia
+das ondas, habitats, alteram a eficiência de cada um desses processos; contudo,
+as taxas relativas desses processos são controladas pela natureza físico-química
+do material derramado os processos podem, assim, serem listados: espalhamento,
+evaporação, dispersão, dissolução, emulsificação, sedimentação, biodegradação e
+foto-oxidação. Cabe ressaltar que os processos ocorrem de forma simultânea, não
+havendo ligação entre o início de um e o término do anterior. 2.2 Área de estudo
+A localização geométrica da bacia Potiguar – Ceará e a grande área onde está
+localizado o estúario Barra Grande, está representado nas figuras a seguir a fim
+de demostrar a distancia aproximada dos campos de petróleo em águas rasas com o
+município de Icapuí. 2.2.1 Bacia Potiguar - Ceará Esta bacia está localizada no
+extremo leste da Margem Equatorial Brasileira, compreendendo um segmento emerso
+e outro submerso, ao longo dos Estados do Rio Grande do Norte e do Ceará. A
+Bacia Potiguar é a segunda região produtora do país, são 8 blocos (3 em terra e
+5 no mar), totalizando 7.657 km². O esforço exploratório já realizado resultou
+na descoberta de 70 campos de óleo e gás, sendo 6 no mar e 64 em terra (ANP,
+2002). O Estado do Ceará junto com o Rio Grande do Norte está entre os maiores
+produtores de petróleo do Brasil em zonas onshore (em terra), a Petrobras atua
+na região do Estado do Rio Grande do Norte desde o ano de 1951, onde o primeiro
+campo a ser explorado foi denominado como Ubarana em operação desde o ano de
+1976, localizada na costa de Guamaré. Na região do Ceará a Petrobras começou
+suas atividades em 1967, com o primeiro poço em águas rasas (offshore) no campo
+de Xaréu em 1977 (PETROBRAS, 2015). Dentro da Bacia Potiguar – Ceará localiza-se
+as seguintes plataformas situadas em águas rasas todas do tipo fixa, pois são os
+tipos de plataformas mais utilizadas em laminas d'águas até 200 metros, como
+mostra a Tabela 2. Tabela 2: Plataformas da bacia Potiguar - Ceará. Fonte:
+Petrobras, 2015. Acima foi apresentada uma tabela onde se localiza as
+plataformas na região da bacia Potiguar - C eará, onde se localiza na área do
+estado do ceara o município de Icapuí. Na Figura 1 mostra o mapa da bacia Fonte:
+ANP, 2015. Na figura 1 observasse o mapa de toda a área que a bacia potiguar
+ceara cobre, na parte superior do mapa se ver todo os campos petrolíferos da
+bacia presente em sua área offshore, já na parte inferior do mapa se encontra os
+campos onshore de petróleo e gás natural, desde o estado do ceara ao Rio Grande
+do Norte. Parte dessa bacia onde se localiza o estado do Ceará, onde se pode
+encontrar no litoral do mapa a seguir o município de Icapuí, localizado no
+litoral do Estado do Ceara. 2.2.2 Município de Icapuí – Ceará Todo seu litoral
+está banhado pelo oceano atlântico, e suas divisas estão o município de Aracati
+- Ceará e o Estado do Rio Grande do Norte. Na Figura 2 observa-se todo o
+território pertencente ao município de Icapuí. O Município de Icapuí presente na
+figura acima está amplamente explorada por sua valorização turística, dentro
+delas o estuário barra grande, local de grande área ambiental estuarina, onde
+diversas especes de animais se aglomeram, em especial as espécies ameaçadas de
+extinção, o peixe boi marinho, que usa estuário como local de alimento e
+reprodução (COSTA, 2010). 2.2.3 Estuário Barra Grande - Icapuí - Ceará Dentro do
+município de Icapuí encontra-se o estuário Barra Grande, com extensão de 28 km²
+georreferenciada sob as coordenadas geográficas (Norte/Oeste) 4º40'15.84'' S,
+37º23'10.98'' W e (Sul/Leste) 4º43'45.39''S, 37º19'01.36'' W. local de grande
+biodiversidade marinha, lagoas costeiras, manguezais, terraços marinhos, delta
+de maré, dunas, banco de algas e a faixa de praia. O ecossistema de manguezal é
+de grande importância para o equilíbrio da biodiversidade da faixa costeira de
+Icapuí bem como dentro do estuário de barra grande, pois as atividades
+socioeconômicas giram em torno dessa área. O banco de algas e o ecossistema
+manguezal de Icapuí representam sistemas ambientais de primordial importância
+para a diversidade biológica leste do litoral cearense. Estão relacionados com
+as atividades tradicionais de pesca, mariscarem, cultivos de algas e promovem as
+condições ecológicas para a produção lagosteira (SILVA, 2012). A Figura 3 mostra
+a localização do estuário Barra Grande, onde toda comunidade ao redor e as
+várias espécies de animais terrestre e marinho dependem direta e indiretamente
+desse ambiente. A Barra Grande é uma planície de maré, localizada em uma área
+sedimentar, nos arredores é comum encontrar terraços marinhos que chegam a
+sobrepor conchas. Essa região é uma área que está em constante movimentação de
+sedimentos, vindo das falésias mortas que circulam o município e entram em
+movimentos através das energias pluviométrica, eólica e gravitacional por conta
+do desnível topográficos e correntes marinhas que atuam nessa região do litoral
+do Ceará (MEIRELES, 2006) (SILVA, 2012). Este delta apresenta uma extensão de 3
+km na baixa-mar, com canais de maré que adentram a terra em forma de rio, com
+aspectos geográficos peculiares. Na extensão praia aparece um banco de algas com
+uma vasta diversidade de algas, e uma grande quantidade de moluscos, peixes e
+aves, constituindo um ambiente de fluxo de energia e de reprodução das espécies
+(MEIRELES, 2012). 2.2.4 O Fluxo Costeiro e as Interferências Humanas A planície
+de Icapuí foi construída à medida que os fluxos de matéria e energia
+proporcionavam a produção de sedimentos e nutrientes, a sua distribuição e
+deposição ao longo das unidades ambientais e ecossistemas associados, ao que se
+aliaram às flutuações do nível relativo do mar, mudanças climáticas e ação das
+energias modeladoras atuais (ondas, marés, ventos, gravidade, pluvial e
+hidrodinâmica superficial e subterrânea) (MEIRELES, 2012). Os sedimentos
+deixados na região litorânea são oriundos das fases de vazão da maré no estuário
+Barra Grande e da água subterrânea dos aquíferos conhecidos como barreiras,
+terraços marinhos e dunas que se direcionam para o delta de maré que são criados
+por depósitos de sedimentos trazidos pelo fluxo de água, fazendo com que todos
+os fluxos interajam entre si, produzindo nutrientes para as praias adjacentes e
+estuários (COSTA, 2010). Foi mediante o aporte de areia proveniente da deriva
+litorânea de sudeste para noroeste e a mudança na fisiografia da linha de costa
+diante da desembocadura do estuário Barra Grande, que ocorreu acúmulo
+diferenciado de sedimentos na área do delta de maré. Esses sedimentos
+movimentaram-se na forma de grandes bancos de areia ricos em biodetritos. Essa
+dinâmica também interferiu diretamente no comportamento morfológico das praias
+localizadas ao noroeste da desembocadura do estuário. Verificou-se que também
+está relacionada com eventos de soterramento de áreas com a concentração de
+algas, regulando, desta forma, a distribuição geográfica das algas sobre o delta
+de maré (MEIRELES, 2012). 2.2.5 - Aspectos Fisiógrafos A zona costeira do Estado
+do Ceará é conduzida pelo clima equatorial, semiárido e recebe influência da
+Zona de Convergência Intertropical (ZCIT). Nessa região, as chuvas são
+totalmente influenciadas pela ZCIT, e as frentes frias que chegam a essa região
+nos meses de novembro e janeiro. Na figura 4, mostra a estação meteorológica do
+município de Icapuí, pela base de dados da Fundação Cearense de Meteorologia e
+Recursos Hídricos (FUNCEME). Fonte : FUNCEME 2.2.6 A Importância do Manguezal
+Barra Grande e do Banco de Algas para a Biodiversidade. O manguezal de Barra
+Grande e o banco de algas da planície costeira de Icapuí representam sistemas
+ambientais importantes do estuário Barra Grande, eles apresentam uma grande
+variedade de organismos diversos. Essa parte da costa do litoral cearense estar
+relacionada com as atividades tradicionais de pesca, mariscarem, cultivos de
+algas, promovendo as condições ecológicas para a produção lagosteira (MEIRELES,
+2001). A fauna do manguezal da Barra Grande é bastante diversificada, animais de
+diversos tamanhos provenientes de vários ambientes, ocupam as mais diversas
+partes do manguezal, garantindo o equilíbrio da cadeia ecossistêmica (COSTA,
+2010). A microfauna na Barra Grande apresenta microcrustáceos, moluscos, larvas
+de camarão, de peixes, de caranguejo e outras espécies que depende do fluxo da
+maré dentro do estuário, esse fluxo circula pelas correntes d'Água levando
+nutrientes para pequenos organismos situados na base da cadeia alimentar como
+pequenos crustáceos e integrantes do plâncton, os quais servem de alimento para
+os níveis seguintes da cadeia alimentar (MEIRELES, 2010). A Barra Grande é local
+de parada de diversas aves migratórias que ficam nessa localização por algum
+tempo para se reproduzir e logo após seguem sua migração até a Patagônia,
+algumas aves vinda de países como Estados Unidos e Canadá. São comuns na Barra
+Grande aves como a garça tricolor, garça azul, garça pequena, garça grande,
+garça vaqueira, pescador, sericoia do mangue, socó, sirizeta, galinha do mangue,
+tamatião, maçarico, pirão gordo e outros (MEIRELES, 2010). Em volta do estuário
+de Icapuí – CE, encontra-se um dos principais projetos de conservação do
+peixe-boi marinho, espécie presente deste a Florida nos estados unidos, até
+Alagoas na zono costeira do Brasil o peixe boi é um animal robusto ameaçado de
+extinção, vivendo em águas rasas como rios e estuários onde acontece a
+reprodução da espécie, pois a fêmea procura águas calmas para o nascimento do
+filhote (MEIRELES, 2010). Os Sirenios (peixe-boi) são mamíferos de vida longa, e
+apresentas baixa taxa de produtividade. No litoral do Ceará, a espécie
+encontrasse em dois estremos: Litoral extremo Oeste na divisa com estado do
+Piauí, e litoral extremo Leste divisa com o estado do Rio Grande do Norte. Nesse
+segundo se localiza o estuário Barra Grande no Município de Icapuí - Ceará
+(MEIRELES, 2010). 2.2.6 Características dos estuários As características dos
+ecossistemas e das atividades socioeconômicas que são desenvolvidas nos
+ambientes sujeitos a contaminação é importante para identificar as técnicas de
+resposta e os recursos aplicáveis. Os estuários são considerados locais de
+grande sensibilidade ao óleo, quando ocorre uma emergência nesses locais e sua
+limpeza se toma prioritária. (POSSOBON, 2012). Segundo Pritchard (1967),
+estuários são caracterizados por: • serem massas d’água costeiras semifechadas;
+A respeito da formação do estuário Pritchard (1967), diz que existem quatro
+tipos distintos de estuários. São eles: a) Estuários em planícies costeiras:
+Tipos mais encontrados são compridos e estreitos e sua formação se deu pelo
+avanço natural dos rios em direção ao mar. b) Fiordes com rios: são profundos,
+estreitos e apresentam divisões. Baías. Os estuários também estão caracterizados
+pela relação entre a água marinha com a água doce dos rios, há uma diferença da
+densidade entres os dois tipos de agua, como a salinidade e temperatura, que
+fazem com que não ocorra uma mistura imediata, logo formasse uma camada inferior
+pela água salgada (PRITCHARD, 1967; POSSOBON, 2012). Segundo Duarte e Vieira
+(1997), o estuário é como a entrada de um braço de mar em uma bacia
+hidrográfica. As águas dos rios podem apresentar detritos e material
+particulado, estes materiais chegam a aderir na camada de óleo, aumentando a sua
+densidade e causando a sedimentação do óleo no leito dos estuários (POSSOBON,
+2012). Os estuários são ambientes no qual acontece uma grande produtividade de
+diferentes tipos de vida, isso devido à retenção de nutrientes oriunda do
+processo de circulação das águas. O estuário é um rico ambiente de alimentação
+das mais variadas espécies microscópicas que existem no planeta, é uma fonte de
+material orgânico, onde faz dos estuários locais como criadouros e um local para
+reprodução pra espécies de moluscos, crustáceos peixes e aves que se concentram
+em grande população os manguezais presentes nesse ambiente (POSSOBOM, 2012).
+Alguns dos compostos do petróleo e seus derivados têm alta toxicidade e
+componentes que podem ser carcinogênicos para diversas espécies. O recobrimento
+que óleo causado fisicamente nos organismos e a persistência do mesmo no
+ambiente, potencializa o prolongamento do impacto nos seres vivos (POSSOBOM,
+2012). O método de classificação de ambientes sensíveis ao óleo foi desenvolvido
+pelo governo americano e devido sua eficiência o governo brasileiro observou a
+necessidade de adaptar e aplicar também aos estuários, devido sua alta
+sensibilidade que os ambientes de manguezais apresentam, e são áreas que são
+protegidas das ondas, e apresentam uma vegetação sensível ao óleo (BRASIL,
+2002). Os estuários por serem ambientes protegidos, não são diretamente ligados
+a ação das ondas, isso faz com que os estuários não removam o óleo naturalmente.
+Os sedimentos dos manguezais dificultam o acesso das equipes de resposta ao
+derrame, bem como os insumos necessários, pois quando o óleo entra em contato
+com a lama do mangue, e acontece o pisoteamento na mesma, gerando possível
+soterramento do óleo, isso faz com que aumente ainda mais a sensibilidade do
+ambiente (BRASIL, 2002). Trataremos, a seguir, dos impactos ambientais advindos
+de derrames acidentais ou operacionais. Impactos do Petróleo no meio ambiente A
+utilização do petróleo traz grandes riscos ao meio ambiente, os piores danos
+acontecem durante o transporte de combustível, com vazamentos em grande escala
+de oleodutos e navios petroleiros (FERREIRA, 2006). 2.3.1 Impactos do Petróleo
+na Biota A biota é o conjunto de seres vivos que habitam no mesmo ambiente
+ecológico, a baixo uma descrição dos efeitos do óleo no ecossistema presente
+dentro dos estuários. Tais como os Impactos na biota nectônica, bentônica,
+planctônica e avifauna (MEIRELES, 2012). Os animais nectônicos são organismos
+aquáticos capazes de se deslocar contra as correntes, tais como peixes,
+tartarugas, peixes-boi e baleias. Os efeitos deletérios potencialmente causados
+pelo óleo em peixes são de acordo com a tabela (DEVIDS, 2008). (DEVIDS, 2008). A
+presença do óleo afeta os peixes de várias formas, depende da espécie e em que
+ciclo de vida o animal se encontra, alguns peixes são afetados pelo óleo na sua
+fase juvenil e adulta, já outros apresenta ovos que podem suportar aos
+componentes do óleo (CHEREMISINOFF e DAVLETSHIN, 2011). Alguns animais marinhos,
+como tartarugas, não conseguem distinguir o óleo dos seus alimentos naturais, e
+logo costuma engolir as pelotas de óleo confundindo com alimento (IPIECA, 2004).
+Os animais bentônicos são aqueles animais que vivem associados aos sedimentos,
+eles são é formado por organismos aquáticos como caranguejos, mexilhões, corais,
+estrelas do mar e alguns tipos de peixes (LEÃO, 2004). Diante disso, quando
+esses animais são contaminados pelo óleo, os outros seres que necessitam deles
+para se alimentar também são contaminados (MONTEIRO, 2003). 2.3.2 Impactos nos
+seres humanos Alguns dos componentes do petróleo, como os compostos mais
+voláteis são altamente tóxicos, e se tornam cancerígenos quando são inalados e
+causam os efeitos crônicos (LEÃO, 2004). Também causa efeitos crônicos e agudos
+devidos os seus componentes como mostra a tabela 4. Fonte: IPIECA, 2000. O
+responsável pelas equipes de respostas ao óleo identifica os ricos e as medidas
+que devem ser adotadas caso ocorra um incidente com algum membro da equipe, pois
+além dos perigos acima descrito na tabela, o óleo é um produto que apresenta
+inflamabilidade durante um tempo curto definido os compostos inflamáveis serem
+voláteis (IPIECA, 2002). 2.3.3 Impactos do Óleo O petróleo pode causar grandes
+impactos dentro da comunidade ecológica aquática, através do efeito físico,
+resultante do recobrimento; e do efeito químico, associado à toxicidade dos
+compostos presentes na composição do hidrocarboneto. A combinação entre
+densidade, viscosidade e toxidade do óleo vazado gera efeitos distintos em um
+derrame de óleo, bem como sua variação com o passar do tempo. Óleos que
+apresentam uma baixa densidade geralmente estão ligados à sua toxidade, pois seu
+efeito químico é mais representativo. Óleos de alta densidade predomina o efeito
+físico de recobrimento. O intemperismo pode elevar a densidade/viscosidade de um
+óleo e, ao mesmo tempo, reduzir sua toxicidade (DEVIDS, 2008). Os principais
+efeitos do óleo no organismo e nas comunidades biológicas costeira estão
+representados de acordo com a figura 5. Fonte: (DEVIDS, 2008). O movimento
+frequente de subidas e decidas das marés atuam também como um fator importante
+de limpeza natural (DEVIDS, 2008). 2.3.4 Intemperismo do Óleo Quando o óleo é
+derramado no mar, este sofre algumas alterações em sua composição, isto se dá
+pela combinação dos processos físicos, químicos e biológicos nomeado de
+intemperismo. Este processo começa logo após o derrame e se manifesta pelo meio,
+dependendo das condições do ambiente e pelo tipo de óleo (SZEWCZYK, 2006). O
+processo de intemperismo acontece nos primeiros períodos do derramamento, pois
+esse processo não é constante. Sendo que as características do óleo mudarão,
+ficando como uma taxa de toxidez baixa, consequentemente passando o
+hidrocarboneto a ficar mais denso e viscoso. No início tem-se os processos de
+espalhamento, evaporação, dispersão, emulsificação e dissolução que são os mais
+importantes no momento inicial de um derrame, já os outros processos como
+oxidação, sedimentação e biodegradação ocorrem como o passar do tempo (SZEWCZYK,
+2006). Fonte: (SZEWCZYK, 2006). Os fenômenos apresentados na Figura 6, estão
+dependendo do tempo e do tamanho do derramamento. Segundo Szewczyk, (2006) o
+volume derramado na Figura 7 mostra a escala de tempo em que os diferentes
+fenômenos se comportam. Os fatores apresentados na Figura 7, tais como a
+evaporação que é o processo que mais domina durante um vazamento, os
+hidrocarbonetos de petróleo são formados por uma grande quantidade de
+componentes que tem variadas temperatura de evaporação, bem como diferentes
+graus de solubilidade e saturação no ar. São também, componentes de cadeia
+menores mais voláteis, logo evaporam com grande facilidade, enquanto o óleo tipo
+Bunker C e óleos lubrificantes praticamente não sofrem esse tipo de fenômeno de
+evaporação (SZEWCZYK, 2006; POSSOBON, 2012). O fenômeno da evaporação diminui o
+volume da mancha na lamina d'Água, em função do óleo ser uma mistura com vários
+componentes, a taxa de evaporação fica menor com o passar do tempo em que a
+mancha se encontra no mar. O grau da evaporação está ligado com a temperatura da
+água, da força dos ventos, e do local de espalhamento da mancha (FERREIRA,
+2006). Vários autores concordam que a taxa de evaporação em uma mancha depende
+fundamentalmente dos seguintes fatores: velocidade do vento local, propriedades
+físicas do óleo, superfície da mancha, pressão de vapor, espessura da mancha,
+temperatura e condições de radiação no local (SZEWCZYK, 2006). Outro fator é a
+dispersão que é tensão turbulenta, podem separar bolhas que são dispersas no
+mar, e logo são afetadas pela degradação (emulsificação, diluição,
+biodegradação). O processo de degradação será mais evidente devido às condições
+do ambiente e das bolhas devido à relação superfície-volume com o corpo da
+mancha. Elas podem afundar e reflutuar, dependendo do balanço nas ondas no
+momento do derrame. Vale dizer que a dispersão não é um processo de degradação,
+e sim um processo físico no qual são separadas algumas porções do óleo
+(LANZILLOTTA, 2008). Por outro lado, a emulsificação é um processo onde é
+formada uma emulsão entre a parte do óleo e água, nesse processo pode ocorrer um
+aumento de até cinco vezes do volume do petróleo em relação ao início do
+derrame. O fator dissolução é um processo que começa a ser percebido logo após o
+início do derrame, e não se instabiliza, fazendo com que se estenda por um longo
+período de tempo. Na dissolução a taxa do óleo depende de sua composição, do
+grau de temperatura existente, do espalhamento da mancha na lamina d’água bem
+como a turbulência dessa água (LANZILLOTTA, 2008). Já a Oxidação é a combinação
+química dos hidrocarbonetos com o oxigênio. Contribui para o intemperismo do
+óleo, uma vez que forma compostos solúveis. Sais minerais dissolvidos em água
+aceleram a taxa de oxidação. Metais traço agem como catalisadores da reação de
+oxidação, ao passo que compostos de enxofre na mistura, faz decrescer essa taxa.
+A radiação ultravioleta auxilia no processo de oxidação (LANZILLOTTA, 2008). 2.4
+Cartas de sensibilidade ambiental ao óleo (SAO) e o índice de sensibilidade do
+litoral (ISL) A identificação dos componentes de valor ambiental (CVA) sensíveis
+ao óleo pode ser feita utilizando as cartas de sensibilidade ambiental ao óleo,
+Cartas SAO. Nas cartas SAO, as linhas de costa são classificadas em função da
+persistência do óleo e da facilidade de limpeza, utilizando um índice de
+sensibilidade litorânea, ou ISL (POSSOBO, 2012). A Lei Nº 9.966, de 28 de abril
+de 2000 “Lei do Óleo” atribuiu ao MMA responsabilidades na identificação,
+localização e definição dos limites das áreas ecologicamente sensíveis com
+relação “à poluição causada por lançamento de óleo e outras substâncias nocivas
+ou perigosas em águas sob jurisdição nacional (BRASIL, 2005). As cartas SAO -
+cartas de sensibilidade ao óleo devem atender a todos os eventos causados por
+derrames de óleo tanto em ambientes marinhos de difícil acesso (alto mar), até
+em acidentes ocorrido na zona costeira e suas adjacências. As Cartas SAO
+contemplam três tipos de elaboração que vai desde cartas SAO em escalas pequenas
+á escalas grandes e em locais específicos (BRASIL, 2005). No Litoral nordeste do
+Brasil, precisamente nos estados do Ceará e Rio Grande do Norte, onde se
+localiza a bacia Potiguar Ceará, foi escolhida como piloto das atividades de
+mapeamento, para as quais foram feitas dentro dos três níveis do plano
+cartográfico das cartas SAO, uma estratégica, oito cartas SAO táticas e dez
+Cartas SAO operacionais. As cartas SAO incluem três tipos de informações
+principais :  Sensibilidade ambiental do litoral ao óleo , definida por um
+Índice de Sensibilidade do Litoral ( ISL ) . O ISL é baseado em características
+físicas da costa, que determina o grau de impacto e o quanto óleo persiste; 
+Recursos biológicos sensíveis ao óleo onde o foco principal é identificar
+informação de espécies ameaçadas ou em perigo de extinção, e locais da
+reprodução das espécies para um novo ciclo de vida, bem como áreas de
+alimentação, rota de migração, reprodução e berçários;  Atividades
+socioeconômicas que podem ser prejudicadas por derramamentos de óleo ou afetadas
+pelas ações de resposta, incluindo áreas de recreação, lazer e veraneio no
+litoral, áreas de pesca e maricultura, áreas sob gerenciamento especial
+(unidades de conservação, sítios históricos ou culturais), tomadas d‘água para
+plantas industriais ou de energia, salinas, portos e terminais etc. (BRASIL,
+2005). A sensibilidade é classificada através do ISL, respeitando o grau de
+exposição à energia de ondas e marés; declividade do litoral e o tipo do
+substrato que organiza os mais variados tipos de contorno da costa numa escala
+crescente que vai de 1 a 10. Quanto maior for o índice maior será o grau de
+sensibilidade (BRASIL, 2005). Praias de areia grossa; Praias intermediárias de
+areia fina a média, expostas; Praias de areia fina a média, abrigadas. ISL 7
+Planície de maré arenosa exposta; Terraço de baixa-mar Planície de maré arenosa
+/ lamosa abrigada e outras áreas úmidas costeiras não vegetadas; Terraço de
+baixa-mar lamoso abrigado; Recifes areníticos servindo de suporte para colônias
+de corais. ISL 10 Deltas e barras de rio vegetadas; Terraços alagadiços,
+banhados, brejos, margens de rios e lagoas; Brejo salobro ou de água salgada,
+com vegetação adaptada ao meio salobro ou salgado; apicum; Marismas Fonte: MMA,
+2015. 2.5 Técnicas para a Resposta ao Vazamento de Óleo A melhor escolha de
+técnicas para a resposta ao vazamento do óleo é fundamental para a diminuição
+dos impactos nos ambientes socioambientais (ITOPF, 2011). As técnicas de
+resposta a serem empregadas devem ser previstas com base nas características
+esperadas do óleo que apresenta possibilidade de contaminar o local, as próprias
+características do local, principalmente a sua sensibilidade ao óleo e às
+operações de resposta em si (CANTAGALLO, MILANELLI e DIAS-BRITO, 2007). Tem que
+ser o suficiente bastante para desconta minar o ambiente no qual houve o
+acidente, ou proporcionar uma recuperação natural com menor tempo. É de extrema
+importância evitar que a mancha do petróleo entre em contato com a costa,
+principalmente dentro dos estuários, local onde o processo natural de
+intemperismo do óleo é considerado difícil e restrito. Essa dificuldade se dá
+pela função dos estuários apresentarem baixa concentração de oxigênio no
+substrato, e pelo fato dos estuários serem ambientes onde não há energia das
+ondas, sendo assim, as melhores técnicas para esse ambiente é proteção dos
+componentes sensíveis feito pelo isolamento da área e contenção afim de evitar
+que óleo se estenda a áreas ainda mais sensíveis (ITOPF, 2011). A técnica
+envolvida para a resposta ao vazamento do óleo não deve ser mais marcante do que
+o próprio óleo, existem tipos de técnicas dentro da área costeira a fim de
+evitar e diminuir o impacto sobre o ambiente. A contenção e o recolhimento são
+técnicos utilizadas para evitar que o óleo chegue nos ambientes sensíveis, essa
+técnica também promove a retirada do óleo, nos estuários se aplica esse método
+pois é de grande eficácia dentro dos ambientes sensíveis como os estuários. A
+dispersão mecânica é causada pela quebra da mistura do petróleo na água através
+de uma embarcação utilizando movimentos sobre a camada de hidrocarbonetos,
+quando o óleo está presente na agua ele forma uma mancha na superfície,
+aumentando essa superfície de contato uma vez que a densidade do óleo é menor
+que a densidade da agua salina. Em áreas sensíveis como estuários, essa técnica
+é pouco recomendada, ou se coloca em pratica com outras combinações para efetuar
+tal evento (FERREIRA, 2006). A dispersão química dentro de um estuário é
+proibida pela legislação nacional (BRASIL, 2000) os dispersantes químicos são
+feitos com um ingrediente ativo chamado surfactante que apresentam produtos
+hidrofílicos e oleofilicos na sua composição. Esses dispersantes formam
+gotículas de óleo que facilita a sua dispersão e biodegradação. Vale lembrar que
+essa técnica não é permitida dentro dos estuários (FERREIRA, 2006). Na figura 8
+é mostrado como acontece o processo de dispersão química em ambiente marítimo,
+onde a técnica pode ser aplicada. A queima in situ ou queima no local, é um
+processo de queima da mancha de óleo utilizado em vários países, no local de um
+derramamento, tem como principal característica remover grande parcela do óleo
+presente na superfície do mar, essa técnica não é prevista pela legislação
+brasileira, pois existe alguns problemas quanto ignição do óleo, a geração de
+grande quantidade de fumaça, e a possibilidade dos resíduos gerados na queima
+ser denso e viscoso (FERREIRA, 2006). Derramamentos tendem em atingir a região
+costeira. No momento em que a camada de óleo atinge a costa ocorre um maior
+impacto ambiental e econômico, pois atinge regiões de pesca e recreação. É
+importante que retire o óleo da zona costeira de imediato e cuidadosamente antes
+que o mesmo possa se intemperara, pois, ocorrendo esse processo as polotas do
+óleo podem se prender firmemente a areia do litoral e nas rochas (FERREIRA,
+2006). 2.5.1 Posicionamento de barreiras O modo em que as barreiras para a
+contenção são posicionadas possui algumas limitações devido a facilidade do óleo
+se espalhar por longas áreas durante um curto período. As barreiras tanto podem
+deixar o óleo parado em um determinado local como podem provocar mudanças no
+posicionamento do mesmo em direção de áreas menos sensíveis, ou servem para
+fazer a deslocação desse óleo para uma área longe de para ováveis incidentes
+(ITOPF, 2011). Na figura 9 apresenta as quatro formas de posicionamento de
+barreiras segundo Oebius (1999). Fonte: Adaptado de: Oebius,1999. As barreiras
+de contenção são utilizadas afim de conter a passagem de óleo numa resposta aos
+vazamentos, são obstáculos utilizados para impedir a passagem do óleo, desviando
+sua trajetória para uma posterior ação de remoção. Já na varredura o objetivo é
+o mesmo, porém utiliza transporte para fazer uma deslocação das barreiras para o
+local em que está a mancha de óleo. Na deflexão, o principal objetivo é desviar
+a mancha do hidrocarboneto. E por fim o cerco tem como objetivo concentrar o
+óleo em um determinado local podendo também ter a função de isolar algum local
+do contato com o óleo, utilizada também para proteger fazendas marinhas, áreas
+de desovas, marinas e os manguezais (POSSOBON,2012). A contenção, a varredura e
+a deflexão podem ser executadas em diversas configurações, sendo os extremos das
+barreiras ancorados ou carregados por embarcações como mostra as figuras abaixo.
+A figura 10 mostra a configuração A figura mostra visivelmente que não há
+embarcações de apoio, sendo uma da vantagem deste método de contenção, onde não
+terá gastos na locomoção de um barco de apoio para esticar a barreira, porém, a
+área na qual o "gancho" de contenção pode alcançar pode ser menor que em termos
+proporcionais da macha de óleo (BASTOS,2011). A figura 13 utiliza uma
+configuração que lembra a letra V, nela também usa dois botes de apoio que com
+suas forças esticam a barreira de contenção fazendo formato de V (BASTOS, 2011).
+3. - METODOLOGIA Inicialmente, foi feita uma extensa revisão de literatura sobre
+o tema, em livros, revistas especializadas, jornais, dissertações, teses de
+diversos autores e anais de eventos científicos. Na sequência, foi descrito as
+características do estuário Barra Brande onde identificou que na região desse
+estuário a comunidade que vive em torno do mesmo depende diretamente nos insumos
+naturais daquela região. Diante das características ambientais presente em volta
+da Barra Grande e de um possível derrame de óleo oriundo da bacia De acordo com
+Ecycle (2015), as garrafas depois que descartadas, podem permanecer no meio
+ambiente por até 800 anos, a produção dessas garrafas cresceu, mas a reciclagem
+tornou-se o maior problema, pois não acompanhou a produção, isso fez com que em
+vários locais houve um acumulo de garrafas com tamanhos e formatos
+diversificado, essas garrafas tornaram um dos maiores vilões do meio ambiente.
+Dentro da preocupação ambiental tanto vindo do descarte irregular das garrafas
+PETs, e dos impactos que um óleo venha causar no ambiente costeiros e dentro de
+um estuário, apresenta-se nesse trabalho uma barreira de contenção sustentável,
+feita com a reciclagem de PET. A obtenção das garrafas para a formação da
+barreira se encontrava dentro do campus da Universidade de Fortaleza (UNIFOR),
+uma forma de conscientização dos alunos e respeito da reciclagem. Após todo o
+processo de criação da barreira, foi testada sua flutuabilidade na piscina do
+LEN – Laboratório de Estudos náuticos. 3.1 Materiais e Método Os materiais e
+métodos utilizados para a realização da montagem da barreira de contenção com
+garrafas PETs, estão descritos a seguir de acordo com seu processo de montagem.
+Fonte: Autoria própria. A figura 14 mostra as matérias utilizados para fazer a
+colagem das garrafas PETs, a mistura foi feita em ambiente aberto, dentro da
+empresa ARMTEC – Tecnologia em Robótica no laboratório de Estudos Náuticos.
+Fonte: Autoria própria. A figura 15 mostra a adição de 30 ml resina em um
+recipiente feito com o mesmo material da barreira de contenção. Fonte: Autoria
+própria. A Figura 16 mostra a adição de 1ml gotas de catalizador afim de
+acelerar a velocidade da reação. Fonte: Autoria própria. Depois da mistura feita
+a resina junto com o catalizador foi misturada em um recipiente, a resina começa
+a secar após a adição do catalisador e, depois de 05 ou 10 minutos, começa a
+endurecer de modo irreversível. Fonte: Autoria própria. Na figura 18, mostra o
+momento em que coloca a resina na superfície da garrafa, o tempo desse processo
+foi entre 4 a 8 minutos após a adição do catalizador. Fonte: Autoria própria. Em
+seguida como mostrado na figura 19, foi colado 2 (duas) garrafas pet de 500ml
+cada, 1 (uma) com agua no seu interior e outra sem a presença do liquido. Fonte:
+Autoria própria. A figura 20 mostra as garrafas PET logo após a secagem da
+resina. Fonte: Autoria própria. Depois do processo de secagem da resina entre as
+garrafas foi feito um teste no com o objetivo de encontrar descolagem da resina
+entre as 2 (duas) pets. Esse teste feito em uma piscina, teve um tempo de 1
+(uma) hora. Na qual não foram identificadas a descolagem das garrafas pets.
+Figura 22: revestimento com filme de PVC Fonte: Autoria própria. Passado o tempo
+de teste, foi feito o revestimento das garrafas utilizando papel filme, no total
+foram revestidos com o mesmo material o número de 23 pares Garrafas PETs. 4
+RESULTADOS E DISCUSSÕES A partir do presente trabalho, pode-se considerar que o
+derramamento de petróleo nos ecossistemas estuarinos tem maiores impactos
+ambientais, pois os estuários são praticamente isentos das forças meteorológicas
+como vento fortes. O petróleo apresenta elevada toxidade devido à grande
+quantidade de compostos inorgânicos. Verificou-se neste estudo que os ambientes
+costeiros são altamente vulneráveis ao derrame de óleo, principalmente os
+estuários, foco deste trabalho. Uma vez que dentro desse ambiente estuarino,
+local onde é considerado um berçário das mais variadas espécies marítimas, bem
+como aves que dependem das copas do mangue e de todo local ao redor do mesmo
+para reprodução e alimentação. Diante de todo o experimento feito com a barreira
+de pet na piscina, e de acordo com as barreiras de contenção identificadas nesta
+pesquisa, constatou-se que as barreiras em resposta ao óleo ainda são as únicas
+formas de conter uma determinada mancha de óleo em um estuário, protejedo dos
+locais mais sensíveis, enquanto as equipes de resposta junto com as empresas
+especializadas para tais atividades. Nesse sentido, as barreiras de contenção em
+resposta a vazamentos de óleo é um método eficaz contra um desastre ambiental. O
+experimento realizado demostrou que uma barreira de contenção feita com garrafas
+PET tornou-se eficiente no bloqueio de resíduos dentro de uma piscina. Como a
+densidade do óleo é menor que a água, pode-se fazer uma comparação já que a
+barreira obteve sucesso em sua flutuabildade, ficando 5 centímetros acima da
+lamina da agua da piscina e 7 centímetros submerso (acima da lâmina d’água). As
+figuras, do experimento mostram a eficiência da barreira de contenção feita por
+PET (Tereftalato de Etileno). Na Figura 23 é possível ver um protótipo da
+contenção de barreira de garrafa pet na piscina do laboratório de estudos
+náuticos, onde foi testada a sua flutuabilidade dentro da piscina. Fonte:
+Autoria própria. Feito todo o processo de revestimento com as 23 garrafas se
+obteve uma barreira de contenção com 5 metros de comprimento e 12 centímetros de
+espessura afim de impedir a passagem de óleo e outras substâncias presentes na
+coluna d'água, como uma espessura de 7 cm abaixo da lâmina d'água, e 5cm acima
+da lâmina d'água. Fonte: Autoria própria. Foi testado a flexibilidade da
+barreira, onde se obteve êxito em sua flexibilidade ao fazer um cerco na piscina
+em que as extremidades da barreira foram unidas entre si. Fonte: Autoria
+própria. Como apresentado no decorrer deste trabalho, as barreiras de contenção
+utilizadas para a resposta em ambientes marinhos formam diversas configurações,
+a barreira feita com PET também apresentou as flexibilidades como mostra a
+figura 25. Fonte: Autoria própria 5 CONCLUSÕES E SUGESTÕES PARA TRABALHOS
+FUTUROS O teste de uma barreira de contenção construída com garrafa de
+Politereftalato de etileno - PET em uma piscina para aplicação no estuário Barra
+Grande em Icapuí-CE possibilitou uma observação real da flutuabilidade da
+barreira bem como a possibilidade da mesma ser flexível. Após a verificação da
+eficiência da barreira de contenção de garrafas PET em uma piscina e
+constatou-se que não houve a submersão das garrafas ao longo dos dias em que a
+mesma se encontrou flutuando na piscina. Também concluiu que os métodos de
+contenção existentes são essenciais tanto para prevenção quando para a resposta
+a acidentes que envolve hidrocarbonetos de petróleo e seus derivados.
+Recomenda-se, em trabalhos futuros, o aprofundamento deste experimento in loco,
+a partir de um mapeamento mais detalhado das margens do estuário, enfocando
+principalmente nas correntes marinha oriunda do oceano que adentra o estuário e
+uma avaliação do impacto que o petróleo vindo da bacia petrolífera
+Potiguar-Ceará possa causar para a biodiversidade e na comunidade em torno do
+estuário. Diante disso, a fim de ressaltar a importância do reaproveitamento de
+materiais recicláveis, para trabalhos futuros, recomenda-se a realização desse
+experimento feito na piscina em um ambiente real de resposta, dentro do estuário
+Barra Grande, localizado no município de Icapuí, estado do Ceará. 
+
+A perfuração de um poço é feita ininterruptamente e até que sejam alcançados os
+objetivos pré-determinados. Enquanto ocorre a perfuração, é necessário manter a
+estabilidade do poço, bem como todo o material triturado pela broca deve vir à
+superfície e, para isto utiliza-se o fluido de perfuração. De posse deste
+material, o geólogo examina os detritos nele contidos, fazendo uma análise
+contínua das formações que estão sendo perfuradas. Sendo o fluido de perfuração
+um dos fatores de grande importância para o êxito nas operações de perfuração
+marítima e terrestre, necessita-se de estudos minuciosos e abrangentes. O tema é
+extenso e polêmico nas suas variedades e aplicações, o que faz necessário certa
+experiência prática para conhecer seus múltiplos envolvimentos e/ou soluções no
+que diz respeito aos problemas que venham a ocorrer durante as operações nos
+campos petrolíferos (LUMMUS, 1971). Existem diferentes tipos de fluidos de
+perfuração, estes podem ser classificados conforme sua base principal, água,
+óleo ou gás. O petróleo, fonte energética não renovável mais utilizada no mundo,
+vem levando cada vez mais ao estudo de sistemas que visem oferecer melhorias aos
+processos de exploração e produção desta matéria-prima (SANTANNA, 2003). O
+objetivo geral deste trabalho é obter um fluido de perfuração à base óleo,
+utilizando microemulsão, visto que a microemulsão apresenta a vantagem de ser
+mais estável do que a emulsão, logo, durante as paradas na perfuração do poço,
+manterá os cascalhos em suspensão por mais tempo. Para isso, partiu-se de
+diagramas ternários obtidos utilizando-se variações do tensoativo
+nonilfenoletoxilado (com quatro e oito óxidos de eteno) e fases aquosa e
+orgânica. Foram, escolhidos pontos dentro das regiões de microemulsão para
+determinar as composições dos fluidos de perfuração a serem analisados. O fluido
+estudado é constituído por tensoativo não-iônico, fase aquosa (salmora ou água
+destilada) e fase orgânica (n-parafina), sendo adicionados aditivos
+viscosificantes (Goma Xantana ou Atapulgita) e adensante (Baritina). Os fluidos
+preparados neste trabalho foram submetidos a estudo e caracterização reológica.
+2. - REVISÃO BIBLIOGRÁFICA A fim de introduzir uma base para o entendimento do
+leitor, a seguir será explanado acerca dos principais conceitos apresentados na
+literatura sobre os fluidos de perfuração, suas funções, propriedades e
+classificação, como também sobre diagramas de fases e microemulsão. 2.1. FLUIDOS
+DE PERFURAÇÃO Na operação de perfuração, uma das etapas da exploração de óleo e
+gás, é indispensável a utilização do fluido de perfuração, que também pode ser
+chamado de lama, este pode ser definido como um fluido circulante capaz de
+tornar viável a atividade de perfuração (API, 1979). Os fluidos de perfuração
+podem ser conceituados de diversas maneiras. Segundo CHILINGAR (1983), os
+fluidos de perfuração são fluidos circulantes utilizados em sistemas de
+perfuração, com o objetivo de proporcionar as condições necessárias na operação.
+Para THOMAS et al. (2001) são misturas complexas, que podem ser constituídas por
+sólidos, líquidos, componentes químicos e, por vezes, até gases. Sendo que, do
+ponto de vista químico, eles podem assumir aspectos de suspensões, dispersões
+coloidais ou emulsões, dependendo do estado físico dos componentes. MACHADO
+(2002), complementando, afirma que do ponto de vista físico, os fluidos de
+perfuração assumem comportamentos de fluidos não-newtonianos, ou seja, a relação
+entre a tensão de cisalhamento e a taxa de deformação não é constante. Os
+fluidos de perfuração são materiais multifásicos que contém água, material
+orgânico, sólidos em suspensão e sais dissolvidos em diversas proporções,
+auxiliando na penetração das brocas e na suspensão dos cascalhos gerados durante
+a perfuração (DARLEY e GRAY, 1988). Definindo de forma mais simples, fluido de
+perfuração é todo líquido usado em uma operação de perfuração. Esse líquido é
+circulado, ou bombardeado, da superfície até a broca, através do poço,
+retornando pelo anular. 2.1.1. Funções Os fluidos de perfuração são
+indispensáveis durante as operações de perfuração, pois desempenham uma série de
+funções essenciais. Este desempenho é diretamente dependente das propriedades
+reológicas (viscosidades, consistência de gel), de filtração (controle de
+filtrado, reboco) e lubricidade (coeficiente de lubricidade) dos fluidos de
+perfuração (MEDEIROS et al., 2008). Segundo THOMAS et al. , ( 2001 ) para
+garantir uma perfuração rápida e segura , os fluidos de perfuração devem
+apresentar , sempre que possível , as seguintes características :  Ser
+quimicamente estável ;  Aceitar qualquer tratamento , químico e físico ;  Ser
+bombeável ;  Resfriar e lubrificar a coluna de perfuração e a broca ; 
+Apresentar baixo grau de corrosão e de abrasão em relação à coluna de perfuração
+e aos demais equipamentos do sistema de circulação ;  Estabilizar as paredes do
+poço , mecânica e quimicamente ;  Manter os sólidos em suspensão quando estiver
+em repouso ;  Ser inerte em relação às rochas produtoras ;  Facilitar as
+interpretações geológicas do material retirado ( ou testemunho ) do poço ; 
+Exercer pressão hidrostática sobre as formações , de modo a evitar o influxo de
+fluidos indesejáveis ( kick ) ;  Apresentar custo compatível com a produção ; 
+Facilitar o acesso e a separação dos cascalhos na superfície . 2.1.2. Ciclo do
+fluido de perfuração no poço A maior parte do fluido de perfuração utilizado em
+uma operação de perfuração é recirculada em um ciclo contínuo: 1. - O fluido de
+perfuração (ou lama) é misturada e mantida no tanque de lama. 2. - Uma bomba
+extrai a lama do tanque e a bombeia, pelo interior da coluna de perfuração,
+passa pela broca, que está raspando a formação rochosa. 3. - Retorna a
+superfície através do espaço anular formado pelas paredes do poço e da coluna de
+perfuração, transportando cascalhos das rochas raspadas pela broca. 4. - A
+seguir, a lama inicia a viagem de volta até a superfície transportando pedaços
+de rocha, chamados cortes, que foram raspados da formação pela broca. Os
+batedores de xisto consistem de uma série de telas de metal vibratórias,
+utilizadas para separar a lama dos cortes. A lama goteja através das telas e
+retorna ao tanque de lama. 6. - Os cascalhos das rochas escorrem pelo deslizador
+de xisto para serem descartados, ou analisados por geólogos. A Figura 1 ilustra
+o ciclo do fluido de perfuração no poço. E a Figura 2 ilustra o retorno pelo
+espaço anular, do fluido de perfuração, transportando consigo os cascalhos.
+Fonte: http://www. slb.com. 2.1.3. Classificação dos fluidos de perfuração Os
+fluidos de perfuração são constituídos por uma fase dispersante ou contínua e
+uma fase dispersa. A classificação de um fluido de perfuração é feita em função
+de sua composição. O principal critério para classificação se baseia no
+constituinte principal da fase dispersante ou contínua, podendo ser separados em
+fluidos à base de água, fluidos à base de óleo, fluidos pneumáticos (ar, gás,
+espuma) e mais recentemente, os fluidos sintéticos. A Figura 3 mostra a divisão
+e subdivisão dos tipos de fluidos de perfuração. Fonte: Modificado de Pereira
+(2008). Os fluidos de base água (também conhecido como Water Based Muds - WBM)
+são aqueles que apresentam como meio de dispersão a água, seja ela doce ou
+salgada. A definição e classificação de um fluido a base de água considera,
+principalmente, a natureza da água e os aditivos químicos empregados no preparo
+do fluido. A proporção entre os componentes básicos e as interações entre eles
+provoca sensíveis modificações nas propriedades físicas e químicas do fluido.
+Consequentemente, a composição é o principal fator a considerar no controle das
+propriedades destes fluidos (MACHADO, 2002). A principal função da água é prover
+o meio de dispersão para os materiais coloidais, principalmente argilas e
+polímeros, que modificam a viscosidade, o limite de escoamento, a força gel,
+entre outros parâmetros. A seleção da água a ser utilizada no preparo do fluido
+depende da disponibilidade, do custo de transporte e tratamento, dos tipos de
+formações geológicas a serem perfurados, dos produtos químicos que irão compor o
+fluido, e de equipamentos e técnicas a serem empregados na avaliação das
+formações. 2.1.3.2. Fluidos pneumáticos Os fluidos de perfuração pneumáticos são
+os fluidos à base de ar, gás ou névoa, e estes são comprimidos antes de sua
+utilização. Este tipo de fluido, de baixa densidade, é bastante utilizado em
+zonas com perdas de circulação severas e formações produtoras com pressão muito
+baixa ou com grande susceptibilidade a danos, como também em formações muito
+duras como basalto ou o diabásio e em regiões com escassez de água ou regiões
+glaciais com camadas espessas de gelo. A utilização de um fluido circulante de
+ar, gás natural, gás inerte ou misturado com água, tem vantagem econômica em
+áreas de rochas duras, onde há pouca chance de encontrar grandes quantidades de
+água. O ar seco ou gás irá prover uma rápida taxa de penetração do fluido,
+reduzindo a deposição de cascalhos no poço (BAROID LIMITED, 1985). A Tabela 1
+mostra a composição desse tipo de fluido. Tabela 1 – Caracterização da
+composição dos fluidos à base de ar. Lama com ar injetado para remover os
+sólidos perfurados. 2.1.3.3. Fluidos sintéticos São definidos como fluidos cuja
+fase contínua é um líquido sintético. Estes podem desempenhar as mesmas funções
+dos fluidos à base de óleo, bem como, serem utilizados em situações nas quais os
+fluidos à base de água sofrem limitações (BURKE e VEIL, 1995). Os fluidos
+sintéticos são menos tóxicos que os fluidos de base oleosa (diesel), mas possui
+a desvantagem de um alto custo na fabricação. Eles podem ser à base de éter,
+éster, parafinas, olefinas, aldeídos ou linear alquil benzeno (CATARINA, 2007).
+2.1.3.4. Fluidos base óleo Nos fluidos à base de óleo, os sólidos são suspensos
+em óleo e a água pode ser emulsionada com óleo, no caso do óleo ser a fase
+dispersante (emulsão A/O) (DARLEY e GRAY, 1988). De acordo com Lummus e Azar
+(1986), os fluidos à base de óleo podem ser subdivididos em duas classes: os
+verdadeiros fluidos à base de óleo e as emulsões inversas. Os verdadeiros
+fluidos à base de óleo contêm água em concentrações volumétricas a 5,0%. As
+emulsões inversas podem conter até 50,0% em volume de água, que é dispersa em
+óleo através de um emulsificante especial. Os agentes emulsificantes (ou
+sufactantes) são substâncias adicionadas às emulsões para aumentar a sua
+estabilidade cinética tornando-as razoavelmente estáveis e homogêneas,
+facilitando a dispersão dos cascalhos. A presença de ambos os líquidos (óleo e
+água) juntos resulta em uma emulsão, formada através de agitação e da presença
+de um emulsificante adequado. A natureza química do agente emulsificante
+determina se o óleo está emulsionado na água (emulsão direta) ou se a água está
+emulsionada no óleo (emulsão inversa) (SERRA, 2003). Utilizam-se os fluidos de
+perfuração base óleo em situações especiais por possuírem as seguintes
+características: resistência a temperaturas elevadas, com propriedades
+reológicas e filtrantes controláveis até 500ºF; baixa taxa de corrosão; baixa
+solubilidade das formações de sal; atividade química controlada pela natureza e
+concentração do eletrólito dissolvido na fase aquosa; alta capacidade de
+inibição em relação às formações argilosas hidratáveis; alto índice lubrificante
+ou baixo coeficiente de atrito; baixa taxa de corrosão; intervalo amplo para
+variação de massa específica (MACHADO, 2002). A Tabela 2 apresenta a
+caracterização físico-química dos fluidos de base oleosa e suas influências sob
+as rochas ativas. Fonte: Silva (2003). Embora seja grande a aplicabilidade deste
+tipo de fluido devido à sua eficiência, sua utilização se restringe a situações
+especiais, nas quais não seja possível substituí-los por alternativas mais
+viáveis do ponto de vista econômico e ambiental. O uso de fluido verdadeiro e
+fluidos de emulsão inversa requer proteção para o meio ambiente. A Tabela 3
+mostra um comparativo entre o fluido à base de óleo frente um fluido à base de
+água, abordando as suas desvantagens e vantagens. Dificuldade de detecção de gás
+no poço devido sua solubilidade na fase contínua. Menores taxas de penetração.
+Menor número de perfilagem que podem ser executadas. Maior grau de poluição.
+Dificuldade no combate à perda de circulação. Maior custo inicial. Utilizados em
+poços HPHT (alta pressão e alta temperatura) Utilizados em formação de folhelhos
+argilosos e plásticos. Utilizados em formações salinas de halita, silvita,
+carnalita, etc. Utilizado em formações de arenito produtores danificáveis por
+fluidos à base de água. Utilizados em poços direcionais ou delgados ou de longo
+afastamento. Utilizados em formações com baixa pressão de poros ou de fraturas.
+Fonte: Silva (2003). 2.1.4. Fatores determinantes para a escolha do tipo de
+fluido a ser utilizado Os principais fatores a serem analisados a fim de
+determinar a escolha de qual fluido de perfuração utilizar, são apresentados na
+Tabela 4. FATORES CARACTERIZAÇÃO Para ter condições de segurança em uma
+perfuração, um fluido de perfuração deve no mínimo ter um peso adequado para
+manter o controle do poço, para garantir a não formação de hidratos gasosos ou
+retardar a sua Condições de segurança formação durante a perfuração, além disso,
+deve levar em conta zonas de H2S (sulfetos de hidrogênio). São rochas
+sedimentares formadas pela evaporação de água do mar. Estas Formações rochosas
+salinas possuem altos teores salinos, podendo interferir na perfuração,
+principalmente pela diferença de pressão osmótica do local. Regiões de altas
+pressões e temperaturas podem prejudicar o desempenho Zonas de altas pressões e
+dos fluidos de perfuração, podendo alterar as suas propriedades
+físico-temperaturas químicas. Dependendo da região (on-shore/off-shore), do país
+na qual esta sendo realizada a perfuração, da legislação em vigor, das
+características de Condições ambientais disposição final, esses fatores
+influenciam na determinação a de um fluido quando se relaciona com as questões
+ambientais. Podem alterar as propriedades reológicas dos fluidos de perfuração.
+Perfurações horizontais podem dificultar a ação dos fluidos de perfuração, seja
+pelo baixo grau de lubricidade do fluido, seja pelo aumento da viscosidade ou
+pela dificuldade do carreamento dos cascalhos. Fator que apresenta influência
+direta na escolha de um fluido, podendo constituir cerca de 7% do valor total do
+custo de uma perfuração. Fatores como custo da disposição final do fluido, custo
+de aditivos, custo de manutenção, entre outros são alguns dos fatores
+econômicos. Fonte: Morais (2009). Os fluidos de perfuração são desenvolvidos com
+a finalidade de atender as necessidades e particularidades de cada perfuração.
+Por isso, em muitos casos, os fluidos devem ser mais elaborados, sendo
+adicionado um ou mais aditivos para obter a composição adequada. Lummus e Azar
+(1986) classificam os aditivos para fluidos de perfuração em viscosificantes,
+agentes densificantes, emulsificantes, redutores de viscosidade (defloculantes
+ou dispersantes), redutores de filtrado e aditivos especiais. i. Viscosificantes
+São aditivos utilizados para aumentar a viscosidade do fluido, representados
+pela bentonita, goma xantana, CMC, atapulgita e polímeros naturais e sintéticos.
+ii. Adensantes São aditivos que tem a função de aumentar a densidade do fluido,
+sendo a baritina o adensante mais utilizado. iii. Emulsificantes Estabilizam a
+emulsão através da dispersão de dois líquidos imiscíveis iv. Redutores de
+viscosidade iv. São aditivos utilizados para reduzir a viscosidade do fluido. v.
+Redutores de perda de fluido Estes aditivos possuem a função de reduzir o volume
+de filtrado. Aditivos especiais 2.1.6. Propriedades dos fluidos de perfuração As
+propriedades do fluido que mais influenciam na taxa de penetração e,
+consequentemente, no custo são: a densidade, o teor de sólidos, o filtrado e a
+viscosidade. Porém, existem várias outras propriedades relacionadas a um fluido.
+As propriedades do fluido de perfuração podem ser divididas em propriedades
+físicas e químicas. As propriedades físicas, mais importantes, a serem
+analisadas são: parâmetros reológicos, força gel, densidade, parâmetros de
+filtração e teor de sólidos. Já as propriedades químicas, com maior relevância,
+são: potencial hidrogeniônico (pH) e a resistividade elétrica. A determinação
+das propriedades dos fluidos de perfuração é de fundamental importância no
+acompanhamento do fluido durante sua aplicação no poço, para definição de
+tratamento através de testes piloto, e em trabalhos de pesquisa e
+desenvolvimento de novas formulações, tanto em sondas como em laboratórios de
+pesquisa (Petrobras, 1991). 2.1.6.1. Propriedades físicas Parâmetros reológicos:
+Segundo Annis e Smith (1996), as propriedades reológicas de um fluido de
+perfuração são aquelas propriedades que descrevem as características de fluxo de
+um fluido sob várias circunstâncias de deformação. Em um sistema de circulação
+de fluido, o fluxo ocorre em uma variedade de taxas nas canalizações de tamanhos
+e de formas diferentes. No interesse de saber ou prever os efeitos deste fluxo,
+é preciso saber o comportamento reológico do fluido nos vários pontos do
+interesse no sistema de circulação. O comportamento do fluxo de um fluido é
+definido pelos parâmetros reológicos. Para isto, considera-se que o fluido é
+definido como um modelo reológico, cujos parâmetros vão influir diretamente no
+cálculo de perdas de cargas na tubulação e velocidade de transporte dos
+cascalhos (MACHADO, 2002). A partir da medição reológica de determinado fluido
+pode-se indicar como este escoará quando submetido a condições de temperatura,
+pressão e taxa de cisalhamento. Dentre os parâmetros reológicos mais usuais,
+destaca-se a viscosidade, que se refere à resistência que uma substância
+apresenta ao fluxo, e, no campo, citam-se como principais propriedades
+reológicas de interesse o índice de comportamento, o índice de consistência, a
+viscosidade aparente, a viscosidade plástica, o limite de escoamento e a força
+gel (THOMAS et al, 2001). O controle destas propriedades é indispensável, pois
+visa o melhoramento da operação de perfuração por meio da otimização no processo
+de limpeza do poço, removendo os cascalhos perfurados, através da minimização da
+pressão de bombas, evitando o influxo da formação e prevenindo perda de
+circulação para a formação perfurada (VITAL, 2005). Para Machado (2002),
+reologia é a ciência que estuda a deformação e o fluxo da matéria. Assim sendo,
+os parâmetros reológicos utilizados para descrever o comportamento do fluxo de
+um fluido, definido como modelo reológico, irão interferir diretamente nos
+valores da perda de carga nas tubulações e na velocidade com que são
+transportados os cascalhos. Os fluidos apresentam dois tipos de classificações
+reológicas quanto à deformação, e também quanto à relação entre a taxa de
+deformação e a tensão de cisalhamento. Na segunda classificação, os fluidos
+podem ser divididos em: Fluidos Newtonianos: sua viscosidade é constante e
+seguem a Lei de Newton.  Esta classe abrange todos os gases e líquidos não
+poliméricos e homogêneos. Ex.: água, leite, soluções de sacarose, óleos
+vegetais.  Fluidos Não Newtonianos: a relação entre a taxa de deformação e a
+tensão de cisalhamento não é constante. Este tipo de fluido apresenta várias
+subdivisões, como apresentado na Figura 4 que mostra um esquema, para melhor
+visualização, com as divisões e subdivisões de acordo com a relação entre a taxa
+de deformação e a tensão de cisalhamento. Segundo DARLEY e GRAY (1988), o estudo
+reológico é focado primeiramente na relação entre a pressão exercida do fluxo e
+a taxa do fluxo, e depois disso na influência das características do fluido no
+fluxo. Os regimes de escoamentos viscosos são classificados em laminar ou
+turbulento, de acordo com a sua estrutura. No regime laminar, a estrutura do
+escoamento é caracterizada pelo movimento suave em lâminas ou camadas. A
+estrutura do escoamento no regime turbulento é caracterizada por movimentos
+tridimensionais aleatórios de partículas fluidas, em adição ao movimento médio
+(FOX e MCDONALD, 2005). Quando o fluxo é turbulento, a pressão aumenta com o
+aumento da velocidade muito mais rapidamente do que quando é laminar (DARLEY e
+GRAY, 1988). O comportamento de fluxo de um fluido é definido pelos parâmetros
+reológicos. Estes são determinados considerando um modelo matemático particular
+o qual influencia diretamente no cálculo das perdas de carga na tubulação e
+velocidade de transporte dos cascalhos (MELO, 2004). A Figura 5 mostra as curvas
+de fluxo dos modelos matemáticos, com base no comportamento reológico do fluido
+newtoniano e dos fluidos não newtonianos independentes do tempo. Fonte:
+Modificado Diaz (2002). Para cada modelo reológico estão associados certos
+parâmetros. O modelo mais empregado no tratamento dos fluidos de perfuração é o
+modelo Binghaniano, cujos componentes reológicos são as viscosidades plásticas
+(𝜇𝑝) e o limite de escoamento (𝜏0) (Machado, 2002). As propriedades reológicas e
+gelificantes são: viscosidade aparente, plástica e limite de escoamento, e os
+géis (MELO, 2008). Machado (2002) descreve viscosidade aparente (𝜇𝑎) como a
+viscosidade que o fluido teria se fosse Newtoniano, naquelas condições de fluxo
+(Equação 1), e limite de escoamento (LE), como a tensão mínima (𝜏𝑙) aplicada ao
+fluido para que haja alguma tensão cisalhante. A seguir será explanado com mais
+detalhes o modelo Newtoniano, de Bingham e o de Ostwald Waale ou fluido de
+potência (pode ser usado para representar os fluidos pseudoplásticos), pois
+estes modelos serão utilizados para os resultados deste trabalho. Issac Newton
+foi o primeiro a desenvolver a lei básica da viscosimetria, descrevendo o
+comportamento de fluxo de um líquido ideal (SCHRAMM, 1988). Assim, os fluidos
+que apresentam características deste modelo ficaram conhecidos como fluidos
+Newtonianos. A equação matemática desenvolvida por Newton está mostrada na
+Equação 2 : ( 2 ) Sendo : 𝜏 - tensão de cisalhamento ( Pa ) 𝜇 - viscosidade (
+Pa.s ) 𝛾 ̇ - taxa de cisalhamento (s−1) Neste modelo , a tensão de cisalhamento
+para um fluido de Bingham é definida pelas equações a seguir : Sendo : 𝜇𝑝 –
+viscosidade plástica do fluido 𝜏0 – tensão limite de escoamento do fluido Um
+detalhe importante deste modelo é que ele só é válido para escoamento laminar. E
+além disso, um fluido de Bingham não flui até uma tensão de cisalhamento, 𝜏,
+exercer um valor mínimo, 𝜏𝑙. Após a aplicação desta tensão cisalhante mínima, as
+variações da tensão de cisalhamento são proporcionais à taxas de cisalhamento. 
+Modelo de Ostwald Waale ou fluido de potência A tensão de cisalhamento em um
+fluido de potência está relacionada à taxa de cisalhamento através da seguinte
+equação : ( 8 ) Sendo : 𝐾 - índice de consistência do fluido , 𝛾̇ - taxa de
+deformação por cisalhamento do fluido n – índice de comportamento Newtoniano 𝑛 >
+1, fluido Dilatante Força gel: Alguns fluidos de perfuração são tixotrópicos,
+isto é, adquirem um estado semi-rígido quando estão em repouso e voltam a
+adquirir um estado de fluidez quando estão novamente em movimento. A força gel é
+um parâmetro também de natureza reológica que indica o grau de gelificação
+devido à interação elétrica entre partículas dispersas. A força gel inicial mede
+a resistência inicial para colocar o fluido em fluxo. A força gel final mede a
+resistência do fluido para reiniciar o fluxo quando este fica certo tempo em
+repouso. A diferença entre elas indica o grau de tixotropia do fluido (SILVA,
+2003).  Tixotropia O fluido de perfuração é projetado para gelificar
+gradativamente quando não há cisalhamento aplicado sobre ele. À esta propriedade
+dá-se o nome de tixotropia, a qual é definida como um decréscimo contínuo da
+viscosidade com o tempo quando um escoamento é aplicado a uma amostra que tenha
+estado previamente em repouso e a subsequente recuperação da viscosidade no
+tempo quando o escoamento é descontinuado. Quando o escoamento é então
+reiniciado, o gel é quebrado e picos de pressão são observados, os quais podem
+ser suficientes para comprometer a estabilidade do poço ou até fraturar a
+formação nas imediações do poço (ROCHA, 2010). Mewis & Wagner (2009) definiram
+tixotropia como um decréscimo contínuo da viscosidade com o tempo quando uma
+amostra que tenha estado previamente em repouso é submetida ao escoamento e a
+subsequente recuperação da viscosidade no tempo quando o escoamento é
+descontinuado. Segundo Machado (2002), fluidos de perfuração são exemplos de
+fluidos tixotrópicos. A Figura 6 mostra uma curva de fluxo para cima e outra
+diretamente para baixo. A área formada entre essas duas curvas é definida como a
+magnitude desta propriedade chamada tixotropia. Densidade: Segundo Annis e Smith
+(1996), a densidade do fluido de perfuração tem que ser tal que a pressão
+hidrostática exercida pela coluna de fluido evite o influxo para o poço. Esta é
+a primeira das necessidades de qualquer fluido e deve ser considerado antes de
+qualquer outra das propriedades ou funções do fluido. Com isso, o ponto inicial
+do controle de pressão é o controle da densidade do fluido. O peso da coluna de
+fluido no poço, necessário para balancear a pressão da formação é o ponto de
+referência em que todos os cálculos de controle e pressão são baseados (ANNIS e
+SMITH, 1996). Os limites de variação da densidade dos fluidos para perfurar uma
+determinada fase são definidos pelo limite mínimo da pressão de poros (é a
+pressão atuante nos fluidos que se encontram no espaço poroso da rocha) e pelo
+limite máximo da pressão de fratura (é o valor de pressão para o qual a rocha se
+rompe) das formações expostas. Assim, muitas vezes há necessidade de aumentar ou
+diminuir a densidade do fluido de perfuração. Para aumentar a densidade,
+geralmente adiciona-se baritina, BaSO4, que tem densidade entre 4,3 e 4,6 g/cm³,
+enquanto que a densidade dos sólidos perfurados é em torno de 2,60. Neste
+trabalho, foi utilizado a baritina com a finalidade de elevar a densidade do
+fluido. iv. Parâmetros de filtração: A capacidade do fluido de perfuração em
+formar uma camada de partículas sólidas úmidas, denominada de reboco, sobre as
+rochas permeáveis expostas pela broca é de fundamental importância para o
+sucesso da perfuração e da completação do poço. Para formar o reboco, deve haver
+o influxo da fase líquida do fluido do poço para a formação. Este processo é
+conhecido como filtração. É essencial que o fluido tenha uma fração razoável de
+partículas com dimensões ligeiramente menores que as dimensões dos poros das
+rochas expostas. Quando existem partículas sólidas com dimensões adequadas, a
+obstrução dos poros é rápida e somente a fase líquida do fluido, o filtrado,
+invade a rocha (SILVA, 2003). A invasão de filtrado na formação pode causar um
+número de dificuldades em analisar o poço. Se a invasão do filtrado é grande,
+pode transportar todos os líquidos do poço para formação antes que este seja
+recuperado. O filtrado pode, também, reagir quimicamente com a argila dos poros
+da formação ou com espécies químicas dos fluidos das formações e mudar as
+características de permeabilidade do poço (AMOCO, 2013). Os elevados valores de
+volume de filtrado, por sua vez, indicam invasão excessiva de filtrado nas
+formações hidratáveis, avaliações equivocadas da formação que está sendo
+perfurada e redução do diâmetro do poço em virtude da formação de reboco muito
+espesso. Além disso, filtrados elevados contribuem fortemente para o processo de
+prisão diferencial (FARIAS, 2005). O filtrado e a espessura do reboco são dois
+parâmetros medidos rotineiramente para definir o comportamento do fluido quanto
+à filtração. Teor de sólidos: O teor de sólidos é uma propriedade que deve ser
+controlada com rigor, visto que o seu aumento implica aumento de várias outras
+propriedades, tais como densidade, viscosidade e forças géis, além de aumentar a
+probabilidade de ocorrência de problemas como desgaste dos equipamentos de
+circulação, fratura das formações devido à elevação das pressões de bombeio ou
+hidrostática, prisão da coluna e redução da taxa de penetração. Com isso, o teor
+de sólidos deve ser controlado para mantê-lo na menor quantidade possível. A fim
+de tratar o fluido para reduzir o teor de sólidos, utiliza-se o tratamento
+preventivo, que consiste em inibir o fluido, física ou quimicamente, evitando-se
+a dispersão dos sólidos perfurados, ou o método corretivo, em busca de extrair
+os sólidos para reduzir o teor de sólidos presentes no fluido, para isto,
+utiliza-se tanques de decantação, peneiras, hidrociclones, centrifugadores, ou
+diluir o fluido. 2.1.6.2. Propriedades Químicas Potencial Hidrogeniônica pH: O
+pH dos fluidos de perfuração é medido através de papéis indicadores ou de
+potenciômetros, e é geralmente mantido no intervalo alcalino baixo, isto é, de 7
+a 10. O objetivo principal é reduzir a taxa de corrosão dos equipamentos e
+evitar a dispersão das formações argilosas (SILVA, 2003). Resistividade
+elétrica: A resistência elétrica é definida como sendo a capacidade que tem um
+meio de impedir passagem da corrente elétrica. A resistividade (R) de um
+condutor é diretamente proporcional ao comprimento (L) a ser percorrido pela
+corrente elétrica, e inversamente proporcional à área (A) atravessada. As rochas
+que contem gás, óleo e/ou água misturados em seus poros, apresentam valor de
+resistividade mais alto que as rochas que não contem devido à capacidade
+isolante da fração hidrocarboneto. Assim, quanto maior for a quantidade de
+hidrocarboneto maior a dificuldade da corrente elétrica terá em atravessar esta
+rocha. Um método de perfilagem amplamente utilizado é o de resistividade
+elétrica. Neste método, mede-se a cada 20 cm de rocha perfurada, a resistividade
+elétrica. Com isso, esta propriedade é de fundamental importância. Neste tópico,
+terá uma abordagem rápida sobre a definição, classificação e sobre a propriedade
+de micelização dos tensoativos. 2.2.1. Definição A representação esquemática de
+um tensoativo pode ser observada na Figura 7. Fonte: Schramm (2000). 2.2.2.
+Classificação Os tensoativos podem ser diferenciados a partir da sua região
+polar. Baseado neste critério, os tensoativos podem ser divididos em: iônicos
+(catiônicos e aniônicos), não iônicos e anfóteros. A Figura 8 apresenta
+esquematicamente a classificação dos tipos de tensoativos. Fonte: Silva (2008).
+2.2.2.1 Tensoativos iônicos Este tipo de tensoativo apresenta carga elétrica na
+parte hidrofílica, e ao se dissociarem em água, formam íons carregados
+negativamente (tensoativos aniônicos) ou positivamente (tensoativos catiônicos).
+Os tensoativos aniônicos possuem um ou vários grupos ionizáveis que produzem
+íons carregados negativamente na superfície ativa quando em solução aquosa.
+Neste grupo são incluídos os sabões, compostos sulfonados e os sulfonatados
+(Silva, 2008). Estes são derivados de gorduras animais ou óleos vegetais, por
+reações de saponificação, sendo até o momento os mais estudados e compreendidos
+com relação à sua estrutura e função.  Tensoativos Catiônicos Os tensoativos
+catiônicos possuem, em solução aquosa, um ou vários grupos ionizáveis que
+produzem íons carregados positivamente na superfície ativa. Estes tensoativos
+são normalmente utilizados para tratamentos de água, formulação de desinfetantes
+e cosméticos, devido a sua efetiva ação microbiológica. Exemplos comuns deste
+tipo de tensoativo são os sais quaternários de amônio de cadeia longa (SANTANNA,
+2003). Estes são solúveis tanto em meio ácido como em meio alcalino,
+proporcionando aumento de viscosidade e ação bactericida e aminas de cadeias
+longas, utilizadas como óleos lubrificantes, como inibidores de corrosão em
+superfícies metálicas e como coletores de flotação na indústria de minérios
+(ROSSI, 2006). Como o próprio nome já diz, este tipo de tensoativo não
+apresentam íons em sua extremidade, ou seja, são constituídos por substâncias
+cujas moléculas, em solução aquosa, não se ionizam. É interessante explicar
+então, como este grupo dissocia-se em água. Portanto, esta solubilidade está
+relacionada à presença de grupamentos funcionais em suas moléculas, que possuem
+forte afinidade com a água. Como exemplos, o nonilfenol etoxilado, álcoois
+graxos etoxilados e o propilenoglicoletoxilado. 2.2.2.3. Tensoativos anfóteros
+Este tipo de tensoativo contêm em sua estrutura tanto o radial ácido quanto o
+radical básico. Assim, esses compostos, quando dissociados, podem exibir
+características aniônicas ou catiônicas, dependendo do pH da solução. Para serem
+catiônicos o pH deve variar entre 4 e 9 ou para serem aniônicos o pH deve variar
+entre 9 e 10. 2.2.3. Micelização Uma das propriedades fundamentais dos
+tensoativos é a propriedade de adsorção nas interfaces (limite entre duas fases
+imiscíveis) ou superfícies de um dado sistema. As propriedades físicoquímicas de
+tensoativos, na sua grande maioria, não variam significativamente, mesmo em
+baixas concentrações. No entanto, para uma dada concentração específica de
+tensoativo, conhecida como concentração micelar crítica (cmc), ocorre uma
+mudança brusca nestas propriedades. Abaixo da c.m.c, as moléculas de tensoativo
+estão presentes na forma de monômeros dispersos, e acima, estão presentes na
+forma de agregados (micelas). Este processo de formação é conhecido como
+micelização (SWARUP e SCHOFF, 1993), e está representado na Figura 9. As micelas
+são agregados moleculares, de tamanho coloidal, em equilíbrio com as moléculas
+de monômeros das quais são formadas (DeLNUNZLO, 1990). Fonte: Swarup e Schoff
+(1993). Existem dois tipos de micelas: as micelas diretas e as micelas inversas,
+que são caracterizadas pela natureza do solvente em que os tensoativos estão
+presentes. Em agregados de caráter iônico, ocorre no interior da micela um
+agrupamento da parte hidrofóbica da molécula tensoativa de forma a se ter um
+mínimo de superfície em contato com a água, a cauda apolar do tensoativo fica
+orientada para o meio da micela, esses agregados são chamados de micelas
+diretas. Em se tratando das micelas inversas, as mesmas se orientam de forma
+oposta, as cabeças hidrofílicas estão direcionadas para o centro e as caudas
+hidrofóbicas estão direcionadas para o meio externo (SILVA, 2011; SANTANNA,
+2003), como mostra a Figura 10. Fonte: Santanna (2003). Os diagramas de fases
+podem ser divididos em: ternários, quaternários e pseudoternários. O diagrama de
+fases retrata em que condição experimental é possível se obter microemulsões e
+as regiões que limitam as emulsões, fases separadas, e microemulsões O/A e A/O
+(Silva, 2008). 2.3.1. Diagramas ternários Os diagramas ternários são
+representados em um diagrama triangular contendo três constituintes: água, óleo
+e tensoativo, cada um destes componentes assumem um dos vértices do triângulo.
+Com isso, de acordo com as condições e proporções dos constituintes, pode ser
+delimitada as regiões de microemulsão, como mostra a Figura 11. 2.3.2. Diagramas
+quaternários O diagrama quaternário (Figura 12) é uma extensão do diagrama de
+fases ternário. Este utiliza um tetraedro para representar as regiões de
+microemulsão formadas por quatro constituintes: tensoativo, cotensoativo, fase
+oleosa e fase aquosa. Da mesma forma que nos diagramas ternários, cada
+componente puro assume um vértice do tetraedro. 2.3.3. Diagramas pseudoternários
+Os diagramas pseudoternários representam cortes axiais nos diagramas
+quaternários, onde se obtém diagramas triangulares em que um dos vértices
+representa a mistura de dois componentes, a uma razão constante (SANTANNA 2003),
+conforme mostra a Figura 13. 2.4. ASPECTOS GERAIS SOBRE MICROEMULSÃO As
+microemulsões são sistemas dispersos, termodinamicamente estáveis, transparentes
+ou translúcidos, monofásicos, formados a partir de uma aparente solubilização
+espontânea de dois líquidos, normalmente imiscíveis, na presença de tensoativo e
+cotensoativo (ROBB, 1981). Desta maneira, o antigo conceito de que água e óleo
+não se misturam sofreu mudanças significativas. A adição de um terceiro
+componente em um sistema composto por dois líquidos que sejam parcialmente ou
+totalmente imiscíveis entre si, pode resultar na diminuição (ou aumento) da
+solubilidade destes líquidos. O tensoativo pode ser adicionado como um terceiro
+componente, proporcionando uma redução da tensão interfacial entre os líquidos
+imiscíveis tornando-os capazes de se dispersarem um no outro (ROSSI et al.,
+2007). As microemulsões são constituídas de microgotículas dispersas , dinâmicas
+, com um diâmetro variando entre 10 e 300 nm. . As microemulsões diferem das
+emulsões não somente por seu tamanho estrutural ser bem menor, como também por
+sua estabilidade termodinâmica, estabilizando e propiciando vida longa a
+sistemas de misturas do tipo óleo/água (SILVA, 2011). As principais diferenças
+estão mostradas na Tabela 5. Fonte: Damasceno et al. (2011). As microemulsões
+podem ser do tipo água em óleo (A/O) e óleo em água (O/A). A diferença entre
+estes tipos é que no primeiro A/O, os domínios aquosos são cercados por uma
+região contínua de óleo. Já no segundo caso O/A, os domínios de óleo são
+cercados por uma região contínua de água. 2.4.1. Classificação de Winsor As
+microemulsões podem entrar em equilíbrio com outras fases. A fase oleosa se
+encontra acima da microemulsão por possuir densidade menor que a da água. 
+WINSOR II (WII): Quando a fase microemulsionada está em equilíbrio com uma fase
+aquosa em excesso. A microemulsão se encontra na parte superior à fase aquosa
+por possuir menor densidade.  WINSOR III (WIII): É caracterizado por um sistema
+trifásico, onde a microemulsão está em equilíbrio com uma fase aquosa e outra
+orgânica ao mesmo tempo. Sendo que o óleo é a fase superior, a microemulsão é a
+fase intermediária e a água, a fase inferior.  WINSOR IV (WIV): Este sistema,
+em escala macroscópica, é monofásico, constituído por uma fase microemulsionada
+única. A Figura 14 mostra a classificação apresentada por Winsor, de forma
+esquemática. Fonte: Santanna (2003). 3. - METODOLOGIA EXPERIMENTAL Neste
+capítulo serão discriminados os reagentes, materiais, equipamentos e a
+metodologia utilizada no desenvolvimento da parte experimental desta pesquisa,
+bem como, a construção dos diagramas de fase, preparo do fluido de perfuração e
+dos ensaios reológicos realizados. O experimento deste trabalho, em síntese,
+consistiu na obtenção dos sistemas microemulsionados através da construção, de
+diagramas de fase. Posteriormente, foram escolhidos alguns pontos de
+microemulsão, dentro destes diagramas, para a elaboração do fluido de
+perfuração, no qual, adicionou-se viscosificante, de tipos e concentrações
+diferentes, para analisar a influência deste sobre o fluido. Mediu-se também a
+densidade deste fluido para então ser adicionar a quantidade certa de adensante
+para deixar o fluido com o peso ideal. Por fim, foram realizados os ensaios
+reológicos e analisado os resultados. 3.1. REAGENTES UTILIZADOS Para a
+realização deste trabalho , foram utilizados os seguintes reagentes :  Água
+destilada , como fase aquosa ; /  NaCl , para transformar a água destilada em
+salmoura ; DÁ  n-Parafina , representando a fase óleo ; DÁ  Nonifenoletoxilado
+( Ultranex 40 e Ultranex 80 ) , tensoativos não-iônicos , utilizados como agente
+emulsificante ; VV  Goma Xantana e Atapulgita , viscosificantes utilizados para
+modificar a viscosidade do fluido ; DÁ  Baritina , adensante , utilizado para
+dar peso ao fluido . 3.2. MATERIAIS UTILIZADOS Os principais materiais usados no
+desenvolvimento experimental foram : PÁ  Tubo de ensaio ;  Conta gotas ; 3.3 .
+EQUIPAMENTOS UTILIZADOS Os equipamentos utilizados no decorrer deste trabalho
+foram : DÁ  Balança analítica Tecnal , modelo B-TEC-W210A ;  Agitador Tecnal ,
+modelo AP56 Phonenix ;  Centrífuga Quimis , microprocessada ; ÚV ÚV  Reômetro
+Thermo Cientific – HAAKE MARS ( Modular Advanced Rheometer System ) . DÁ 3.4
+OBTENÇÃO DOS SISTEMAS MICROEMULSIONADOS E CONSTRUÇÃO DOS DIAGRAMAS DE FASE Para
+determinar as regiões de microemulsão, é necessária a construção de diagramas de
+fases. A construção desses diagramas foi baseada na titulação volumétrica com
+pesagem analítica das proporções volumétricas, para se obter as proporções
+mássicas respectivas. Para a obtenção dos diagramas de fases ternários, fixam-se
+dois vértices do triângulo equilátero (normalmente os vértices do tensoativo e a
+da fase orgânica) e titula-se com a fase aquosa ou oleosa, varrendo toda a
+extensão do diagrama até a formação ou desaparecimento das regiões de
+microemulsão. Para obter os sistemas microemulsionados entre a água (doce ou
+salmoura), óleo (n-Parafina) e o tensoativo, foi necessário primeiramente
+escolher o tipo de água a ser utilizado. Quando escolhido a água doce,
+utilizou-se apenas a água destilada, já para a salmoura, adicionou-se NaCl, nas
+concentrações 35 g/L, 140 g/L e 270 g/L, à água destilada com a finalidade de
+deixá-la na concentração desejada. Após isso, inicia-se a obtenção dos sistemas
+microemulsionados. Para isto, foi utilizada a seguinte estratégia: pesou-se um
+tubo de ensaio vazio, misturou neste a fase óleo e o tensoativo, em proporções
+conhecidas, que visualmente apresenta-se de forma incolor. Posteriormente, foi
+gotejada a água, e a cada gota a mistura foi agitada e centrifugada para
+verificar se a mesma continuava incolor (microemulsionada) ou se apresentava
+algum turvamento, ou seja, se havia deixado de ser um sistema microemulsionado.
+Para a mistura inicial entre o óleo e o tensoativo utilizou-se como base de
+cálculo 2,5 g e as percentagens foram variadas em 10%, ou seja, criou-se uma
+tabela, na qual, o óleo iniciou com 10% da base de cálculo (0,25 g de óleo) e o
+tensoativo com 90% da base de cálculo (2,25 g de tensoativo) e estas
+percentagens foram modificadas em 10% para cima, no caso do óleo, e 10 % para
+baixo, no caso do tensoativo, até que varreu todas as percentagens possíveis.
+Assim, a última percentagem do óleo foi 90% da base de cálculo (2,25 g de óleo)
+e a última percentagem do tensoativo foi 10% da base de cálculo (0,25 g de
+tensoativo). Em cada mistura inicial obtida, foi gotejado a água e agitado
+posteriormente a cada gota para descobrir qual região Winsor este sistema
+estaria. Inicialmente incolor, ao adicionar uma certa quantidade de água, este
+sistema pode turvar parcialmente ou totalmente, caracterizando o fim da região
+de microemulsão. Ao descobrir o ponto exato que o sistema deixou de ser
+microemulsão, pesa o tubo de ensaio com a amostra para descobrir qual a massa de
+água que foi adicionada, apenas subtraindo a massa encontrada no tubo de ensaio
+com os três reagentes utilizados pela massa do tubo de ensaio com os 2,5 g da
+mistura inicial. E com a ajuda do Excel 2010, foram construídos os diagramas de
+fase. 3.5. PREPARO DO FLUIDO DE PERFURAÇÃO Após a construção do diagrama de
+fases, escolheu-se o ponto a ser estudado, apresentando então a percentagem dos
+três constituintes deste diagrama. Adotou-se a base de cálculo de 25 g para o
+preparo do fluido, após isso, o viscosificante (Goma Xantana ou Atapulgita) foi
+adicionado lentamente e sob agitação na água, para hidratá-lo durante 24 horas.
+Em seguida, adicionou-se ao misturador a fase óleo (n-parafina), o tensoativo
+emulsificante (Ultranex 40 ou Ultranex 80), e em seguida a fase aquosa (água
+destilada ou água salina) contendo viscosificante. Com a utilização de uma
+proveta, calculou-se a densidade deste fluido para posteriormente, realizar o
+cálculo de balanço de massa, a fim de calcular a quantidade de baritina
+necessária para elevar o peso do fluido ao valor desejado de 9lb/gal, utilizado
+neste trabalho. O balanço de massa foi obtido pela Equação 9: (9) Sendo: 𝑉 -
+volume do fluido obtido; 𝜌𝐵𝑎𝑟𝑖𝑡𝑖𝑛𝑎 - massa específica da baritina; 𝑉𝐵𝑎𝑟𝑖𝑡𝑖𝑛𝑎 -
+volume necessário de baritina; 𝜌𝑓 - peso específico desejado do fluido; 𝑉𝑓 -
+volume do fluido (𝑉+𝑉𝐵𝑎𝑟𝑖𝑡𝑖𝑛𝑎). Por fim, a massa de baritina calculada foi
+adicionada ao fluido no misturador, continuando com a agitação para total
+mistura do sistema. 3.6. ENSAIOS REOLÓGICOS Foram realizados os ensaios
+reológicos de viscosidade e tixotropia, e para isto, utilizou-se o reômetro
+Thermo Cientific – HAAKE MARS (Modular Advanced Rheometer System). Com os
+resultados obtidos nesta etapa do procedimento determinou-se entre outros, a
+viscosidade plástica, o limite de escoamento e o grau de tixotropia dos fluidos
+estudados utilizando o software do equipamento. Os ensaios foram realizados à
+temperatura de 25 ºC. Para a determinação da viscosidade plástica e do limite de
+escoamento, variou-se a taxa de cisalhamento de 5 a 1010 s-1 por um minuto. Já
+para determinar o grau de tixotropia, foram necessários três minuto de
+experimento, no primeiro minuto, variou-se a taxa de cisalhamento de 5 a 1010
+s-1, no segundo minuto manteve-se a taxa de cisalhamento em 1010 s-1, e no
+terceiro minuto variou-se a taxa de cisalhamento de 1010 a 5 s-1. Por fim, foi
+calculada a área do ciclo de histerese, caracterizando o grau de tixotropia do
+fluido. Os resultados obtidos deste trabalho podem ser divididos em duas partes:
+obtenção de diagramas de fase ternários e caracterização reológica dos fluidos
+produzidos, analisando a viscosidade plástica, limite de escoamento e a
+tixotropia do fluido. 4.1. DIAGRAMAS DE FASE TERNÁRIO OBTIDOS O primeiro
+experimento realizado neste trabalho foi a construção do diagrama de fase
+ternário, composto por: fase orgânica ou fase óleo, no caso a n-Parafina, os
+tensoativos Ultranex 40 e Ultranex 80 e água doce. Os diagramas obtidos com a
+utilização do Excel 2010, para os sistemas mencionados anteriormente, estão
+representados nas Figuras 15 e 16. Fonte: Autor. Realizando uma análise visual
+nestes diagramas é fácil perceber que o primeiro (Figura 15), utilizando o
+Ultranex 40, apresentou uma região muito maior de Winsor IV, ou seja, maior
+região de microemulsão. Assim, ao longo deste trabalho foram construídos
+diagramas com água salina e realizado ensaios reológicos apenas utilizando o
+Ultranex 40. A fim de obter um fluido mais adequado à realidade de campo, foi
+adicionado NaCl (sal), em concentrações pré-determinadas, à água destilada para
+a construção de um novo diagrama de fase. A salinidade precisa estar presente no
+fluido para evitar a migração e o inchamento de argilas presentes nas formações
+rochosas durante a perfuração. Preparou-se então, soluções aquosas de NaCl com
+270000 ppm, 140000 ppm e 35000 ppm. Em posse dessas soluções , preparou-se novos
+diagramas de fase , mostrados nas Figuras 17 , 18 e 19 , utilizando essas
+respectivas concentrações de NaCl. . Fonte: Autor. Fonte: Autor. Segundo Barros
+Neto (1996), as microemulsões com tensoativos não iônios, são pouco sensíveis à
+variação de salinidade. Porém, como foi variado a concentração de NaCl em grande
+quantidade, as regiões de microemulsão modificaram significativamente.
+Novamente, realizando uma análise visual nas Figuras 17, 18 e 19, percebe-se que
+o aumento da concentração de NaCl, diminui a região de microemulsã, ou seja,
+quanto maior a salinidade, menor a região microemulsionada. Assim , para a
+realização dos ensaios reológicos foi escolhido um ponto no diagrama ,
+utilizando água salina com 35000 ppm de NaCl , com a seguinte composição : 60 %
+n-parafina , 30 % Ultranex40 e 10 % solução salina com 35000 ppm de NaCl. . A
+próxima etapa analisada, após a escolha da composição, foram os ensaios
+reológicos realizados referentes aos fluidos produzidos com a composição
+escolhida. As análises reológicas, do ponto composto por 60% de n-Parafina mais
+30% de Ultranex 40 e 10% de água salina a 35000 ppm de NaCl, foram divididas em
+duas partes: análise da influência da concentração de viscosificante sobre
+fluido de perfuração e análise comparativa dos tipos de viscosificante frente ao
+fluido produzido. 4.2.1. Influência da concentração de viscosificante sobre o
+fluido de perfuração Para a obtenção destes resultados, o viscosificante
+escolhido foi a Goma Xantana, visto que este é amplamente utilizado na indústria
+de petróleo. Foram realizados ensaios com 0,5%, 1,0%, 2,0%, 4%, 6% e 8% de Goma
+Xantana. A seguir, seguem respectivamente as Figuras 20 e 21, comparativos entre
+as curva de fluxo e viscosidade As Figuras apresentando a curva de fluxo e
+viscosidade com aplicação dos modelos de Newton, Bingham e Ostwald de Waale para
+cada uma destas concentrações, estão no ANEXO A. Fonte: Autor. Os fluidos
+apresentados na Figura 20, com Goma Xantana, apresentam comportamento não
+Newtoniano para altas concentrações, visto que, a relação de tensão cisalhante
+por taxa de cisalhamento não é constante, e comportamento Newtoniano para baixas
+concentrações, pois, a relação de tensão cisalhante por taxa de cisalhamento é
+constante. Pode ser observado, ainda, que os reogramas partem da origem dos
+eixos, caracterizando que os fluidos preparados com a Goma Xantana não oferecem
+resistência ao fluxo inicial, ou seja, limite de escoamento igual ou muito
+próximo de zero. O fator chave para este comportamento são as forças
+interpartículas e/ou intermoleculares fracas, formadas nas dispersões de GX.
+Analisando a Figura 21, percebe-se que a viscosidade do fluido aumenta com o
+aumento da concentração de viscosificante (Goma Xantana) no meio. Já com relação
+à taxa de cisalhamento a viscosidade diminui em altas concentrações e mantem-se
+constante em baixas concentrações. Portanto, em baixas concentrações, este
+fluido apresenta-se como um fluido Newtoniano, a viscosidade se mantém constante
+com a variação da taxa de cisalhamento. E em altas concentrações, como fluido
+pseudoplástico, a viscosidade diminui com o aumento da taxa de cisalhamento.
+Asconcentrações de 6 e 8 % foram mais significativas no aumento da viscosidade.
+A partir da aplicação dos modelos de Newton, Bingham e Ostwald de Waale na curva
+de fluxo, extraíram-se do software de tratamento de dados, o Haake RheoWin Data
+Manager, os valores dos parâmetros desejados (Tabela 6). Além de descobrir qual
+dos modelos melhor se adapta a estes fluidos, a partir do coeficiente de
+correlação (R²). Fonte: Autor. Analisando os parâmetros apresentados na Tabela
+6, infere-se do índice de comportamento (𝑛), que em altas concentrações de GX o
+fluido deixa de se comportar como dilatante (𝑛 > 1) e passa a comportar-se como
+pseudoplástico (0 < 𝑛 < 1). Infere-se também, das viscosidades, que com o
+aumento da concentração de Goma Xantana, aumenta-se a viscosidade plástica. A
+partir do coeficiente de correlação, percebe-se que todos os modelos se
+ajustaram. Também relacionado a essas concentrações de Goma Xantana, foram
+realizados ensaios tixotrópicos. A Figura 22 mostra o comportamento tixotrópico
+do fluido utilizando 8% de Goma Xantana, pois dentre as concentrações deste
+viscosificante, esta obteve a maior diferença entre a rampa de ida e a rampa de
+volta. As Figuras que mostram o comportamento tixotrópico do fluido para as
+demais concentrações estão no ANEXO B. Fonte : Autor. Os valores de magnitude
+tixotrópica, ou seja, da diferença entre as rampas de ida e volta, para as
+concentrações estudadas estão apresentados na Tabela 7. Tabela 7 - Valores de
+magnitude tixotrópica. Analisando a Tabela 7, apresentando todas as
+concentrações de Goma Xantana utilizada, percebe-se que à medida que se aumenta
+a concentração de viscosificante, aumenta o grau de tixotropia do fluido. 4.2.2.
+Análise dos tipos de viscosificante frente ao fluido produzido Os
+viscosificantes utilizados para realizar esta comparação foram: Goma Xantana e
+Atapulgita. As porcentagens de viscosificantes utilizadas nesta comparação são:
+2%, 4%, 6% e 8%. Para isto, foram utilizadas as Figura 20 e 21, relacionadas à
+Goma Xantana, para utilizar as curvas de fluxo e viscosidade em relação à taxa
+de cisalhamento, e aplicação dos modelos de Newton, Bingham e Ostwald de Waale,
+para comparar as Figuras 23 e 24, relacionadas à Atapulgita. E os valores dos
+parâmetros e do coeficiente de correlação, para a Goma Xantana, e Atapulgita nas
+Tabelas 6 e 8, respectivamente. Fonte: Autor. A partir da Figura 23, pode-se
+observar que os reogramas tendem da origem dos eixos, caracterizando que os
+fluidos preparados com a Atapulgita não oferecem resistência ao fluxo inicial,
+ou seja, limite de escoamento igual ou muito próximo de zero. Quando comparadas
+aos reogramas da Goma Xantana percebe-se o mesmo comportamento. Analisando a
+Figura 24, percebe-se que a viscosidade do fluido aumenta com o aumento da
+concentração de viscosificante (Atapulgita) no meio. Já com relação à taxa de
+cisalhamento (Figura 24) a viscosidade diminui. Portanto, este fluido
+apresenta-se como fluido pseudoplástico. Novamente, a partir da aplicação dos
+modelos de Newton, Bingham e Ostwald de Waale na curva de fluxo, extraíram-se do
+software de tratamento de dados, o Haake RheoWin Data Manager, os valores dos
+parâmetros desejados (Tabela 8). Além de descobrir qual dos modelos melhor se
+adapta a estes fluidos, a partir do coeficiente de correlação (R²). As Figuras
+apresentando a curva de fluxo e viscosidade com aplicação dos modelos de Newton
+, Bingham e Ostwald de Waale para cada uma destas concentrações estão no ANEXO
+C. Fonte : Autor . Analogamente à análise que já foi realizada para GX, dos
+parâmetros apresentados na Tabela 8, infere-se pelo índice de comportamento (𝑛),
+todos os fluidos apresentaram comportamento pseudoplástico (0 < 𝑛 < 1) e, além
+disso, para Atapulgita, sempre que aumenta a sua concentração diminui o índice
+de compontamento. Infere-se também, das viscosidades, que com o aumento da
+concentração de Atapulgita, aumenta-se a viscosidade plástica. A partir do
+coeficiente de correlação, percebe-se que todos os modelos se ajustaram.
+Portanto, comparando a Atapulgita e a Goma Xantana, percebe-se que ambas
+apresentaram fluidos mais próximos do modelo de Bingham, como também, que em
+altas concentrações, ambos os fluidos adquirem comportamento pseudoplástico. A
+fim de realizar uma comparação com a Figura 22, que mostra a curva de fluxo de
+histerese tixotrópica em relação à taxa de cisalhamento para a Goma Xantana, foi
+utilizada a Figura 25, para 8% de Atapulgita, visto que, como no caso da Goma
+Xantana, apresentou a maior diferença entre as rampas de ida e de volta. As
+Figuras que mostram o comportamento tixotrópico do fluido para as demais
+concentrações estão no ANEXO D. Fonte: Autor. Comparando os gráficos de Goma
+Xantana (Figura 22) e Atapulgita (Figura 25), percebe-se que, o fluido com
+Atapulgita apresentam maior grau de tixotropia. Isso deve-se ao fato da
+Atapulgita ser uma argila mais adequada ao fluido salino , pois não tem suas
+propriedades reológicas alteradas pela presença de sal. . Os valores de
+magnitude tixotrópica para a Atapulgita estão fornecidos na Tabela 9. Analisando
+a Tabela 9, percebe-se que a magnitude tixotrópica do fluido aumenta conforme
+aumenta a concentração de Atapulgita. Além disso, comparando a magnitude
+tixotrópica, para as mesmas concentrações, dos fluidos com Goma Xantana e
+Atapulgita, nas Tabelas 7 e 9, respectivamente, fica evidente, que, com a
+utilização da Atapulgita, o fluido apresenta maior grau tixotrópico. As regiões
+de microemulsão (WIV) obtidas, utilizando água destilada, foram maiores com a
+utilização do tensoativo Ultranex 40 se comparado ao Ultranex 80. Analisando o
+efeito da salinidade no sistema foi possível a obtenção de região de
+microemulsão com a concentração de NaCl de 35000 ppm, permitindo elaborar um
+fluido base óleo com características mais próximas a realidade do campo. Através
+da aplicação do modelo de Ostwald de Waale foi possível perceber que os fluidos
+preparados com Goma Xantana se comportaram como dilatante em baixas
+concentrações e pseudoplásticos em altas concentrações. Já os fluidos preparados
+com Atapulgita se comportaram como fluidos pseudoplásticos. Com relação à
+tixotropia, a utilização da Goma Xantana proporcionou menor grau de tixotropia
+se comparada a Atapulgita, além de demonstrar que quanto maior a concentração de
+viscosificante maior a magnitude tixotrópica. Os fluidos preparados com
+Atapulgita apresentaram melhores resultados para as propriedades relevantes para
+os fluidos de perfuração. Isso pode ser explicado pelo fato da Atapulgita não
+ter suas propriedades reológicas alteradas pela presença do sal, diferentemente
+da Goma Xantana. AMOCO PRODUCTION COMPANY. Drilling Fluids Manual. Acesso em: 14
+de junho de 2013. Tese (Doutorado em Engenharia de Processos) – Universidade
+Federal de Campina Grande, Campina Grande, 2003. AMORIM, Luciana Viana.; FARIAS,
+Kássie Vieira.; VIANA, Josiane Dantas.; BARBOSA, Maria Ingrid Rocha.; PEREIRA,
+Eugênio; FRANÇA, Kleper Borges.; LIRA, Hélio de Lucena.; FERREIRA, Héber Carlos.
+Fluidos de Perfuração à base água. Revista Cerâmica. São Paulo: v. 51, n. 318,
+p. 128-138, 2005. AMORIM, L.V.; GOMES, C.M.; SILVA, F.L.H.; FERREIRA, H.C.
+Comportamento reológico de dispersões de argilas bentoníticas: efeitos do tipo
+de ferramenta, velocidade e tempo de agitação. Revista Cerâmica. BAROIDE
+LIMITED. Houston, USA, 1985. BURKE, C.J.; VEIL, J.A. Synthetic-based drilling
+fluids have any. [s.n], 1995. BURNHAM, J.W.; HARRIS, L.E.; McDANIEL, B.W.
+Journal Petroleum Technology, 217-220, 1980. CHILINGAR G. V.; CHILINGARIAN G.
+V.; VORABUTR, P. Drilling and drilling fluids. DARLEY, H.C.H.; GRAY, G.R.
+Composition and Properties of Drilling and Completion Fluids. Fifth Edition,
+Gulf Publishing Company, Houstoun, Texas, 1988. DelNUNZLO, M. J. Tensoativos e
+suas aplicações básicas. Aerossol & Cosméticos, 14-22, 1990. 

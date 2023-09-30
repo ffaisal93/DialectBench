@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
+       words means "syntactic words", e.g. Spanish "vámonos" is split to two words, "vamos" and "nos"
+       fused is the number of tokens that are split to two or more syntactic words
+       The words and fused elements can be omitted if no token is split to smaller syntactic words. -->
+  <size>
+    <total><sentences>98</sentences><tokens>1318</tokens><words>1318</words><fused>0</fused></total>
+    <train><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></train>
+    <dev><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></dev>
+    <test><sentences>98</sentences><tokens>1318</tokens><words>1318</words><fused>0</fused></test>
+  </size>
+  <lemmas unique="273" /><!-- ,, ., ha'e, a, va'e, ma, pa, aguã, kuery, pe, mi, ore, iko, upecha, embiapo -->
+  <forms unique="382" /><!-- ,, ., ha'e, ma, aguã, kuery, arã, pe, mi, ore, pa, chee, rupi, jurua, ka'aguy -->
+  <fusions unique="0" /><!--  -->
+  <!-- Statistics of universal POS tags. The comments show the most frequent lemmas. -->
+  <tags unique="15">
+    <tag name="ADJ">7</tag><!-- porã, aju, ũ -->
+    <tag name="ADP">78</tag><!-- pe, upi, py, rami, e, me, eve, gui, jave, orevy -->
+    <tag name="ADV">75</tag><!-- upecha, agã, upeicha, ko'agã, porã, ko'ape, mba'eicha, aỹ, apy, mba'echa -->
+    <tag name="AUX">2</tag><!-- iko, ĩ -->
+    <tag name="CCONJ">27</tag><!-- ha'e, ha, pero, porque, ajeve -->
+    <tag name="DET">11</tag><!-- kova'e, mba'e, pavẽ, pe, javive, mava'e -->
+    <tag name="INTJ">1</tag><!-- gueno -->
+    <tag name="NOUN">169</tag><!-- embiapo, ka'aguy, emiarirõ, jurua, opy, eko, u, jaryi, avachi, chy -->
+    <tag name="NUM">6</tag><!-- mokoĩ, peteĩ -->
+    <tag name="PART">184</tag><!-- ma, kuery, mi, pa, ko, ete, ju, kuera, kuri, upei -->
+    <tag name="PRON">111</tag><!-- ore, chee, ha'e, upea, mba'e, ichupe, ñande, che, eta, upe -->
+    <tag name="PROPN">9</tag><!-- Tupã, Guarani, Madre, Patricia, Tierra -->
+    <tag name="PUNCT">248</tag><!-- ,, ., ", ?, ",, .", !, ". -->
+    <tag name="SCONJ">132</tag><!-- a, va'e, aguã, vy, ramo, gua, rire, ronguare, rã, eve -->
+    <tag name="VERB">258</tag><!-- iko, apo, 'u, ha'e, ju, he'i, kuaa, mba'apo, pa, ayvu -->
+  </tags>
+  <!-- Statistics of features and values. The comments show the most frequent word forms. -->
+  <feats unique="39">
+    <feat name="Clusivity" value="Ex" upos="PRON">20</feat><!-- ore, oregui -->
+    <feat name="Clusivity" value="In" upos="PRON">10</feat><!-- ñande, ñandevy -->
+    <feat name="Clusivity[obj]" value="Ex" upos="VERB">3</feat><!-- orepytyvõ'i, orereko, orereroayvu -->
+    <feat name="Clusivity[obj]" value="In" upos="VERB">1</feat><!-- ñanderayvu -->
+    <feat name="Clusivity[psor]" value="Ex" upos="NOUN">10</feat><!-- oreayvu, orechy, orejaryi, oreka'aguy, oremba'e'i, orerembi'u -->
+    <feat name="Clusivity[psor]" value="In" upos="NOUN">12</feat><!-- ñanerembiapo, Ñanderu, Ñanderuvicha, ñandejara, ñandejaryi, ñandepy'a, ñandereko, ñaneñe'ẽ -->
+    <feat name="Clusivity[subj]" value="Ex" upos="VERB">48</feat><!-- roju, romba'apo, roiko, rojapo, roñoty, ndoro'ui, ro'u, roñea'ã, Ndoroikuaavei, Romoĩ -->
+    <feat name="Clusivity[subj]" value="In" upos="VERB">21</feat><!-- jaecha, jajapo, jaraa, jareko, ñañoty'i, ja'u, jaiko, jaikuaapa, jaje'apa, jajoguereko -->
+    <feat name="Mood" value="Des" upos="VERB">3</feat><!-- tojapouka, toendu -->
+    <feat name="Mood" value="Imp" upos="VERB">1</feat><!-- eekombo'e -->
+    <feat name="Mood" value="Ind" upos="VERB">252</feat><!-- ha'e, oiko, he'i, opa, ou, cheayvu, roju, romba'apo, ndaipovei, oñevanga -->
+    <feat name="Number" value="Plur" upos="NOUN,PRON">36</feat><!-- ore, ñande, ñandevy, kyrĩgue'i, pende, pendevy, oregui -->
+    <feat name="Number" value="Sing" upos="PRON">22</feat><!-- chee, che, ndee, ndevy -->
+    <feat name="Number[psor]" value="Plur" upos="NOUN">23</feat><!-- ñanerembiapo, oreayvu, orechy, orejaryi, oreka'aguy, Ñanderu, oremba'e'i, orerembi'u, pendejaryi, Ñanderuvicha -->
+    <feat name="Number[psor]" value="Sing" upos="NOUN">31</feat><!-- cheremiarirõ'i, cheru, chejaryi, chetuva, Cheapoare, chehistoria, chememby, chememby'i, chepi'a'i, cherakykue -->
+    <feat name="NumType" value="Card" upos="NUM">6</feat><!-- peteĩ, mokoĩ, mokoĩ'i -->
+    <feat name="Person" value="1" upos="PRON,VERB">50</feat><!-- ore, chee, ñande, che, ñandevy, ainy, oregui -->
+    <feat name="Person" value="2" upos="PRON">7</feat><!-- ndee, pende, pendevy, ndevy -->
+    <feat name="Person" value="3" upos="PRON,VERB">27</feat><!-- ha'e, ichupe, heta, oikovy, oiny, okuapy -->
+    <feat name="Person[obj]" value="1" upos="VERB">7</feat><!-- chemoirũ, chereroñe'ẽ, orepytyvõ'i, orereko, orereroayvu, ñanderayvu -->
+    <feat name="Person[obj]" value="3" upos="VERB">1</feat><!-- imoiny -->
+    <feat name="Person[subj]" value="1" upos="VERB">107</feat><!-- cheayvu, roju, romba'apo, roiko, rojapo, roñoty, aiko, aipota, ajapo, areko -->
+    <feat name="Person[subj]" value="2" upos="VERB">11</feat><!-- ndapechai, reju, eekombo'e, ereikuaa, erendu, pemokañy, penderecharãi, pereko, remoñendu -->
+    <feat name="Person[subj]" value="3" upos="VERB">85</feat><!-- oiko, opa, ou, oñevanga, ho'u, oikuaa, oja, ojapo, opyta, heta -->
+    <feat name="Polarity" value="Neg" upos="PRON,VERB">14</feat><!-- ndaipovei, ndoro'ui, ndapechai, Ndoroikuaavei, mba'eve, ndaa'ei, ndo'ui, ndojapoi -->
+    <feat name="PronType" value="Dem" upos="DET,PRON">25</feat><!-- upea, kova'e, upe, kirami'i, pe, pea, ko'ava, umia, upeve -->
+    <feat name="PronType" value="Ind" upos="PRON">3</feat><!-- heta -->
+    <feat name="PronType" value="Int" upos="DET,PRON">12</feat><!-- mba'e, Mava'e -->
+    <feat name="PronType" value="Prs" upos="PRON">78</feat><!-- ore, chee, ha'e, ichupe, ñande, che, ñandevy, ndee, pende, pendevy -->
+    <feat name="PronType" value="Tot" upos="DET,PRON">4</feat><!-- pavẽ, javive, opa -->
+    <feat name="Subcat" value="Ditr" upos="VERB">4</feat><!-- ome'ẽ, tojapouka -->
+    <feat name="Subcat" value="Indir" upos="VERB">7</feat><!-- roñea'ã, jaje'apa, oña'ã, penderecharãi, ñeñandu -->
+    <feat name="Subcat" value="Intr" upos="VERB">110</feat><!-- oiko, opa, ou, cheayvu, roju, romba'apo, ndaipovei, oñevanga, roiko, aa -->
+    <feat name="Subcat" value="Tran" upos="VERB">125</feat><!-- ha'e, he'i, rojapo, roñoty, aipota, ajapo, areko, ho'u, jaecha, ndoro'ui -->
+    <feat name="VerbForm" value="Fin" upos="VERB">211</feat><!-- oiko, opa, ou, cheayvu, roju, romba'apo, oñevanga, roiko, rojapo, roñoty -->
+    <feat name="VerbForm" value="Inf" upos="VERB">34</feat><!-- ha'e, he'i, ndaipovei, aa, kyri'ĩ, aipoa'e, ha'e'i, ja'e, marã, ndaa'ei -->
+    <feat name="VerbForm" value="Post" upos="VERB">2</feat><!-- kuaa'i, pota -->
+    <feat name="VerbForm" value="Ser" upos="VERB">10</feat><!-- erekovy, ainy, eravy-ravy'i, oikovy, oiny, okuapy, ovy-ovy, rekovy -->
+    <feat name="VerbForm" value="Vnoun" upos="VERB">1</feat><!-- ka'aguy -->
+  </feats>
+  <!-- Statistics of universal dependency relations. -->
+  <deps unique="34">
+    <dep name="acl">10</dep>
+    <dep name="advcl">46</dep>
+    <dep name="advmod">72</dep>
+    <dep name="amod">10</dep>
+    <dep name="appos">10</dep>
+    <dep name="case">77</dep>
+    <dep name="cc">26</dep>
+    <dep name="ccomp">18</dep>
+    <dep name="compound">1</dep>
+    <dep name="compound:svc">17</dep>
+    <dep name="conj">63</dep>
+    <dep name="cop">1</dep>
+    <dep name="csubj">1</dep>
+    <dep name="dep:mod">183</dep>
+    <dep name="det">9</dep>
+    <dep name="discourse">4</dep>
+    <dep name="dislocated">11</dep>
+    <dep name="dislocated:cleft">3</dep>
+    <dep name="fixed">4</dep>
+    <dep name="list">2</dep>
+    <dep name="mark">130</dep>
+    <dep name="nmod">20</dep>
+    <dep name="nsubj">89</dep>
+    <dep name="nummod">6</dep>
+    <dep name="obj">63</dep>
+    <dep name="obl">64</dep>
+    <dep name="obl:sentcon">7</dep>
+    <dep name="parataxis">11</dep>
+    <dep name="parataxis:rep">2</dep>
+    <dep name="punct">248</dep>
+    <dep name="reparandum">10</dep>
+    <dep name="root">98</dep>
+    <dep name="vocative">1</dep>
+    <dep name="xcomp">1</dep>
+  </deps>
+</treebank>

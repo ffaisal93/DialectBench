@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
+       words means "syntactic words", e.g. Spanish "vámonos" is split to two words, "vamos" and "nos"
+       fused is the number of tokens that are split to two or more syntactic words
+       The words and fused elements can be omitted if no token is split to smaller syntactic words. -->
+  <size>
+    <total><sentences>133</sentences><tokens>733</tokens><words>786</words><fused>53</fused></total>
+    <train><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></train>
+    <dev><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></dev>
+    <test><sentences>133</sentences><tokens>733</tokens><words>786</words><fused>53</fused></test>
+  </size>
+  <lemmas unique="13" /><!-- per, e, com, erom, post, pre, pis, tra, fuiom, hondra, pere, super, ulo -->
+  <forms unique="366" /><!-- fetu, per, feitu, pesnimu, puni, tuta, arves, ikuvina, ustentu, e, fisiu, ukri, pune, arviu, enumek -->
+  <fusions unique="27" /><!-- tutaper, ukriper, preveres, pusveres, ahtimem, eikvasese, pupluper, rupiname, vukukum, akeřuniamem, avieklufe, esunesku, esunume, funtlere, nertruku -->
+  <!-- Statistics of universal POS tags. The comments show the most frequent lemmas. -->
+  <tags unique="12">
+    <tag name="ADJ">115</tag><!-- _ -->
+    <tag name="ADP">59</tag><!-- per, e, com, _, post, pre, tra, hondra, pere, super -->
+    <tag name="ADV">35</tag><!-- _ -->
+    <tag name="AUX">20</tag><!-- _, erom, fuiom -->
+    <tag name="CCONJ">17</tag><!-- _ -->
+    <tag name="DET">4</tag><!-- _ -->
+    <tag name="NOUN">241</tag><!-- _ -->
+    <tag name="NUM">13</tag><!-- _ -->
+    <tag name="PRON">26</tag><!-- _, pis, ulo -->
+    <tag name="PROPN">33</tag><!-- _ -->
+    <tag name="SCONJ">26</tag><!-- _ -->
+    <tag name="VERB">197</tag><!-- _ -->
+  </tags>
+  <!-- Statistics of features and values. The comments show the most frequent word forms. -->
+  <feats unique="28">
+    <feat name="Abbr" value="Yes" upos="PROPN">4</feat><!-- t., k., t -->
+    <feat name="Aspect" value="Perf" upos="VERB">10</feat><!-- benurent, prusikurent, amprefus, apelust, ateřafust, pepurkurent, purtinçus -->
+    <feat name="Case" value="Abl" upos="ADJ,DET,NOUN,PRON,VERB">119</feat><!-- puni, tuta, arves, ikuvina, fisiu, ukri, ařepes, veres, numer, vinu -->
+    <feat name="Case" value="Acc" upos="ADJ,NOUN,NUM,PRON,PROPN,VERB">87</feat><!-- arviu, arvia, vatuva, ulu, buf, muneklu, ehvelklu, esunu, etraf, kastruvu -->
+    <feat name="Case" value="Dat" upos="ADJ,NOUN,PROPN">20</feat><!-- ařferture, iuvie, krapuvi, esune, fisuvi, hunte, iuve, iuvi, marte, ri -->
+    <feat name="Case" value="Gen" upos="ADJ,NOUN,PRON,PROPN">21</feat><!-- fratru, atiieřiu, atiieřiur, eru, iiuvinas, kastruçiie, kluviier, kureties, nuřpener, pihaklu -->
+    <feat name="Case" value="Loc" upos="ADJ,DET,NOUN,PROPN">23</feat><!-- ferine, atiieřier, eikvases, uhtretie, asiane, atiieřie, esune, esunu, kumnahkle, kumne -->
+    <feat name="Case" value="Nom" upos="ADJ,NOUN,PRON,PROPN,VERB">53</feat><!-- pure, ařfertur, frater, karu, kuratu, mestru, fratreks, ikuvinus, kvestur, muta -->
+    <feat name="Gender" value="Fem" upos="ADJ,DET,NOUN,VERB">44</feat><!-- karu, mestru, atiieřier, eikvases, etraf, muta, panta, plenasier, purtitaf, ri -->
+    <feat name="Gender" value="Masc" upos="ADJ,NOUN,PRON,PROPN,VERB">67</feat><!-- fratru, atiieřiu, pure, ulu, ařfertur, ařferture, frater, numer, atiieřiur, fratreks -->
+    <feat name="Gender" value="Neut" upos="ADJ,NOUN,PRON,VERB">30</feat><!-- esunu, kuratu, ehvelklu, eřek, purtitu, supa, atiieřie, este, esune, esunes -->
+    <feat name="Mood" value="Imp" upos="VERB">77</feat><!-- fetu, feitu, ustentu, ustetu, aitu, pesnimu, revestu, sumtu, vetu, enetu -->
+    <feat name="Mood" value="Ind" upos="AUX,VERB">18</feat><!-- fust, benurent, eitipes, prusikurent, apelust, fuiest, furent, heries, menes, pepurkurent -->
+    <feat name="Mood" value="Sub" upos="AUX,VERB">16</feat><!-- si, habia, feia, emantu, emantur, kuraia, prehabia, prehubia, sis, teřa -->
+    <feat name="Number" value="Plur" upos="ADJ,AUX,NOUN,PRON,VERB">151</feat><!-- arves, arviu, ařepes, veres, arvia, fratru, vatuva, atiieřiu, pure, benurent -->
+    <feat name="Number" value="Sing" upos="ADJ,AUX,DET,NOUN,PRON,PROPN,VERB">282</feat><!-- fetu, feitu, puni, tuta, ikuvina, ustentu, fisiu, ukri, ferine, fust -->
+    <feat name="Number[psor]" value="Sing" upos="DET">1</feat><!-- svesu -->
+    <feat name="Person" value="2" upos="VERB">72</feat><!-- fetu, feitu, ustentu, ustetu, aitu, sumtu, vetu, enetu, etu, heries -->
+    <feat name="Person" value="3" upos="AUX,VERB">46</feat><!-- fust, si, benurent, habia, herte, eitipes, feia, pesnimu, prusikurent, revestu -->
+    <feat name="Person[psor]" value="3" upos="DET">1</feat><!-- svesu -->
+    <feat name="Tense" value="Fut" upos="AUX,VERB">90</feat><!-- fetu, feitu, ustentu, fust, benurent, ustetu, aitu, prusikurent, revestu, sumtu -->
+    <feat name="Tense" value="Past" upos="VERB">9</feat><!-- kuratu, eitipes, anzeriates, purtitu, spafu, çersnatur -->
+    <feat name="Tense" value="Pres" upos="AUX,VERB">29</feat><!-- kutef, si, eru, habia, feia, emantu, emantur, herifi, kuraia, kutep -->
+    <feat name="VerbForm" value="Fin" upos="VERB">68</feat><!-- fetu, feitu, ustentu, ustetu, aitu, sumtu, vetu, enetu, steplatu -->
+    <feat name="VerbForm" value="Inf" upos="AUX,VERB">5</feat><!-- eru, aferum, herifi -->
+    <feat name="VerbForm" value="Part" upos="VERB">18</feat><!-- kutef, kuratu, purtitaf, anzeriates, kumate, kutep, purtitu, restef, spafu, çersnatur -->
+    <feat name="VerbForm" value="Sup" upos="VERB">1</feat><!-- anzeriatu -->
+    <feat name="Voice" value="Pass" upos="VERB">15</feat><!-- herte, kuratu, pesnimu, emantu, emantur, herifi, purtitu, spafu, teřte, çersnatur -->
+  </feats>
+  <!-- Statistics of universal dependency relations. -->
+  <deps unique="27">
+    <dep name="acl">3</dep>
+    <dep name="acl:relcl">3</dep>
+    <dep name="advcl">49</dep>
+    <dep name="advmod">33</dep>
+    <dep name="amod">102</dep>
+    <dep name="appos">1</dep>
+    <dep name="aux">8</dep>
+    <dep name="case">59</dep>
+    <dep name="cc">17</dep>
+    <dep name="ccomp">11</dep>
+    <dep name="conj">45</dep>
+    <dep name="cop">11</dep>
+    <dep name="csubj">1</dep>
+    <dep name="det">3</dep>
+    <dep name="expl">2</dep>
+    <dep name="flat">5</dep>
+    <dep name="iobj">20</dep>
+    <dep name="mark">26</dep>
+    <dep name="nmod">25</dep>
+    <dep name="nsubj">30</dep>
+    <dep name="nummod">12</dep>
+    <dep name="obj">82</dep>
+    <dep name="obl">99</dep>
+    <dep name="orphan">1</dep>
+    <dep name="root">133</dep>
+    <dep name="vocative">3</dep>
+    <dep name="xcomp">2</dep>
+  </deps>
+</treebank>

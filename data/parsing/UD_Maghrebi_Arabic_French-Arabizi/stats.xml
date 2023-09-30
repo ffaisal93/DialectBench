@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
+       words means "syntactic words", e.g. Spanish "vámonos" is split to two words, "vamos" and "nos"
+       fused is the number of tokens that are split to two or more syntactic words
+       The words and fused elements can be omitted if no token is split to smaller syntactic words. -->
+  <size>
+    <total><sentences>1287</sentences><tokens>18561</tokens><words>19793</words><fused>1166</fused></total>
+    <train><sentences>1003</sentences><tokens>14444</tokens><words>15404</words><fused>912</fused></train>
+    <dev><sentences>139</sentences><tokens>2064</tokens><words>2210</words><fused>137</fused></dev>
+    <test><sentences>145</sentences><tokens>2053</tokens><words>2179</words><fused>117</fused></test>
+  </size>
+  <lemmas unique="5074" /><!-- et, le, les, la, à, l', de, avec, Dieu, dieu_mien, oh, vivre, que, pas, Algérie -->
+  <forms unique="7545" /><!-- el, l, la, ya, w, les, rabi, al, wa, fi, et, le, vive, a, l' -->
+  <fusions unique="857" /><!-- l'algerie, c'est, fel, bel, lalgerie, l'algérie, l3am, brabi, mel, lyoum, j'ai, l'equipe, l'équipe, c’est, el3am -->
+  <!-- Statistics of universal POS tags. The comments show the most frequent lemmas. -->
+  <tags unique="16">
+    <tag name="ADJ">1059</tag><!-- grand, tous, bon, bonne, mieux, nationale, bien, vrai, vivant, tout -->
+    <tag name="ADP">1688</tag><!-- à, de, avec, pour, dans, en, sur, comme, au, contre -->
+    <tag name="ADV">875</tag><!-- pas, toujours, quand, même, bien, plus, tous, beaucoup, pourquoi, alors -->
+    <tag name="AUX">34</tag><!-- avoir, être -->
+    <tag name="CCONJ">1034</tag><!-- et, mais, ou, ni, donc, ou_bien, sinon, soit, bessah, car -->
+    <tag name="DET">2143</tag><!-- le, les, la, l', des, un, une, cette, tout, notre -->
+    <tag name="INTJ">1018</tag><!-- oh, inchaAllah, ô, wallah, paix, si_Dieu_le_veut, merci, 123, ah, InchaAllah -->
+    <tag name="NOUN">3610</tag><!-- année, pays, équipe, algériens, gens, monde, coupe, peuple, raison, chose -->
+    <tag name="NUM">174</tag><!-- 1, 0, 2, 4, 3, 100, 10, 2010, 30, 5 -->
+    <tag name="PART">277</tag><!-- pas, que, ne, ni, sauf, est_pas, non, alors, mieux, ce_n'est_pas -->
+    <tag name="PRON">1969</tag><!-- qui, je, avec_toi, nous, vous, moi, avec_vous, toi, ce, cette -->
+    <tag name="PROPN">1866</tag><!-- Dieu, dieu_mien, Algérie, Saadane, verts, ziani, maroc, France, Algerie, Setif -->
+    <tag name="PUNCT">251</tag><!-- ,, (, ?, ), !, -, /, ;, !!!, !! -->
+    <tag name="SCONJ">230</tag><!-- que, si, comme, parce, parce_que, puisque, qu', qu'eux, quand, sinon -->
+    <tag name="VERB">3487</tag><!-- vivre, est, c'est, a, nous_sommes, fait, soit, tu_es, suis, va -->
+    <tag name="X">78</tag><!-- _, X, d, d_\, que, z -->
+  </tags>
+  <!-- Statistics of features and values. The comments show the most frequent word forms. -->
+  <feats unique="21">
+    <feat name="AdpType" value="Prep" upos="ADJ,ADP,ADV,DET,NOUN,PRON,PROPN,SCONJ,VERB">1730</feat><!-- fi, de, m3a, f, b, pour, ta3, a, 3la, bi -->
+    <feat name="Gender" value="Fem" upos="VERB">116</feat><!-- rabhat, tkoun, raha, rahet, rahi, rouhi, 3adaw, 7atecheki, Kanet, MATASTAHELCH -->
+    <feat name="Gender" value="Masc" upos="ADP,AUX,PRON,VERB">1599</feat><!-- yal3ab, rana, ykoun, ngoul, yahdina, ndir, ndirou, ya3tik, yjib, ina -->
+    <feat name="Mood" value="Imp" upos="VERB">222</feat><!-- allez, roh, diri, goulou, qoulli, casse, kon, rouh, afham, al3ab -->
+    <feat name="Mood" value="Ind" upos="VERB">4</feat><!-- importe, eport, import -->
+    <feat name="Mood" value="Sub" upos="VERB">187</feat><!-- vive, viva, tahya, tahia, ViVeeeeeeeeeeeeeeee, tahiati, viiiiiiiiiiiiiive, viiiiiiiva -->
+    <feat name="Number" value="Plur" upos="AUX,PRON,VERB">620</feat><!-- rana, ndirou, ina, dertou, narbhou, ndiro, rabhat, rahoum, tkoun, ya3arfou -->
+    <feat name="Number" value="Sing" upos="ADP,AUX,VERB">1102</feat><!-- yal3ab, ykoun, ngoul, ndir, ya3tik, yahdina, yjib, nesma3, rah, rak -->
+    <feat name="Person" value="1" upos="AUX,VERB">396</feat><!-- rana, ngoul, ina, ndirou, nrouh, ndir, nesma3, rani, Kount, na7ki -->
+    <feat name="Person" value="2" upos="PRON,VERB">209</feat><!-- rak, dertou, tgoul, habit, rouhi, ta3arfou, tatabi3a, tebka, troh, 3ajbek -->
+    <feat name="Person" value="3" upos="AUX,PRON,VERB">1117</feat><!-- yal3ab, ykoun, ya3tik, yahdina, yjib, rah, yahdik, rahou, yarham, ychafik -->
+    <feat name="Polarity" value="Neg" upos="ADJ,ADP,ADV,AUX,CCONJ,DET,NOUN,PART,PRON,VERB">551</feat><!-- la, ma, pas, machi, ne, n', ni, walou, makan, rien -->
+    <feat name="PronType" value="Dem" upos="DET,PRON">204</feat><!-- hada, had, hadi, hado, haka, hadou, hadak, hade, hda, hadh -->
+    <feat name="PronType" value="Ind" upos="PRON">1</feat><!-- quoi -->
+    <feat name="PronType" value="Int" upos="PRON">1</feat><!-- me3amen -->
+    <feat name="PronType" value="Rel" upos="PRON">181</feat><!-- li, qui, l, ma, ali, man, les, eli, elli, ki -->
+    <feat name="Tense" value="Pres" upos="VERB">6</feat><!-- importe, vive, eport, import -->
+    <feat name="Typo" value="Yes" upos="ADJ,ADP,ADV,CCONJ,INTJ,NOUN,PRON,PROPN,SCONJ,VERB">74</feat><!-- in, par, inchaa, incha, sur, every, face, la, macha, si -->
+    <feat name="VerbForm" value="Fin" upos="VERB">6</feat><!-- importe, vive, eport, import -->
+    <feat name="VerbForm" value="Inf" upos="VERB">84</feat><!-- dire, voir, faire, guerrir, vivre, construire, payer, DEPASSE, S, amené -->
+    <feat name="VerbForm" value="Part" upos="VERB">53</feat><!-- donné, perdu, fait, jouer, posée, classé, commencé, commis, comparé, connu -->
+  </feats>
+  <!-- Statistics of universal dependency relations. -->
+  <deps unique="37">
+    <dep name="acl">5</dep>
+    <dep name="acl:relcl">105</dep>
+    <dep name="advcl">70</dep>
+    <dep name="advmod">1057</dep>
+    <dep name="amod">683</dep>
+    <dep name="appos">92</dep>
+    <dep name="aux">29</dep>
+    <dep name="case">1643</dep>
+    <dep name="cc">1030</dep>
+    <dep name="ccomp">270</dep>
+    <dep name="compound">4</dep>
+    <dep name="conj">504</dep>
+    <dep name="cop">3</dep>
+    <dep name="csubj">4</dep>
+    <dep name="dep">41</dep>
+    <dep name="det">2217</dep>
+    <dep name="discourse">1002</dep>
+    <dep name="dislocated">47</dep>
+    <dep name="expl">59</dep>
+    <dep name="expl:pv">12</dep>
+    <dep name="fixed">68</dep>
+    <dep name="flat">125</dep>
+    <dep name="goeswith">70</dep>
+    <dep name="iobj">41</dep>
+    <dep name="list">2</dep>
+    <dep name="mark">258</dep>
+    <dep name="nmod">1286</dep>
+    <dep name="nsubj">1790</dep>
+    <dep name="nummod">83</dep>
+    <dep name="obj">1594</dep>
+    <dep name="obl">1179</dep>
+    <dep name="parataxis">2066</dep>
+    <dep name="punct">251</dep>
+    <dep name="reparandum">2</dep>
+    <dep name="root">1287</dep>
+    <dep name="vocative">292</dep>
+    <dep name="xcomp">522</dep>
+  </deps>
+</treebank>

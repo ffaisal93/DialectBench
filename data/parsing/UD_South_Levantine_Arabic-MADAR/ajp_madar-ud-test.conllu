@@ -1,0 +1,1188 @@
+# newpar
+# sent_id = 1
+# text = بدي بلوفر أطفال.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	بلوفر	بلوفر	NOUN	_	_	1	obj	_	_
+3	أطفال	طِفِل	NOUN	_	_	2	nmod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n\
+
+# newpar
+# sent_id = 2
+# text = اذا أي حد سأل عني، احكيلهم اني راح أكون بالكوفي شوب.
+1	اذا	إِذًا	CCONJ	_	_	4	mark	_	_
+2	أي	أَي	ADJ	_	_	3	nmod	_	_
+3	حد	حَد	NOUN	_	_	4	nsubj	_	_
+4	سأل	سَأَل	VERB	_	_	8	advcl	_	_
+5	عن	عَن	ADP	_	_	6	case	_	SpaceAfter=No
+6	ي	هُو	PRON	_	_	4	obl:arg	_	SpaceAfter=No
+7	،	،	PUNCT	_	_	4	punct	_	_
+8	احكي	حكى	VERB	_	_	0	root	_	SpaceAfter=No
+9	ل	لِ	ADP	_	_	10	case	_	SpaceAfter=No
+10	هم	هُوَ	PRON	_	_	8	obl:arg	_	_
+11	ان	إنّ	PART	_	_	14	mark	_	SpaceAfter=No
+12	ي	هُوَ	PRON	_	_	14	nsubj	_	_
+13	راح	راح	AUX	_	_	14	aux	_	_
+14	أكون	كَان	VERB	_	_	8	ccomp	_	_
+15	ب	بِ	ADP	_	_	16	case	_	SpaceAfter=No
+16	الكوفي	كوفي	NOUN	_	_	14	obl	_	_
+17	شوب	شوب	NOUN	_	_	16	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n\n\
+
+# newpar
+# sent_id = 3
+# text = بقدر أروح هناك من خلال القطار؟
+1	بقدر	قِدِر	AUX	_	_	2	aux	_	_
+2	أروح	راح	VERB	_	_	0	root	_	_
+3	هناك	هُنَاكَ	ADV	_	_	2	advmod	_	_
+4	من	مِن	ADP	_	_	6	case	_	_
+5	خلال	خِلَالَ	ADP	_	_	4	obl:arg	_	_
+6	القطار	قِطَار	NOUN	_	_	2	obl	_	SpaceAfter=No
+7	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 4
+# text = بدي مجفف للشعر.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	مجفف	مجفف	NOUN	_	_	1	obj	_	_
+3	ل	ل	ADP	_	_	4	case	_	SpaceAfter=No
+4	لشعر	شعر	NOUN	_	_	2	obl	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 5
+# text = بدنا زاوية هادية، ازا ممكن.
+1	بد	بدّ	VERB	_	_	0	root	_	SpaceAfter=No
+2	نا	هُوَ	PRON	_	_	1	nsubj	_	_
+3	زاوية	زَاوِيَة	NOUN	_	_	1	obj	_	_
+4	هادية	هادي	ADJ	_	_	3	amod	_	SpaceAfter=No
+5	،	،	PUNCT	_	_	1	punct	_	_
+6	ازا	إزا	CCONJ	_	_	7	mark	_	_
+7	ممكن	مُمكِن	ADJ	_	_	1	advcl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 6
+# text = هويتك الشخصية. اوه، صح. جواز سفر صح؟
+1	هويت	هوية	NOUN	_	_	0	root	_	SpaceAfter=No
+2	ك	هُو	PRON	_	_	1	nmod:poss	_	_
+3	الشخصية	شَخصِيّ	ADJ	_	_	1	nmod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
+5	اوه	أُوه	INTJ	_	_	1	discourse	_	SpaceAfter=No
+6	،	،	PUNCT	_	_	5	punct	_	_
+7	صح	صَحّ	INTJ	_	_	1	discourse	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	7	punct	_	_
+9	جواز	جَوَاز	NOUN	_	_	1	parataxis	_	_
+10	سفر	سَفَر	NOUN	_	_	9	nmod	_	_
+11	صح	صَحّ	INTJ	_	_	9	discourse	_	SpaceAfter=No
+12	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 7
+# text = ممكن يكونو قمصاني مغسولين بكرا الصبح؟
+1	ممكن	مُمكِن	AUX	_	_	2	aux	_	_
+2	يكونو	كان	VERB	_	_	0	root	_	_
+3	قمصان	قميص	NOUN	_	_	2	obj	_	SpaceAfter=No
+4	ي	هُو	PRON	_	_	3	amod	_	_
+5	مغسولين	مغسول	ADJ	_	_	2	obl:arg	_	_
+6	بكرا	بُكرا	ADP	_	_	2	obl	_	_
+7	الصبح	صبح	NOUN	_	_	6	amod	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 8
+# text = عفواً. في حولينا هون مكتبة بتبيع كتب؟
+1	عفواً	عفو	INTJ	_	_	3	discourse	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	_	_
+3	في	فِي	VERB	_	_	0	root	_	_
+4	حولي	حول	ADP	_	_	5	case	_	SpaceAfter=No
+5	نا	هُو	PRON	_	_	3	obl:arg	_	_
+6	هون	هون	ADV	_	_	3	advmod	_	_
+7	مكتبة	مَكتَبَة	NOUN	_	_	3	obj	_	_
+8	بتبيع	باع	VERB	_	_	7	acl	_	_
+9	كتب	كِتَاب	NOUN	_	_	8	obj	_	SpaceAfter=No
+10	؟	؟	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 9
+# text = أظن انك عملت غلط. الغرفة كانت أجرتها مدفوعة. عندي فاتورة.
+1	أظن	ظَن	VERB	_	_	0	root	_	_
+2	ان	أَنَّ	CCONJ	_	_	4	mark	_	SpaceAfter=No
+3	ك	هُوَ	PRON	_	_	4	nsubj	_	_
+4	عملت	عِمِل	VERB	_	_	1	ccomp	_	_
+5	غلط	غلط	NOUN	_	_	4	obj	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	1	punct	_	_
+7	الغرفة	غُرفَة	NOUN	_	_	9	nmod	_	_
+8	كانت	كَان	AUX	_	_	11	aux	_	_
+9	أجرت	أجرة	NOUN	_	_	11	nsubj	_	SpaceAfter=No
+10	ها	هُوَ	PRON	_	_	9	nmod:poss	_	_
+11	مدفوعة	مَدفوع	ADJ	_	_	1	parataxis	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+13	عند	عند	ADP	_	_	14	case	_	SpaceAfter=No
+14	ي	هُوَ	PRON	_	_	1	nsubj	_	_
+15	فاتورة	فَاتُورَة	NOUN	_	_	14	nsubj	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	15	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 10
+# text = واحد برجر بالجبنة عشان أروح، لو سمحت.
+1	واحد	وَاحِد	NUM	_	_	2	nummod	_	_
+2	برجر	بٌرجَر	NOUN	_	_	0	root	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	الجبنة	جِبنِة	NOUN	_	_	2	nmod	_	_
+5	عشان	عشان	ADP	_	_	6	mark	_	_
+6	أروح	راح	VERB	_	_	2	advcl	_	SpaceAfter=No
+7	،	،	PUNCT	_	_	6	punct	_	_
+8	لو	لُو	CCONJ	_	_	9	case	_	_
+9	سمحت	سَمَح	ADV	_	_	6	advcl	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# # newpar
+# sent_id = 11
+# text = ممكن، بس لازم نوزنهم كل واحد لحاله.
+1	ممكن	مُمكِن	INTJ	_	_	5	discourse	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	بس	بَس	CCONJ	_	_	1	cc	_	_
+4	لازم	لَازِم	AUX	_	_	5	aux	_	_
+5	نوزن	وَزَّن	VERB	_	_	0	root	_	SpaceAfter=No
+6	هم	هُوَ	PRON	_	_	5	obj	_	_
+7	كل	كُل	DET	_	_	8	det	_	_
+8	واحد	وَاحِد	NOUN	_	_	5	obj	_	_
+9	ل	لَ	ADP	_	_	10	case	_	SpaceAfter=No
+10	حال	حال	ADJ	_	_	5	obl:arg	_	SpaceAfter=No
+11	ه	هُوَ	PRON	_	_	10	nmod:poss	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 12
+# text = راح أنزل بالفندق حوالي الساعة تسعة بالليل.
+1	راح	راح	AUX	_	_	2	aux	_	_
+2	أنزل	نِزِل	VERB	_	_	0	root	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	الفندق	فندق	NOUN	_	_	2	nmod	_	_
+5	حوالي	حَوَالَى	NOUN	_	_	2	nmod	_	_
+6	الساعة	سَاعَة	NOUN	_	_	5	nmod	_	_
+7	تسعة	تِسعَة	NUM	_	_	6	nummod	_	_
+8	ب	بِ	ADP	_	_	9	case	_	SpaceAfter=No
+9	الليل	ليل	NOUN	_	_	7	obl	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 13
+# text = بتعرف كاثي؟ هاي حفلة عيد ميلادها.
+1	بتعرف	عِرِف	VERB	_	_	0	root	_	_
+2	كاثي	كاثي	PROPN	_	_	1	obj	_	SpaceAfter=No
+3	؟	؟	PUNCT	_	_	1	punct	_	_
+4	هاي	هاي	DET	_	_	5	det	_	_
+5	حفلة	حَفلَِة	NOUN	_	_	1	obj	_	_
+6	عيد	عِيد	NOUN	_	_	5	nmod	_	_
+7	ميلاد	ميلاد	NOUN	_	_	6	nmod	_	SpaceAfter=No
+8	ها	هُوَ	PRON	_	_	5	nmod	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 14
+# text = لو سمحت ابعتلي حدا فوف عشان شنطي الساعة ستة ونص.
+1	لو	لَو	SCONJ	_	_	2	mark	_	_
+2	سمحت	سَمَح	VERB	_	_	3	advcl	_	_
+3	ابعت	إِبعَت	VERB	_	_	0	root	_	SpaceAfter=No
+4	ل	لِ	ADP	_	_	5	case	_	SpaceAfter=No
+5	ي	هُوَ	PRON	_	_	3	obl:arg	_	_
+6	حدا	حَد	NOUN	_	_	3	obj	_	_
+7	فوف	فُوق	ADV	_	_	3	advmod	_	_
+8	عشان	عَشان	ADP	_	_	9	case	_	_
+9	شنط	شَنطَة	NOUN	_	_	3	obl	_	SpaceAfter=No
+10	ي	هُوَ	PRON	_	_	9	nmod:poss	_	_
+11	الساعة	سَاعَة	NOUN	_	_	3	nmod	_	_
+12	ستة	سِتَّة	NUM	_	_	11	nummod	_	_
+13	و	وَ	CCONJ	_	_	14	cc	_	SpaceAfter=No
+14	نص	نُص	NOUN	_	_	12	conj	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 15
+# text = بأي محطة لازم أنزل عشان أروح على امباير ستيت بيلدينج؟
+1	ب	بِ	ADP	_	_	3	case	_	SpaceAfter=No
+2	أي	أَي	DET	_	_	3	det	_	_
+3	محطة	مَحَطَّة	NOUN	_	_	5	obj	_	_
+4	لازم	لَازِم	AUX	_	_	5	aux	_	_
+5	أنزل	اِنَزَل	VERB	_	_	0	root	_	_
+6	عشان	عشان	ADP	_	_	7	mark	_	_
+7	أروح	راح	VERB	_	_	5	xcomp	_	_
+8	على	عَلَى	ADP	_	_	9	case	_	_
+9	امباير	إمِباير	PROPN	_	_	7	obl	_	_
+10	ستيت	ستيت	PROPN	_	_	9	flat:foreign	_	_
+11	بيلدينج	بيلدينج	PRON	_	_	9	flat:foreign	_	SpaceAfter=No
+12	؟	؟	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 16
+# text = عم بدور على اشي أنيق.
+1	عم	عَم	AUX	_	_	2	aux	_	_
+2	بدور	دَوّر	VERB	_	_	0	root	_	_
+3	على	عَلَى	ADP	_	_	4	case	_	_
+4	اشي	اشي	NOUN	_	_	2	obl:arg	_	_
+5	أنيق	أَنيَق	ADJ	_	_	4	nmod	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 17
+# text = بقدر ألمسه؟
+1	بقدر	قِدِر	AUX	_	_	2	aux	_	_
+2	ألمس	لَمَس	VERB	_	_	0	root	_	SpaceAfter=No
+3	ه	هُوَ	ADJ	_	_	2	obj	_	SpaceAfter=No
+4	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 18
+# text = راح آخد صورة لجاك دانييلز.
+1	راح	راح	AUX	_	_	2	aux	_	_
+2	آخد	آخُد	VERB	_	_	0	root	_	_
+3	صورة	صُورَة	NOUN	_	_	2	obj	_	_
+4	ل	لِ	ADP	_	_	5	case	_	SpaceAfter=No
+5	جاك	جاك	PROPN	_	_	2	obl:arg	_	_
+6	دانييلز	دانييلز	PROPN	_	_	5	flat:foreign	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 19
+# text = بدي كيس بشار، لو سمحت.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	كيس	كيس	NOUN	_	_	1	obj	_	_
+3	بشار	بُشار	NOUN	_	_	2	nmod	_	SpaceAfter=No
+4	،	،	PUNCT	_	_	1	punct	_	_
+5	لو	لَو	ADP	_	_	6	case	_	_
+6	سمحت	سَمَح	VERB	_	_	1	advcl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 20
+# text = حابب أبعته عن طريق البريد البري او البحري.
+1	حابب	حَب	ADJ	_	_	2	xcomp	_	_
+2	أبعت	بَعَت	VERB	_	_	0	root	_	SpaceAfter=No
+3	ه	هُوَ	PRON	_	_	2	obj	_	_
+4	عن	عَن	ADP	_	_	5	case	_	_
+5	طريق	طَرِيق	NOUN	_	_	2	obl:arg	_	_
+6	البريد	بَرِيد	NOUN	_	_	5	nmod	_	_
+7	البري	بَرِّيّ	ADJ	_	_	6	nmod	_	_
+8	او	أَو	CCONJ	_	_	9	cc	_	_
+9	البحري	بَحرِيّ	ADJ	_	_	6	conj	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 21
+# text = استمتعنا بالغدا.
+1	استمتع	استمتع	VERB	_	_	0	root	_	SpaceAfter=No
+2	نا	هُوَ	PRON	_	_	1	nsubj	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	الغدا	غذا	NOUN	_	_	1	obl	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 22
+# text = هاي البيتزا زاكية. مين عملها؟
+1	هاي	هاي	DET	_	_	2	det	_	_
+2	البيتزا	بِيتزَا	NOUN	_	_	3	nsubj	_	_
+3	زاكية	زاكي	ADJ	_	_	0	root	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	3	punct	_	_
+5	مين	مين	PRON	_	_	6	nsubj	_	_
+6	عمل	عِمِل	VERB	_	_	3	acl	_	SpaceAfter=No
+7	ها	هُوَ	PRON	_	_	6	obj	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	3	punct	_	_
+
+# newpar
+# sent_id = 23
+# text = متى راح يتحرك القطار الجاي على بوسطن؟
+1	متى	مَتَى	ADV	_	_	3	advmod	_	_
+2	راح	راح	AUX	_	_	3	aux	_	_
+3	يتحرك	تَحَرَّك	VERB	_	_	0	root	_	_
+4	القطار	قِطَار	NOUN	_	_	3	nsubj	_	_
+5	الجاي	جاي	ADJ	_	_	4	amod	_	_
+6	على	عَلَى	ADP	_	_	7	case	_	_
+7	بوسطن	بوسطن	PROPN	_	_	3	obl	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 24
+# text = راح أنزل من هون على مركز روكفلر؟
+1	راح	راح	AUX	_	_	2	aux	_	_
+2	أنزل	نِزِل	VERB	_	_	0	root	_	_
+3	من	مِن	ADV	_	_	4	case	_	_
+4	هون	هون	ADV	_	_	2	advmod	_	_
+5	على	عَلَى	ADP	_	_	6	case	_	_
+6	مركز	مَركَز	NOUN	_	_	2	obl	_	_
+7	روكفلر	روكفلر	PROPN	_	_	6	nmod	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 25
+# text = بأي مجال هو كان قبل؟
+1	ب	بِ	ADP	_	_	2	case	_	SpaceAfter=No
+2	أي	أَيّ	DET	_	_	3	det	_	_
+3	مجال	مَجَال	NOUN	_	_	5	obl	_	_
+4	هو	هُوَ	PRON	_	_	5	nsubj	_	_
+5	كان	كَان	VERB	_	_	0	root	_	_
+6	قبل	قَبلَ	ADP	_	_	5	obl	_	SpaceAfter=No
+7	؟	؟	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 26
+# text = لو سمحت ساعدني ألاقي دليل بحكي ياباني.
+1	لو	لَو	ADP	_	_	2	case	_	_
+2	سمحت	سَمَح	VERB	_	_	3	advcl	_	_
+3	ساعد	سَاعَد	VERB	_	_	0	root	_	SpaceAfter=No
+4	ني	هُوَ	PRON	_	_	3	obj	_	_
+5	ألاقي	لِقي	VERB	_	_	3	ccomp	_	_
+6	دليل	دَلِيل	NOUN	_	_	3	obj	_	_
+7	بحكي	حَكى	VERB	_	_	6	acl	_	_
+8	ياباني	يَابَانِيّ	NOUN	_	_	7	xcomp	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	3	punct	_	_
+
+# newpar
+# sent_id = 27
+# text = في أي كازينوهات حلوة؟
+1	في	فِي	VERB	_	_	0	root	_	_
+2	أي	أي	DET	_	_	3	det	_	_
+3	كازينوهات	كازينو	NOUN	_	_	1	nsubj	_	_
+4	حلوة	حلو	ADJ	_	_	3	amod	_	SpaceAfter=No
+5	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 28
+# text = وين قسم "البنات"؟
+1	وين	وين	ADV	_	_	2	advmod	_	_
+2	قسم	قَسَّم	NOUN	_	_	0	root	_	_
+3	"	"	PUNCT	_	_	2	punct	_	SpaceAfter=No
+4	البنات	بِنت	NOUN	_	_	2	nmod	_	SpaceAfter=No
+5	"	"	PUNCT	_	_	4	punct	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 29
+# text = أنا من طوكيو.
+1	أنا	أنا	PRON	_	_	3	nsubj	_	_
+2	من	مِن	ADP	_	_	3	case	_	_
+3	طوكيو	طُوكِيُو	PROPN	_	_	0	root	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 30
+# text = خاص، لو سمحت.
+1	خاص	خَاصّ	ADJ	_	_	0	root	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	لو	لَو	CCONJ	_	_	4	mark	_	_
+4	سمحت	سَمَح	VERB	_	_	1	advcl	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 31
+# text = بس أنا عندي موعد عشان أشوفها الساعة تنتين.
+1	بس	بس	CCONJ	_	_	3	cc	_	_
+2	أنا	آنَا	PRON	_	_	3	nsubj	_	_
+3	عند	عند	PRON	_	_	0	root	_	SpaceAfter=No
+4	ي	هُوَ	PRON	_	_	3	obj	_	_
+5	موعد	مَوعِد	NOUN	_	_	3	obl:arg	_	_
+6	عشان	عشان	ADP	_	_	7	mark	_	_
+7	أشوف	شاف	VERB	_	_	5	acl	_	SpaceAfter=No
+8	ها	هُوَ	PRON	_	_	7	obj	_	_
+9	الساعة	سَاعَة	NOUN	_	_	7	iobj	_	_
+10	تنتين	تنتين	NUM	_	_	9	nummod	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 32
+# text = لو سمحت ورجيني جواز سفرك.
+1	لو	لَو	ADP	_	_	2	case	_	_
+2	سمحت	سَمَح	ADV	_	_	3	advcl	_	_
+3	ورجي	وَرْجى	VERB	_	_	0	root	_	SpaceAfter=No
+4	ني	هُوَ	PRON	_	_	3	iobj	_	_
+5	جواز	جواز	NOUN	_	_	3	obj	_	_
+6	سفر	سفر	NOUN	_	_	5	nmod	_	SpaceAfter=No
+7	ك	هُوَ	PRON	_	_	6	nmod:poss	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 33
+# text = اتنين برجر بالجبنة، لو سمحت.
+1	اتنين	اِتنَان	NUM	_	_	2	nummod	_	_
+2	برجر	برجر	NOUN	_	_	0	root	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	الجبنة	جبنة	NOUN	_	_	2	nmod	_	SpaceAfter=No
+5	،	،	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+6	لو	لَو	ADP	_	_	7	case	_	_
+7	سمحت	سَمَح	VERB	_	_	2	advcl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 34
+# text = معدتي بتوجعني بعد الأكل.
+1	معدت	معدة	NOUN	_	_	3	nsubj	_	SpaceAfter=No
+2	ي	هُوَ	PRON	_	_	1	nmod:poss	_	_
+3	بتوجع	وَجّع	VERB	_	_	0	root	_	SpaceAfter=No
+4	ني	هُوَ	PRON	_	_	3	obj	_	_
+5	بعد	بَعدَ	ADP	_	_	6	case	_	_
+6	الأكل	أكِل	NOUN	_	_	3	obl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 35
+# text = وين المحطة الجاي؟
+1	وين	وين	ADV	_	_	0	root	_	_
+2	المحطة	مَحَطَّة	NOUN	_	_	1	nsubj	_	_
+3	الجاي	جاي	ADJ	_	_	2	amod	_	SpaceAfter=No
+4	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 36
+# text = لازم ألحق طيارة الساعة عشرة الصبح.
+1	لازم	لَازِم	AUX	_	_	2	aux	_	_
+2	ألحق	لِحِق	NOUN	_	_	0	root	_	_
+3	طيارة	طيارة	NOUN	_	_	2	obj	_	_
+4	الساعة	سَاعَة	NOUN	_	_	2	nmod	_	_
+5	عشرة	عَشَرَة	NUM	_	_	4	nummod	_	_
+6	الصبح	صبح	NOUN	_	_	5	nmod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 37
+# text = تأكد، لو سمحت.
+1	تأكد	تَأَكَّد	VERB	_	_	0	root	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	لو	لَو	ADP	_	_	4	case	_	_
+4	سمحت	سَمَح	VERB	_	_	1	advcl	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 38
+# text = أنا حابب أخلع سني.
+1	أنا	آنَا	PRON	_	_	3	nsubj	_	_
+2	حابب	حَب	AUX	_	_	3	aux	_	_
+3	أخلع	خَلَع	VERB	_	_	0	root	_	_
+4	سن	سن	NOUN	_	_	3	obj	_	SpaceAfter=No
+5	ي	هُوَ	PRON	_	_	4	nmod:poss	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 39
+# text = أنا بدي أعرف كم لازم أترك بغشيش.
+1	أنا	آنَا	PRON	_	_	2	nsubj	_	_
+2	بدي	بدّ	VERB	_	_	0	root	_	_
+3	أعرف	عِرِف	VERB	_	_	2	ccomp	_	_
+4	كم	كَم	ADV	_	_	3	advmod	_	_
+5	لازم	لَازِم	AUX	_	_	6	aux	_	_
+6	أترك	تَرَك	VERB	_	_	3	xcomp	_	_
+7	بغشيش	بغشيش	NOUN	_	_	6	obj	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 40
+# text = هو مش هون هلأ.
+1	هو	هُوَ	PRON	_	_	3	nsubj	_	_
+2	مش	مش	PART	_	_	3	advmod	_	_
+3	هون	هون	ADV	_	_	0	root	_	_
+4	هلأ	هلا	ADV	_	_	3	advmod	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 41
+# text = أنا هون بشغل إعلامي.
+1	أنا	أنَا	PRON	_	_	2	nsubj	_	_
+2	هون	هون	ADV	_	_	0	root	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	شغل	شغل	NOUN	_	_	2	nmod	_	_
+5	إعلامي	إِعلَامِيّ	ADJ	_	_	4	amod	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 42
+# text = رجع خمسة دولار، لو سمحت.
+1	رجع	رِجِع	VERB	_	_	0	root	_	_
+2	خمسة	خَمسَة	NUM	_	_	3	nummod	_	_
+3	دولار	دُولَار	NOUN	_	_	1	nmod	_	SpaceAfter=No
+4	،	،	PUNCT	_	_	6	punct	_	_
+5	لو	لَو	ADP	_	_	6	mark	_	_
+6	سمحت	سَمَح	ADV	_	_	1	advcl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 43
+# text = شو رأيك بموديلات البلاستك هاي؟
+1	شو	شو	DET	_	_	2	nsubj	_	_
+2	رأي	رَأي	NOUN	_	_	0	root	_	SpaceAfter=No
+3	ك	هُوَ	PRON	_	_	2	nmod:poss	_	_
+4	ب	بِ	ADP	_	_	5	mark	_	SpaceAfter=No
+5	موديلات	موديل	NOUN	_	_	2	nmod	_	_
+6	البلاستك	بلاستك	NOUN	_	_	5	nmod	_	_
+7	هاي	هاي	DET	_	_	5	det	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 44
+# text = أكيد. راح نكون مبسوطين نعمل هيك.
+1	أكيد	اكيد	INTJ	_	_	4	discourse	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	_	_
+3	راح	راح	AUX	_	_	4	aux	_	_
+4	نكون	كان	VERB	_	_	0	root	_	_
+5	مبسوطين	مبسوط	ADJ	_	_	4	xcomp	_	_
+6	نعمل	عِمِل	VERB	_	_	5	xcomp	_	_
+7	هيك	هيك	NOUN	_	_	6	obl	_	SpaceAfter=No
+8	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 45
+# text = شوي، كتاب ماليزي كوميدي. راح أشتري واحد عشان آخده على البيت متل كتاب محادثة.
+1	شوي	شوي	INTJ	_	_	8	discourse	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	كتاب	كتاب	NOUN	_	_	8	dep	_	_
+4	ماليزي	ماليزي	ADJ	_	_	3	amod	_	_
+5	كوميدي	كوميدي	ADJ	_	_	3	amod	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	_	_
+7	راح	راح	AUX	_	_	8	aux	_	_
+8	أشتري	اشتَرى	VERB	_	_	0	root	_	_
+9	واحد	وَاحِد	NUM	_	_	8	obj	_	_
+10	عشان	عشان	ADP	_	_	11	mark	_	_
+11	آخد	أخّد	VERB	_	_	8	acl	_	SpaceAfter=No
+12	ه	هُوَ	PRON	_	_	11	obj	_	_
+13	على	عَلَى	ADP	_	_	14	case	_	_
+14	البيت	بَيت	NOUN	_	_	11	acl	_	_
+15	متل	مَتَل	ADV	_	_	16	case	_	_
+16	كتاب	كِتَاب	NOUN	_	_	11	obl	_	_
+17	محادثة	مُحَادَثَة	NOUN	_	_	16	nmod	_	SpaceAfter=No
+18	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 46
+# text = الطريق للنجاح ل " جنماكو"، صح؟
+1	الطريق	طَرِيق	NOUN	_	_	0	root	_	_
+2	ل	لِ	ADP	_	_	3	case	_	SpaceAfter=No
+3	لنجاح	نجاح	NOUN	_	_	1	nmod	_	_
+4	ل	لِ	ADP	_	_	6	mark	_	_
+5	"	"	PUNCT	_	_	4	punct	_	_
+6	جنماكو	جنماكو	PROPN	_	_	1	obl	_	SpaceAfter=No
+7	"	"	PUNCT	_	_	6	punct	_	SpaceAfter=No
+8	،	،	PUNCT	_	_	6	punct	_	_
+9	صح	صح	INTJ	_	_	1	discourse	_	SpaceAfter=No
+10	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 47
+# text = ساعتي وقفت.
+1	ساعت	ساعة	NOUN	_	_	3	obj	_	SpaceAfter=No
+2	ي	هُوَ	PRON	_	_	1	nmod:poss	_	_
+3	وقفت	وَقَف	VERB	_	_	0	root	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 48
+# text = هاي الغرفة رقم اتنين صفر واحد. بدي أطلب فطور بكرا.
+1	هاي	هاي	DET	_	_	2	det	_	_
+2	الغرفة	غُرفَة	NOUN	_	_	0	root	_	_
+3	رقم	رَقم	NOUN	_	_	2	nmod	_	_
+4	اتنين	اِتنَان	NUM	_	_	3	nummod	_	_
+5	صفر	صِفر	NUM	_	_	4	nummod	_	_
+6	واحد	وَاحِد	NUM	_	_	5	nummod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	2	punct	_	_
+8	بدي	بدّ	VERB	_	_	2	parataxis	_	_
+9	أطلب	طَلَب	VERB	_	_	8	ccomp	_	_
+10	فطور	فطور	NOUN	_	_	9	obj	_	_
+11	بكرا	بٌكرا	NOUN	_	_	9	obl	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	9	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 49
+# text = وين مدخل القطار؟
+1	وين	وين	ADV	_	_	2	advmod	_	_
+2	مدخل	مدخل	NOUN	_	_	0	root	_	_
+3	القطار	قِطَار	NOUN	_	_	2	nmod	_	SpaceAfter=No
+4	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 50
+# text = بدي جاكيتات رياضة.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	جاكيتات	جاكيت	NOUN	_	_	1	obj	_	_
+3	رياضة	رِيَاضَة	NOUN	_	_	2	amod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 51
+# text = أنا بدي أروح على مركز هارفارد. ممكن تحكيلي لما نروح هناك؟
+1	أنا	آنَا	PRON	_	_	2	nsubj	_	_
+2	بدي	بدّ	VERB	_	_	0	root	_	_
+3	أروح	راح	VERB	_	_	2	xcomp	_	_
+4	على	عَلَى	ADP	_	_	5	case	_	_
+5	مركز	مَركَز	NOUN	_	_	3	obl:arg	_	_
+6	هارفارد	هارفارد	NOUN	_	_	5	amod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	3	punct	_	_
+8	ممكن	مُمكِن	ADJ	_	_	1	parataxis	_	_
+9	تحكي	حَكى	VERB	_	_	8	obj	_	SpaceAfter=No
+10	ل	لِ	ADP	_	_	11	case	_	SpaceAfter=No
+11	ي	هُوَ	PRON	_	_	9	obl:arg	_	_
+12	لما	لما	CCONJ	_	_	13	mark	_	_
+13	نروح	راح	VERB	_	_	9	advcl	_	_
+14	هناك	هُنَاكَ	ADV	_	_	9	obl:arg	_	SpaceAfter=No
+15	؟	؟	PUNCT	_	_	9	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 52
+# text = قبل ما نحسبه يوم، ممكن تعطيني كم دقيقة؟
+1	قبل	قَبلَ	ADP	_	_	3	case	_	_
+2	ما	مَا	CCONJ	_	_	3	mark	_	_
+3	نحسب	حَسَب	PRON	_	_	8	ccomp	_	SpaceAfter=No
+4	ه	هُوَ	PRON	_	_	3	obj	_	_
+5	يوم	يَوم	NOUN	_	_	4	nmod	_	SpaceAfter=No
+6	،	،	PUNCT	_	_	3	punct	_	_
+7	ممكن	مُمكِن	AUX	_	_	8	aux	_	_
+8	تعطي	أعطى	VERB	_	_	0	root	_	SpaceAfter=No
+9	ني	هُوَ	PRON	_	_	8	obj	_	_
+10	كم	كَم	DET	_	_	11	det	_	_
+11	دقيقة	دَقِيقَة	NOUN	_	_	8	iobj	_	SpaceAfter=No
+12	؟	؟	PUNCT	_	_	8	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 53
+# text = طيب، يلا نروح. أنا بقدر أساعدك بحل واجبك بعد ما ناكل شوية بيتزا.
+1	طيب	طيب	INTJ	_	_	4	discourse	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	يلا	يلا	INTJ	_	_	4	discourse	_	_
+4	نروح	راح	VERB	_	_	8	dep	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	4	punct	_	_
+6	أنا	أنا	PRON	_	_	8	nsubj	_	_
+7	بقدر	قِدِر	AUX	_	_	8	aux	_	_
+8	أساعد	ساعَد	VERB	_	_	0	root	_	SpaceAfter=No
+9	ك	هُوَ	PROPN	_	_	8	obj	_	_
+10	ب	بِ	ADP	_	_	11	case	_	SpaceAfter=No
+11	حل	حَلّ	NOUN	_	_	8	acl	_	_
+12	واجب	واجب	NOUN	_	_	11	nmod	_	SpaceAfter=No
+13	ك	هُوَ	PROPN	_	_	12	nmod:poss	_	_
+14	بعد	بَعدَ	ADP	_	_	11	case	_	_
+15	ما	مَا	CCONJ	_	_	16	cc	_	_
+16	ناكل	أَكَل	VERB	_	_	14	obl	_	_
+17	شوية	شوي	ADJ	_	_	16	advmod	_	_
+18	بيتزا	بيتزا	NOUN	_	_	17	nmod	_	SpaceAfter=No
+19	.	.	PUNCT	_	_	8	punct	_	_
+
+# newpar
+# sent_id = 54
+# text = بتحب الإسطوانات الصغيرة وإالا الكبيرة؟
+1	بتحب	حَب	VERB	_	_	0	root	_	_
+2	الإسطوانات	اسطوانة	NOUN	_	_	1	obj	_	_
+3	الصغيرة	صَغِير	ADJ	_	_	2	amod	_	_
+4	وإالا	وِلّا	CCONJ	_	_	5	cc	_	_
+5	الكبيرة	كَبِير	ADJ	_	_	2	conj	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 55
+# text = بدي اأمن على اشيائي الغالية بخزنة الفندق.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	اأمن	أَمّن	VERB	_	_	1	ccomp	_	_
+3	على	عَلَى	ADP	_	_	4	case	_	_
+4	اشيائ	شيء	NOUN	_	_	2	obj	_	SpaceAfter=No
+5	ي	هُوَ	PRON	_	_	4	nmod:poss	_	_
+6	الغالية	غَالِي	ADJ	_	_	4	amod	_	_
+7	ب	بِ	ADP	_	_	8	case	_	SpaceAfter=No
+8	خزنة	خزنة	NOUN	_	_	1	obl	_	_
+9	الفندق	فُندُق	NOUN	_	_	8	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 56
+# text = اه، أظن راح أستنى.
+1	اه	اه	INTJ	_	_	3	discourse	_	SpaceAfter=No
+2	،	،	PUNCT	_	_	1	punct	_	_
+3	أظن	أَظَن	VERB	_	_	0	root	_	_
+4	راح	راح	AUX	_	_	5	aux	_	_
+5	أستنى	أَستنِيّ	VERB	_	_	3	ccomp	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 57
+# text = على أي ساعة راح نوصل على لوس أنجيلوس؟
+1	على	عَلَى	ADP	_	_	3	case	_	_
+2	أي	أَيّ	DET	_	_	3	det	_	_
+3	ساعة	سَاعَة	NOUN	_	_	5	obl	_	_
+4	راح	راح	AUX	_	_	5	aux	_	_
+5	نوصل	وَصَل	VERB	_	_	0	root	_	_
+6	على	عَلَى	ADP	_	_	7	case	_	_
+7	لوس	لُوس	PROPN	_	_	5	obl	_	_
+8	أنجيلوس	انجيلوس	PROPN	_	_	7	flat:foreign	_	SpaceAfter=No
+9	؟	؟	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 58
+# text = راح أضل أستنى لعند ما يفضى الترس.
+1	راح	راح	AUX	_	_	2	aux	_	_
+2	أضل	ضَل	VERB	_	_	0	root	_	_
+3	أستنى	استنى	VERB	_	_	2	ccomp	_	_
+4	ل	لِ	ADV	_	_	5	advmod:emph	_	SpaceAfter=No
+5	عند	عِندَ	NOUN	_	_	2	obl	_	_
+6	ما	مَا	PART	_	_	7	mark	_	_
+7	يفضى	فِضي	VERB	_	_	3	advcl	_	_
+8	الترس	ترس	NOUN	_	_	7	obj	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 59
+# text = لفندقي، لو سمحت. عنوان فندقي هون.
+1	ل	لِ	ADV	_	_	2	case	_	SpaceAfter=No
+2	فندق	فندق	ADJ	_	_	11	parataxis	_	SpaceAfter=No
+3	ي	هُوَ	PRON	_	_	2	nmod:poss	_	SpaceAfter=No
+4	،	،	PUNCT	_	_	2	punct	_	_
+5	لو	لَو	ADP	_	_	6	case	_	_
+6	سمحت	سَمَح	VERB	_	_	2	advcl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	6	punct	_	_
+8	عنوان	عُنوَان	NOUN	_	_	11	nsubj	_	_
+9	فندق	فندق	NOUN	_	_	8	nmod	_	SpaceAfter=No
+10	ي	هُوَ	PRON	_	_	9	nmod:poss	_	_
+11	هون	هون	ADV	_	_	0	root	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 60
+# text = من أي مكان بتطلع باصات المعالم السياحية؟
+1	من	مِن	ADP	_	_	3	case	_	_
+2	أي	أَيّ	DET	_	_	3	det	_	_
+3	مكان	مَكَان	NOUN	_	_	4	obl	_	_
+4	بتطلع	طِلِع	VERB	_	_	0	root	_	_
+5	باصات	باص	NOUN	_	_	4	nsubj	_	_
+6	المعالم	مَعلَم	NOUN	_	_	5	nmod	_	_
+7	السياحية	سِيَاحِيّ	ADJ	_	_	6	amod	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	4	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 61
+# text = ممكن تخبرني قبل ما نروح على دورهام؟
+1	ممكن	مُمكِن	AUX	_	_	2	aux	_	_
+2	تخبر	خبّر	VERB	_	_	0	root	_	SpaceAfter=No
+3	ني	هُوَ	PRON	_	_	2	obj	_	_
+4	قبل	قَبلَ	ADP	_	_	6	mark	_	_
+5	ما	مَا	CCONJ	_	_	6	mark	_	_
+6	نروح	راح	VERB	_	_	2	advcl	_	_
+7	على	عَلَى	ADP	_	_	8	case	_	_
+8	دورهام	دورهام	NOUN	_	_	6	obl	_	SpaceAfter=No
+9	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 62
+# text = بدي استأجر سيارة من هاد النوع لمدة أربعة وعشرين ساعة.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	استأجر	اِستاَجَر	NOUN	_	_	1	ccomp	_	_
+3	سيارة	سَيَّارَة	NOUN	_	_	2	obj	_	_
+4	من	مِن	ADP	_	_	6	case	_	_
+5	هاد	هاد	DET	_	_	6	det	_	_
+6	النوع	نَوع	NOUN	_	_	2	nmod	_	_
+7	ل	لِ	ADP	_	_	8	case	_	SpaceAfter=No
+8	مدة	مُدَّة	NOUN	_	_	2	obl	_	_
+9	أربعة	أَربَعَة	NUM	_	_	8	nummod	_	_
+10	و	وَ	CCONJ	_	_	11	cc	_	SpaceAfter=No
+11	عشرين	عِشرُون	NUM	_	_	9	conj	_	_
+12	ساعة	سَاعَة	NOUN	_	_	9	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 63
+# text = بدي أشوف دكتور جراحة.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	أشوف	شاف	VERB	_	_	1	ccomp	_	_
+3	دكتور	دكتور	NOUN	_	_	2	obj	_	_
+4	جراحة	جِرَاحَة	NOUN	_	_	3	nmod	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 64
+# text = كم بتكلف تذكرة روحة ورجعة على أكسفورد؟
+1	كم	كَم	ADV	_	_	2	advmod	_	_
+2	بتكلف	كلّف	NOUN	_	_	0	root	_	_
+3	تذكرة	تذكرة	NOUN	_	_	2	nsubj	_	_
+4	روحة	روحة	NOUN	_	_	3	nmod	_	_
+5	و	وَ	CCONJ	_	_	6	cc	_	SpaceAfter=No
+6	رجعة	رجعة	NOUN	_	_	3	conj	_	_
+7	على	عَلَى	ADP	_	_	8	case	_	_
+8	أكسفورد	أَكسفورَد	NOUN	_	_	2	obl	_	SpaceAfter=No
+9	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 65
+# text = إشتريته هلأ.
+1	إشتريت	اشترى	VERB	_	_	0	root	_	SpaceAfter=No
+2	ه	هُوَ	PRON	_	_	1	obj	_	_
+3	هلأ	هلا	ADV	_	_	1	advmod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 66
+# text = وقف عند التقاطع التاني.
+1	وقف	وقّف	VERB	_	_	0	root	_	_
+2	عند	عِندَ	ADP	_	_	3	case	_	_
+3	التقاطع	التقاطع	NOUN	_	_	1	obl	_	_
+4	التاني	التاني	ADJ	_	_	3	amod	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 67
+# text = مرحبا. كيف حالك؟
+1	مرحبا	مَرحَبًا	INTJ	_	_	4	discourse	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	_	_
+3	كيف	كَيفَ	DET	_	_	4	det	_	_
+4	حال	حال	NOUN	_	_	0	root	_	SpaceAfter=No
+5	ك	كَ	PRON	_	_	4	nsubj	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	4	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 68
+# text = لو سمحت حطه بشنتة غسيل وإتركه هناك.
+1	لو	لَو	SCONJ	_	_	2	mark	_	_
+2	سمحت	سَمَح	VERB	_	_	3	advcl	_	_
+3	حط	حَطْ	VERB	_	_	0	root	_	SpaceAfter=No
+4	ه	هُوَ	PRON	_	_	3	obj	_	_
+5	ب	بِ	ADP	_	_	6	case	_	SpaceAfter=No
+6	شنتة	شنتة	NOUN	_	_	3	obl	_	_
+7	غسيل	غَسِيل	NOUN	_	_	6	nmod	_	_
+8	و	وَ	CCONJ	_	_	7	cc	_	SpaceAfter=No
+9	إترك	تَرَك	VERB	_	_	7	conj	_	SpaceAfter=No
+10	ه	هُوَ	PRON	_	_	9	nmod	_	_
+11	هناك	هُنَاكَ	ADV	_	_	7	advmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 69
+# text = خلي تسريحتي الباف نازلة، لو سمحت.
+1	خلي	خلّى	VERB	_	_	0	root	_	_
+2	تسريحت	تسريحة	NOUN	_	_	1	obj	_	SpaceAfter=No
+3	ي	هُوَ	NOUN	_	_	2	nmod:poss	_	_
+4	الباف	الباف	NOUN	_	_	2	nmod	_	_
+5	نازلة	نازِل	ADJ	_	_	1	advmod	_	SpaceAfter=No
+6	،	،	PUNCT	_	_	1	punct	_	_
+7	لو	لَو	ADP	_	_	8	case	_	_
+8	سمحت	سَمَح	ADV	_	_	1	advmod	_	SpaceAfter=No
+9	.	.	PUNCT	_	_	8	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 70
+# text = الجزء المكتوب بالخط المايل بيشير للتغيرات اللي صارت في سنوات الألف تسعمية وتسعين.
+1	الجزء	جُزء	NOUN	_	_	6	nsubj	_	_
+2	المكتوب	مكتوب	ADJ	_	_	1	nmod	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	الخط	خَطّ	NOUN	_	_	1	nmod	_	_
+5	المايل	مايل	ADJ	_	_	4	amod	_	_
+6	بيشير	أشار	VERB	_	_	0	root	_	_
+7	ل	لِ	ADP	_	_	8	case	_	SpaceAfter=No
+8	لتغيرات	تغير	NOUN	_	_	6	obl	_	_
+9	اللي	اللي	DET	_	_	10	det	_	_
+10	صارت	صَار	VERB	_	_	8	obl:arg	_	_
+11	في	فِي	ADP	_	_	12	case	_	_
+12	سنوات	سَنَة	NOUN	_	_	9	acl	_	_
+13	الألف	أَلف	NUM	_	_	12	nummod	_	_
+14	تسعمية	تَسعمِيَة	NUM	_	_	13	nummod	_	_
+15	و	وَ	CCONJ	_	_	12	cc	_	SpaceAfter=No
+16	تسعين	تسعين	NUM	_	_	14	conj	_	SpaceAfter=No
+17	.	.	PUNCT	_	_	6	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 71
+# text = ممكن تحكيلي الأماكن المهمة هون؟
+1	ممكن	مُمكِن	AUX	_	_	2	aux	_	_
+2	تحكي	حَكَى	VERB	_	_	0	root	_	SpaceAfter=No
+3	ل	لِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	ي	هُوَ	NOUN	_	_	2	obj	_	_
+5	الأماكن	مَكَان	NOUN	_	_	2	obj	_	_
+6	المهمة	مَهَمَّة	ADJ	_	_	5	amod	_	_
+7	هون	هون	ADV	_	_	5	advmod	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 72
+# text = بدي استأجر كرسي مريح ممكن ينتني.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	استأجر	اِسنَأجَر	VERB	_	_	1	ccomp	_	_
+3	كرسي	كرسي	NOUN	_	_	2	obj	_	_
+4	مريح	مريح	ADJ	_	_	3	amod	_	_
+5	ممكن	مُمكِن	ADJ	_	_	6	amod	_	_
+6	ينتني	تَنى	VERB	_	_	3	acl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 73
+# text = الشارع الخلفي خطير؟
+1	الشارع	شَارِع	NOUN	_	_	0	root	_	_
+2	الخلفي	أَلخلف	ADJ	_	_	1	amod	_	_
+3	خطير	خَطِير	ADJ	_	_	1	nmod	_	SpaceAfter=No
+4	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 74
+# text = إنجرحت رجلي.
+1	إنجرحت	اِنجَرَح	VERB	_	_	0	root	_	_
+2	رجل	رجل	NOUN	_	_	1	nsubj	_	SpaceAfter=No
+3	ي	هُوَ	PRON	_	_	2	nmod:poss	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 75
+# text = أنا مريض.
+1	أنا	أنا	PRON	_	_	2	nsubj	_	_
+2	مريض	مَرِيض	ADJ	_	_	0	root	_	SpaceAfter=No
+3	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 76
+# text = بدي واحد حديث.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	واحد	وَاحِد	NOUN	_	_	1	obj	_	_
+3	حديث	حَدِيث	ADJ	_	_	2	amod	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 77
+# text = شو بتسموا هاد بالإنجليزي؟
+1	شو	شو	DET	_	_	2	obl	_	_
+2	بتسموا	سمّى	VERB	_	_	0	root	_	_
+3	هاد	هاد	DET	_	_	2	obj	_	_
+4	ب	بِ	ADP	_	_	5	case	_	SpaceAfter=No
+5	الإنجليزي	الانجليزي	NOUN	_	_	2	obl	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 78
+# text = ما في مشكلة.
+1	ما	مَا	PART	_	_	2	advmod	_	_
+2	في	فِي	VERB	_	_	0	root	_	_
+3	مشكلة	مُشكِلَة	NOUN	_	_	2	nsubj	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 79
+# text = هاد نوع من الوساخة.
+1	هاد	هاد	DET	_	_	2	nsubj	_	_
+2	نوع	نَوع	VERB	_	_	0	root	_	_
+3	من	مِن	ADP	_	_	4	case	_	_
+4	الوساخة	وساخة	NOUN	_	_	2	obl:arg	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 80
+# text = بقدر أوظف دليل بحكي -ياباني؟
+1	بقدر	قِدِر	VERB	_	_	0	root	_	_
+2	أوظف	وظّف	VERB	_	_	1	ccomp	_	_
+3	دليل	دَلِيل	NOUN	_	_	2	obj	_	_
+4	بحكي	حَكى	VERB	_	_	3	acl	_	_
+5	-	-	PUNCT	_	_	4	punct	_	SpaceAfter=No
+6	ياباني	يَابَانِيّ	NOUN	_	_	4	obj	_	SpaceAfter=No
+7	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 81
+# text = بتحتاج حد ياخدك من المطار؟
+1	بتحتاج	احْتاج	VERB	_	_	0	root	_	_
+2	حد	حَدّ	NOUN	_	_	1	obj	_	_
+3	ياخد	أَخَد	VERB	_	_	1	xcomp	_	SpaceAfter=No
+4	ك	هُوَ	PRON	_	_	3	obj	_	_
+5	من	مِن	ADP	_	_	6	case	_	_
+6	المطار	مَطَار	NOUN	_	_	3	obl	_	SpaceAfter=No
+7	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 82
+# text = بدي نسخة عن تقرير السرقة.
+1	بدي	بدّ	VERB	_	_	0	root	_	_
+2	نسخة	نُسخَة	NOUN	_	_	1	obj	_	_
+3	عن	عَن	ADP	_	_	4	case	_	_
+4	تقرير	تَقرِير	NOUN	_	_	2	obl:arg	_	_
+5	السرقة	سَرِقَة	NOUN	_	_	4	nmod	_	SpaceAfter=No
+6	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 83
+# text = عيد ميلادك قرب.
+1	عيد	عِيد	NOUN	_	_	4	nsubj	_	_
+2	ميلاد	ميلاد	NOUN	_	_	1	nmod	_	SpaceAfter=No
+3	ك	كَ	ADP	_	_	2	nmod:poss	_	_
+4	قرب	قرّب	NOUN	_	_	0	root	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 84
+# text = عملت الحجز في طوكيو قبل شهر.
+1	عملت	عَمِل	VERB	_	_	0	root	_	_
+2	الحجز	حَجز	NOUN	_	_	1	obj	_	_
+3	في	فِي	ADP	_	_	4	case	_	_
+4	طوكيو	طُوكِيُو	X	_	_	1	obl	_	_
+5	قبل	قَبلَ	ADP	_	_	6	case	_	_
+6	شهر	شَهر	NOUN	_	_	1	obl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 85
+# text = سكوتش مع مي، لو سمحت.
+1	سكوتش	سكوتش	NOUN	_	_	3	obl	_	_
+2	مع	مَعَ	ADP	_	_	3	case	_	_
+3	مي	مَيّ	NOUN	_	_	0	root	_	SpaceAfter=No
+4	،	،	PUNCT	_	_	3	punct	_	_
+5	لو	لَو	CCONJ	_	_	6	mark	_	_
+6	سمحت	سَمَح	ADV	_	_	3	advmod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 86
+# text = طيب. راح أتصل فيك بس يكونوا جاهزيين.
+1	طيب	طَيِّب	INTJ	_	_	4	discourse	_	SpaceAfter=No
+2	.	.	PUNCT	_	_	1	punct	_	_
+3	راح	راح	AUX	_	_	4	aux	_	_
+4	أتصل	إتَّصَل	VERB	_	_	0	root	_	_
+5	في	فِي	ADP	_	_	6	case	_	SpaceAfter=No
+6	ك	هُوَ	PRON	_	_	4	obl	_	_
+7	بس	بس	CCONJ	_	_	8	mark	_	_
+8	يكونوا	كَان	VERB	_	_	4	advcl	_	_
+9	جاهزيين	جاهز	ADJ	_	_	8	amod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	4	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 87
+# text = هاي البوابة على لاس فيغاس؟
+1	هاي	هاي	DET	_	_	2	det	_	_
+2	البوابة	بوابة	NOUN	_	_	0	root	_	_
+3	على	عَلَى	ADP	_	_	4	case	_	_
+4	لاس	لاس	PROPN	_	_	2	obl	_	_
+5	فيغاس	فيغاس	PROPN	_	_	4	flat:foreign	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 88
+# text = أي ساعة مكتب البريد بسكر؟
+1	أي	أَيّ	DET	_	_	2	nmod	_	_
+2	ساعة	سَاعَة	NOUN	_	_	5	obl	_	_
+3	مكتب	مَكتَب	NOUN	_	_	5	nsubj	_	_
+4	البريد	بَرِيد	NOUN	_	_	3	nmod	_	_
+5	بسكر	سَكّر	VERB	_	_	0	root	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	5	punct	_	SpacesAfter=\n\n
+
+# sent_id = 89
+# text = جمعهم عند البوابة.
+1	جمع	جَمّع	VERB	_	_	0	root	_	SpaceAfter=No
+2	هم	هُوَ	PRON	_	_	1	obj	_	_
+3	عند	عِندَ	ADP	_	_	4	case	_	_
+4	البوابة	البوابة	NOUN	_	_	1	obl:arg	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 90
+# text = كم بتكلف الليموزين عشان تروح على مركز المدينة؟
+1	كم	كَم	DET	_	_	2	det	_	_
+2	بتكلف	كَلّف	VERB	_	_	0	root	_	_
+3	الليموزين	الليموزين	NOUN	_	_	2	nsubj	_	_
+4	عشان	عشان	ADP	_	_	5	mark	_	_
+5	تروح	راح	VERB	_	_	3	acl	_	_
+6	على	عَلَى	ADP	_	_	7	case	_	_
+7	مركز	مركَز	NOUN	_	_	2	obl	_	_
+8	المدينة	مَدِينَة	NOUN	_	_	7	nmod	_	SpaceAfter=No
+9	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 91
+# text = كم كله مع بعض؟
+1	كم	كَم	DET	_	_	0	root	_	_
+2	كل	كُل	NOUN	_	_	1	nsubj	_	SpaceAfter=No
+3	ه	هُو	PRON	_	_	2	nmod	_	_
+4	مع	مَعَ	ADP	_	_	5	case	_	_
+5	بعض	بَعض	NOUN	_	_	1	obl	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 92
+# text = عنا خمر أبيض ممتاز.
+1	عنا	عنا	PRON	_	_	0	root	_	_
+2	خمر	خمر	NOUN	_	_	1	obj	_	_
+3	أبيض	أَبيَض	ADJ	_	_	2	amod	_	_
+4	ممتاز	ممتاز	ADJ	_	_	2	amod	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 93
+# text = كيف أروح على الديزني لاند؟
+1	كيف	كَيفَ	ADV	_	_	2	advmod	_	_
+2	أروح	راح	VERB	_	_	0	root	_	_
+3	على	عَلَى	ADP	_	_	4	case	_	_
+4	الديزني	ديزني	PROPN	_	_	2	obl:arg	_	_
+5	لاند	لاند	PROPN	_	_	4	flat:foreign	_	SpaceAfter=No
+6	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 94
+# text = برجر بالجبنة وبطاطا مقلية.
+1	برجر	برجر	NOUN	_	_	0	root	_	_
+2	ب	بِ	ADP	_	_	3	case	_	SpaceAfter=No
+3	الجبنة	جبنة	NOUN	_	_	1	obl	_	_
+4	و	وَ	CCONJ	_	_	5	cc	_	SpaceAfter=No
+5	بطاطا	بطاطا	NOUN	_	_	3	conj	_	_
+6	مقلية	مقليّ	ADJ	_	_	5	amod	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 95
+# text = كم وقت بدها مشي على الرجلين؟
+1	كم	كَم	ADV	_	_	2	advmod	_	_
+2	وقت	وَقت	NOUN	_	_	3	obj	_	_
+3	بد	بِدّ	VERB	_	_	0	root	_	SpaceAfter=No
+4	ها	هُوَ	PRON	_	_	3	nsubj	_	_
+5	مشي	مَشي	NOUN	_	_	3	ccomp	_	_
+6	على	عَلَى	ADP	_	_	7	case	_	_
+7	الرجلين	رِجل	NOUN	_	_	5	obl	_	SpaceAfter=No
+8	؟	؟	PUNCT	_	_	3	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 96
+# text = ما فيه ولا إشي صعب ولا إشي غامض.
+1	ما	مَا	DET	_	_	2	det	_	_
+2	في	فِي	VERB	_	_	0	root	_	SpaceAfter=No
+3	ه	هُوَ	PRON	_	_	2	obl:arg	_	_
+4	ولا	ولَا	CCONJ	_	_	5	cc	_	_
+5	إشي	اشي	VERB	_	_	2	nsubj	_	_
+6	صعب	صَعب	ADJ	_	_	5	amod	_	_
+7	ولا	ولَا	CCONJ	_	_	8	cc	_	_
+8	إشي	اشي	NOUN	_	_	5	conj	_	_
+9	غامض	غامض	ADJ	_	_	8	amod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 97
+# text = إحكيها مرة تانية لو سمحت.
+1	إحكي	حَكى	VERB	_	_	0	root	_	SpaceAfter=No
+2	ها	هُو	PRON	_	_	1	obj	_	_
+3	مرة	مَرَّة	NOUN	_	_	1	nmod	_	_
+4	تانية	تانية	ADJ	_	_	3	amod	_	_
+5	لو	لَو	ADP	_	_	6	case	_	_
+6	سمحت	سَمَح	ADV	_	_	1	advcl	_	SpaceAfter=No
+7	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 98
+# text = بيطلعوا تمنية وتلاتين دولار كلهم مع بعض.
+1	بيطلعوا	طِلِع	VERB	_	_	0	root	_	_
+2	تمنية	تمنية	NUM	_	_	1	nummod	_	_
+3	و	وَ	CCONJ	_	_	2	cc	_	SpaceAfter=No
+4	تلاتين	تلاتين	NUM	_	_	2	conj	_	_
+5	دولار	دُولَار	NOUN	_	_	1	obj	_	_
+6	كل	كُل	DET	_	_	7	det	_	SpaceAfter=No
+7	هم	هُو	PRON	_	_	5	obj	_	_
+8	مع	مَعَ	NOUN	_	_	9	case	_	_
+9	بعض	بَعض	NOUN	_	_	1	nmod	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 99
+# text = كم سعر هاد العطر؟
+1	كم	كَم	ADV	_	_	2	advmod	_	_
+2	سعر	سِعر	NOUN	_	_	0	root	_	_
+3	هاد	هاد	DET	_	_	4	det	_	_
+4	العطر	عطر	NOUN	_	_	2	nmod	_	SpaceAfter=No
+5	؟	؟	PUNCT	_	_	2	punct	_	SpacesAfter=\n\n
+
+# newpar
+# sent_id = 100
+# text = في حمام بالمحطة.
+1	في	فِي	VERB	_	_	0	root	_	_
+2	حمام	حمام	NOUN	_	_	1	nsubj	_	_
+3	ب	بِ	ADP	_	_	4	case	_	SpaceAfter=No
+4	المحطة	محطة	NOUN	_	_	2	nmod	_	SpaceAfter=No
+5	.	.	PUNCT	_	_	1	punct	_	SpacesAfter=\n\
+

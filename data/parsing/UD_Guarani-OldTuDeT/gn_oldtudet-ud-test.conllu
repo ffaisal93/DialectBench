@@ -1,0 +1,521 @@
+# document_authorship = Annotated by Fabrício Ferraz Gerardi and Lorena Martín-Rodriguez
+# document_reference = Restivo (1724) [begin 001.page+sentence]
+# document_reference = Montoya (Tesoro 1639) [begin 002.]
+# document_reference = Montoya (Arte, 1640) [begin 003.]
+# document_reference = Montoya (Catecismo 1640) [begin 004.]
+# document_reference = Montoya (Silex, 1640) [begin 005.]
+# sent_id = 001.7
+# text = Avareta upe
+# text_eng = to the men
+# text_spa = a los hombres
+1-2	Avareta	_	_	_	_	_	_	_	_
+1	Ava	ava	NOUN	_	_	2	nmod	_	_
+2	reta	heta	NOUN	_	Rel=Cont	0	root	_	_
+3	upe	upe	ADP	upe	_	2	case	_	_
+
+# sent_id = 001.72
+# text = Aipapa vaka
+# text_eng = I counted the cows
+# text_spa = conté las vacas
+1	Aipapa	papa	VERB	v	Number[subj]=Sing|Person[obj]=3|Person[subj]=1	0	root	_	_
+2	vaka	vaka	NOUN	v	_	1	obl:obj	_	_
+
+# sent_id = 001.73
+# text = Ava marangatu upe
+# text_eng = To the virtuous man
+# text_spa = al hombre virtuoso
+1	Ava	ava	NOUN	_	_	0	root	_	_
+2	marangatu	marangatu	NOUN	_	_	1	nmod	_	_
+3	upe	upe	ADP	_	_	1	case	_	_
+
+# sent_id = 001.8
+# text = Ava marangatu py'a
+# text_eng = the heart of a virtuous man
+# text_spa = el corazon del hombre virtuoso
+1	Ava	ava	NOUN	_	_	3	nmod	_	_
+2	marangatu	marangatu	NOUN	_	_	1	nmod	_	_
+3	py'a	py'a	NOUN	_	_	0	root	_	_
+
+# sent_id = 001.90
+# text = mba'e ase ãnga reheguára
+# text_eng = (9)
+# text_spa = cosa del alma, cosa que pertenece al alma
+1	mba'e	mba'e	NOUN	n	_	0	root	_	_
+2	ase	ase	PRON	pron	PronType=Prs	3	nmod	_	_
+3	ãnga	ãng	NOUN	n	Case=Ref	1	nmod	_	_
+4	reheguára	rehe	ADP	posp	Nomzr=CCirc	3	obl	_	_
+
+# sent_id = 001.91
+# text = mba'e chekotypeguare
+# text_eng = A thing that was on my room
+# text_spa = cosa que estuvo en mi aposento
+1	mba'e	_	NOUN	n	_	0	root	_	_
+2	chekotypeguare	koty	NOUN	n	Case=Loc|Nomzr=Circ|Number[psor]=Sing|Person[psor]=1|Tense=Past	1	nmod	_	_
+
+# sent_id = 001.92
+# text = yvyra Tupãópeguarãngue
+# text_eng =
+# text_spa = palo que había de haber sido / que había de ser para la Iglesia, y que no fue, o no lo será
+1	yvyra	yvyra	NOUN	n	Case=Ref	0	root	_	_
+2-3	Tupãópeguarãngue	_	_	_	_	_	_	_	_
+2	Tupã	Tupã	PROPN	propn	_	1	nmod	_	_
+3	ópeguarãngue	o	NOUN	n	Case=Loc|Nomzr=CCirc|Tense=FutPast	2	nmod	_	_
+
+# sent_id = 001.101
+# text = ame'ẽ Pa'i upe
+# text_spa = lo di al padre
+1	ame'ẽ	me'ẽ	VERB	v	Number[subj]=Sing|Person[subj]=1	0	root	_	_
+2	Pa'i	pa'i	NOUN	n	_	1	obl	_	_
+3	upe	upe	ADP	posp	_	2	case	_	_
+
+# sent_id = 001.102
+# text = Nañoambuae heguigua ruguãi nanga Tupã túva
+# text_eng = God does not come from anyone else
+# text_spa = Dios Padre no procede de otro
+1	Nañoambuae	amboae	NOUN	n	Polarity=Neg|Reflex=Yes	0	root	_	_
+2	heguigua	hegui	NOUN	n	Nomzr=CCirc|Rel=NCont	1	obl	_	_
+3	ruguãi	ruguãi	ADV	adv	Polarity=Neg	1	advmod	_	_
+4	nanga	_	PART	_	_	1	discourse	_	_
+5	Tupã	_	PROPN	_	_	1	nsubj	_	_
+6	túva	_	NOUN	_	_	5	compound	_	_
+
+# sent_id = 001.103
+# text = kyse pype
+# text_eng = with the knife
+# text_spa = con el cuchillo
+1	kyse	kyse	NOUN	n	_	0	root	_	_
+2	pype	pype	ADP	posp	_	1	case	_	_
+
+# sent_id = 001.104
+# text = iñangaipava'ekue upeguarãma ño ete nanga Tupã tataguasu apyre'ỹ ojapo araka'e
+# text_eng = 
+# text_spa = sólo para los pecadores hizo Dios el fuego eterno antiguamente
+1	iñangaipava'ekue	ñangaipav	NOUN	n	Nomzr=Rel|Rel=Cont	9	obl	_	_
+2	upeguarãma	upe	ADP	_	Tense=Past	1	case	_	_
+3	ño	ño	ADV	adv	_	9	advmod	_	_
+4	ete	ete	PART	_	_	3	discourse	_	_
+5	nanga	nang	PART	_	_	9	discourse	_	_
+6	Tupã	Tupã	PROPN	propn	_	9	obl:subj	_	_
+7	tataguasu	tata	NOUN	_	_	9	obl:obj	_	_
+8	apyre'ỹ	apy	NOUN	n	Priv=Yes	7	nmod	_	_
+9	ojapo	apo	VERB	v	Number[subj]=Sing|Person[obj]=3|Person[subj]=3	0	root	_	_
+10	araka'e	araka'e	ADV	adv	_	9	advmod	_	_
+
+# sent_id = 001.105
+# text = añangareko hasyva’e rehe
+# text_spa = cuido de los enfermos
+1	añangareko	ñangareko	VERB	v	Number[subj]=Sing|Person[subj]=1	0	root	_	_
+2	hasyva’e	asy	NOUN	n	Nomzr=Rel|Rel=NCont	1	obl	_	_
+3	rehe	ehe	ADP	_	Rel=Cont	2	case	_	_
+
+# sent_id = 001.106
+# text = Peru agui aipysy
+# text_spa = recíbolo de Pedro
+1	Peru	Peru	PROPN	_	_	3	obl	_	_
+2	agui	gui	ADP	_	_	1	case	_	_
+3	aipysy	pysy	VERB	v	Number[subj]=Sing|Person[obj]=3|Person[subj]=1	0	root	_	_
+
+# sent_id = 001.107
+# text = A Tupã , chejára !
+# text_spa = ah Dios, mi Señor.
+1	A	a	INTJ	intj	_	2	discourse	_	_
+2	Tupã	Tupã	PROPN	propn	_	0	root	_	_
+3	,	,	PUNCT	punct	_	2	punct	_	_
+4	chejára	jar	NOUN	n	Case=Ref|Number[psor]=Sing|Person[psor]=1	2	appos	_	_
+5	!	!	PUNCT	punct	_	2	punct	_	_
+
+# sent_id = 001.108
+# text = orehegui oñemi
+# text_spa = se escondió de nosotros
+1	orehegui	gui	ADP	posp	Clusivity=Ex|Number=Plur|Person=1	2	obl	_	_
+2	oñemi	mi	VERB	v	Number[subj]=Plur|Person[subj]=3|Reflex=Yes	0	root	_	_
+
+# sent_id = 001.109
+# text = chekogagui aju
+# text_spa = vengo de mi chacra
+1	chekogagui	ko	NOUN	n	Case=Abl|Number[psor]=Sing|Person[psor]=1	2	obl	_	_
+2	aju	ju	VERB	vi	Number[subj]=Sing|Person[subj]=1	0	root	_	_
+
+# sent_id = 001.11
+# text = Aha cherópe
+# text_eng = I go home (to my house)
+# text_spa = Voy a mi casa
+1	Aha	ha	VERB	v	Number[subj]=Sing|Person[subj]=1	0	root	_	_
+2	cherópe	o	NOUN	n	Case=All|Rel=Cont	1	obj	_	_
+
+# sent_id = 001.112
+# text = Oho guetẽme
+# text_eng = He went to hos village
+# text_spa = Se fue a su pueblo
+1	Oho	ho	VERB	_	Person[subj]=3	0	root	_	_
+2	guetẽme	guetẽ	NOUN	_	Case=All	1	obl	_	_
+
+# sent_id = 001.113
+# text = Guembiapokue tetĩrõ ogueraha tekovẽ ambuae pypene
+# text_eng = He will take to the other life the deeds he'll have done
+# text_spa = Llevará a la otra vida las obras que hubiere hecho
+1	Guembiapokue	apo	NOUN	_	Corf=Yes|Dev=Pass|Tense=Past	3	obj	_	_
+2	tetĩrõ	_	PRON	_	PronType=Ind	1	nmod	_	_
+3	ogueraha	ho	VERB	_	Voice=Com	0	root	_	_
+4	tekovẽ	_	NOUN	_	Rel=Abs	3	obl	_	_
+5	ambuae	_	PRON	_	PronType=Ind	4	nmod	_	_
+6	pypene	_	ADP	_	Tense=Fut	4	case	_	_
+
+# sent_id = 001.114
+# text = Tupã upegua niko
+# text_spa = 'esto es para Dios'.
+# text_port = "Isso é para Deus".
+# text_eng = 'This is for God'.
+1	Tupã	Tupã	PROPN	propn	_	0	root	_	_
+2	upegua	upe	ADP	posp	Nomzr=CCirc	1	case	_	_
+3	niko	niko	PART	pcl	_	1	discourse	_	_
+
+# sent_id = 001.16
+# text = ava matete oiko
+# text_spa = 'muchos hombres hay'
+# text_port = 'Muitos homens são'
+# text_eng = 'Many men there are'
+1	ava	ava	NOUN	n	_	3	nsubj	_	_
+2	matete	matete	ADV	adv	Emph=Yes	1	advmod	_	_
+3	oiko	iko	VERB	vi	Person[subj]=3	0	root	_	_
+
+# sent_id = 001.162
+# text = chemarãngatu ete ndehegui
+# text_spa = 'soy mucho mejor que tú'
+# text_port = 'Eu sou muito melhor do que você'
+# text_eng = 'I'm much better than you'
+1	chemarãngatu	marangatu	NOUN	n	Number=Sing|Person[psor]=1	0	root	_	_
+2	ete	ete	ADV	adv	Emph=Yes	1	advmod	_	_
+3	ndehegui	hegui	ADP	posp	Number=Sing|Person[psor]=2	1	obl	_	_
+
+# sent_id = 001.17
+# text = mirĩmirĩ ñote aypysy
+# text_spa = 'tomé poquísimo'.
+# text_port = 'Eu levei pouco'.
+# text_eng = 'I drank very little'.
+1	mirĩmirĩ	mirĩ	ADV	adv	Red=Di	3	advmod	_	_
+2	ñote	ñote	PART	pcl	_	3	discourse	_	_
+3	aypysy	ypysy	VERB	vt	Number=Sing|Person[subj]=1	0	root	_	_
+
+# sent_id = 001.202
+# text = nde rako erejapo
+# text_spa = tú lo hiciste
+1	nde	nde	PRON	pron	Number=Sing|Person=2|PronType=Prs	3	obl:obj	_	_
+2	rako	rako	PART	prcl	Evident=Nfh	3	discourse	_	_
+3	erejapo	apo	VERB	v	Number[subj]=Sing|Person[obj]=3|Person[subj]=2	0	root	_	_
+
+# sent_id = 001.203
+# text = ãng mbohapy personas oiko'e ojohugui
+# text_spa = estas tres personas se distinguen entre sí
+1	ãng	ãng	DET	dem	_	3	det	_	_
+2	mbohapy	mbohapy	NUM	num	NumType=Card	3	nummod	_	_
+3	personas	persona	NOUN	_	_	4	obl:subj	_	_
+4	oiko'e	iko'e	VERB	v	Number[subj]=Sing|Person[subj]=3	0	root	_	_
+5	ojohugui	_	ADP	posp	Reflex=Yes	4	obl	_	_
+
+# sent_id = 001.21
+# text = ha'e pype aju
+# text_spa = 'en ella (canoa) vine';
+# text_port = 'Nela (canoa) vim';
+# text_eng = 'In the canoe, I came';
+1	ha'e	ha'e	PRON	pro	PronType=Dem	3	obl	_	_
+2	pype	pype	ADP	posp	Rel=Cont	1	case	_	_
+3	aju	ju	VERB	vi	Number=Sing|Person[subj]=1	0	root	_	_
+
+# sent_id = 001.212
+# text = ha'épe oho
+# text_spa = 'a ella fue'
+# text_port = 'Foi a ela'
+# text_eng = 'It went to her'
+1	ha'épe	ha'e	PRON	pro	Case=Loc|PronType=Dem	2	obl	_	_
+2	oho	ho	VERB	vi	Person[subj]=3	0	root	_	_
+
+# sent_id = 001.215
+# text = ndeitee Tupã ha'e katu oiporavo
+# text_spa = por eso Dios a él principalmente escogió
+1	ndeitee	_	ADV	_	_	5	advmod	_	_
+2	Tupã	_	PROPN	_	_	5	obl:subj	_	_
+3	ha'e	_	PRON	_	_	5	obl:obj	_	_
+4	katu	_	ADV	_	_	5	advmod	_	_
+5	oiporavo	poravo	VERB	vt	Number[subj]=Sing|Person[obj]=3|Person[subj]=3	0	root	_	_
+
+# sent_id = 001.22
+# text = akoiva'e rechaka rako oñemondýi ete
+# text_spa = 'viendo aquello se espantó muchísimo'
+# text_port = 'Vendo isso foi muito assustado'
+# text_eng = 'Seeing that, he was very frightened'
+1	akoiva'e	akoi	PRON	pro	Nomzr=Ag|PronType=Dem	2	obj	_	_
+2	rechaka	echag	VERB	vt	Rel=Cont|VerbForm=Ger	4	advcl	_	_
+3	rako	rako	PART	pcl	Tense=Past	2	discourse	_	_
+4	oñemondýi	ñemondýi	VERB	vi	Person[subj]=3	0	root	_	_
+5	ete	ete	ADV	adv	Emph=Yes	4	advmod	_	_
+
+# sent_id = 001.222
+# text = aipo a'e ndeve
+# text_spa = 'eso te dije';
+# text_port = "Isso eu te disse";
+# text_eng = 'I told you that';
+1	aipo	aipo	PRON	pro	PronType=Dem	2	obj	_	_
+2	a'e	a'e	VERB	vt	Number=Sing|Person[subj]=1	0	root	_	_
+3	ndeve	nde	PRON	pro	Case=Dat|PronType=Prs	2	obl	_	_
+
+# sent_id = 001.223
+# text = ava panga omombe'u ndeve
+# text_spa = '¿quién te lo dijo?'
+# text_port = 'Quem lhe disse?'
+# text_eng = 'who told you?'
+1	ava	ava	NOUN	n	_	3	nmod	_	_
+2	panga	panga	PART	pcl	Int=Yes	1	discourse	_	_
+3	omombe'u	mombe'u	VERB	vt	Person[subj]=3	0	root	_	_
+4	ndeve	nde	PRON	pro	Case=Dat|PronType=Prs	3	obl	_	_
+
+# sent_id = 000.214
+# text = ha'eva'e ava mba'e ogueraha
+# text_spa = llevó las cosas de ese hombre
+1	ha'eva'e	ha'eva'e	DET	dem	Number=Sing|Person=2	2	nmod	_	_
+2	ava	ava	NOUN	n	_	3	nmod	_	_
+3	mba'e	mba'e	NOUN	n	_	4	obl:obj	_	_
+4	ogueraha	ha	VERB	v	Number[subj]=Sing|Person[subj]=2|Voice=Com	0	root	_	_
+
+# sent_id = 001.224
+# text = kova'e katu nanga ikaraiva'ekue reko eterã
+# text_spa = 'esto sí cierto es el ser propio y verdadero que ha de tener un Cristiano';
+# text_port = 'Isso é verdade é o próprio e verdadeiro ser cristão';
+# text_eng = 'This is true is the own and true being a Christian';
+1	kova'e	ko	PRON	pro	Nomzr=Ag|PronType=Dem	5	nsubj	_	_
+2	katu	katu	NOUN	n	Rel=Cont	1	nmod	_	_
+3	nanga	nanga	PART	pcl	_	1	discourse	_	_
+4	ikaraiva'ekue	karai	NOUN	n	Nomzr=Ag|Rel=NCont|Tense=Past	5	nmod	_	_
+5	reko	iko	NOUN	n	Rel=Cont	0	root	_	_
+6	eterã	ete	ADV	adv	Emph=Yes|Tense=Fut	5	advmod	_	_
+
+# sent_id = 001.225
+# text = kuiva'e katu cheremienoĩngue
+# text_spa = 'no sino aquél es, a quien yo llamé'.
+# text_port = 'Não, mas isso é, a quem eu liguei'.
+# text_eng = 'No but that is, whom I called'.
+1	kuiva'e	kui	PRON	pro	Nomzr=Ag|PronType=Dem	3	nsubj	_	_
+2	katu	katu	NOUN	n	Rel=Cont	1	nmod	_	_
+3	cheremienoĩngue	enoĩ	NOUN	n	Nomzr=DevPass|Number=Sing|Person[psor]=1|Poss=Yes|Rel=Cont|Tense=Past	0	root	_	_
+
+# sent_id = 001.226
+# text = eguĩ ramingua meme rako nguĩ Tupãsy rehegua
+# text_spa = 'de esa manera son esos congregados de la virgen'
+# text_port = "Dessa forma, eles são aqueles congregados da Virgem"
+# text_eng = 'That way they are those congregates of the virgin'
+1	eguĩ	eguĩ	PRON	pro	PronType=Dem	2	nmod	_	_
+2	ramingua	ami	NOUN	n	Nomzr=Circ|Rel=Cont	8	obl	_	_
+3	meme	meme	PART	pcl	_	2	discourse	_	_
+4	rako	rako	PART	pcl	_	2	discourse	_	_
+5	nguĩ	nguĩ	DET	dem	PronType=Dem	7	det	_	_
+6-7	Tupãsy	_	_	_	_	_	_	_	_
+6	Tupã	Tupã	NOUN	n	_	7	nmod	_	_
+7	sy	sy	NOUN	n	Rel=Cont	8	nmod	_	_
+8	rehegua	ehe	NOUN	n	Nomzr=Circ|Rel=Cont	0	root	_	_
+
+# sent_id = 001.227
+# text = evokoi katu ojapokuaa
+# text_spa = ése sí, que lo sabe hacer
+1	evokoi	evokoi	PRON	pron	Emph=Yes|PronType=Dem	4	obl:subj	_	_
+2	katu	katu	ADV	_	_	4	advmod	_	_
+3-4	ojapokuaa	_	_	_	_	_	_	_	_
+3	ojapo	apo	VERB	_	Number[subj]=Sing|Person[subj]=3	4	dep	_	_
+4	kuaa	kuaa	VERB	_	_	0	root	_	_
+
+# sent_id = 001.228
+# text = eguĩva'e katu oho yvápene
+# text_spa = ésos sí que irán al cielo
+1	eguĩva'e	_	PRON	n	Emph=Yes|PronType=Dem	3	obl:subj	_	_
+2	katu	katu	ADV	adv	_	3	advmod	_	_
+3	oho	ho	VERB	v	Number[subj]=Sing|Person[subj]=3	0	root	_	_
+4	yvápene	yvá	ADP	posp	Case=All|Tense=Fut	3	obl	_	_
+
+# sent_id = 001.231
+# text = mava'e asepyri panga ereju ra'e
+# text_spa = '¿para quién has venido?'
+# text_port = 'Para quem você veio?'
+# text_eng = 'For whom have you come?'
+1	mava'e	ma	PRON	pro	Nomzr=Ag|PronType=Int	2	nmod	_	_
+2	asepyri	ase	NOUN	n	Case=Abl|Nomzr=Pas	4	obl	_	_
+3	panga	panga	PART	pcl	Int=Yes	2	discourse	_	_
+4	ereju	tur	VERB	vi	Number=Sing|Person[subj]=2	0	root	_	_
+5	ra'e	ra'e	PART	pcl	Int=Yes	4	discourse	_	_
+
+# sent_id = 001.232
+# text = humava'e ojapo ra'e
+# text_spa = '¿pues quién lo hizo?';
+# text_port = "Então, quem fez isso?";
+# text_eng = 'So who did it?';
+1	humava'e	ma	PRON	pro	Nomzr=Ag|PronType=Int	2	obl:subj	_	_
+2	ojapo	apo	VERB	vt	Person[subj]=3	0	root	_	_
+3	ra'e	ra'e	PART	pcl	Int=Yes	2	discourse	_	_
+
+# sent_id = 001.233
+# text = humava'e oiko ra'e
+# text_spa = '¿pues cuál es?'
+# text_port = 'Bem, o que é isso?'
+# text_eng = 'Well what is it?'
+1	humava'e	ma	PRON	pro	Nomzr=Ag|PronType=Int	2	obl:subj	_	_
+2	oiko	iko	VERB	vi	Person[subj]=3	0	root	_	_
+3	ra'e	ra'e	PART	pcl	Int=Yes	2	discourse	_	_
+
+# sent_id = 001.234
+# text = ava verami ukui
+# text_spa = 'parece que son hombres aquéllos'.
+# text_port = "Parece que eles são homens".
+# text_eng = 'It seems that they are men'.
+1	ava	ava	NOUN	n	_	0	root	_	_
+2	verami	verami	PART	pcl	_	1	discourse	_	_
+3	ukui	ukui	PRON	pro	_	1	obl:subj	_	_
+
+# sent_id = 001.235
+# text = mbya nuguĩ omombe'u
+# text_spa = 'esa gente lo ha dicho'.
+# text_port = "Essas pessoas disseram".
+# text_eng = 'These people have said'.
+1	mbya	mbya	NOUN	n	_	3	obl:subj	_	_
+2	nuguĩ	nuguĩ	PART	pcl	_	1	discourse	_	_
+3	omombe'u	mbe'u	VERB	vt	Person[subj]=3|Voice=Cau	0	root	_	_
+
+# sent_id = 001.236
+# text = ha've pupera'e
+# text_spa = '¿es bueno ése?'
+# text_port = "Isso é bom?"
+# text_eng = 'Is that good?'
+1	ha've	ha'e	PRON	pro	PronType=Dem	2	obl:subj	_	_
+2	pupera'e	eupe	PRON	pro	Int=Yes|PronType=Dem	0	root	_	_
+
+# sent_id = 001.237
+# text = iporãve neguĩ yvága
+# text_spa = son muy hermosos esos cielos
+1	iporãve	porã	NOUN	n	Intens=Yes|Rel=NCont	0	root	_	_
+2	neguĩ	neguĩ	PART	prcl	_	1	discourse	_	_
+3	yvága	yvág	NOUN	n	Case=Ref	1	nsubj	_	_
+
+# sent_id = 001.241
+# text = a'u mburu hinĩ ra'e
+# text_spa = 'ahí está en hora mala';
+# text_port = 'Lá está em uma hora ruim';
+# text_eng = 'There it is in a bad hour';
+1	a'u	a'u	PRON	pro	PronType=Dem	3	obl:subj	_	_
+2	mburu	mburu	NOUN	n	_	3	nmod	_	_
+3	hinĩ	aĩ	NOUN	n	Rel=NCont	0	root	_	_
+4	ra'e	ra'e	PART	pcl	Int=Yes	3	discourse	_	_
+
+# sent_id = 001.242
+# text = aipo peku ra'e ?
+# text_spa = '¿estáis ahí?'
+# text_port = 'Você está aí?'
+# text_eng = 'Are you there?'
+1	aipo	aipo	PRON	pro	Int=Yes|PronType=Dem	2	obl	_	_
+2	peku	oku	VERB	vi	Number=Plur|Person[subj]=2	0	root	_	_
+3	ra'e	ra'e	PART	pcl	Int=Yes	2	discourse	_	_
+4	?	?	PUNCT	punct	_	2	punct	_	_
+
+# sent_id = 001.271
+# text = ahayhu akóiramo , ãng aete ajavaetereko
+# text_spa = 'lo amaba entonces, pero ahora lo aborresco',
+# text_port = 'Eu o amei então, mas agora estou aborcendo isso',
+# text_eng = 'I loved him then, but now I abhor it',
+1	ahayhu	hayhu	VERB	vt	Number=Sing|Person[subj]=1	0	root	_	_
+2-3	akóiramo	_	_	_	_	_	_	_	_
+2	akói	akói	PRON	pro	PronType=Dem	1	obl	_	_
+3	ramo	amo	ADP	posp	Rel=Cont	2	case	_	_
+4	,	,	PUNCT	punct	_	1	punct	_	_
+5	ãng	ãng	PRON	pro	PronType=Dem	7	obj	_	_
+6	aete	aete	ADV	adv	_	5	advmod	_	_
+7	ajavaetereko	javaetereko	VERB	vi	Number=Sing|Person[subj]=1	1	parataxis	_	_
+
+# sent_id = 001.272
+# text = añomi cherapicha mba'e
+# text_spa = 'escondí cosa de mi prójimo';
+# text_port = "Esconda algo do meu vizinho";
+# text_eng = 'Hide something from my neighbor';
+1	añomi	ñomi	VERB	vt	Number=Sing|Person[subj]=1	0	root	_	_
+2	cherapicha	apicha	NOUN	n	Number=Sing|Person[psor]=1|Poss=Yes|Rel=Cont	1	iobj	_	_
+3	mba'e	mba'e	NOUN	n	_	1	obj	_	_
+
+# sent_id = 001.1114
+# text = Adán heguigua nanga ñande opakatu
+# text_spa = todos nosotros somos descendientes de Adán
+1	Adán	Adán	PROPN	propn	_	2	nmod	_	_
+2	heguigua	guigua	NOUN	n	Rel=Cont	0	root	_	_
+3	nanga	nanga	PART	prcl	_	2	discourse	_	_
+4	ñande	_	PRON	pron	Clusivity=In|Number=Plur|Person=1|PronType=Prs	2	nsubj	_	_
+5	opakatu	opakatu	PRON	pron	PronType=Tot	4	det	_	_
+
+# sent_id = 001.731
+# text = añemombe'u chupe cheãngaipapaguéra rehe
+# text_spa = confeséme a él de mis pecados
+1	añemombe'u	mombe'u	VERB	v	Number[subj]=Sing|Person[subj]=1|Reflex=Yes|Voice=Cau	0	root	_	_
+2	chupe	chupe	ADP	posp	_	1	obl	_	_
+3	cheãngaipapaguéra	ãngaipapa	NOUN	Number[psor]=Sing|Person[psor]=1|Tense=Past	_	1	obl	_	_
+4	rehe	ehe	ADP	posp	Rel=Cont	3	case	_	_
+
+# sent_id = 001.732
+# text = ajerure Tupã upe cherekotevẽháva rehe
+# text_spa =  pido a Dios lo que necesito
+1	ajerure	_	VERB	v	Number[subj]=Sing|Person[subj]=1|Reflex=Yes	0	root	_	_
+2	Tupã	_	PRON	pron	_	1	obl	_	_
+3	upe	_	ADP	posp	_	2	case	_	_
+4	cherekotevẽháva	kotevẽ	NOUN	n	Case=Ref|Nomzr=Circ|Number[psor]=Sing|Person[psor]=1|Rel=Cont	1	obl	_	_
+5	rehe	ehe	ADP	posp	Rel=Cont	4	case	_	_
+
+# sent_id = 001.76
+# text = chekane'õ imbo'évo
+# text_spa = me cansé de enseñar
+1	chekane'õ	kane'õ	NOUN	n	Number[psor]=Sing|Person[psor]=1	0	root	_	_
+2	imbo'évo	mbo'é	VERB	v	Rel=NCont|VerbForm=Ger	1	xcomp	_	_
+
+# sent_id = 001.78
+# text = kunumi mbo'eharéra aju
+# text_spa = vengo de enseñar a los muchachos
+1	kunumi	kunumi	NOUN	n	_	2	nmod	_	_
+2	mbo'eharéra	mbo'e	NOUN	n	Nomzr=Ag|Tense=Past	3	advcl	_	_
+3	aju	ju	VERB	_	Number[subj]=Sing|Person[subj]=1	0	root	_	_
+
+# sent_id = 001.2167
+# text = ndearu'ãmbe'e ndeporerekua mbya rehe
+# text_spa = como de ti se esperaba, agasajas a la gente
+1	ndearu'ãmbe'e	_	NOUN	n	Number[psor]=Sing|Person[psor]=2	2	nmod	_	_
+2	ndeporerekua	_	NOUN	n	Number[psor]=Sing|Person[psor]=2	0	root	_	_
+3	mbya	_	NOUN	n	_	2	obl	_	_
+4	rehe	_	ADP	posp	Rel=Cont	3	case	_	_
+
+# sent_id = 001.2173
+# text = Tupã porokuaitáva atyvyvyri tekuára
+# text_spa = los que no viven como Dios manda, que viven diferentemente de lo que Dios manda
+1	Tupã	Tupã	PROPN	_	_	2	nmod	_	_
+2	porokuaitáva	kuai	NOUN	_	Case=Ref|Nomzr=Circ	4	nmod	_	_
+3	atyvyvyri	atyvyvyri	ADV	_	_	4	advmod	_	_
+4	tekuára	_	NOUN	n	Case=Ref|Nomzr=Ag|Rel=Abs	0	root	_	_
+
+# sent_id = 001.318
+# text = eraha kunumi , tomongaru
+# text_spa =  lleva al muchacho para que le den de comer
+1	eraha	ha	VERB	v	Mood=Imp|Number[subj]=Sing|Person[subj]=2|Voice=Com	0	root	_	_
+2	kunumi	kunumi	NOUN	n	_	1	obl:obj	_	_
+3	,	,	PUNCT	punct	_	1	punct	_	_
+4	tomongaru	karu	VERB	v	Mood=Perm|Number[subj]=Sing|Person[subj]=3|Voice=Cau	1	advcl	_	_
+
+# sent_id = 001.443
+# text = kunumi kakuaague tou
+# text_spa =  vengan los muchachos mayores
+1	kunumi	kunumi	NOUN	n	_	3	obl:obj	_	_
+2	kakuaague	_	NOUN	n	_	1	nmod	_	_
+3	tou	u	VERB	v	Mood=Perm|Number[subj]=Sing|Person[subj]=3	0	root	_	_
+
+# sent_id = 001.571
+# text = ainupãuka Peru Chuã upe
+# text_spa = hice que Juan azotase a Pedro
+1	ainupãuka	nupã	VERB	vt	Number[subj]=Sing|Person[obj]=3|Person[subj]=1|Voice=Cau	0	root	_	_
+2	Peru	Peru	PROPN	propn	_	1	obl:obj	_	_
+3	Chuã	chuã	PROPN	propn	_	1	obl	_	_
+4	upe	upe	ADP	posp	_	3	case	_	_
+
+# sent_id = 001.589
+# text = ama nachemondoukái
+# text_spa = la lluvia no me dejó venir
+1	ama	ama	NOUN	n	_	2	nsubj	_	_
+2	nachemondoukái	so	NOUN	n	Number=Sing|Person=1|Polarity=Neg|Voice=Cau	0	root	_	_
+

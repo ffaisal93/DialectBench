@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank>
+  <!-- tokens means "surface tokens", e.g. Spanish "vámonos" counts as one token
+       words means "syntactic words", e.g. Spanish "vámonos" is split to two words, "vamos" and "nos"
+       fused is the number of tokens that are split to two or more syntactic words
+       The words and fused elements can be omitted if no token is split to smaller syntactic words. -->
+  <size>
+    <total><sentences>316</sentences><tokens>6568</tokens><words>6928</words><fused>355</fused></total>
+    <train><sentences>20</sentences><tokens>221</tokens><words>226</words><fused>5</fused></train>
+    <dev><sentences>0</sentences><tokens>0</tokens><words>0</words><fused>0</fused></dev>
+    <test><sentences>296</sentences><tokens>6347</tokens><words>6702</words><fused>350</fused></test>
+  </size>
+  <lemmas unique="1192" /><!-- o, de, ,, ., ëse, che, e, à, l', un, avei, se, ghe, no, da -->
+  <forms unique="1563" /><!-- o, ,, de, e, a, ., l', à, che, é, un, i, se, da, no -->
+  <fusions unique="80" /><!-- do, da, a-o, di, de, into, a-a, inta, co-o, da-o, pe-o, sciô, a-i, da-a, pe-a -->
+  <!-- Statistics of universal POS tags. The comments show the most frequent lemmas. -->
+  <tags unique="16">
+    <tag name="ADJ">219</tag><!-- bello, antigo, mæximo, santo, cao, neuvo, primmo, avvoxou, bon, bravo -->
+    <tag name="ADP">904</tag><!-- de, à, da, in, pe, inte, con, co, comme, sce -->
+    <tag name="ADV">459</tag><!-- no, ciù, ben, tanto, ghe, chì, coscì, lì, ascì, insemme -->
+    <tag name="AUX">318</tag><!-- ëse, avei, poei, stâ, voei, dovei, savei, vegnî -->
+    <tag name="CCONJ">240</tag><!-- e, ma, ò, ni, comme, tanto -->
+    <tag name="DET">850</tag><!-- o, un, quello, tutto, mæ, sto, vòstro, seu, atro, sò -->
+    <tag name="INTJ">23</tag><!-- scì, ben, eh, ah, no, diascoa, graçie, guao, seguo, Òh -->
+    <tag name="NOUN">896</tag><!-- giorno, paise, parte, gio, çittæ, cösa, figgio, stöia, tempo, vòtta -->
+    <tag name="NUM">42</tag><!-- doî, eutto, 1929, quaranta, quattro, trenta, 1746, 1815, 1847, 1874 -->
+    <tag name="PART">136</tag><!-- l' -->
+    <tag name="PRON">928</tag><!-- o, che, se, ghe, me, ti, quello, ô, ve, ne -->
+    <tag name="PROPN">189</tag><!-- Zena, Gexù, Segnô, Zane, Arbâ, Galilea, Peter, Scimon, Milan, Nervi -->
+    <tag name="PUNCT">792</tag><!-- ,, ., !, :, ?, ", ;, «, », ( -->
+    <tag name="SCONJ">148</tag><!-- che, se, comme, perché, quande, però, Scicomme, coscì -->
+    <tag name="VERB">762</tag><!-- fâ, ëse, avei, anâ, dî, dâ, vegnî, stâ, mette, piggiâ -->
+    <tag name="X">22</tag><!-- Tintin, aventures, de, del, les, Canto, Italiani, Strade, claire, degli -->
+  </tags>
+  <!-- Statistics of features and values. The comments show the most frequent word forms. -->
+  <feats unique="36">
+    <feat name="Definite" value="Def" upos="DET">584</feat><!-- o, a, i, e, l' -->
+    <feat name="Definite" value="Ind" upos="DET">117</feat><!-- un, unna, unn', Çerti -->
+    <feat name="Degree" value="Abs" upos="ADJ">2</feat><!-- affeçionatiscimo, braviscima -->
+    <feat name="Degree" value="Cmp" upos="ADJ,ADV">5</feat><!-- megio, pezo -->
+    <feat name="Foreign" value="Yes" upos="X">22</feat><!-- Aventures, Les, Tintin, de, del, Canto, Italiani, Strade, claire, degli -->
+    <feat name="Gender" value="Fem" upos="ADJ,AUX,DET,NOUN,NUM,PRON,PROPN,VERB">1076</feat><!-- a, e, unna, l', Zena, parte, sta, figgia, quella, vòstra -->
+    <feat name="Gender" value="Masc" upos="ADJ,AUX,DET,NOUN,NUM,PRON,PROPN,VERB">1652</feat><!-- o, un, i, l', quello, ô, quelli, fæto, tutto, tutti -->
+    <feat name="Mood" value="Cnd" upos="AUX,VERB">25</feat><!-- aviæ, porriæ, saieiva, saiæ, saviæ, aniësci, arriviësci, daiæ, dovieiva, faiæ -->
+    <feat name="Mood" value="Imp" upos="AUX,VERB">33</feat><!-- mia, ammia, danni, vanni, Appægia, Leva, Metti, Monda, Remescia, Sciuscia -->
+    <feat name="Mood" value="Ind" upos="AUX,VERB">591</feat><!-- é, à, ea, ò, son, an, peu, en, ê, aiva -->
+    <feat name="Mood" value="Sub" upos="AUX,VERB">32</feat><!-- agge, aggian, segge, seggian, aggiæ, aise, arreste, avesse, ceuve, creddesci -->
+    <feat name="Number" value="Plur" upos="ADJ,AUX,DET,NOUN,PRON,PROPN,VERB">745</feat><!-- i, e, ve, son, quelli, an, tutti, voî, en, vòtte -->
+    <feat name="Number" value="Sing" upos="ADJ,AUX,DET,NOUN,PRON,PROPN,VERB">2887</feat><!-- o, a, é, un, l', à, unna, quello, ea, ti -->
+    <feat name="NumType" value="Card" upos="NUM">42</feat><!-- doe, doî, eutto, 1929, quaranta, 1746, 1815, 1847, 1874, 1892 -->
+    <feat name="NumType" value="Ord" upos="ADJ">9</feat><!-- primma, primmo, vinteximo, primme, quarto, segonda -->
+    <feat name="Person" value="1" upos="AUX,PRON,VERB">193</feat><!-- me, m', ò, mi, son, penso, se, sò, veuggio, emmo -->
+    <feat name="Person" value="2" upos="AUX,PRON,VERB">191</feat><!-- ti, ve, t', te, voî, ê, æ, ei, mia, sei -->
+    <feat name="Person" value="3" upos="AUX,PRON,VERB">920</feat><!-- o, é, a, se, à, ea, ghe, ô, lê, s' -->
+    <feat name="Poss" value="Yes" upos="DET,PRON">57</feat><!-- mæ, seu, vòstra, sò, tò, vòstro, nòstra, nòstro, vòstri, teu -->
+    <feat name="PronType" value="Art" upos="DET">700</feat><!-- o, a, i, un, e, l', unna, unn' -->
+    <feat name="PronType" value="Dem" upos="DET,PRON">126</feat><!-- quello, quelli, gh', sta, ghe, quella, ne, n', quelle, quell' -->
+    <feat name="PronType" value="Exc" upos="DET">3</feat><!-- che -->
+    <feat name="PronType" value="Ind" upos="DET,PRON">59</feat><!-- un, atro, atri, uña, atra, quarche, quarcösa, tanti, tante, guæi -->
+    <feat name="PronType" value="Int" upos="DET,PRON">18</feat><!-- chi, cöse, che, cös' -->
+    <feat name="PronType" value="Neg" upos="DET,PRON">17</feat><!-- ninte, nisciun, nisciuña -->
+    <feat name="PronType" value="Prs" upos="DET,PRON">681</feat><!-- o, a, se, ti, me, m', ve, ghe, ô, lê -->
+    <feat name="PronType" value="Rel" upos="PRON">107</feat><!-- che, ch', quæ, chi, quante, donde -->
+    <feat name="PronType" value="Tot" upos="DET,PRON">34</feat><!-- tutto, tutti, tutta, tutte, ciascheduña, tutt' -->
+    <feat name="Tense" value="Fut" upos="AUX,VERB">18</feat><!-- avià, diei, pensià, saià, Saian, aviei, aviemo, battezzià, dian, doviæ -->
+    <feat name="Tense" value="Imp" upos="AUX,VERB">131</feat><!-- ea, aiva, diva, ean, poeiva, stava, anava, vegniva, arriesciva, arrivava -->
+    <feat name="Tense" value="Past" upos="AUX,VERB">207</feat><!-- fæto, stæto, dæto, dito, andæto, anæto, misso, fæta, stæti, vegnuo -->
+    <feat name="Tense" value="Pres" upos="AUX,VERB">724</feat><!-- é, à, ò, son, fâ, ëse, an, peu, vedde, dâ -->
+    <feat name="VerbForm" value="Fin" upos="AUX,VERB">681</feat><!-- é, à, ea, ò, son, an, peu, en, ê, aiva -->
+    <feat name="VerbForm" value="Ger" upos="VERB">1</feat><!-- piggiando -->
+    <feat name="VerbForm" value="Inf" upos="AUX,VERB">191</feat><!-- fâ, ëse, dâ, stâ, anâ, parlâ, vedde, beive, dî, mette -->
+    <feat name="VerbForm" value="Part" upos="AUX,VERB">207</feat><!-- fæto, stæto, dæto, dito, andæto, anæto, misso, fæta, stæti, vegnuo -->
+  </feats>
+  <!-- Statistics of universal dependency relations. -->
+  <deps unique="35">
+    <dep name="acl">35</dep>
+    <dep name="acl:relcl">102</dep>
+    <dep name="advcl">95</dep>
+    <dep name="advmod">412</dep>
+    <dep name="amod">150</dep>
+    <dep name="appos">22</dep>
+    <dep name="aux">216</dep>
+    <dep name="case">748</dep>
+    <dep name="cc">243</dep>
+    <dep name="ccomp">53</dep>
+    <dep name="conj">234</dep>
+    <dep name="cop">100</dep>
+    <dep name="csubj">8</dep>
+    <dep name="dep">134</dep>
+    <dep name="det">849</dep>
+    <dep name="discourse">23</dep>
+    <dep name="dislocated">16</dep>
+    <dep name="expl">149</dep>
+    <dep name="expl:impers">23</dep>
+    <dep name="expl:pv">125</dep>
+    <dep name="fixed">103</dep>
+    <dep name="flat">43</dep>
+    <dep name="iobj">105</dep>
+    <dep name="mark">245</dep>
+    <dep name="nmod">267</dep>
+    <dep name="nsubj">416</dep>
+    <dep name="nummod">19</dep>
+    <dep name="obj">287</dep>
+    <dep name="obl">411</dep>
+    <dep name="orphan">3</dep>
+    <dep name="parataxis">83</dep>
+    <dep name="punct">792</dep>
+    <dep name="root">316</dep>
+    <dep name="vocative">6</dep>
+    <dep name="xcomp">95</dep>
+  </deps>
+</treebank>

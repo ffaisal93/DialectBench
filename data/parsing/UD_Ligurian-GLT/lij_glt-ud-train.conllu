@@ -1,0 +1,294 @@
+# global.columns = ID FORM LEMMA UPOS XPOS FEATS HEAD DEPREL DEPS MISC
+# newdoc id = cairo
+# newpar id = cairo-p001
+# sent_id = cairo-p001-s001
+# text = A figgia a l'à scrito unna lettia a-a seu amiga.
+1	A	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	2	det	_	_
+2	figgia	figgia	NOUN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+3	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
+4	l'	l'	PART	_	_	6	dep	_	SpaceAfter=No
+5	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	scrito	scrive	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+7	unna	un	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	8	det	_	_
+8	lettia	lettia	NOUN	_	Gender=Fem|Number=Sing	6	obj	_	_
+9-10	a-a	_	_	_	_	_	_	_	_
+9	à	à	ADP	_	_	12	case	_	_
+10	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	12	det	_	_
+11	seu	seu	DET	_	Poss=Yes|PronType=Prs	12	det	_	_
+12	amiga	amigo	NOUN	_	Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = cairo-p001-s002
+# text = Penso che ceuve.
+1	Penso	pensâ	VERB	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	che	che	SCONJ	_	_	3	mark	_	_
+3	ceuve	ceuve	VERB	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	_	SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
+
+# sent_id = cairo-p001-s003
+# text = O l'à provou à smette de fummâ e beive.
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+2	l'	l'	PART	_	_	4	dep	_	SpaceAfter=No
+3	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	provou	provâ	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+5	à	à	ADP	_	_	6	mark	_	_
+6	smette	smette	VERB	_	Tense=Pres|VerbForm=Inf	4	xcomp	_	_
+7	de	de	ADP	_	_	8	mark	_	_
+8	fummâ	fummâ	VERB	_	Tense=Pres|VerbForm=Inf	6	xcomp	_	_
+9	e	o	DET	_	Definite=Def|Gender=Fem|Number=Plur|PronType=Art	10	det	_	_
+10	beive	beive	VERB	_	Tense=Pres|VerbForm=Inf	8	conj	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = cairo-p001-s004
+# text = Ti veu anâ via?
+1	Ti	ti	PRON	_	Number=Sing|Person=2|PronType=Prs	3	nsubj	_	_
+2	veu	voei	AUX	_	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	anâ	anâ	VERB	_	Tense=Pres|VerbForm=Inf	0	root	_	_
+4	via	via	ADV	_	_	3	advmod	_	SpaceAfter=No
+5	?	?	PUNCT	_	_	3	punct	_	_
+
+# sent_id = cairo-p001-s005
+# text = Sam, arvi o barcon!
+1	Sam	Sam	PROPN	_	Gender=Masc|Number=Sing	3	vocative	_	SpaceAfter=No
+2	,	,	PUNCT	_	_	1	punct	_	_
+3	arvi	arvî	VERB	_	Mood=Imp|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	5	det	_	_
+5	barcon	barcon	NOUN	_	Gender=Masc|Number=Sing	3	obj	_	SpaceAfter=No
+6	!	!	PUNCT	_	_	3	punct	_	_
+
+# sent_id = cairo-p001-s006
+# text = A l'à fæto lavâ a machina da seu maio.
+1	A	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+2	l'	l'	PART	_	_	4	dep	_	SpaceAfter=No
+3	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	fæto	fâ	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+5	lavâ	lavâ	VERB	_	Tense=Pres|VerbForm=Inf	4	xcomp	_	_
+6	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	7	det	_	_
+7	machina	machina	NOUN	_	Gender=Fem|Number=Sing	5	obj	_	_
+8	da	da	ADP	_	_	10	case	_	_
+9	seu	seu	DET	_	Poss=Yes|PronType=Prs	10	det	_	_
+10	maio	maio	NOUN	_	Gender=Masc|Number=Sing	4	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = cairo-p001-s007
+# text = O vexin de Peter o l'à tento o reçinto de rosso.
+1	O	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	2	det	_	_
+2	vexin	vexin	NOUN	_	Gender=Masc|Number=Sing	8	nsubj	_	_
+3	de	de	ADP	_	_	4	case	_	_
+4	Peter	Peter	PROPN	_	Gender=Masc|Number=Sing	2	nmod	_	_
+5	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	expl	_	_
+6	l'	l'	PART	_	_	8	dep	_	SpaceAfter=No
+7	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	_	_
+8	tento	tenze	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	reçinto	reçinto	NOUN	_	Gender=Masc|Number=Sing	8	obj	_	_
+11	de	de	ADP	_	_	12	case	_	_
+12	rosso	rosso	NOUN	_	Gender=Masc|Number=Sing	8	obl	_	SpaceAfter=No
+13	.	.	PUNCT	_	_	8	punct	_	_
+
+# sent_id = cairo-p001-s008
+# text = Mæ poæ o l'é ciù bullo che o teu.
+1	Mæ	mæ	DET	_	Poss=Yes|PronType=Prs	2	det	_	_
+2	poæ	poæ	NOUN	_	Gender=Masc|Number=Sing	7	nsubj	_	_
+3	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	expl	_	_
+4	l'	l'	PART	_	_	7	dep	_	SpaceAfter=No
+5	é	ëse	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+6	ciù	ciù	ADV	_	_	7	advmod	_	_
+7	bullo	bullo	ADJ	_	Gender=Masc|Number=Sing	0	root	_	_
+8	che	che	ADP	_	_	10	case	_	_
+9	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	10	det	_	_
+10	teu	teu	PRON	_	Poss=Yes|PronType=Prs	7	obl	_	SpaceAfter=No
+11	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = cairo-p001-s009
+# text = Mary a l'à guägno o bronzo, Peter l'argento e Jane l'öo.
+1	Mary	Mary	PROPN	_	Gender=Masc|Number=Sing	5	nsubj	_	_
+2	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+3	l'	l'	PART	_	_	5	dep	_	SpaceAfter=No
+4	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	_	_
+5	guägno	guägnâ	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	bronzo	bronzo	NOUN	_	Gender=Masc|Number=Sing	5	obj	_	SpaceAfter=No
+8	,	,	PUNCT	_	_	9	punct	_	_
+9	Peter	Peter	PROPN	_	Gender=Masc|Number=Sing	5	conj	_	_
+10	l'	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	11	det	_	SpaceAfter=No
+11	argento	argento	NOUN	_	Gender=Masc|Number=Sing	9	orphan	_	_
+12	e	e	CCONJ	_	_	13	cc	_	_
+13	Jane	Jane	PROPN	_	Gender=Fem|Number=Sing	5	conj	_	_
+14	l'	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	15	det	_	SpaceAfter=No
+15	öo	öo	NOUN	_	Gender=Masc|Number=Sing	13	orphan	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = cairo-p001-s010
+# text = Iguazú o l'é un paise piccin ò grande?
+1	Iguazú	Iguazú	PROPN	_	Gender=Fem|Number=Sing	6	nsubj	_	_
+2	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	expl	_	_
+3	l'	l'	PART	_	_	6	dep	_	SpaceAfter=No
+4	é	ëse	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+5	un	un	DET	_	Definite=Ind|Gender=Masc|Number=Sing|PronType=Art	6	det	_	_
+6	paise	paise	NOUN	_	Gender=Masc|Number=Sing	0	root	_	_
+7	piccin	piccin	ADJ	_	Gender=Masc|Number=Sing	6	amod	_	_
+8	ò	ò	CCONJ	_	_	9	cc	_	_
+9	grande	grande	ADJ	_	Gender=Masc|Number=Sing	7	conj	_	SpaceAfter=No
+10	?	?	PUNCT	_	_	6	punct	_	_
+
+# sent_id = cairo-p001-s011
+# text = Ni Peter Smith e ni Mary Brown an posciuo ëse çernui.
+1	Ni	ni	CCONJ	_	_	2	cc	_	_
+2	Peter	Peter	PROPN	_	Gender=Masc|Number=Sing	11	nsubj	_	_
+3	Smith	Smith	PROPN	_	Gender=Masc|Number=Sing	2	flat	_	_
+4	e	e	CCONJ	_	_	6	cc	_	_
+5	ni	ni	CCONJ	_	_	6	cc	_	_
+6	Mary	Mary	PROPN	_	Gender=Fem|Number=Sing	2	conj	_	_
+7	Brown	Brown	PROPN	_	Gender=Fem|Number=Sing	6	flat	_	_
+8	an	avei	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	aux	_	_
+9	posciuo	poei	AUX	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	11	aux	_	_
+10	ëse	ëse	AUX	_	Tense=Pres|VerbForm=Inf	11	aux	_	_
+11	çernui	çerne	VERB	_	Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part	0	root	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	11	punct	_	_
+
+# sent_id = cairo-p001-s012
+# text = No gh'an idea de chi l'agge scrito.
+1	No	no	ADV	_	_	3	advmod	_	_
+2	gh'	ghe	PRON	_	PronType=Dem	3	expl:pv	_	SpaceAfter=No
+3	an	avei	VERB	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	idea	idea	NOUN	_	Gender=Fem|Number=Sing	3	obj	_	_
+5	de	de	ADP	_	_	6	case	_	_
+6	chi	chi	PRON	_	PronType=Int	3	obl	_	_
+7	l'	lo	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	obj	_	SpaceAfter=No
+8	agge	avei	AUX	_	Mood=Sub|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	_	_
+9	scrito	scrive	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	6	acl:relcl	_	SpaceAfter=No
+10	.	.	PUNCT	_	_	3	punct	_	_
+
+# sent_id = cairo-p001-s013
+# text = Cöse t'ammii?
+1	Cöse	cöse	PRON	_	Number=Sing|PronType=Int	3	obj	_	_
+2	t'	ti	PRON	_	Number=Sing|Person=2|PronType=Prs	3	nsubj	_	SpaceAfter=No
+3	ammii	ammiâ	VERB	_	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	_	SpaceAfter=No
+4	?	?	PUNCT	_	_	3	punct	_	_
+
+# sent_id = cairo-p001-s014
+# text = Quande ti pensi de poei vegnî?
+1	Quande	quande	ADV	_	_	3	mark	_	_
+2	ti	ti	PRON	_	Number=Sing|Person=2|PronType=Prs	3	nsubj	_	_
+3	pensi	pensâ	VERB	_	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	de	de	ADP	_	_	6	mark	_	_
+5	poei	poei	AUX	_	Tense=Pres|VerbForm=Inf	6	aux	_	_
+6	vegnî	vegnî	VERB	_	Tense=Pres|VerbForm=Inf	3	xcomp	_	SpaceAfter=No
+7	?	?	PUNCT	_	_	3	punct	_	_
+
+# sent_id = cairo-p001-s015
+# text = O l'à cattou unna machina, seu fræ incangio solo che unna biçicletta.
+1	O	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+2	l'	l'	PART	_	_	4	dep	_	SpaceAfter=No
+3	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	cattou	cattâ	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+5	unna	un	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	6	det	_	_
+6	machina	machina	NOUN	_	Gender=Fem|Number=Sing	4	obj	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	9	punct	_	_
+8	seu	seu	PRON	_	Poss=Yes|PronType=Prs	9	det	_	_
+9	fræ	fræ	NOUN	_	Gender=Masc|Number=Sing	4	conj	_	_
+10	incangio	incangio	ADV	_	_	14	advmod	_	_
+11	solo	solo	ADV	_	_	14	advmod	_	_
+12	che	che	ADP	_	_	11	fixed	_	_
+13	unna	un	DET	_	Definite=Ind|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	biçicletta	biçicletta	NOUN	_	Gender=Fem|Number=Sing	9	orphan	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = cairo-p001-s016
+# text = Peter e Mary se son abbrassæ e dapeu son sciortii d'inta stançia.
+1	Peter	Peter	PROPN	_	Gender=Masc|Number=Sing	6	nsubj	_	_
+2	e	e	CCONJ	_	_	3	cc	_	_
+3	Mary	Mary	PROPN	_	Gender=Fem|Number=Sing	1	conj	_	_
+4	se	se	PRON	_	Person=3|PronType=Prs	6	obj	_	_
+5	son	ëse	AUX	_	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	abbrassæ	abbrassâ	VERB	_	Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part	0	root	_	_
+7	e	e	CCONJ	_	_	10	cc	_	_
+8	dapeu	dapeu	ADV	_	_	10	advmod	_	_
+9	son	ëse	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	10	aux	_	_
+10	sciortii	sciortî	VERB	_	Gender=Masc|Number=Plur|Tense=Past|VerbForm=Part	6	conj	_	_
+11	d'	de	ADP	_	_	14	case	_	SpaceAfter=No
+12-13	inta	_	_	_	_	_	_	_	_
+12	inte	inte	ADP	_	_	14	case	_	_
+13	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	14	det	_	_
+14	stançia	stançia	NOUN	_	Gender=Fem|Number=Sing	10	obl	_	SpaceAfter=No
+15	.	.	PUNCT	_	_	6	punct	_	_
+
+# sent_id = cairo-p001-s017
+# text = Quello giorno a l'aviæ dovuo fâse a testa, ma pe quarche raxon a no l'à fæto.
+1	Quello	quello	DET	_	Gender=Masc|Number=Sing|PronType=Dem	2	det	_	_
+2	giorno	giorno	NOUN	_	Gender=Masc|Number=Sing	7	obl	_	_
+3	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
+4	l'	l'	PART	_	_	7	dep	_	SpaceAfter=No
+5	aviæ	avei	AUX	_	Mood=Cnd|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	_	_
+6	dovuo	dovei	AUX	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	7	aux	_	_
+7-8	fâse	_	_	_	_	_	_	_	_
+7	fâ	fâ	VERB	_	Tense=Pres|VerbForm=Inf	0	root	_	_
+8	se	se	PRON	_	Person=3|PronType=Prs	7	expl:pv	_	_
+9	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	10	det	_	_
+10	testa	testa	NOUN	_	Gender=Fem|Number=Sing	7	obj	_	SpaceAfter=No
+11	,	,	PUNCT	_	_	20	punct	_	_
+12	ma	ma	CCONJ	_	_	20	cc	_	_
+13	pe	pe	ADP	_	_	15	case	_	_
+14	quarche	quarche	DET	_	Gender=Fem|Number=Sing|PronType=Ind	15	det	_	_
+15	raxon	raxon	NOUN	_	Gender=Fem|Number=Sing	20	obl	_	_
+16	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	20	nsubj	_	_
+17	no	no	ADV	_	_	20	advmod	_	_
+18	l'	lo	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	obj	_	SpaceAfter=No
+19	à	avei	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	_	_
+20	fæto	fâ	VERB	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	7	conj	_	SpaceAfter=No
+21	.	.	PUNCT	_	_	7	punct	_	_
+
+# sent_id = cairo-p001-s018
+# text = No ò posciuo tegnîghe o passo perché o l'anava tròppo spedio.
+1	No	no	ADV	_	_	4	advmod	_	_
+2	ò	avei	AUX	_	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	_	_
+3	posciuo	poei	AUX	_	Gender=Masc|Number=Sing|Tense=Past|VerbForm=Part	4	aux	_	_
+4-5	tegnîghe	_	_	_	_	_	_	_	_
+4	tegnî	tegnî	VERB	_	Tense=Pres|VerbForm=Inf	0	root	_	_
+5	ghe	ghe	PRON	_	Person=3|PronType=Prs	4	iobj	_	_
+6	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	7	det	_	_
+7	passo	passo	NOUN	_	Gender=Masc|Number=Sing	4	obj	_	_
+8	perché	perché	SCONJ	_	_	11	mark	_	_
+9	o	o	PRON	_	Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	_	_
+10	l'	l'	PART	_	_	11	dep	_	SpaceAfter=No
+11	anava	anâ	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Imp|VerbForm=Fin	4	advcl	_	_
+12	tròppo	tròppo	ADV	_	_	13	advmod	_	_
+13	spedio	spedio	ADJ	_	Gender=Masc|Number=Sing	11	xcomp	_	SpaceAfter=No
+14	.	.	PUNCT	_	_	4	punct	_	_
+
+# sent_id = cairo-p001-s019
+# text = Sta lettia a l'é do Peter e a l'é stæta consegnâ vëi.
+1	Sta	sto	DET	_	Gender=Fem|Number=Sing|PronType=Dem	2	det	_	_
+2	lettia	lettia	NOUN	_	Gender=Fem|Number=Sing	5	nsubj	_	_
+3	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	5	expl	_	_
+4	l'	l'	PART	_	_	5	dep	_	SpaceAfter=No
+5	é	ëse	VERB	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6-7	do	_	_	_	_	_	_	_	_
+6	de	de	ADP	_	_	8	case	_	_
+7	o	o	DET	_	Definite=Def|Gender=Masc|Number=Sing|PronType=Art	8	det	_	_
+8	Peter	Peter	PROPN	_	Gender=Masc|Number=Sing	5	obl	_	_
+9	e	e	CCONJ	_	_	14	cc	_	_
+10	a	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	14	nsubj	_	_
+11	l'	l'	PART	_	_	14	dep	_	SpaceAfter=No
+12	é	ëse	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	_	_
+13	stæta	stâ	AUX	_	Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part	14	aux	_	_
+14	consegnâ	consegnâ	VERB	_	Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part	5	conj	_	_
+15	vëi	vëi	ADV	_	_	14	advmod	_	SpaceAfter=No
+16	.	.	PUNCT	_	_	5	punct	_	_
+
+# sent_id = cairo-p001-s020
+# text = A l'é cresciua à Pariggi, a capitale da Fransa.
+1	A	o	PRON	_	Gender=Fem|Number=Sing|Person=3|PronType=Prs	4	nsubj	_	_
+2	l'	l'	PART	_	_	4	dep	_	SpaceAfter=No
+3	é	ëse	AUX	_	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	cresciua	cresce	VERB	_	Gender=Fem|Number=Sing|Tense=Past|VerbForm=Part	0	root	_	_
+5	à	à	ADP	_	_	6	case	_	_
+6	Pariggi	Pariggi	PROPN	_	Gender=Fem|Number=Sing	4	obl	_	SpaceAfter=No
+7	,	,	PUNCT	_	_	9	punct	_	_
+8	a	o	DET	_	Definite=Def|Gender=Fem|Number=Sing|PronType=Art	9	det	_	_
+9	capitale	capitale	NOUN	_	Gender=Fem|Number=Sing	6	appos	_	_
+10	da	da	ADP	_	_	11	case	_	_
+11	Fransa	Fransa	PROPN	_	Gender=Fem|Number=Sing	9	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	_	_	4	punct	_	_
+
