@@ -76,6 +76,15 @@ UD_HEAD_LABELS = [
     "xcomp",
 ]
 
+UD_HEAD_LABELS_TwitterAAE = UD_HEAD_LABELS + ['acl_relcl',
+         'aux_pass',
+         'compound_prt',
+         'det_predet',
+         'nmod_poss',
+         'nmod_tmod',
+         'obl_npmod',
+         'obl_tmod']
+
 UD_HEAD_LABELS_singlish = ['ADJ',
      'ADP',
      'acl',

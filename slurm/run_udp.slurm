@@ -36,3 +36,11 @@ fi
 if [[ "$task" = "predict_udp_eng_sing" ]]; then
 	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
 fi
+
+if [[ "$task" = "train_udp_eng_TwitterAAE" ]]; then
+	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
+fi
+
+if [[ "$task" = "predict_udp_eng_TwitterAAE" ]]; then
+	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
+fi

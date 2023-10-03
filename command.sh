@@ -60,6 +60,23 @@ if [[ "$task" = "train_udp_eng_sing" ]]; then
 	done
 fi
 
+if [[ "$task" = "train_udp_eng_TwitterAAE" ]]; then
+
+	#./command.sh --task train_udp_eng_sing --MODEL_NAME bert
+	export ALL_MODELS=("UD_English-EWT")
+	
+	for MODEL_NAME in ${ALL_MODELS[@]}; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${base_model}
+		echo ${MODEL_NAME}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
+		# bash install.sh --task train_udp_eng_TwitterAAE --lang UD_English-EWT --MODEL_NAME bert
+	done
+fi
+
 if [[ "$task" = "predict_udp" ]]; then
 	efile="tr_output/${base_model}_${task}.err"
 	ofile="tr_output/${base_model}_${task}.out"
@@ -80,5 +97,17 @@ if [[ "$task" = "predict_udp_eng_sing" ]]; then
 	echo ${base_model}
 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} null ${base_model}
 	# bash install.sh --task ${task} --MODEL_NAME ${base_model}
+
+fi
+
+if [[ "$task" = "predict_udp_eng_TwitterAAE" ]]; then
+	#./command.sh --task predict_udp_eng_sing --MODEL_NAME xlmr
+	efile="tr_output/${base_model}_${task}.err"
+	ofile="tr_output/${base_model}_${task}.out"
+	echo ${efile}
+	echo ${ofile}
+	echo ${base_model}
+	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} null ${base_model}
+	# bash install.sh --task predict_udp_eng_TwitterAAE --MODEL_NAME bert
 
 fi

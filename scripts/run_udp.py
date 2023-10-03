@@ -16,7 +16,7 @@ import transformers.adapters.composition as ac
 from preprocessing import preprocess_dataset
 from transformers import AutoConfig, AutoTokenizer, HfArgumentParser, set_seed
 from transformers.adapters import AdapterArguments, AdapterConfigBase, AutoAdapterModel
-from utils_udp import UD_HEAD_LABELS, UD_HEAD_LABELS_singlish, DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
+from utils_udp import UD_HEAD_LABELS, UD_HEAD_LABELS_singlish, UD_HEAD_LABELS_TwitterAAE, DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
 
 
 logger = logging.getLogger(__name__)
@@ -64,6 +64,7 @@ class ModelArguments:
     )
     use_train_lang: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
     use_singlish: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
+    use_TwitterAAE: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
 
 
 @dataclass
@@ -145,6 +146,8 @@ def main():
     labels = UD_HEAD_LABELS
     if data_args.task_name=='singlish' or model_args.use_singlish:
         labels=UD_HEAD_LABELS_singlish
+    elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
+        labels=UD_HEAD_LABELS_TwitterAAE
     label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
     num_labels = len(labels)
 
@@ -199,6 +202,7 @@ def main():
     else:
         dataset = load_dataset("scripts/universal_dependencies.py", data_args.task_name)
         # dataset = load_dataset("universal_dependencies", data_args.task_name)
+    print(labels)
     dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
 
     # # Setup adapters
@@ -309,6 +313,8 @@ def main():
                 labels = UD_HEAD_LABELS
                 if data_args.task_name=='singlish' or model_args.use_singlish:
                     labels=UD_HEAD_LABELS_singlish
+                elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
+                    labels=UD_HEAD_LABELS_TwitterAAE
                 label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
                 num_labels = len(labels)
 

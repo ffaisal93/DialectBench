@@ -121,6 +121,31 @@ if [[ "$task" = "train_udp_eng_sing" || "$task" = "all" ]]; then
 	deactivate
 fi
 
+if [[ "$task" = "train_udp_eng_TwitterAAE" || "$task" = "all" ]]; then
+
+	echo "------------------------------Train UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+
+	export TASK_NAME=${lang}
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_train \
+	    --use_TwitterAAE \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/${TASK_NAME}-TwitterAAE \
+	    --overwrite_output_dir \
+	    --store_best_model \
+	    --evaluation_strategy epoch \
+	    --metric_score las 
+	deactivate
+fi
+
 if [[ "$task" = "predict_udp" || "$task" = "all" ]]; then
 
 	echo "------------------------------Predict UDP------------------------------"
@@ -196,22 +221,20 @@ if [[ "$task" = "predict_udp_eng_sing" || "$task" = "all" ]]; then
 	deactivate
 fi
 
-
-
-if [[ "$task" = "predict_udp_test" || "$task" = "all" ]]; then
+if [[ "$task" = "predict_udp_eng_TwitterAAE" || "$task" = "all" ]]; then
 
 	echo "------------------------------Predict UDP------------------------------"
 	source vnv/vnv-adp-l/bin/activate
-	export TASK_NAME="UD_English-EWT"
-	# export TASK_NAME="UD_French-ParTUT"
+	export TASK_NAME="TwitterAAE"
 
-	##few shot
-	result_file="/projects/antonis/fahim/DialectBench/experiments/test-French-Rhapsodie.txt"
+
+	##zero shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}_${task}_${TASK_NAME}.txt"
 	rm ${result_file} 
 
 	python scripts/run_udp.py \
 	    --model_name_or_path ${MODEL_PATH} \
-	    --do_predict_all \
+	    --do_predict \
 	    --task_name $TASK_NAME \
 	    --per_device_train_batch_size 32 \
 	    --learning_rate 2e-4 \
@@ -220,8 +243,40 @@ if [[ "$task" = "predict_udp_test" || "$task" = "all" ]]; then
 	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
 	    --lang_config metadata/udp_metadata.json \
 	    --result_file ${result_file} \
-	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/UD_English-EWT-TwitterAAE \
 	    --evaluation_strategy epoch \
+	    --store_best_model \
+	    --metric_score las
+	deactivate
+fi
+
+
+
+if [[ "$task" = "predict_udp_test" || "$task" = "all" ]]; then
+
+	echo "------------------------------Predict UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+	export TASK_NAME="TwitterAAE"
+	# export TASK_NAME="UD_French-ParTUT"
+
+	##few shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/test-French-Rhapsodie.txt"
+	rm ${result_file} 
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_predict \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --lang_config metadata/udp_metadata.json \
+	    --result_file ${result_file} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/UD_English-EWT \
+	    --evaluation_strategy epoch \
+	    --store_best_model \
 	    --metric_score las
 
 	# python scripts/run_udp.py \
