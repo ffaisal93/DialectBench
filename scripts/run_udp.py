@@ -8,14 +8,15 @@ import os
 import sys
 from dataclasses import dataclass, field
 from typing import Dict, Optional
+import torch
 
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk, DatasetDict
 
 import transformers.adapters.composition as ac
 from preprocessing import preprocess_dataset
 from transformers import AutoConfig, AutoTokenizer, HfArgumentParser, set_seed
-from transformers.adapters import AdapterArguments, AdapterConfigBase, AutoAdapterModel, setup_adapter_training
-from utils_udp import UD_HEAD_LABELS, DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
+from transformers.adapters import AdapterArguments, AdapterConfigBase, AutoAdapterModel
+from utils_udp import UD_HEAD_LABELS, UD_HEAD_LABELS_singlish, DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
 
 
 logger = logging.getLogger(__name__)
@@ -57,6 +58,12 @@ class ModelArguments:
     mecab_dic_dir: Optional[str] = field(
         default=None, metadata={"help": "Path to mecab dictionary. Required when using Japanese model/tokenizer"}
     )
+    do_predict_all: bool = field(
+        default=False,
+        metadata={"help": "Overwrite the cached training and evaluation sets."},
+    )
+    use_train_lang: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
+    use_singlish: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
 
 
 @dataclass
@@ -81,6 +88,8 @@ class DataTrainingArguments:
     )
     use_mock_data: bool = field(default=False)
     evaluate_on: str = field(default="validation")
+    lang_config: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
+    result_file: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
 
 
 def main():
@@ -134,6 +143,8 @@ def main():
 
     # Prepare for UD dependency parsing task
     labels = UD_HEAD_LABELS
+    if data_args.task_name=='singlish' or model_args.use_singlish:
+        labels=UD_HEAD_LABELS_singlish
     label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
     num_labels = len(labels)
 
@@ -169,6 +180,7 @@ def main():
         config=config,
         cache_dir=model_args.cache_dir,
     )
+    # if training_args.do_train==True:
     model.add_dependency_parsing_head(
         task_name,
         num_labels=num_labels,
@@ -185,34 +197,50 @@ def main():
         dataset_builder.download_and_prepare(dl_manager=mock_dl_manager, ignore_verifications=True)
         dataset = dataset_builder.as_dataset()
     else:
-        dataset = load_dataset("universal_dependencies", data_args.task_name)
+        dataset = load_dataset("scripts/universal_dependencies.py", data_args.task_name)
+        # dataset = load_dataset("universal_dependencies", data_args.task_name)
     dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
 
-    # Setup adapters
-    if model_args.leave_out_twelvth:
-        logger.info("Leaving out 12")
-        adapter_config_kwargs = {"leave_out": [11]}
-        adapter_load_kwargs = {"leave_out": [11]}
-    else:
-        adapter_config_kwargs = {}
-        adapter_load_kwargs = {}
-    adapter_name, lang_adapter_name = setup_adapter_training(
-        model,
-        adapter_args,
-        task_name,
-        adapter_config_kwargs=adapter_config_kwargs,
-        adapter_load_kwargs=adapter_load_kwargs,
-    )
+    # # Setup adapters
+    # if model_args.leave_out_twelvth:
+    #     logger.info("Leaving out 12")
+    #     adapter_config_kwargs = {"leave_out": [11]}
+    #     adapter_load_kwargs = {"leave_out": [11]}
+    # else:
+    #     adapter_config_kwargs = {}
+    #     adapter_load_kwargs = {}
+    # adapter_name, lang_adapter_name = setup_adapter_training(
+    #     model,
+    #     adapter_args,
+    #     task_name,
+    #     adapter_config_kwargs=adapter_config_kwargs,
+    #     adapter_load_kwargs=adapter_load_kwargs,
+    # )
     # Initialize our Trainer
     # HACK: Set this attribute to False to prevent label columns from being deleted
     training_args.remove_unused_columns = False
     trainer_class = DependencyParsingAdapterTrainer if adapter_args.train_adapter else DependencyParsingTrainer
-    trainer = trainer_class(
-        model=model,
-        args=training_args,
-        train_dataset=dataset["train"],
-        eval_dataset=dataset[data_args.evaluate_on],
-    )
+
+
+    if "validation" in list(dataset.keys()) and "train" in list(dataset.keys()):
+        trainer = trainer_class(
+            model=model,
+            args=training_args,
+            train_dataset=dataset["train"],
+            eval_dataset=dataset[data_args.evaluate_on],
+        )
+    elif "train" in list(dataset.keys()):
+        training_args.evaluation_strategy="no"
+        trainer = trainer_class(
+            model=model,
+            args=training_args,
+            train_dataset=dataset["train"],
+        )
+    elif list(dataset.keys())==["test"]:
+        trainer = trainer_class(
+            model=model,
+            args=training_args,
+        )
 
     # Training
     if training_args.do_train:
@@ -229,16 +257,16 @@ def main():
 
     # Evaluation
     results = {}
-    if training_args.do_eval:
-        logger.info("*** Evaluate ***")
+    # if training_args.do_eval:
+    #     logger.info("*** Evaluate ***")
 
-        result = trainer.evaluate()
+    #     result = trainer.evaluate()
 
-        if trainer.is_world_process_zero():
-            results.update(result)
+    #     if trainer.is_world_process_zero():
+    #         results.update(result)
 
-        trainer.log_metrics("eval", result)
-        trainer.save_metrics("eval", result)
+    #     trainer.log_metrics("eval", result)
+    #     trainer.save_metrics("eval", result)
 
     # Predict
     if training_args.do_predict:
@@ -277,6 +305,7 @@ def main():
                     model.set_active_adapters(task_name)
                 model.to(training_args.device)
             else:
+                print(training_args.output_dir)
                 trainer.model = AutoAdapterModel.from_pretrained(
                     os.path.join(training_args.output_dir, "best_model"),
                     from_tf=bool(".ckpt" in model_args.model_name_or_path),
@@ -286,12 +315,91 @@ def main():
 
         predictions, _, metrics = trainer.predict(dataset["test"])
 
-        output_test_results_file = os.path.join(training_args.output_dir, "test_results.txt")
+        output_test_results_file = data_args.result_file
         if trainer.is_world_process_zero():
-            with open(output_test_results_file, "w") as writer:
-                for key, value in metrics.items():
-                    logger.info("  %s = %s", key, value)
-                    writer.write("%s = %s\n" % (key, value))
+            writer = open(output_test_results_file, "a")
+            logger.info("%s,%s,%s,%s,%s,%s\n" % (data_args.task_name,data_args.task_name,'-','-', 
+                metrics['uas'],metrics['las'],))
+            writer.write("%s,%s,%s,%s,%s,%s\n" % (data_args.task_name,data_args.task_name,'-','-', 
+                metrics['uas'],metrics['las'],))
+
+    if model_args.do_predict_all:
+        import json
+        with open(data_args.lang_config) as json_file:
+            lang_info = json.load(json_file)
+
+        output_test_results_file = data_args.result_file
+        if trainer.is_world_process_zero():
+            writer = open(output_test_results_file, "a")
+
+        count=0
+        for lang, info in lang_info.items():
+            # if count>4:
+            #     break
+            # count+=1
+            print(lang, info, count)
+            
+            try:
+               ## define model path (zero shot from english if trained model not available)
+                if 'train' in lang_info[lang]["split"]:
+                    train_lang = lang
+                else:
+                    train_lang = 'UD_English-EWT'
+                ##zero-shot-default
+                if model_args.use_train_lang:
+                    train_lang = 'UD_English-EWT'
+
+                model_dir = os.path.join(training_args.output_dir, train_lang)
+                if "best_model" in os.listdir(model_dir):
+                    model_dir = os.path.join(model_dir, "best_model")
+
+                print("-------------------- %s ----------------------" %(model_dir))
+
+
+                # Prepare for UD dependency parsing task
+                labels = UD_HEAD_LABELS
+                if lang=='singlish' and model_args.use_train_lang==False:
+                    labels=UD_HEAD_LABELS_singlish
+                label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
+                num_labels = len(labels)
+
+                config = AutoConfig.from_pretrained(
+                    model_dir,
+                    num_labels=num_labels,
+                    id2label=label_map,
+                    label2id={label: i for i, label in enumerate(labels)},
+                    cache_dir=model_args.cache_dir,
+                    pad_token_id=-1,
+                )
+
+                trainer.model = AutoAdapterModel.from_pretrained(
+                        model_dir,
+                        from_tf=bool(".ckpt" in model_args.model_name_or_path),
+                        config=config,
+                        cache_dir=model_args.cache_dir,
+                    )
+                trainer.model.to(training_args.device)
+
+                ##load predict dataset
+                dataset = load_dataset("scripts/universal_dependencies.py", lang,
+                    split=['test'], cache_dir=model_args.cache_dir)
+                dataset = DatasetDict({"test":dataset[0]})
+                dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
+                ##prediction
+                predictions, _, metrics = trainer.predict(dataset["test"])
+                ##save results
+                if trainer.is_world_process_zero():
+                        logger.info("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
+                            metrics['uas'], 
+                            metrics['las']))
+                        writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
+                            metrics['uas'], 
+                            metrics['las'])) 
+
+            except:
+                logger.info("#########------------------------error happened in %s----------------########" %(lang))
+                writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'], 0, 0))
+
 
     return results
 

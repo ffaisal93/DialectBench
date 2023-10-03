@@ -76,6 +76,72 @@ UD_HEAD_LABELS = [
     "xcomp",
 ]
 
+UD_HEAD_LABELS_singlish = ['ADJ',
+     'ADP',
+     'acl',
+     'acl:relcl',
+     'advcl',
+     'advmod',
+     'amod',
+     'appos',
+     'aux',
+     'auxpass',
+     'case',
+     'cc',
+     'ccomp',
+     'comound',
+     'compound',
+     'compound:prt',
+     'compount',
+     'compount:prt',
+     'conj',
+     'cop',
+     'csubj',
+     'dep',
+     'det',
+     'det:predet',
+     'discourse',
+     'dislocated',
+     'dobj',
+     'dup',
+     'expl',
+     'iboj',
+     'iobj',
+     'list',
+     'mark',
+     'mmod',
+     'mod',
+     'mwe',
+     'name',
+     'neg',
+     'nmod',
+     'nmod:npmod',
+     'nmod:npmpd',
+     'nmod:poss',
+     'nmod:tmod',
+     'nsubj',
+     'nsubjpass',
+     'nummod',
+     'parataxis',
+     'paratixis',
+     'part',
+     'punct',
+     'remnant',
+     'rooot',
+     'root',
+     'sux',
+     'vocative',
+     'xcomp',
+     '_', 
+     'clf',  
+     'fixed', 
+     'flat', 
+     'goeswith', 
+     'obj', 
+     'obl', 
+     'orphan', 
+     'reparandum']
+
 
 @dataclass
 class UDTrainingArguments(TrainingArguments):
@@ -287,7 +353,7 @@ class DependencyParsingTrainer(Trainer):
         return PredictionOutput(predictions=output.predictions, label_ids=output.label_ids, metrics=output.metrics)
 
     def store_best_model(self, output):
-
+        print(output.metrics, self.args.metric_score)
         if self.args.metric_score not in output.metrics:
             raise Exception(
                 "Metric %s not in output.\nThe following output was generated: %s",
@@ -364,9 +430,9 @@ class DependencyParsingTrainer(Trainer):
         results[f"{metric_key_prefix}_loss"] = np.mean(eval_losses)
 
         # Prefix all keys with metric_key_prefix + '_'
-        for key in list(results.keys()):
-            if not key.startswith(f"{metric_key_prefix}_"):
-                results[f"{metric_key_prefix}_{key}"] = results.pop(key)
+        # for key in list(results.keys()):
+        #     if not key.startswith(f"{metric_key_prefix}_"):
+        #         results[f"{metric_key_prefix}_{key}"] = results.pop(key)
 
         # Add predictions_rels to output, even though we are only interested in the metrics
         return PredictionOutput(predictions=predictions_rels, label_ids=None, metrics=results)

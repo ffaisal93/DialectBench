@@ -31,6 +31,7 @@ def preprocess_dataset(
                     del words[i]
                     del heads[i]
                     del deprels[i]
+                    i=i-1
                 i += 1
             tokens = [tokenizer.tokenize(w) for w in words]
             word_lengths = [len(w) for w in tokens]
@@ -90,7 +91,12 @@ def preprocess_dataset(
         return dict(features)
 
     # Expects columns in all splits to be identical
-    remove_columns = dataset.column_names["train"]
+    if "train" in dataset.column_names:
+        remove_columns = dataset.column_names["train"]
+    elif "test" in dataset.column_names:
+        remove_columns = dataset.column_names["test"]
+    else:
+        remove_columns = dataset.column_names
     dataset = dataset.map(
         encode_batch,
         batched=True,

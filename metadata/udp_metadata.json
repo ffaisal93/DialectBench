@@ -1,0 +1,513 @@
+{
+   "singlish": {
+      "lang": "singlish",
+      "code": "eng-sing",
+      "desc": "",
+      "langgroup": "English",
+      "split": [
+         "dev",
+         "test",
+         "train"
+      ]
+   },
+   "UD_Armenian-ArmTDP": {
+      "lang": "Armenian",
+      "code": "hye-east",
+      "desc": "",
+      "langgroup": "Armenian",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_French-ParTUT": {
+      "lang": "French",
+      "code": "fre-multigenre",
+      "desc": "",
+      "langgroup": "French",
+      "split": [
+         "train",
+         "dev",
+         "test"
+      ]
+   },
+   "UD_English-EWT": {
+      "lang": "English",
+      "code": "eng",
+      "desc": "",
+      "langgroup": "English",
+      "split": [
+         "dev",
+         "test",
+         "train"
+      ]
+   },
+   "UD_Ligurian-GLT": {
+      "lang": "Ligurian",
+      "code": "lij",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "train",
+         "test"
+      ]
+   },
+   "UD_Gheg-GPS": {
+      "lang": "Gheg",
+      "code": "aln",
+      "desc": "",
+      "langgroup": "Albanian",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Norwegian-Nynorsk": {
+      "lang": "Norwegian",
+      "code": "nor-nynorsk",
+      "desc": "",
+      "langgroup": "Norwegian",
+      "split": [
+         "test",
+         "dev",
+         "train"
+      ]
+   },
+   "UD_Albanian-TSA": {
+      "lang": "Albanian",
+      "code": "alb",
+      "desc": "",
+      "langgroup": "Albanian",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Italian-PUD": {
+      "lang": "Italian",
+      "code": "ita-trans",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Portuguese-Bosque": {
+      "lang": "Portuguese",
+      "code": "por-euro-bra",
+      "desc": "",
+      "langgroup": "Portuguese",
+      "split": [
+         "test",
+         "dev",
+         "train"
+      ]
+   },
+   "UD_Italian-PoSTWITA": {
+      "lang": "Italian",
+      "code": "ita-tweet",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "UD_Old_French-SRCMF": {
+      "lang": "Old_French",
+      "code": "fro",
+      "desc": "",
+      "langgroup": "French",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_Swiss_German-UZH": {
+      "lang": "Swiss_German",
+      "code": "gsw",
+      "desc": "",
+      "langgroup": "German",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_North_Sami-Giella": {
+      "lang": "North_Sami",
+      "code": "sme",
+      "desc": "",
+      "langgroup": "Sami",
+      "split": [
+         "train",
+         "test"
+      ]
+   },
+   "UD_Norwegian-Bokmaal": {
+      "lang": "Norwegian",
+      "code": "nor-bokmaal",
+      "desc": "",
+      "langgroup": "Norwegian",
+      "split": [
+         "dev",
+         "test",
+         "train"
+      ]
+   },
+   "UD_French-ParisStories": {
+      "lang": "French",
+      "code": "fre-parisian",
+      "desc": "",
+      "langgroup": "French",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_German-LIT": {
+      "lang": "German",
+      "code": "deu-lit",
+      "desc": "",
+      "langgroup": "German",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Italian-MarkIT": {
+      "lang": "Italian",
+      "code": "ita-essay",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "train",
+         "dev",
+         "test"
+      ]
+   },
+   "UD_Chinese-GSDSimp": {
+      "lang": "Chinese",
+      "code": "zho-simp",
+      "desc": "",
+      "langgroup": "Chinese",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_Chinese-HK": {
+      "lang": "Chinese",
+      "code": "zho-trad-hk",
+      "desc": "",
+      "langgroup": "Chinese",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Umbrian-IKUVINA": {
+      "lang": "Umbrian",
+      "code": "xum",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Guarani-OldTuDeT": {
+      "lang": "Guarani",
+      "code": "grn",
+      "desc": "",
+      "langgroup": "Guarani",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Low_Saxon-LSDC": {
+      "lang": "Low_Saxon",
+      "code": "nds",
+      "desc": "",
+      "langgroup": "German",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_French-Rhapsodie": {
+      "lang": "French",
+      "code": "fre-spoken",
+      "desc": "",
+      "langgroup": "French",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "UD_Mbya_Guarani-Thomas": {
+      "lang": "Mbya_Guarani",
+      "code": "gun-paraguay",
+      "desc": "",
+      "langgroup": "Guarani",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Classical_Chinese-Kyoto": {
+      "lang": "Classical_Chinese",
+      "code": "zho-class-kyoto",
+      "desc": "",
+      "langgroup": "Chinese",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "UD_Norwegian-NynorskLIA": {
+      "lang": "Norwegian",
+      "code": "nor-nynorsk-spoken-old",
+      "desc": "",
+      "langgroup": "Norwegian",
+      "split": [
+         "train",
+         "dev",
+         "test"
+      ]
+   },
+   "UD_Komi_Permyak-UH": {
+      "lang": "Komi_Permyak",
+      "code": "koi",
+      "desc": "",
+      "langgroup": "Komi",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Chinese-CFL": {
+      "lang": "Chinese",
+      "code": "zho-l2-written",
+      "desc": "",
+      "langgroup": "Chinese",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Arabic-NYUAD": {
+      "lang": "Arabic",
+      "code": "ara-msa",
+      "desc": "",
+      "langgroup": "Arabic",
+      "split": [
+         "train",
+         "dev",
+         "test"
+      ]
+   },
+   "UD_Portuguese-PUD": {
+      "lang": "Portuguese",
+      "code": "por-trans",
+      "desc": "",
+      "langgroup": "Portuguese",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Portuguese-PetroGold": {
+      "lang": "Portuguese",
+      "code": "por-bra-petro",
+      "desc": "",
+      "langgroup": "Portuguese",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_Italian-TWITTIRO": {
+      "lang": "Italian",
+      "code": "ita-ironic-tweet",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "test",
+         "train",
+         "dev"
+      ]
+   },
+   "UD_Neapolitan-RB": {
+      "lang": "Neapolitan",
+      "code": "nap",
+      "desc": "",
+      "langgroup": "Italian",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Turkish_German-SAGT": {
+      "lang": "Turkish_German",
+      "code": "qtd-cs",
+      "desc": "",
+      "langgroup": "German",
+      "split": [
+         "test",
+         "dev",
+         "train"
+      ]
+   },
+   "UD_Chinese-PUD": {
+      "lang": "Chinese",
+      "code": "zho-trans",
+      "desc": "",
+      "langgroup": "Chinese",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Maghrebi_Arabic_French-Arabizi": {
+      "lang": "Maghrebi_Arabic_French",
+      "code": "qaf-arabizi",
+      "desc": "",
+      "langgroup": "Arabic",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "UD_Portuguese-CINTIL": {
+      "lang": "Portuguese",
+      "code": "por-newspaper",
+      "desc": "",
+      "langgroup": "Portuguese",
+      "split": [
+         "test",
+         "train",
+         "dev"
+      ]
+   },
+   "UD_French-PUD": {
+      "lang": "French",
+      "code": "fre-translation",
+      "desc": "",
+      "langgroup": "French",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_South_Levantine_Arabic-MADAR": {
+      "lang": "South_Levantine_Arabic",
+      "code": "ajp",
+      "desc": "",
+      "langgroup": "Arabic",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Komi_Zyrian-Lattice": {
+      "lang": "Komi_Zyrian",
+      "code": "kpv-written",
+      "desc": "",
+      "langgroup": "Komi",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Frisian_Dutch-Fame": {
+      "lang": "Frisian_Dutch",
+      "code": "qfn",
+      "desc": "",
+      "langgroup": "Dutch",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Skolt_Sami-Giellagas": {
+      "lang": "Skolt_Sami",
+      "code": "sms",
+      "desc": "",
+      "langgroup": "Sami",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Mbya_Guarani-Dooley": {
+      "lang": "Mbya_Guarani",
+      "code": "gun-brazil",
+      "desc": "",
+      "langgroup": "Guarani",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Dutch-Alpino": {
+      "lang": "Dutch",
+      "code": "nld",
+      "desc": "",
+      "langgroup": "Dutch",
+      "split": [
+         "train",
+         "test",
+         "dev"
+      ]
+   },
+   "UD_Arabic-PUD": {
+      "lang": "Arabic",
+      "code": "ara-msa-trans",
+      "desc": "",
+      "langgroup": "Arabic",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Komi_Zyrian-IKDP": {
+      "lang": "Komi_Zyrian",
+      "code": "kpv-dialectal",
+      "desc": "",
+      "langgroup": "Komi",
+      "split": [
+         "test"
+      ]
+   },
+   "UD_Western_Armenian-ArmTDP": {
+      "lang": "Western_Armenian",
+      "code": "hye-west",
+      "desc": "",
+      "langgroup": "Armenian",
+      "split": [
+         "test",
+         "dev",
+         "train"
+      ]
+   },
+   "UD_Portuguese-GSD": {
+      "lang": "Portuguese",
+      "code": "por-brazil",
+      "desc": "",
+      "langgroup": "Portuguese",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "UD_Arabic-PADT": {
+      "lang": "Arabic",
+      "code": "ara-msa",
+      "desc": "",
+      "langgroup": "Arabic",
+      "split": [
+         "dev",
+         "train",
+         "test"
+      ]
+   },
+   "TwitterAAE": {
+      "lang": "TwitterAAE",
+      "code": "eng-aae",
+      "desc": "",
+      "langgroup": "English",
+      "split": [
+         "test"
+      ]
+   }
+}

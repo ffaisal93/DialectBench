@@ -3,6 +3,7 @@ task=${task:-none}
 lang=${lang:-eng}
 lang2=${lang2:-eng}
 lang3=${lang3:-eng}
+MODEL_NAME=${MODEL_NAME:-bert}
 
 while [ $# -gt 0 ]; do
 
@@ -15,11 +16,19 @@ while [ $# -gt 0 ]; do
   shift
 done
 
+if [[ "$MODEL_NAME" = "bert" ]]; then
+	MODEL_PATH='bert-base-multilingual-cased'
+fi
+
+if [[ "$MODEL_NAME" = "xlmr" ]]; then
+	MODEL_PATH='xlm-roberta-base'
+fi
+
 echo ${task}
 echo ${lang}
 
 module load python/3.8.6-ff
-cd /scratch/ffaisal/DaialectBench
+cd /scratch/ffaisal/DialectBench
 
 if [[ "$task" = "install_adapter_latest" || "$task" = "all" ]]; then
 	echo "------------------------------Install adapter latest------------------------------"
@@ -63,48 +72,194 @@ if [[ "$task" = "install_transformers_latest" || "$task" = "all" ]]; then
 fi
 
 
-# echo "------------------------------Install adapter latest------------------------------"
-# module load python/3.8.6-ff
-# rm -rf adapter-transformers-l
-# rm -rf vnv/vnv-adp-l
-# python -m venv vnv/vnv-adp-l
-# source vnv/vnv-adp-l/bin/activate
-# wget -O adapters3.1.0.tar.gz https://github.com/adapter-hub/adapter-transformers/archive/refs/tags/adapters3.1.0.tar.gz
-# tar -xf adapters3.1.0.tar.gz
-# rm adapters3.1.0.tar.gz
-# mv adapter-transformers-adapters3.1.0 adapter-transformers-l
-# cd adapter-transformers-l
-# #cp ../scripts/ad_l_trans_trainer.py src/transformers/trainer.py
-# pip install .
-# ../vnv/vnv-adp-l/bin/python -m pip install --upgrade pip
-# cd ..
-# pip install --upgrade pip
-# pip3 install -r requirements.txt
-# ##for A100 gpu
-# deactivate
+if [[ "$task" = "train_udp" || "$task" = "all" ]]; then
+
+	echo "------------------------------Train UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+
+	export TASK_NAME=${lang}
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_train \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/$TASK_NAME \
+	    --overwrite_output_dir \
+	    --store_best_model \
+	    --evaluation_strategy epoch \
+	    --metric_score las 
+	deactivate
+fi
+
+if [[ "$task" = "train_udp_eng_sing" || "$task" = "all" ]]; then
+
+	echo "------------------------------Train UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+
+	export TASK_NAME=${lang}
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_train \
+	    --use_singlish \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/${TASK_NAME}-sing \
+	    --overwrite_output_dir \
+	    --store_best_model \
+	    --evaluation_strategy epoch \
+	    --metric_score las 
+	deactivate
+fi
+
+if [[ "$task" = "predict_udp" || "$task" = "all" ]]; then
+
+	echo "------------------------------Predict UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+	export TASK_NAME="UD_English-EWT"
+
+	##few shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}_${task}_all.txt"
+	rm ${result_file} 
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_predict_all \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --lang_config metadata/udp_metadata.json \
+	    --result_file ${result_file} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME} \
+	    --evaluation_strategy epoch \
+	    --metric_score las
+
+	##zero shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}_${task}_${TASK_NAME}.txt"
+	rm ${result_file} 
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_predict_all \
+	    --use_train_lang \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --lang_config metadata/udp_metadata.json \
+	    --result_file ${result_file} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME} \
+	    --evaluation_strategy epoch \
+	    --metric_score las
+	deactivate
+fi
+
+if [[ "$task" = "predict_udp_eng_sing" || "$task" = "all" ]]; then
+
+	echo "------------------------------Predict UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+	export TASK_NAME="singlish"
+
+
+	##zero shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}_${task}_${TASK_NAME}.txt"
+	rm ${result_file} 
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_predict \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --lang_config metadata/udp_metadata.json \
+	    --result_file ${result_file} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/UD_English-EWT-sing \
+	    --evaluation_strategy epoch \
+	    --metric_score las
+	deactivate
+fi
 
 
 
+if [[ "$task" = "predict_udp_test" || "$task" = "all" ]]; then
 
-# echo "------------------------------Install transformer latest------------------------------"
-# module load python/3.8.6-ff
-# training on task, while task adapter freezed
+	echo "------------------------------Predict UDP------------------------------"
+	source vnv/vnv-adp-l/bin/activate
+	export TASK_NAME="UD_English-EWT"
+	# export TASK_NAME="UD_French-ParTUT"
 
-# rm -rf transformers-orig
-# rm -rf vnv/vnv-trns
-# module load python/3.8.6-ff
-# python -m venv vnv/vnv-trns
-# source vnv/vnv-trns/bin/activate
-# wget -O transformersv4.21.1.tar.gz "https://github.com/huggingface/transformers/archive/refs/tags/v4.21.1.tar.gz"
-# tar -xf transformersv4.21.1.tar.gz
-# rm transformersv4.21.1.tar.gz
-# mv transformers-4.21.1 transformers-orig
-# cd transformers-orig
-# pip install .
-# pip install --upgrade pip
-# cd ..
-# pip install -r requirements.txt
-# deactivate
+	##few shot
+	result_file="/projects/antonis/fahim/DialectBench/experiments/test-French-Rhapsodie.txt"
+	rm ${result_file} 
+
+	python scripts/run_udp.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --do_predict_all \
+	    --task_name $TASK_NAME \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-4 \
+	    --num_train_epochs 5 \
+	    --max_seq_length 256 \
+	    --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	    --lang_config metadata/udp_metadata.json \
+	    --result_file ${result_file} \
+	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME} \
+	    --evaluation_strategy epoch \
+	    --metric_score las
+
+	# python scripts/run_udp.py \
+	#     --model_name_or_path ${MODEL_PATH} \
+	#     --do_train \
+	#     --do_predict \
+	#     --task_name ${TASK_NAME} \
+	#     --per_device_train_batch_size 32 \
+	#     --learning_rate 2e-4 \
+	#     --num_train_epochs 5 \
+	#     --max_seq_length 256 \
+	#     --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	#     --output_dir /projects/antonis/fahim/DialectBench/experiments/test/${MODEL_NAME}/${TASK_NAME}-test \
+	#     --result_file ${result_file} \
+	#     --overwrite_output_dir \
+	#     --store_best_model \
+	#     --evaluation_strategy epoch \
+	#     --metric_score las \
+	#     --max_steps 10
+
+	# python scripts/run_udp.py \
+	#     --model_name_or_path ${MODEL_PATH} \
+	#     --do_predict \
+	#     --task_name ${TASK_NAME} \
+	#     --per_device_train_batch_size 32 \
+	#     --learning_rate 2e-4 \
+	#     --num_train_epochs 5 \
+	#     --max_seq_length 256 \
+	#     --cache_dir /scratch/ffaisal/hug_cache/datasets \
+	#     --lang_config metadata/udp_metadata.json \
+	#     --result_file ${result_file} \
+	#     --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/${TASK_NAME} \
+	#     --evaluation_strategy epoch \
+	#     --store_best_model \
+	#     --metric_score las
+	deactivate
+fi
+
+
 
 
 if [[ "$task" = "download_udp_train" || "$task" = "all" ]]; then
@@ -240,6 +395,7 @@ if [[ "$task" = "train_m2ner_all" || "$task" = "all" ]]; then
 		--overwrite_output_dir \
 		--evaluation_strategy epoch \
 		--train_adapter
+	
 	deactivate
 
 fi
