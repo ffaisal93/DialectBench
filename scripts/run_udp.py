@@ -306,6 +306,20 @@ def main():
                 model.to(training_args.device)
             else:
                 print(training_args.output_dir)
+                labels = UD_HEAD_LABELS
+                if data_args.task_name=='singlish' or model_args.use_singlish:
+                    labels=UD_HEAD_LABELS_singlish
+                label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
+                num_labels = len(labels)
+
+                config = AutoConfig.from_pretrained(
+                    training_args.output_dir,
+                    num_labels=num_labels,
+                    id2label=label_map,
+                    label2id={label: i for i, label in enumerate(labels)},
+                    cache_dir=model_args.cache_dir,
+                    pad_token_id=-1,
+                )
                 trainer.model = AutoAdapterModel.from_pretrained(
                     os.path.join(training_args.output_dir, "best_model"),
                     from_tf=bool(".ckpt" in model_args.model_name_or_path),
@@ -322,6 +336,7 @@ def main():
                 metrics['uas'],metrics['las'],))
             writer.write("%s,%s,%s,%s,%s,%s\n" % (data_args.task_name,data_args.task_name,'-','-', 
                 metrics['uas'],metrics['las'],))
+            logger.info("saved in %s" % (output_test_results_file))
 
     if model_args.do_predict_all:
         import json

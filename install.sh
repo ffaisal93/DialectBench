@@ -191,6 +191,7 @@ if [[ "$task" = "predict_udp_eng_sing" || "$task" = "all" ]]; then
 	    --result_file ${result_file} \
 	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/UD_English-EWT-sing \
 	    --evaluation_strategy epoch \
+	    --store_best_model \
 	    --metric_score las
 	deactivate
 fi
