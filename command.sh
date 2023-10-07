@@ -37,8 +37,9 @@ if [[ "$task" = "train_udp" ]]; then
 		echo ${ofile}
 		echo ${base_model}
 		echo ${MODEL_NAME}
-		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
-		# bash install.sh --task ${task} --lang ${MODEL_NAME} --MODEL_NAME ${base_model}
+		# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
+		bash install.sh --task train_udp --lang ${MODEL_NAME} --MODEL_NAME ${base_model}
+		# bash install.sh --task train_udp --lang UD_English-EWT --MODEL_NAME xlmr
 	done
 fi
 
@@ -84,6 +85,7 @@ if [[ "$task" = "predict_udp" ]]; then
 	echo ${ofile}
 	echo ${base_model}
 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} null ${base_model}
+	#./command.sh --task predict_udp --MODEL_NAME bert
 	# bash install.sh --task ${task} --MODEL_NAME ${base_model}
 
 fi

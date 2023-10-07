@@ -15,11 +15,11 @@
 15	round	_	_	_	_	14	compound	_	_
 16	!	_	_	_	_	_	_	_	_
 
-1	My	_	_	_	_	2	nmod_poss	_	_
+1	My	_	_	_	_	2	nmod:poss	_	_
 2	nigga	_	_	_	_	4	nsubj	_	_
 3	ATMENTION	_	_	_	_	2	appos	_	_
 4	turnt	_	_	_	_	0	root	_	_
-5	up	_	_	_	_	4	compound_prt	_	_
+5	up	_	_	_	_	4	compound:prt	_	_
 6	eith	_	_	_	_	7	case	_	_
 7	us	_	_	_	_	4	obl	_	_
 8	to	_	_	_	_	7	appos	_	_
@@ -31,7 +31,7 @@
 2	yep	_	_	_	_	3	discourse	_	_
 3	look	_	_	_	_	0	root	_	_
 4	to	_	_	_	_	6	case	_	_
-5	yo	_	_	_	_	6	nmod_poss	_	_
+5	yo	_	_	_	_	6	nmod:poss	_	_
 6	left	_	_	_	_	3	obl	_	_
 7	when	_	_	_	_	9	mark	_	_
 8	you	_	_	_	_	9	nsubj	_	_
@@ -63,7 +63,7 @@
 4	but	_	_	_	_	10	cc	_	_
 5	what	_	_	_	_	10	nsubj	_	_
 6	they	_	_	_	_	7	nsubj	_	_
-7	need	_	_	_	_	5	acl_relcl	_	_
+7	need	_	_	_	_	5	acl:relcl	_	_
 8	to	_	_	_	_	9	mark	_	_
 9	do	_	_	_	_	7	xcomp	_	_
 10	is	_	_	_	_	1	parataxis	_	_
@@ -87,7 +87,7 @@
 7	me	_	_	_	_	6	obj	_	_
 8	bitch	_	_	_	_	6	vocative	_	_
 9	speak	_	_	_	_	3	parataxis	_	_
-10	up	_	_	_	_	9	compound_prt	_	_
+10	up	_	_	_	_	9	compound:prt	_	_
 11	EMOJI	_	_	_	_	9	discourse	_	_
 12	that's	_	_	_	_	13	nsubj	_	_
 13	all	_	_	_	_	3	parataxis	_	_
@@ -102,7 +102,7 @@
 7	swear	_	_	_	_	1	parataxis	_	_
 8	u	_	_	_	_	9	nsubj	_	_
 9	turnt	_	_	_	_	7	ccomp	_	_
-10	up	_	_	_	_	9	compound_prt	_	_
+10	up	_	_	_	_	9	compound:prt	_	_
 11	one	_	_	_	_	9	xcomp	_	_
 12	fa	_	_	_	_	14	case	_	_
 13	no	_	_	_	_	14	det	_	_
@@ -117,7 +117,7 @@
 7	African	_	_	_	_	8	amod	_	_
 8	Song	_	_	_	_	3	conj	_	_
 9	In	_	_	_	_	12	case	_	_
-10	My	_	_	_	_	12	nmod_poss	_	_
+10	My	_	_	_	_	12	nmod:poss	_	_
 11	Living	_	_	_	_	12	amod	_	_
 12	Room	_	_	_	_	2	obl	_	_
 13	#BecauseICan	_	_	_	_	2	parataxis	_	_
@@ -146,7 +146,7 @@
 6	was	_	_	_	_	7	cop	_	_
 7	dwn	_	_	_	_	0	root	_	_
 8	ridin	_	_	_	_	7	xcomp	_	_
-9	around	_	_	_	_	8	compound_prt	_	_
+9	around	_	_	_	_	8	compound:prt	_	_
 10	nigga	_	_	_	_	13	nsubj	_	_
 11	wasn't	_	_	_	_	13	cop	_	_
 12	out	_	_	_	_	13	case	_	_
@@ -177,7 +177,7 @@
 9	too	_	_	_	_	10	advmod	_	_
 10	much	_	_	_	_	1	parataxis	_	_
 11	goin	_	_	_	_	10	xcomp	_	_
-12	on	_	_	_	_	11	compound_prt	_	_
+12	on	_	_	_	_	11	compound:prt	_	_
 13	in	_	_	_	_	15	case	_	_
 14	dat	_	_	_	_	15	det	_	_
 15	mofo	_	_	_	_	11	obl	_	_
@@ -204,7 +204,7 @@
 15	Lmao	_	_	_	_	7	discourse	_	_
 
 1	All	_	_	_	_	3	det	_	_
-2	my	_	_	_	_	3	nmod_poss	_	_
+2	my	_	_	_	_	3	nmod:poss	_	_
 3	niggas	_	_	_	_	6	nsubj	_	_
 4	Off	_	_	_	_	6	case	_	_
 5	The	_	_	_	_	6	det	_	_
@@ -241,7 +241,7 @@
 2	be	_	_	_	_	3	aux	_	_
 3	looking	_	_	_	_	0	root	_	_
 4	upside	_	_	_	_	6	case	_	_
-5	my	_	_	_	_	6	nmod_poss	_	_
+5	my	_	_	_	_	6	nmod:poss	_	_
 6	head	_	_	_	_	3	obl	_	_
 7	likee	_	_	_	_	9	mark	_	_
 8	ion	_	_	_	_	9	nsubj	_	_
@@ -249,7 +249,7 @@
 10	wat	_	_	_	_	12	nsubj	_	_
 11	be	_	_	_	_	12	aux	_	_
 12	goingg	_	_	_	_	9	ccomp	_	_
-13	on	_	_	_	_	12	compound_prt	_	_
+13	on	_	_	_	_	12	compound:prt	_	_
 14	.	_	_	_	_	_	_	_	_
 15	tuhhh	_	_	_	_	3	parataxis	_	_
 16	EMOJI	_	_	_	_	15	discourse	_	_
@@ -268,7 +268,7 @@
 12	crap	_	_	_	_	11	obj	_	_
 13	floating	_	_	_	_	12	acl	_	_
 14	in	_	_	_	_	16	case	_	_
-15	my	_	_	_	_	16	nmod_poss	_	_
+15	my	_	_	_	_	16	nmod:poss	_	_
 16	drink	_	_	_	_	13	obl	_	_
 
 1	These	_	_	_	_	2	det	_	_
@@ -277,10 +277,10 @@
 4	get	_	_	_	_	0	root	_	_
 5	u	_	_	_	_	4	obj	_	_
 6	fucked	_	_	_	_	4	xcomp	_	_
-7	up	_	_	_	_	6	compound_prt	_	_
+7	up	_	_	_	_	6	compound:prt	_	_
 8	or	_	_	_	_	9	cc	_	_
 9	locked	_	_	_	_	6	conj	_	_
-10	up	_	_	_	_	9	compound_prt	_	_
+10	up	_	_	_	_	9	compound:prt	_	_
 
 1	-	_	_	_	_	4	nsubj	_	_
 2	I	_	_	_	_	_	_	_	_
@@ -291,10 +291,10 @@
 7	there	_	_	_	_	5	obl	_	_
 8	&	_	_	_	_	9	cc	_	_
 9	write	_	_	_	_	5	conj	_	_
-10	my	_	_	_	_	11	nmod_poss	_	_
+10	my	_	_	_	_	11	nmod:poss	_	_
 11	name	_	_	_	_	9	obj	_	_
 12	on	_	_	_	_	14	case	_	_
-13	my	_	_	_	_	14	nmod_poss	_	_
+13	my	_	_	_	_	14	nmod:poss	_	_
 14	stocking	_	_	_	_	9	obl	_	_
 15	!	_	_	_	_	_	_	_	_
 
@@ -323,7 +323,7 @@
 2	you	_	_	_	_	3	nsubj	_	_
 3	die	_	_	_	_	0	root	_	_
 4	fo	_	_	_	_	6	case	_	_
-5	yo	_	_	_	_	6	nmod_poss	_	_
+5	yo	_	_	_	_	6	nmod:poss	_	_
 6	nigga	_	_	_	_	3	obl	_	_
 7	?	_	_	_	_	_	_	_	_
 8	that's	_	_	_	_	9	nsubj	_	_
@@ -351,7 +351,7 @@
 3	News	_	_	_	_	5	nsubj	_	_
 4	is	_	_	_	_	5	aux	_	_
 5	coming	_	_	_	_	0	root	_	_
-6	up	_	_	_	_	5	compound_prt	_	_
+6	up	_	_	_	_	5	compound:prt	_	_
 7	with	_	_	_	_	8	case	_	_
 8	me	_	_	_	_	5	obl	_	_
 9	,	_	_	_	_	_	_	_	_
@@ -368,7 +368,7 @@
 20	.	_	_	_	_	_	_	_	_
 
 1	When	_	_	_	_	6	mark	_	_
-2	your	_	_	_	_	3	nmod_poss	_	_
+2	your	_	_	_	_	3	nmod:poss	_	_
 3	focus	_	_	_	_	6	nsubj	_	_
 4	is	_	_	_	_	6	cop	_	_
 5	on	_	_	_	_	6	case	_	_
@@ -388,19 +388,19 @@
 3	I	_	_	_	_	4	nsubj	_	_
 4	ran	_	_	_	_	0	root	_	_
 5	into	_	_	_	_	8	case	_	_
-6	my	_	_	_	_	8	nmod_poss	_	_
+6	my	_	_	_	_	8	nmod:poss	_	_
 7	playa	_	_	_	_	8	amod	_	_
 8	patna	_	_	_	_	4	obl	_	_
 9	from	_	_	_	_	10	case	_	_
 10	Mechanicsville	_	_	_	_	8	nmod	_	_
-11	today	_	_	_	_	4	obl_tmod	_	_
+11	today	_	_	_	_	4	obl:tmod	_	_
 12	!!!	_	_	_	_	_	_	_	_
 
 1	I	_	_	_	_	2	nsubj	_	_
 2	cried	_	_	_	_	0	root	_	_
 3	a	_	_	_	_	5	det	_	_
 4	Lil	_	_	_	_	5	amod	_	_
-5	bit	_	_	_	_	2	obl_npmod	_	_
+5	bit	_	_	_	_	2	obl:npmod	_	_
 6	when	_	_	_	_	8	mark	_	_
 7	dani	_	_	_	_	8	nsubj	_	_
 8	went	_	_	_	_	2	advcl	_	_
@@ -409,12 +409,12 @@
 
 1	Me	_	_	_	_	5	nsubj	_	_
 2	and	_	_	_	_	4	cc	_	_
-3	my	_	_	_	_	4	nmod_poss	_	_
+3	my	_	_	_	_	4	nmod:poss	_	_
 4	cousin	_	_	_	_	1	conj	_	_
 5	gonna	_	_	_	_	0	root	_	_
 6	go	_	_	_	_	5	xcomp	_	_
-7	ova	_	_	_	_	6	compound_prt	_	_
-8	my	_	_	_	_	10	nmod_poss	_	_
+7	ova	_	_	_	_	6	compound:prt	_	_
+8	my	_	_	_	_	10	nmod:poss	_	_
 9	pooh	_	_	_	_	10	amod	_	_
 10	house	_	_	_	_	6	obl	_	_
 11	whenever	_	_	_	_	13	mark	_	_
@@ -463,7 +463,7 @@
 4	that	_	_	_	_	5	det	_	_
 5	nigga	_	_	_	_	3	obj	_	_
 6	Rick	_	_	_	_	5	appos	_	_
-7	up	_	_	_	_	3	compound_prt	_	_
+7	up	_	_	_	_	3	compound:prt	_	_
 8	&	_	_	_	_	9	cc	_	_
 9	tell	_	_	_	_	3	conj	_	_
 10	him	_	_	_	_	9	obj	_	_
@@ -489,7 +489,7 @@
 14	smh	_	_	_	_	8	discourse	_	_
 15	all	_	_	_	_	3	parataxis	_	_
 16	on	_	_	_	_	19	case	_	_
-17	my	_	_	_	_	19	nmod_poss	_	_
+17	my	_	_	_	_	19	nmod:poss	_	_
 18	case	_	_	_	_	19	compound	_	_
 19	branch	_	_	_	_	15	obl	_	_
 20	.	_	_	_	_	_	_	_	_
@@ -527,7 +527,7 @@
 1	"	_	_	_	_	_	_	_	_
 2	ATMENTION	_	_	_	_	7	vocative	_	_
 3	:	_	_	_	_	_	_	_	_
-4	My	_	_	_	_	5	nmod_poss	_	_
+4	My	_	_	_	_	5	nmod:poss	_	_
 5	cousins	_	_	_	_	7	nsubj	_	_
 6	was	_	_	_	_	7	aux	_	_
 7	mixing	_	_	_	_	13	parataxis	_	_
@@ -559,7 +559,7 @@
 14	!	_	_	_	_	_	_	_	_
 
 1	This	_	_	_	_	2	det	_	_
-2	semester	_	_	_	_	3	obl_tmod	_	_
+2	semester	_	_	_	_	3	obl:tmod	_	_
 3	ima	_	_	_	_	0	root	_	_
 4	be	_	_	_	_	3	xcomp	_	_
 5	like	_	_	_	_	6	case	_	_
@@ -592,7 +592,7 @@
 
 1	You	_	_	_	_	2	nsubj	_	_
 2	walking	_	_	_	_	0	root	_	_
-3	out	_	_	_	_	2	compound_prt	_	_
+3	out	_	_	_	_	2	compound:prt	_	_
 4	you	_	_	_	_	5	nsubj	_	_
 5	coming	_	_	_	_	2	parataxis	_	_
 6	back	_	_	_	_	5	advmod	_	_
@@ -610,7 +610,7 @@
 3	ALOT	_	_	_	_	2	obj	_	_
 4	OF	_	_	_	_	5	case	_	_
 5	STUFF	_	_	_	_	3	nmod	_	_
-6	OFF	_	_	_	_	2	compound_prt	_	_
+6	OFF	_	_	_	_	2	compound:prt	_	_
 7	TIL	_	_	_	_	10	case	_	_
 8	THE	_	_	_	_	10	det	_	_
 9	LAST	_	_	_	_	10	amod	_	_
@@ -648,7 +648,7 @@
 3	gone	_	_	_	_	4	aux	_	_
 4	get	_	_	_	_	0	root	_	_
 5	fucked	_	_	_	_	4	xcomp	_	_
-6	up	_	_	_	_	5	compound_prt	_	_
+6	up	_	_	_	_	5	compound:prt	_	_
 7	,	_	_	_	_	_	_	_	_
 8	no	_	_	_	_	9	det	_	_
 9	excuses	_	_	_	_	4	parataxis	_	_
@@ -678,12 +678,12 @@
 7	though	_	_	_	_	3	advmod	_	_
 8	...	_	_	_	_	_	_	_	_
 9	working	_	_	_	_	3	parataxis	_	_
-10	down	_	_	_	_	9	compound_prt	_	_
-11	my	_	_	_	_	13	nmod_poss	_	_
+10	down	_	_	_	_	9	compound:prt	_	_
+11	my	_	_	_	_	13	nmod:poss	_	_
 12	pre-travel	_	_	_	_	13	amod	_	_
 13	checklist	_	_	_	_	9	obj	_	_
 14	..	_	_	_	_	_	_	_	_
-15	hours	_	_	_	_	16	obl_npmod	_	_
+15	hours	_	_	_	_	16	obl:npmod	_	_
 16	away	_	_	_	_	3	parataxis	_	_
 17	now	_	_	_	_	16	advmod	_	_
 18	!!	_	_	_	_	_	_	_	_
@@ -712,8 +712,8 @@
 6	shit	_	_	_	_	5	obj	_	_
 7	I	_	_	_	_	8	nsubj	_	_
 8	strapped	_	_	_	_	1	parataxis	_	_
-9	on	_	_	_	_	8	compound_prt	_	_
-10	my	_	_	_	_	12	nmod_poss	_	_
+9	on	_	_	_	_	8	compound:prt	_	_
+10	my	_	_	_	_	12	nmod:poss	_	_
 11	own	_	_	_	_	12	amod	_	_
 12	nuts	_	_	_	_	8	obj	_	_
 13	.	_	_	_	_	_	_	_	_
@@ -734,10 +734,10 @@
 3	get	_	_	_	_	0	root	_	_
 4	to	_	_	_	_	5	mark	_	_
 5	c	_	_	_	_	3	xcomp	_	_
-6	my	_	_	_	_	7	nmod_poss	_	_
+6	my	_	_	_	_	7	nmod:poss	_	_
 7	mitchy	_	_	_	_	5	obj	_	_
 8	dis	_	_	_	_	9	det	_	_
-9	wkend	_	_	_	_	5	obl_tmod	_	_
+9	wkend	_	_	_	_	5	obl:tmod	_	_
 10	;)	_	_	_	_	3	discourse	_	_
 
 1	I	_	_	_	_	3	nsubj	_	_
@@ -826,7 +826,7 @@
 17	But	_	_	_	_	19	cc	_	_
 18	yall	_	_	_	_	19	nsubj	_	_
 19	do	_	_	_	_	8	parataxis	_	_
-20	yall	_	_	_	_	21	nmod_poss	_	_
+20	yall	_	_	_	_	21	nmod:poss	_	_
 21	thang	_	_	_	_	19	obj	_	_
 
 1	When	_	_	_	_	3	advmod	_	_
@@ -838,16 +838,16 @@
 7	to	_	_	_	_	8	mark	_	_
 8	go	_	_	_	_	6	xcomp	_	_
 9	see	_	_	_	_	8	xcomp	_	_
-10	my	_	_	_	_	11	nmod_poss	_	_
+10	my	_	_	_	_	11	nmod:poss	_	_
 11	plug	_	_	_	_	9	obj	_	_
 12	.	_	_	_	_	_	_	_	_
 
 1	UGH	_	_	_	_	5	discourse	_	_
-2	MA	_	_	_	_	3	nmod_poss	_	_
+2	MA	_	_	_	_	3	nmod:poss	_	_
 3	HAIR	_	_	_	_	5	nsubj	_	_
 4	ALL	_	_	_	_	5	advmod	_	_
 5	MESSED	_	_	_	_	0	root	_	_
-6	UP	_	_	_	_	5	compound_prt	_	_
+6	UP	_	_	_	_	5	compound:prt	_	_
 7	NOW	_	_	_	_	5	advmod	_	_
 8	CUS	_	_	_	_	12	case	_	_
 9	OF	_	_	_	_	8	fixed	_	_
@@ -890,7 +890,7 @@
 2	GOLD	_	_	_	_	3	nmod	_	_
 3	EVERYTHING	_	_	_	_	4	nsubj	_	_
 4	PLAYED	_	_	_	_	0	root	_	_
-5	OUT	_	_	_	_	4	compound_prt	_	_
+5	OUT	_	_	_	_	4	compound:prt	_	_
 6	.	_	_	_	_	_	_	_	_
 7	STOP	_	_	_	_	4	parataxis	_	_
 8	PLAYING	_	_	_	_	7	xcomp	_	_
@@ -907,41 +907,41 @@
 6	a	_	_	_	_	7	det	_	_
 7	game	_	_	_	_	5	obj	_	_
 8	in	_	_	_	_	11	case	_	_
-9	my	_	_	_	_	11	nmod_poss	_	_
+9	my	_	_	_	_	11	nmod:poss	_	_
 10	home	_	_	_	_	11	amod	_	_
 11	state	_	_	_	_	7	nmod	_	_
 12	.	_	_	_	_	_	_	_	_
 13	FLORIDA	_	_	_	_	14	vocative	_	_
 14	Stand	_	_	_	_	3	parataxis	_	_
-15	Up	_	_	_	_	14	compound_prt	_	_
+15	Up	_	_	_	_	14	compound:prt	_	_
 16	!!!	_	_	_	_	_	_	_	_
 17	Um	_	_	_	_	20	nsubj	_	_
 18	on	_	_	_	_	20	nmod	_	_
-19	my	_	_	_	_	20	nmod_poss	_	_
+19	my	_	_	_	_	20	nmod:poss	_	_
 20	way	_	_	_	_	1	parataxis	_	_
 
 1	Now	_	_	_	_	2	advmod	_	_
 2	omw	_	_	_	_	0	root	_	_
 3	to	_	_	_	_	4	mark	_	_
 4	get	_	_	_	_	2	xcomp	_	_
-5	my	_	_	_	_	6	nmod_poss	_	_
+5	my	_	_	_	_	6	nmod:poss	_	_
 6	hair	_	_	_	_	4	obj	_	_
 7	done	_	_	_	_	4	xcomp	_	_
 8	for	_	_	_	_	9	case	_	_
 9	coronation	_	_	_	_	4	obl	_	_
-10	tomorrow	_	_	_	_	9	obl_tmod	_	_
+10	tomorrow	_	_	_	_	9	obl:tmod	_	_
 
 1	Damnnnn	_	_	_	_	4	discourse	_	_
 2	,	_	_	_	_	_	_	_	_
 3	I	_	_	_	_	4	nsubj	_	_
 4	told	_	_	_	_	0	root	_	_
-5	her	_	_	_	_	6	nmod_poss	_	_
+5	her	_	_	_	_	6	nmod:poss	_	_
 6	ass	_	_	_	_	4	obj	_	_
 7	the	_	_	_	_	9	det	_	_
 8	same	_	_	_	_	9	amod	_	_
 9	thing	_	_	_	_	4	obj	_	_
 10	this	_	_	_	_	11	det	_	_
-11	morning	_	_	_	_	4	obl_tmod	_	_
+11	morning	_	_	_	_	4	obl:tmod	_	_
 12	!	_	_	_	_	_	_	_	_
 
 1	When	_	_	_	_	3	mark	_	_
@@ -965,7 +965,7 @@
 6	$92	_	_	_	_	7	nummod	_	_
 7	bill	_	_	_	_	4	obj	_	_
 8	every	_	_	_	_	9	det	_	_
-9	month	_	_	_	_	4	obl_tmod	_	_
+9	month	_	_	_	_	4	obl:tmod	_	_
 10	?	_	_	_	_	_	_	_	_
 11	NOPE	_	_	_	_	3	parataxis	_	_
 
@@ -978,11 +978,11 @@
 7	What	_	_	_	_	3	advcl	_	_
 8	to	_	_	_	_	9	mark	_	_
 9	eat	_	_	_	_	7	xcomp	_	_
-10	all	_	_	_	_	12	det_predet	_	_
+10	all	_	_	_	_	12	det:predet	_	_
 11	the	_	_	_	_	12	det	_	_
 12	ice-cream	_	_	_	_	9	obj	_	_
 13	with	_	_	_	_	16	case	_	_
-14	they	_	_	_	_	16	nmod_poss	_	_
+14	they	_	_	_	_	16	nmod:poss	_	_
 15	Fat	_	_	_	_	16	amod	_	_
 16	a$$	_	_	_	_	9	obl	_	_
 17	EMOJI	_	_	_	_	3	discourse	_	_
@@ -1038,8 +1038,8 @@
 13	Savage	_	_	_	_	3	parataxis	_	_
 
 1	say	_	_	_	_	0	root	_	_
-2	my	_	_	_	_	3	nmod_poss	_	_
-3	ma	_	_	_	_	5	nmod_poss	_	_
+2	my	_	_	_	_	3	nmod:poss	_	_
+3	ma	_	_	_	_	5	nmod:poss	_	_
 4	fuckin	_	_	_	_	5	amod	_	_
 5	name	_	_	_	_	1	obj	_	_
 6	when	_	_	_	_	8	mark	_	_
@@ -1059,12 +1059,12 @@
 5	need	_	_	_	_	2	parataxis	_	_
 6	to	_	_	_	_	7	mark	_	_
 7	hurry	_	_	_	_	5	xcomp	_	_
-8	up	_	_	_	_	7	compound_prt	_	_
+8	up	_	_	_	_	7	compound:prt	_	_
 9	"	_	_	_	_	_	_	_	_
 10	thats	_	_	_	_	12	nsubj	_	_
 11	along	_	_	_	_	12	amod	_	_
 12	tyme	_	_	_	_	0	root	_	_
-13	my	_	_	_	_	14	nmod_poss	_	_
+13	my	_	_	_	_	14	nmod:poss	_	_
 14	boy	_	_	_	_	12	vocative	_	_
 
 1	ATMENTION	_	_	_	_	3	vocative	_	_
@@ -1136,7 +1136,7 @@
 7	of	_	_	_	_	8	case	_	_
 8	time	_	_	_	_	6	nmod	_	_
 9	pass	_	_	_	_	5	xcomp	_	_
-10	by	_	_	_	_	9	compound_prt	_	_
+10	by	_	_	_	_	9	compound:prt	_	_
 11	.	_	_	_	_	_	_	_	_
 12	.	_	_	_	_	_	_	_	_
 
@@ -1149,7 +1149,7 @@
 7	for	_	_	_	_	8	case	_	_
 8	good	_	_	_	_	6	obl	_	_
 9	next	_	_	_	_	10	amod	_	_
-10	week	_	_	_	_	6	nmod_tmod	_	_
+10	week	_	_	_	_	6	nmod:tmod	_	_
 11	.	_	_	_	_	_	_	_	_
 12	What	_	_	_	_	6	parataxis	_	_
 13	the	_	_	_	_	12	fixed	_	_
@@ -1201,7 +1201,7 @@
 12	knock	_	_	_	_	7	conj	_	_
 13	some	_	_	_	_	14	det	_	_
 14	niggas	_	_	_	_	12	obj	_	_
-15	out	_	_	_	_	12	compound_prt	_	_
+15	out	_	_	_	_	12	compound:prt	_	_
 16	EMOJI	_	_	_	_	2	discourse	_	_
 
 1	Me	_	_	_	_	4	nsubj	_	_
@@ -1215,7 +1215,7 @@
 9	and	_	_	_	_	10	cc	_	_
 10	kid	_	_	_	_	8	conj	_	_
 11	fucked	_	_	_	_	4	parataxis	_	_
-12	ya	_	_	_	_	13	nmod_poss	_	_
+12	ya	_	_	_	_	13	nmod:poss	_	_
 13	boo	_	_	_	_	11	obj	_	_
 
 1	Cash	_	_	_	_	3	nsubj	_	_
@@ -1228,15 +1228,15 @@
 8	Damn	_	_	_	_	9	amod	_	_
 9	Games	_	_	_	_	3	obl	_	_
 10	She	_	_	_	_	11	nsubj	_	_
-11	Playing	_	_	_	_	9	acl_relcl	_	_
+11	Playing	_	_	_	_	9	acl:relcl	_	_
 12	Lmao	_	_	_	_	3	discourse	_	_
 13	..	_	_	_	_	_	_	_	_
 14	She	_	_	_	_	16	nsubj	_	_
 15	Better	_	_	_	_	16	advmod	_	_
 16	Calm	_	_	_	_	3	parataxis	_	_
-17	Her	_	_	_	_	18	nmod_poss	_	_
+17	Her	_	_	_	_	18	nmod:poss	_	_
 18	Ass	_	_	_	_	16	obj	_	_
-19	Down	_	_	_	_	16	compound_prt	_	_
+19	Down	_	_	_	_	16	compound:prt	_	_
 20	.	_	_	_	_	_	_	_	_
 
 1	How	_	_	_	_	2	advmod	_	_
@@ -1247,7 +1247,7 @@
 6	give	_	_	_	_	4	xcomp	_	_
 7	Amanda	_	_	_	_	6	obj	_	_
 8	Perez	_	_	_	_	7	flat	_	_
-9	Her	_	_	_	_	10	nmod_poss	_	_
+9	Her	_	_	_	_	10	nmod:poss	_	_
 10	Props	_	_	_	_	6	obj	_	_
 
 1	"	_	_	_	_	_	_	_	_
@@ -1282,7 +1282,7 @@
 4	!!	_	_	_	_	_	_	_	_
 5	leave	_	_	_	_	3	parataxis	_	_
 6	it	_	_	_	_	5	obj	_	_
-7	up	_	_	_	_	5	compound_prt	_	_
+7	up	_	_	_	_	5	compound:prt	_	_
 8	&	_	_	_	_	9	cc	_	_
 9	let	_	_	_	_	5	conj	_	_
 10	us	_	_	_	_	9	obj	_	_
@@ -1294,7 +1294,7 @@
 16	.	_	_	_	_	_	_	_	_
 
 1	Nf	_	_	_	_	0	root	_	_
-2	ATMENTION	_	_	_	_	3	nmod_poss	_	_
+2	ATMENTION	_	_	_	_	3	nmod:poss	_	_
 3	fb	_	_	_	_	1	obj	_	_
 4	?	_	_	_	_	_	_	_	_
 5	Oh	_	_	_	_	15	discourse	_	_
@@ -1303,7 +1303,7 @@
 8	little	_	_	_	_	9	amod	_	_
 9	girl	_	_	_	_	15	nsubj	_	_
 10	in	_	_	_	_	12	case	_	_
-11	your	_	_	_	_	12	nmod_poss	_	_
+11	your	_	_	_	_	12	nmod:poss	_	_
 12	header	_	_	_	_	9	nmod	_	_
 13	is	_	_	_	_	15	cop	_	_
 14	too	_	_	_	_	15	advmod	_	_
@@ -1325,14 +1325,14 @@
 13	able	_	_	_	_	3	parataxis	_	_
 14	to	_	_	_	_	15	mark	_	_
 15	keep	_	_	_	_	13	xcomp	_	_
-16	up	_	_	_	_	15	compound_prt	_	_
+16	up	_	_	_	_	15	compound:prt	_	_
 17	?	_	_	_	_	_	_	_	_
 
 1	Ik	_	_	_	_	0	root	_	_
 2	dis	_	_	_	_	3	det	_	_
 3	nig	_	_	_	_	4	nsubj	_	_
 4	saw	_	_	_	_	1	ccomp	_	_
-5	my	_	_	_	_	6	nmod_poss	_	_
+5	my	_	_	_	_	6	nmod:poss	_	_
 6	stats/tweets	_	_	_	_	4	obj	_	_
 7	why	_	_	_	_	10	advmod	_	_
 8	tf	_	_	_	_	7	fixed	_	_
@@ -1340,21 +1340,21 @@
 10	woke	_	_	_	_	1	parataxis	_	_
 11	me	_	_	_	_	10	obj	_	_
 12	out	_	_	_	_	14	case	_	_
-13	my	_	_	_	_	14	nmod_poss	_	_
+13	my	_	_	_	_	14	nmod:poss	_	_
 14	sleep	_	_	_	_	10	obl	_	_
 
 1	ATMENTION	_	_	_	_	4	vocative	_	_
 2	*	_	_	_	_	_	_	_	_
 3	he	_	_	_	_	4	nsubj	_	_
 4	bites	_	_	_	_	0	root	_	_
-5	his	_	_	_	_	6	nmod_poss	_	_
+5	his	_	_	_	_	6	nmod:poss	_	_
 6	lips	_	_	_	_	4	obj	_	_
 7	and	_	_	_	_	8	cc	_	_
 8	manages	_	_	_	_	4	conj	_	_
 9	to	_	_	_	_	10	mark	_	_
 10	kick	_	_	_	_	8	xcomp	_	_
-11	off	_	_	_	_	10	compound_prt	_	_
-12	his	_	_	_	_	14	nmod_poss	_	_
+11	off	_	_	_	_	10	compound:prt	_	_
+12	his	_	_	_	_	14	nmod:poss	_	_
 13	remaining	_	_	_	_	14	amod	_	_
 14	clothes	_	_	_	_	10	obj	_	_
 15	*	_	_	_	_	_	_	_	_
@@ -1362,7 +1362,7 @@
 1	ATMENTION	_	_	_	_	5	vocative	_	_
 2	yes	_	_	_	_	5	discourse	_	_
 3	,	_	_	_	_	_	_	_	_
-4	my	_	_	_	_	5	nmod_poss	_	_
+4	my	_	_	_	_	5	nmod:poss	_	_
 5	amazon	_	_	_	_	0	root	_	_
 6	.	_	_	_	_	_	_	_	_
 7	Lol	_	_	_	_	9	discourse	_	_
@@ -1371,12 +1371,12 @@
 10	.	_	_	_	_	_	_	_	_
 11	Pop-a-lock	_	_	_	_	12	nsubj	_	_
 12	came	_	_	_	_	5	parataxis	_	_
-13	by	_	_	_	_	12	compound_prt	_	_
+13	by	_	_	_	_	12	compound:prt	_	_
 14	.	_	_	_	_	_	_	_	_
 15	Thx	_	_	_	_	5	parataxis	_	_
 16	!	_	_	_	_	_	_	_	_
 
-1	Our	_	_	_	_	6	nmod_poss	_	_
+1	Our	_	_	_	_	6	nmod:poss	_	_
 2	Dog	_	_	_	_	6	nsubj	_	_
 3	Is	_	_	_	_	6	cop	_	_
 4	A	_	_	_	_	6	det	_	_
@@ -1392,11 +1392,11 @@
 1	Ready	_	_	_	_	0	root	_	_
 2	to	_	_	_	_	3	mark	_	_
 3	get	_	_	_	_	1	xcomp	_	_
-4	off	_	_	_	_	3	compound_prt	_	_
+4	off	_	_	_	_	3	compound:prt	_	_
 5	and	_	_	_	_	6	cc	_	_
 6	chill	_	_	_	_	3	conj	_	_
 7	wit	_	_	_	_	9	case	_	_
-8	my	_	_	_	_	9	nmod_poss	_	_
+8	my	_	_	_	_	9	nmod:poss	_	_
 9	bae	_	_	_	_	6	obl	_	_
 10	and	_	_	_	_	11	cc	_	_
 11	kids	_	_	_	_	9	conj	_	_
@@ -1410,12 +1410,12 @@
 2	really	_	_	_	_	3	advmod	_	_
 3	lost	_	_	_	_	0	root	_	_
 4	with	_	_	_	_	6	case	_	_
-5	my	_	_	_	_	6	nmod_poss	_	_
+5	my	_	_	_	_	6	nmod:poss	_	_
 6	soul	_	_	_	_	3	obl	_	_
 7	,	_	_	_	_	_	_	_	_
 8	<<	_	_	_	_	_	_	_	_
 9	where	_	_	_	_	11	advmod	_	_
-10	my	_	_	_	_	11	nmod_poss	_	_
+10	my	_	_	_	_	11	nmod:poss	_	_
 11	boyfriend	_	_	_	_	3	parataxis	_	_
 12	ugh	_	_	_	_	11	discourse	_	_
 
@@ -1435,7 +1435,7 @@
 14	The	_	_	_	_	15	det	_	_
 15	People	_	_	_	_	12	conj	_	_
 16	I	_	_	_	_	17	nsubj	_	_
-17	Love	_	_	_	_	15	acl_relcl	_	_
+17	Love	_	_	_	_	15	acl:relcl	_	_
 18	"	_	_	_	_	_	_	_	_
 
 1	,	_	_	_	_	_	_	_	_
@@ -1471,7 +1471,7 @@
 9	ones	_	_	_	_	2	parataxis	_	_
 10	who	_	_	_	_	12	nsubj	_	_
 11	round	_	_	_	_	12	case	_	_
-12	me	_	_	_	_	9	acl_relcl	_	_
+12	me	_	_	_	_	9	acl:relcl	_	_
 13	!	_	_	_	_	_	_	_	_
 
 1	ATMENTION	_	_	_	_	4	vocative	_	_
@@ -1488,7 +1488,7 @@
 12	it	_	_	_	_	11	obj	_	_
 13	but	_	_	_	_	19	cc	_	_
 14	the	_	_	_	_	15	det	_	_
-15	boys	_	_	_	_	17	nmod_poss	_	_
+15	boys	_	_	_	_	17	nmod:poss	_	_
 16	Xmas	_	_	_	_	17	compound	_	_
 17	list	_	_	_	_	19	nsubj	_	_
 18	was	_	_	_	_	19	cc	_	_
@@ -1503,7 +1503,7 @@
 5	Bitch	_	_	_	_	7	nsubj	_	_
 6	Shay	_	_	_	_	5	appos	_	_
 7	Got	_	_	_	_	0	root	_	_
-8	My	_	_	_	_	10	nmod_poss	_	_
+8	My	_	_	_	_	10	nmod:poss	_	_
 9	Last	_	_	_	_	10	amod	_	_
 10	Name	_	_	_	_	7	obj	_	_
 11	*	_	_	_	_	_	_	_	_
@@ -1557,7 +1557,7 @@
 7	1	_	_	_	_	6	obj	_	_
 8	you	_	_	_	_	9	nsubj	_	_
 9	find	_	_	_	_	0	root	_	_
-10	out	_	_	_	_	9	compound_prt	_	_
+10	out	_	_	_	_	9	compound:prt	_	_
 11	she	_	_	_	_	12	nsubj	_	_
 12	fckin	_	_	_	_	9	ccomp	_	_
 13	erbody	_	_	_	_	12	obj	_	_
@@ -1604,7 +1604,7 @@
 3	Phonee	_	_	_	_	0	root	_	_
 4	W	_	_	_	_	7	case	_	_
 5	.	_	_	_	_	_	_	_	_
-6	Myy	_	_	_	_	7	nmod_poss	_	_
+6	Myy	_	_	_	_	7	nmod:poss	_	_
 7	Babyy	_	_	_	_	3	obl	_	_
 8	EMOJI	_	_	_	_	3	discourse	_	_
 9	ツ	_	_	_	_	3	discourse	_	_
@@ -1638,7 +1638,7 @@
 11	.	_	_	_	_	_	_	_	_
 
 1	I	_	_	_	_	4	nsubj	_	_
-2	was	_	_	_	_	4	aux_pass	_	_
+2	was	_	_	_	_	4	aux:pass	_	_
 3	always	_	_	_	_	4	advmod	_	_
 4	told	_	_	_	_	0	root	_	_
 5	when	_	_	_	_	7	mark	_	_
@@ -1675,7 +1675,7 @@
 7	ppl	_	_	_	_	6	obj	_	_
 8	ugly	_	_	_	_	6	xcomp	_	_
 9	that's	_	_	_	_	11	nsubj	_	_
-10	somebody	_	_	_	_	11	nmod_poss	_	_
+10	somebody	_	_	_	_	11	nmod:poss	_	_
 11	child	_	_	_	_	2	parataxis	_	_
 12	lol	_	_	_	_	11	discourse	_	_
 13	...	_	_	_	_	_	_	_	_
@@ -1721,11 +1721,11 @@
 
 1	Thts	_	_	_	_	2	nsubj	_	_
 2	Why	_	_	_	_	0	root	_	_
-3	Her	_	_	_	_	5	nmod_poss	_	_
+3	Her	_	_	_	_	5	nmod:poss	_	_
 4	Black	_	_	_	_	5	amod	_	_
 5	ass	_	_	_	_	7	nsubj	_	_
-6	was	_	_	_	_	7	aux_pass	_	_
-7	adopted	_	_	_	_	2	acl_relcl	_	_
+6	was	_	_	_	_	7	aux:pass	_	_
+7	adopted	_	_	_	_	2	acl:relcl	_	_
 8	now	_	_	_	_	7	advmod	_	_
 
 1	Wth	_	_	_	_	0	root	_	_
@@ -1735,14 +1735,14 @@
 5	lmbo	_	_	_	_	1	parataxis	_	_
 6	...........	_	_	_	_	_	_	_	_
 7	next	_	_	_	_	8	amod	_	_
-8	time	_	_	_	_	9	obl_tmod	_	_
+8	time	_	_	_	_	9	obl:tmod	_	_
 9	pic	_	_	_	_	0	parataxis	_	_
 10	a	_	_	_	_	12	det	_	_
 11	different	_	_	_	_	12	amod	_	_
 12	event	_	_	_	_	9	obj	_	_
 13	to	_	_	_	_	14	mark	_	_
 14	prove	_	_	_	_	9	xcomp	_	_
-15	your	_	_	_	_	16	nmod_poss	_	_
+15	your	_	_	_	_	16	nmod:poss	_	_
 16	point	_	_	_	_	14	obj	_	_
 17	............	_	_	_	_	_	_	_	_
 18	#RHOA	_	_	_	_	9	parataxis	_	_
@@ -1754,7 +1754,7 @@
 5	need	_	_	_	_	0	root	_	_
 6	to	_	_	_	_	7	mark	_	_
 7	make	_	_	_	_	5	xcomp	_	_
-8	yo	_	_	_	_	9	nmod_poss	_	_
+8	yo	_	_	_	_	9	nmod:poss	_	_
 9	way	_	_	_	_	7	obj	_	_
 10	dwn	_	_	_	_	11	case	_	_
 11	here	_	_	_	_	9	advmod	_	_
@@ -1771,7 +1771,7 @@
 7	Bout	_	_	_	_	5	parataxis	_	_
 8	to	_	_	_	_	9	mark	_	_
 9	clean	_	_	_	_	7	xcomp	_	_
-10	up	_	_	_	_	9	compound_prt	_	_
+10	up	_	_	_	_	9	compound:prt	_	_
 11	and	_	_	_	_	12	cc	_	_
 12	get	_	_	_	_	7	conj	_	_
 13	this	_	_	_	_	14	det	_	_
@@ -1791,7 +1791,7 @@
 4	21	_	_	_	_	0	root	_	_
 5	my	_	_	_	_	7	case	_	_
 6	this	_	_	_	_	7	det	_	_
-7	year	_	_	_	_	4	obl_tmod	_	_
+7	year	_	_	_	_	4	obl:tmod	_	_
 8	!!!	_	_	_	_	_	_	_	_
 
 1	Whoever	_	_	_	_	2	nsubj	_	_
@@ -1820,7 +1820,7 @@
 
 1	Nigga	_	_	_	_	4	nsubj	_	_
 2	really	_	_	_	_	4	advmod	_	_
-3	got	_	_	_	_	4	aux_pass	_	_
+3	got	_	_	_	_	4	aux:pass	_	_
 4	shot	_	_	_	_	0	root	_	_
 5	dead	_	_	_	_	4	xcomp	_	_
 6	out	_	_	_	_	9	case	_	_
@@ -1888,7 +1888,7 @@
 7	smoove	_	_	_	_	6	flat	_	_
 8	,	_	_	_	_	_	_	_	_
 9	cuz	_	_	_	_	11	mark	_	_
-10	is	_	_	_	_	11	nmod_poss	_	_
+10	is	_	_	_	_	11	nmod:poss	_	_
 11	jokes	_	_	_	_	4	advcl	_	_
 12	....	_	_	_	_	_	_	_	_
 
@@ -1900,7 +1900,7 @@
 6	one	_	_	_	_	3	obl	_	_
 7	...	_	_	_	_	_	_	_	_
 8	check	_	_	_	_	1	parataxis	_	_
-9	my	_	_	_	_	10	nmod_poss	_	_
+9	my	_	_	_	_	10	nmod:poss	_	_
 10	IG	_	_	_	_	8	obj	_	_
 11	in	_	_	_	_	13	case	_	_
 12	a	_	_	_	_	13	det	_	_
@@ -1920,7 +1920,7 @@
 
 1	I'll	_	_	_	_	2	nsubj	_	_
 2	cut	_	_	_	_	0	root	_	_
-3	my	_	_	_	_	4	nmod_poss	_	_
+3	my	_	_	_	_	4	nmod:poss	_	_
 4	beard	_	_	_	_	2	obj	_	_
 5	next	_	_	_	_	6	amod	_	_
 6	cut	_	_	_	_	2	obl	_	_
@@ -2004,25 +2004,25 @@
 20	Chill	_	_	_	_	16	discourse	_	_
 
 1	Woke	_	_	_	_	0	root	_	_
-2	up	_	_	_	_	1	compound_prt	_	_
+2	up	_	_	_	_	1	compound:prt	_	_
 3	feelin	_	_	_	_	1	xcomp	_	_
 4	like	_	_	_	_	5	case	_	_
 5	shit	_	_	_	_	3	obl	_	_
 6	this	_	_	_	_	7	det	_	_
-7	mornin	_	_	_	_	3	obl_tmod	_	_
+7	mornin	_	_	_	_	3	obl:tmod	_	_
 
 1	Gotta	_	_	_	_	0	root	_	_
 2	get	_	_	_	_	1	xcomp	_	_
-3	up	_	_	_	_	2	compound_prt	_	_
+3	up	_	_	_	_	2	compound:prt	_	_
 4	early	_	_	_	_	2	advmod	_	_
 5	n	_	_	_	_	7	case	_	_
 6	da	_	_	_	_	7	det	_	_
-7	a.m	_	_	_	_	4	obl_tmod	_	_
+7	a.m	_	_	_	_	4	obl:tmod	_	_
 
 1	I	_	_	_	_	2	nsubj	_	_
 2	gota	_	_	_	_	0	root	_	_
 3	go	_	_	_	_	2	xcomp	_	_
-4	back	_	_	_	_	3	compound_prt	_	_
+4	back	_	_	_	_	3	compound:prt	_	_
 5	to	_	_	_	_	7	case	_	_
 6	the	_	_	_	_	7	det	_	_
 7	gym	_	_	_	_	3	obl	_	_
@@ -2048,7 +2048,7 @@
 12	u	_	_	_	_	14	nsubj	_	_
 13	can	_	_	_	_	14	aux	_	_
 14	ask	_	_	_	_	2	parataxis	_	_
-15	ur	_	_	_	_	16	nmod_poss	_	_
+15	ur	_	_	_	_	16	nmod:poss	_	_
 16	boo	_	_	_	_	14	obj	_	_
 17	or	_	_	_	_	18	cc	_	_
 18	somethin	_	_	_	_	14	conj	_	_
@@ -2075,7 +2075,7 @@
 7	make	_	_	_	_	6	xcomp	_	_
 8	you	_	_	_	_	9	nsubj	_	_
 9	say	_	_	_	_	7	ccomp	_	_
-10	my	_	_	_	_	11	nmod_poss	_	_
+10	my	_	_	_	_	11	nmod:poss	_	_
 11	name	_	_	_	_	9	obj	_	_
 12	EMOJI	_	_	_	_	6	discourse	_	_
 
@@ -2096,7 +2096,7 @@
 15	I	_	_	_	_	17	nsubj	_	_
 16	can	_	_	_	_	17	aux	_	_
 17	take	_	_	_	_	1	advcl	_	_
-18	my	_	_	_	_	19	nmod_poss	_	_
+18	my	_	_	_	_	19	nmod:poss	_	_
 19	meds	_	_	_	_	17	obj	_	_
 
 1	ATMENTION	_	_	_	_	4	vocative	_	_
@@ -2115,7 +2115,7 @@
 1	Finally	_	_	_	_	2	advmod	_	_
 2	home	_	_	_	_	0	root	_	_
 3	.	_	_	_	_	_	_	_	_
-4	My	_	_	_	_	5	nmod_poss	_	_
+4	My	_	_	_	_	5	nmod:poss	_	_
 5	crib	_	_	_	_	7	nsubj	_	_
 6	is	_	_	_	_	7	cop	_	_
 7	nice	_	_	_	_	2	parataxis	_	_
@@ -2169,7 +2169,7 @@
 1	Last	_	_	_	_	2	amod	_	_
 2	day	_	_	_	_	0	root	_	_
 3	at	_	_	_	_	6	case	_	_
-4	my	_	_	_	_	6	nmod_poss	_	_
+4	my	_	_	_	_	6	nmod:poss	_	_
 5	night	_	_	_	_	6	compound	_	_
 6	Job	_	_	_	_	2	nmod	_	_
 7	!	_	_	_	_	_	_	_	_
@@ -2182,7 +2182,7 @@
 5	go	_	_	_	_	3	ccomp	_	_
 6	..	_	_	_	_	_	_	_	_
 7	Come	_	_	_	_	3	parataxis	_	_
-8	on	_	_	_	_	7	compound_prt	_	_
+8	on	_	_	_	_	7	compound:prt	_	_
 9	!!!	_	_	_	_	_	_	_	_
 
 1	Lets	_	_	_	_	0	root	_	_
@@ -2193,7 +2193,7 @@
 
 1	ATMENTION	_	_	_	_	4	vocative	_	_
 2	what	_	_	_	_	4	nsubj	_	_
-3	yo	_	_	_	_	4	nmod_poss	_	_
+3	yo	_	_	_	_	4	nmod:poss	_	_
 4	number	_	_	_	_	0	root	_	_
 5	?	_	_	_	_	_	_	_	_
 
@@ -2219,7 +2219,7 @@
 2	dis	_	_	_	_	4	nsubj	_	_
 3	is	_	_	_	_	4	cop	_	_
 4	unusual	_	_	_	_	0	root	_	_
-5	my	_	_	_	_	6	nmod_poss	_	_
+5	my	_	_	_	_	6	nmod:poss	_	_
 6	phone	_	_	_	_	7	nsubj	_	_
 7	dry	_	_	_	_	4	parataxis	_	_
 8	af	_	_	_	_	7	advmod	_	_
@@ -2263,7 +2263,7 @@
 10	TATS	_	_	_	_	8	obj	_	_
 11	B4	_	_	_	_	13	case	_	_
 12	SPRiNG	_	_	_	_	13	compound	_	_
-13	BREAK	_	_	_	_	8	obl_tmod	_	_
+13	BREAK	_	_	_	_	8	obl:tmod	_	_
 14	.!	_	_	_	_	_	_	_	_
 15	"	_	_	_	_	_	_	_	_
 16	1000	_	_	_	_	0	root	_	_
@@ -2316,7 +2316,7 @@
 5	come	_	_	_	_	4	xcomp	_	_
 6	looking	_	_	_	_	5	xcomp	_	_
 7	for	_	_	_	_	10	case	_	_
-8	yo	_	_	_	_	10	nmod_poss	_	_
+8	yo	_	_	_	_	10	nmod:poss	_	_
 9	lil	_	_	_	_	10	amod	_	_
 10	ass	_	_	_	_	6	obl	_	_
 
@@ -2342,7 +2342,7 @@
 3	went	_	_	_	_	0	root	_	_
 4	out	_	_	_	_	3	advmod	_	_
 5	last	_	_	_	_	6	amod	_	_
-6	night	_	_	_	_	3	obl_tmod	_	_
+6	night	_	_	_	_	3	obl:tmod	_	_
 
 1	ATMENTION	_	_	_	_	3	vocative	_	_
 2	lol	_	_	_	_	3	discourse	_	_
@@ -2413,7 +2413,7 @@
 8	nigga	_	_	_	_	9	nmod	_	_
 9	head	_	_	_	_	6	obj	_	_
 10	fucked	_	_	_	_	9	acl	_	_
-11	up	_	_	_	_	10	compound_prt	_	_
+11	up	_	_	_	_	10	compound:prt	_	_
 12	quick	_	_	_	_	10	advmod	_	_
 13	lol	_	_	_	_	3	discourse	_	_
 
@@ -2455,7 +2455,7 @@
 1	Ughhhhhh	_	_	_	_	3	discourse	_	_
 2	I	_	_	_	_	3	nsubj	_	_
 3	miss	_	_	_	_	0	root	_	_
-4	my	_	_	_	_	5	nmod_poss	_	_
+4	my	_	_	_	_	5	nmod:poss	_	_
 5	BOYFRIEND	_	_	_	_	3	obj	_	_
 6	YOOOO	_	_	_	_	3	discourse	_	_
 7	!!!!!!	_	_	_	_	_	_	_	_
@@ -2534,7 +2534,7 @@
 10	dey	_	_	_	_	7	ccomp	_	_
 11	cheesin	_	_	_	_	10	xcomp	_	_
 12	hard	_	_	_	_	11	advmod	_	_
-13	her	_	_	_	_	15	nmod_poss	_	_
+13	her	_	_	_	_	15	nmod:poss	_	_
 14	sexy	_	_	_	_	15	amod	_	_
 15	self	_	_	_	_	11	obj	_	_
 16	lol	_	_	_	_	7	discourse	_	_
@@ -2549,7 +2549,7 @@
 2	Kendra	_	_	_	_	4	nsubj	_	_
 3	not	_	_	_	_	4	advmod	_	_
 4	cuttn	_	_	_	_	1	ccomp	_	_
-5	up	_	_	_	_	4	compound_prt	_	_
+5	up	_	_	_	_	4	compound:prt	_	_
 6	lyk	_	_	_	_	7	case	_	_
 7	dat	_	_	_	_	4	obl	_	_
 8	on	_	_	_	_	9	case	_	_
@@ -2564,7 +2564,7 @@
 5	tawkn	_	_	_	_	3	parataxis	_	_
 6	bout	_	_	_	_	9	case	_	_
 7	dat	_	_	_	_	8	det	_	_
-8	man	_	_	_	_	9	nmod_poss	_	_
+8	man	_	_	_	_	9	nmod:poss	_	_
 9	gf	_	_	_	_	5	obl	_	_
 
 1	Dat	_	_	_	_	2	det	_	_
@@ -2619,8 +2619,8 @@
 6	,	_	_	_	_	_	_	_	_
 7	prolly	_	_	_	_	8	advmod	_	_
 8	cumin	_	_	_	_	2	parataxis	_	_
-9	ova	_	_	_	_	8	compound_prt	_	_
-10	tumara	_	_	_	_	8	obl_tmod	_	_
+9	ova	_	_	_	_	8	compound:prt	_	_
+10	tumara	_	_	_	_	8	obl:tmod	_	_
 
 1	ATMENTION	_	_	_	_	6	vocative	_	_
 2	ATMENTION	_	_	_	_	6	vocative	_	_
@@ -2642,11 +2642,11 @@
 8	cumin	_	_	_	_	5	advcl	_	_
 9	Bk	_	_	_	_	8	advmod	_	_
 
-1	My	_	_	_	_	2	nmod_poss	_	_
+1	My	_	_	_	_	2	nmod:poss	_	_
 2	clothes	_	_	_	_	4	nsubj	_	_
 3	jus	_	_	_	_	4	advmod	_	_
 4	cum	_	_	_	_	0	root	_	_
-5	up	_	_	_	_	4	compound_prt	_	_
+5	up	_	_	_	_	4	compound:prt	_	_
 6	missing	_	_	_	_	4	xcomp	_	_
 
 1	Lol	_	_	_	_	4	discourse	_	_
@@ -2703,13 +2703,13 @@
 15	in	_	_	_	_	16	case	_	_
 16	ruzzle	_	_	_	_	13	obl	_	_
 
-1	My	_	_	_	_	2	nmod_poss	_	_
+1	My	_	_	_	_	2	nmod:poss	_	_
 2	mama	_	_	_	_	3	nsubj	_	_
 3	raised	_	_	_	_	0	root	_	_
 4	a	_	_	_	_	5	det	_	_
 5	hustler	_	_	_	_	3	obj	_	_
 6	,	_	_	_	_	_	_	_	_
-7	my	_	_	_	_	8	nmod_poss	_	_
+7	my	_	_	_	_	8	nmod:poss	_	_
 8	mama	_	_	_	_	11	nsubj	_	_
 9	was	_	_	_	_	11	cop	_	_
 10	a	_	_	_	_	11	det	_	_
@@ -2720,7 +2720,7 @@
 3	bouta	_	_	_	_	0	root	_	_
 4	piss	_	_	_	_	3	xcomp	_	_
 5	me	_	_	_	_	4	obj	_	_
-6	off	_	_	_	_	4	compound_prt	_	_
+6	off	_	_	_	_	4	compound:prt	_	_
 7	.	_	_	_	_	_	_	_	_
 
 1	Bitch	_	_	_	_	3	nsubj	_	_
@@ -2749,7 +2749,7 @@
 24	shootin	_	_	_	_	3	parataxis	_	_
 25	dice	_	_	_	_	24	obj	_	_
 26	wit	_	_	_	_	29	case	_	_
-27	er	_	_	_	_	29	nmod_poss	_	_
+27	er	_	_	_	_	29	nmod:poss	_	_
 28	rent	_	_	_	_	29	compound	_	_
 29	money	_	_	_	_	24	obl	_	_
 30	!	_	_	_	_	_	_	_	_
@@ -2767,7 +2767,7 @@
 
 1	Uhh	_	_	_	_	0	root	_	_
 2	.	_	_	_	_	_	_	_	_
-3	My	_	_	_	_	4	nmod_poss	_	_
+3	My	_	_	_	_	4	nmod:poss	_	_
 4	Mood	_	_	_	_	1	parataxis	_	_
 5	Right	_	_	_	_	6	advmod	_	_
 6	Now	_	_	_	_	4	advmod	_	_
@@ -2788,9 +2788,9 @@
 6	.	_	_	_	_	_	_	_	_
 7	Nothin	_	_	_	_	4	parataxis	_	_
 8	like	_	_	_	_	10	case	_	_
-9	getting	_	_	_	_	10	aux_pass	_	_
+9	getting	_	_	_	_	10	aux:pass	_	_
 10	dressed	_	_	_	_	7	nmod	_	_
-11	up	_	_	_	_	10	compound_prt	_	_
+11	up	_	_	_	_	10	compound:prt	_	_
 12	and	_	_	_	_	13	cc	_	_
 13	getting	_	_	_	_	10	conj	_	_
 14	some	_	_	_	_	15	det	_	_
@@ -2801,7 +2801,7 @@
 1	What's	_	_	_	_	0	root	_	_
 2	the	_	_	_	_	3	det	_	_
 3	move	_	_	_	_	1	nsubj	_	_
-4	tonight	_	_	_	_	3	obl_tmod	_	_
+4	tonight	_	_	_	_	3	obl:tmod	_	_
 5	ATL	_	_	_	_	3	vocative	_	_
 6	?!	_	_	_	_	_	_	_	_
 
@@ -2833,7 +2833,7 @@
 3	.	_	_	_	_	_	_	_	_
 4	He	_	_	_	_	5	nsubj	_	_
 5	calmed	_	_	_	_	2	parataxis	_	_
-6	down	_	_	_	_	5	compound_prt	_	_
+6	down	_	_	_	_	5	compound:prt	_	_
 7	and	_	_	_	_	8	cc	_	_
 8	asked	_	_	_	_	5	conj	_	_
 9	me	_	_	_	_	8	obj	_	_
@@ -2858,10 +2858,10 @@
 12	you	_	_	_	_	11	obj	_	_
 13	away	_	_	_	_	11	advmod	_	_
 14	every	_	_	_	_	15	det	_	_
-15	time	_	_	_	_	11	obl_tmod	_	_
+15	time	_	_	_	_	11	obl:tmod	_	_
 16	lol	_	_	_	_	11	discourse	_	_
 
-1	Domino's	_	_	_	_	2	nmod_poss	_	_
+1	Domino's	_	_	_	_	2	nmod:poss	_	_
 2	Pizza	_	_	_	_	14	parataxis	_	_
 3	:	_	_	_	_	_	_	_	_
 4	"	_	_	_	_	_	_	_	_
@@ -2881,28 +2881,28 @@
 
 1	ATMENTION	_	_	_	_	2	vocative	_	_
 2	quiet	_	_	_	_	0	root	_	_
-3	today	_	_	_	_	2	obl_tmod	_	_
+3	today	_	_	_	_	2	obl:tmod	_	_
 4	!!	_	_	_	_	_	_	_	_
 5	Long	_	_	_	_	6	amod	_	_
 6	night	_	_	_	_	2	parataxis	_	_
 7	!?	_	_	_	_	_	_	_	_
 
 1	ATMENTION	_	_	_	_	5	vocative	_	_
-2	my	_	_	_	_	3	nmod_poss	_	_
+2	my	_	_	_	_	3	nmod:poss	_	_
 3	number	_	_	_	_	5	nsubj	_	_
 4	is	_	_	_	_	5	cop	_	_
 5	919	_	_	_	_	0	root	_	_
 6	885	_	_	_	_	5	flat	_	_
 7	6549	_	_	_	_	5	flat	_	_
 8	hit	_	_	_	_	5	obj	_	_
-9	my	_	_	_	_	10	nmod_poss	_	_
+9	my	_	_	_	_	10	nmod:poss	_	_
 10	shit	_	_	_	_	8	obj	_	_
 
 1	FREEE	_	_	_	_	0	root	_	_
-2	MY	_	_	_	_	3	nmod_poss	_	_
+2	MY	_	_	_	_	3	nmod:poss	_	_
 3	COUSINS	_	_	_	_	1	obj	_	_
 4	&&	_	_	_	_	6	cc	_	_
-5	MY	_	_	_	_	6	nmod_poss	_	_
+5	MY	_	_	_	_	6	nmod:poss	_	_
 6	BROS	_	_	_	_	3	conj	_	_
 
 1	I	_	_	_	_	2	nsubj	_	_
@@ -2912,7 +2912,7 @@
 5	Hoess	_	_	_	_	2	obj	_	_
 6	!	_	_	_	_	_	_	_	_
 
-1	Daija	_	_	_	_	3	nmod_poss	_	_
+1	Daija	_	_	_	_	3	nmod:poss	_	_
 2	Ugly	_	_	_	_	3	amod	_	_
 3	ass	_	_	_	_	8	nsubj	_	_
 4	Be	_	_	_	_	8	cop	_	_
@@ -2933,7 +2933,7 @@
 2	Bitchh	_	_	_	_	4	vocative	_	_
 3	Dont	_	_	_	_	4	aux	_	_
 4	Kill	_	_	_	_	0	root	_	_
-5	My	_	_	_	_	6	nmod_poss	_	_
+5	My	_	_	_	_	6	nmod:poss	_	_
 6	Vibee	_	_	_	_	4	obj	_	_
 7	!	_	_	_	_	_	_	_	_
 8	!	_	_	_	_	_	_	_	_
@@ -2958,13 +2958,13 @@
 8	u	_	_	_	_	4	obl	_	_
 
 1	Lol	_	_	_	_	4	discourse	_	_
-2	My	_	_	_	_	3	nmod_poss	_	_
+2	My	_	_	_	_	3	nmod:poss	_	_
 3	Bestfrienddd	_	_	_	_	4	nsubj	_	_
 4	Snapping	_	_	_	_	0	root	_	_
 5	bro	_	_	_	_	4	discourse	_	_
 
 1	.	_	_	_	_	_	_	_	_
-2	MY	_	_	_	_	3	nmod_poss	_	_
+2	MY	_	_	_	_	3	nmod:poss	_	_
 3	Bestfrienddd	_	_	_	_	4	nsubj	_	_
 4	Madd	_	_	_	_	0	root	_	_
 5	At	_	_	_	_	6	case	_	_
@@ -3003,7 +3003,7 @@
 14	when	_	_	_	_	16	mark	_	_
 15	you	_	_	_	_	16	nsubj	_	_
 16	grow	_	_	_	_	11	advcl	_	_
-17	up	_	_	_	_	16	compound_prt	_	_
+17	up	_	_	_	_	16	compound:prt	_	_
 18	?	_	_	_	_	_	_	_	_
 19	"	_	_	_	_	_	_	_	_
 20	let's	_	_	_	_	3	parataxis	_	_
@@ -3020,21 +3020,21 @@
 31	"	_	_	_	_	_	_	_	_
 
 1	Fucked	_	_	_	_	0	root	_	_
-2	my	_	_	_	_	3	nmod_poss	_	_
+2	my	_	_	_	_	3	nmod:poss	_	_
 3	day	_	_	_	_	1	obj	_	_
 4	all	_	_	_	_	5	advmod	_	_
-5	up	_	_	_	_	1	compound_prt	_	_
+5	up	_	_	_	_	1	compound:prt	_	_
 6	!!!	_	_	_	_	_	_	_	_
 
 1	Since	_	_	_	_	3	mark	_	_
 2	u	_	_	_	_	3	nsubj	_	_
 3	got	_	_	_	_	14	advcl	_	_
 4	on	_	_	_	_	7	case	_	_
-5	ur	_	_	_	_	7	nmod_poss	_	_
+5	ur	_	_	_	_	7	nmod:poss	_	_
 6	high	_	_	_	_	7	amod	_	_
 7	horse	_	_	_	_	3	obl	_	_
 8	,	_	_	_	_	_	_	_	_
-9	UR	_	_	_	_	10	nmod_poss	_	_
+9	UR	_	_	_	_	10	nmod:poss	_	_
 10	LIFE'S	_	_	_	_	14	nsubj	_	_
 11	AT	_	_	_	_	14	case	_	_
 12	A	_	_	_	_	14	det	_	_
@@ -3087,13 +3087,13 @@
 12	of	_	_	_	_	13	case	_	_
 13	what	_	_	_	_	11	obl	_	_
 14	I'm	_	_	_	_	15	nsubj	_	_
-15	doing	_	_	_	_	13	acl_relcl	_	_
+15	doing	_	_	_	_	13	acl:relcl	_	_
 16	n	_	_	_	_	17	cc	_	_
 17	how	_	_	_	_	15	conj	_	_
 18	I'm	_	_	_	_	19	nsubj	_	_
-19	fighting	_	_	_	_	17	acl_relcl	_	_
+19	fighting	_	_	_	_	17	acl:relcl	_	_
 20	for	_	_	_	_	22	case	_	_
-21	my	_	_	_	_	22	nmod_poss	_	_
+21	my	_	_	_	_	22	nmod:poss	_	_
 22	babies	_	_	_	_	19	obl	_	_
 23	!!!	_	_	_	_	_	_	_	_
 
@@ -3102,7 +3102,7 @@
 3	type	_	_	_	_	0	root	_	_
 4	that	_	_	_	_	6	nsubj	_	_
 5	would	_	_	_	_	6	aux	_	_
-6	walk	_	_	_	_	3	acl_relcl	_	_
+6	walk	_	_	_	_	3	acl:relcl	_	_
 7	thru	_	_	_	_	9	case	_	_
 8	the	_	_	_	_	9	det	_	_
 9	fire	_	_	_	_	6	obl	_	_
@@ -3111,7 +3111,7 @@
 12	the	_	_	_	_	13	det	_	_
 13	way	_	_	_	_	11	obj	_	_
 14	it	_	_	_	_	15	nsubj	_	_
-15	burn	_	_	_	_	13	acl_relcl	_	_
+15	burn	_	_	_	_	13	acl:relcl	_	_
 16	!!!	_	_	_	_	_	_	_	_
 
 1	ATMENTION	_	_	_	_	4	vocative	_	_
@@ -3119,7 +3119,7 @@
 3	yall	_	_	_	_	4	nsubj	_	_
 4	pick	_	_	_	_	0	root	_	_
 5	on	_	_	_	_	7	case	_	_
-6	my	_	_	_	_	7	nmod_poss	_	_
+6	my	_	_	_	_	7	nmod:poss	_	_
 7	jacket	_	_	_	_	4	obl	_	_
 8	knowing	_	_	_	_	4	advcl	_	_
 9	damn	_	_	_	_	10	advmod	_	_
@@ -3149,7 +3149,7 @@
 1	Wtf	_	_	_	_	3	nsubj	_	_
 2	is	_	_	_	_	3	aux	_	_
 3	going	_	_	_	_	0	root	_	_
-4	on	_	_	_	_	3	compound_prt	_	_
+4	on	_	_	_	_	3	compound:prt	_	_
 5	w/	_	_	_	_	6	case	_	_
 6	Flacco	_	_	_	_	3	obl	_	_
 
@@ -3163,13 +3163,13 @@
 2	got	_	_	_	_	0	root	_	_
 3	me	_	_	_	_	2	obj	_	_
 4	bent	_	_	_	_	2	xcomp	_	_
-5	over	_	_	_	_	4	compound_prt	_	_
+5	over	_	_	_	_	4	compound:prt	_	_
 
 1	I	_	_	_	_	2	nsubj	_	_
 2	want	_	_	_	_	0	root	_	_
 3	sumthn	_	_	_	_	2	obj	_	_
 4	that's	_	_	_	_	5	nsubj	_	_
-5	gonna	_	_	_	_	3	acl_relcl	_	_
+5	gonna	_	_	_	_	3	acl:relcl	_	_
 6	last	_	_	_	_	5	xcomp	_	_
 7	a	_	_	_	_	9	det	_	_
 8	life	_	_	_	_	9	compound	_	_
@@ -3192,13 +3192,13 @@
 1	Don't	_	_	_	_	2	aux	_	_
 2	play	_	_	_	_	0	root	_	_
 3	wit	_	_	_	_	5	case	_	_
-4	my	_	_	_	_	5	nmod_poss	_	_
+4	my	_	_	_	_	5	nmod:poss	_	_
 5	feelings	_	_	_	_	2	obl	_	_
 6	your	_	_	_	_	7	nsubj	_	_
 7	liable	_	_	_	_	2	parataxis	_	_
 8	to	_	_	_	_	9	mark	_	_
 9	get	_	_	_	_	7	xcomp	_	_
-10	your	_	_	_	_	11	nmod_poss	_	_
+10	your	_	_	_	_	11	nmod:poss	_	_
 11	ass	_	_	_	_	9	obj	_	_
 12	whooped	_	_	_	_	9	xcomp	_	_
 13	or	_	_	_	_	14	cc	_	_
@@ -3214,7 +3214,7 @@
 4	with	_	_	_	_	5	case	_	_
 5	titties	_	_	_	_	3	nmod	_	_
 6	on	_	_	_	_	8	case	_	_
-7	her	_	_	_	_	8	nmod_poss	_	_
+7	her	_	_	_	_	8	nmod:poss	_	_
 8	back	_	_	_	_	5	nmod	_	_
 9	lls	_	_	_	_	3	discourse	_	_
 10	:-)	_	_	_	_	3	discourse	_	_
@@ -3246,7 +3246,7 @@
 4	Get	_	_	_	_	1	parataxis	_	_
 5	the	_	_	_	_	6	det	_	_
 6	fuck	_	_	_	_	7	advmod	_	_
-7	out	_	_	_	_	4	compound_prt	_	_
+7	out	_	_	_	_	4	compound:prt	_	_
 8	the	_	_	_	_	9	det	_	_
 9	way	_	_	_	_	7	obl	_	_
 10	lil	_	_	_	_	11	compound	_	_
@@ -3265,7 +3265,7 @@
 3	ME	_	_	_	_	2	obj	_	_
 4	ALONE	_	_	_	_	2	xcomp	_	_
 5	,	_	_	_	_	_	_	_	_
-6	My	_	_	_	_	7	nmod_poss	_	_
+6	My	_	_	_	_	7	nmod:poss	_	_
 7	mother	_	_	_	_	9	nsubj	_	_
 8	forever	_	_	_	_	9	advmod	_	_
 9	complaining	_	_	_	_	2	parataxis	_	_
@@ -3276,7 +3276,7 @@
 1	ATMENTION	_	_	_	_	3	vocative	_	_
 2	lol	_	_	_	_	3	discourse	_	_
 3	shut	_	_	_	_	0	root	_	_
-4	up	_	_	_	_	3	compound_prt	_	_
+4	up	_	_	_	_	3	compound:prt	_	_
 5	he	_	_	_	_	6	nsubj	_	_
 6	funny	_	_	_	_	3	parataxis	_	_
 7	thoe	_	_	_	_	6	advmod	_	_

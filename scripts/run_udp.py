@@ -16,7 +16,7 @@ import transformers.adapters.composition as ac
 from preprocessing import preprocess_dataset
 from transformers import AutoConfig, AutoTokenizer, HfArgumentParser, set_seed
 from transformers.adapters import AdapterArguments, AdapterConfigBase, AutoAdapterModel
-from utils_udp import UD_HEAD_LABELS, UD_HEAD_LABELS_singlish, UD_HEAD_LABELS_TwitterAAE, DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
+from utils_udp import UD_HEAD_LABELS,  DependencyParsingAdapterTrainer, DependencyParsingTrainer, UDTrainingArguments
 
 
 logger = logging.getLogger(__name__)
@@ -63,8 +63,8 @@ class ModelArguments:
         metadata={"help": "Overwrite the cached training and evaluation sets."},
     )
     use_train_lang: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
-    use_singlish: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
-    use_TwitterAAE: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
+    # use_singlish: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
+    # use_TwitterAAE: bool = field(default=False, metadata={"help": "Set this flag to use fast tokenization."})
 
 
 @dataclass
@@ -144,10 +144,10 @@ def main():
 
     # Prepare for UD dependency parsing task
     labels = UD_HEAD_LABELS
-    if data_args.task_name=='singlish' or model_args.use_singlish:
-        labels=UD_HEAD_LABELS_singlish
-    elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
-        labels=UD_HEAD_LABELS_TwitterAAE
+    # if data_args.task_name=='singlish' or model_args.use_singlish:
+    #     labels=UD_HEAD_LABELS_singlish
+    # elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
+    #     labels=UD_HEAD_LABELS_TwitterAAE
     label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
     num_labels = len(labels)
 
@@ -200,7 +200,8 @@ def main():
         dataset_builder.download_and_prepare(dl_manager=mock_dl_manager, ignore_verifications=True)
         dataset = dataset_builder.as_dataset()
     else:
-        dataset = load_dataset("scripts/universal_dependencies.py", data_args.task_name)
+        dataset = load_dataset("scripts/universal_dependencies.py", data_args.task_name,
+            cache_dir=model_args.cache_dir)
         # dataset = load_dataset("universal_dependencies", data_args.task_name)
     print(labels)
     dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
@@ -234,11 +235,15 @@ def main():
             eval_dataset=dataset[data_args.evaluate_on],
         )
     elif "train" in list(dataset.keys()):
-        training_args.evaluation_strategy="no"
+        val_dataset = load_dataset("scripts/universal_dependencies.py", 'UD_English-EWT',
+                    split=['validation'], cache_dir=model_args.cache_dir)
+        val_dataset = DatasetDict({"validation":val_dataset[0]})
+        val_dataset = preprocess_dataset(val_dataset, tokenizer, labels, data_args, pad_token_id=-1)
         trainer = trainer_class(
             model=model,
             args=training_args,
             train_dataset=dataset["train"],
+            eval_dataset=val_dataset["validation"]
         )
     elif list(dataset.keys())==["test"]:
         trainer = trainer_class(
@@ -311,10 +316,10 @@ def main():
             else:
                 print(training_args.output_dir)
                 labels = UD_HEAD_LABELS
-                if data_args.task_name=='singlish' or model_args.use_singlish:
-                    labels=UD_HEAD_LABELS_singlish
-                elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
-                    labels=UD_HEAD_LABELS_TwitterAAE
+                # if data_args.task_name=='singlish' or model_args.use_singlish:
+                #     labels=UD_HEAD_LABELS_singlish
+                # elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
+                #     labels=UD_HEAD_LABELS_TwitterAAE
                 label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
                 num_labels = len(labels)
 
@@ -379,8 +384,8 @@ def main():
 
                 # Prepare for UD dependency parsing task
                 labels = UD_HEAD_LABELS
-                if lang=='singlish' and model_args.use_train_lang==False:
-                    labels=UD_HEAD_LABELS_singlish
+                # if lang=='singlish' and model_args.use_train_lang==False:
+                #     labels=UD_HEAD_LABELS_singlish
                 label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
                 num_labels = len(labels)
 
