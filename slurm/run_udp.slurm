@@ -6,7 +6,7 @@
 ##SBATCH --error=../tr_output/udp_all.err
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1                 # up to 128; 
-#SBATCH --gres=gpu:A100.40gb:1              # up to 8; only request what you need
+#SBATCH --gres=gpu:A100.80gb:1              # up to 8; only request what you need
 #SBATCH --mem-per-cpu=35500M                 # memory per CORE; total memory is 1 TB (1,000,000 MB)
 #SBATCH --export=ALL 
 #SBATCH --time=3-01:00:00                   # set to 1hr; please choose carefully
@@ -15,6 +15,7 @@
 task=$1
 lang=$2
 MODEL_NAME=$3
+DATASET=$4
 
 # to see ID and state of GPUs assigned
 nvidia-smi
@@ -25,22 +26,19 @@ if [[ "$task" = "train_udp" ]]; then
 	bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${MODEL_NAME}
 fi
 
-if [[ "$task" = "train_udp_eng_sing" ]]; then
-	bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${MODEL_NAME}
-fi
-
 if [[ "$task" = "predict_udp" ]]; then
 	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
 fi
 
-if [[ "$task" = "predict_udp_eng_sing" ]]; then
-	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
+if [[ "$task" = "train_sdqa" ]]; then
+	bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${MODEL_NAME}
 fi
 
-if [[ "$task" = "train_udp_eng_TwitterAAE" ]]; then
-	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
+if [[ "$task" = "train_ner" ]]; then
+	bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${MODEL_NAME} --dataset ${DATASET}
 fi
 
-if [[ "$task" = "predict_udp_eng_TwitterAAE" ]]; then
-	bash install.sh --task ${task} --MODEL_NAME ${MODEL_NAME}
+if [[ "$task" = "train_did_lm" ]]; then
+	bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${MODEL_NAME} --dataset ${DATASET}
 fi
+

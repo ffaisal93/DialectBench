@@ -4,5 +4,10 @@ conllu
 datasets >= 1.8.0
 accelerate
 sentencepiece != 0.1.92
-protobuf
 seqeval
+protobuf~=3.20.0
+tensorboardX
+tensorboard
+evaluate
+scipy
+scikit-learn

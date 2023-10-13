@@ -4,6 +4,8 @@ lang=${lang:-eng}
 lang2=${lang2:-eng}
 lang3=${lang3:-eng}
 MODEL_NAME=${MODEL_NAME:-bert}
+dataset=${dataset:-wikiann}
+
 while [ $# -gt 0 ]; do
 
    if [[ $1 == *"--"* ]]; then
@@ -44,40 +46,6 @@ if [[ "$task" = "train_udp" ]]; then
 fi
 
 
-if [[ "$task" = "train_udp_eng_sing" ]]; then
-
-	#./command.sh --task train_udp_eng_sing --MODEL_NAME bert
-	export ALL_MODELS=("UD_English-EWT")
-	
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
-		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
-		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
-		echo ${efile}
-		echo ${ofile}
-		echo ${base_model}
-		echo ${MODEL_NAME}
-		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
-		# bash install.sh --task ${task} --lang ${MODEL_NAME} --MODEL_NAME ${base_model}
-	done
-fi
-
-if [[ "$task" = "train_udp_eng_TwitterAAE" ]]; then
-
-	#./command.sh --task train_udp_eng_sing --MODEL_NAME bert
-	export ALL_MODELS=("UD_English-EWT")
-	
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
-		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
-		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
-		echo ${efile}
-		echo ${ofile}
-		echo ${base_model}
-		echo ${MODEL_NAME}
-		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
-		# bash install.sh --task train_udp_eng_TwitterAAE --lang UD_English-EWT --MODEL_NAME bert
-	done
-fi
-
 if [[ "$task" = "predict_udp" ]]; then
 	efile="tr_output/${base_model}_${task}.err"
 	ofile="tr_output/${base_model}_${task}.out"
@@ -90,26 +58,69 @@ if [[ "$task" = "predict_udp" ]]; then
 
 fi
 
-if [[ "$task" = "predict_udp_eng_sing" ]]; then
-	#./command.sh --task predict_udp_eng_sing --MODEL_NAME xlmr
-	efile="tr_output/${base_model}_${task}.err"
-	ofile="tr_output/${base_model}_${task}.out"
-	echo ${efile}
-	echo ${ofile}
-	echo ${base_model}
-	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} null ${base_model}
-	# bash install.sh --task ${task} --MODEL_NAME ${base_model}
+if [[ "$task" = "train_sdqa" ]]; then
 
+	export ALL_MODELS=("all" "arabic" "bengali" "english" "finnish" "indonesian" "korean" "russian" "swahili" "telugu")
+
+	# export ALL_MODELS=("UD_English-EWT")
+	
+	for MODEL_NAME in ${ALL_MODELS[@]}; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${base_model}
+		echo ${MODEL_NAME}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model}
+		# bash install.sh --task train_sdqa --lang ${MODEL_NAME} --MODEL_NAME ${base_model}
+		# bash install.sh --task train_udp --lang UD_English-EWT --MODEL_NAME xlmr
+	done
 fi
 
-if [[ "$task" = "predict_udp_eng_TwitterAAE" ]]; then
-	#./command.sh --task predict_udp_eng_sing --MODEL_NAME xlmr
-	efile="tr_output/${base_model}_${task}.err"
-	ofile="tr_output/${base_model}_${task}.out"
+if [[ "$task" = "train_ner" ]]; then
+
+	
+	###norwegian dialects
+	export ALL_MODELS=("bokmaal" "nynorsk" "samnorsk")
+	##bokmaal:nb, ##nn:nynorsk
+	for MODEL_NAME in ${ALL_MODELS[@]}; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${base_model}
+		echo ${MODEL_NAME}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
+		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
+		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert
+	done
+
+	export ALL_MODELS=("nn", "no")
+	##bokmaal:nb, ##nn:nynorsk
+	for MODEL_NAME in ${ALL_MODELS[@]}; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${base_model}
+		echo ${MODEL_NAME}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} wikiann
+		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset ${dataset}
+		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert --dataset wikiann
+	done
+fi
+
+if [[ "$task" = "train_did_lm" ]]; then
+	lang="arabic"
+	dataset="madar"
+	efile="tr_output/${base_model}_${lang}_${dataset}_${task}.err"
+	ofile="tr_output/${base_model}_${lang}_${dataset}_${task}.out"
 	echo ${efile}
 	echo ${ofile}
 	echo ${base_model}
-	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} null ${base_model}
-	# bash install.sh --task predict_udp_eng_TwitterAAE --MODEL_NAME bert
+	echo ${lang}
+	echo ${dataset}
+	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
+	# ./install.sh --task train_did_lm --lang arabic --dataset madar --MODEL_NAME bert
 
 fi
