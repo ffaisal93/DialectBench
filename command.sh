@@ -90,12 +90,13 @@ if [[ "$task" = "train_ner" ]]; then
 		echo ${ofile}
 		echo ${base_model}
 		echo ${MODEL_NAME}
-		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
+		# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
 		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
 		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert
 	done
 
-	export ALL_MODELS=("nn", "no")
+	export ALL_MODELS=("ar" "ady" "az" "ku" "tr" "dsb" "nl" "fr" "zh" "en" "kv" "mhr" "it" "de" "pa" "es" "hr" "lij" "lv" "hi" "ro" "el")
+	export ALL_MODELS=("mhr" "it" "de" "pa" "es" "hr" "lij" "lv" "hi" "ro" "el")
 	##bokmaal:nb, ##nn:nynorsk
 	for MODEL_NAME in ${ALL_MODELS[@]}; do
 		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
@@ -105,7 +106,7 @@ if [[ "$task" = "train_ner" ]]; then
 		echo ${base_model}
 		echo ${MODEL_NAME}
 		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} wikiann
-		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset ${dataset}
+		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset wikiann
 		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert --dataset wikiann
 	done
 fi
@@ -122,5 +123,50 @@ if [[ "$task" = "train_did_lm" ]]; then
 	echo ${dataset}
 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
 	# ./install.sh --task train_did_lm --lang arabic --dataset madar --MODEL_NAME bert
+
+fi
+
+if [[ "$task" = "train_predict_did_ml" ]]; then
+	lang="arabic"
+	dataset="madar"
+	efile="tr_output/${base_model}_${lang}_${dataset}_${task}.err"
+	ofile="tr_output/${base_model}_${lang}_${dataset}_${task}.out"
+	echo ${efile}
+	echo ${ofile}
+	echo ${base_model}
+	echo ${lang}
+	echo ${dataset}
+	# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
+	./install.sh --task train_predict_did_ml --lang arabic --dataset madar --MODEL_NAME nb
+
+fi
+
+if [[ "$task" = "train_topic_classification_lm" ]]; then
+	lang="eng_Latn"
+	dataset="sib"
+	efile="tr_output/${base_model}_${lang}_${dataset}_${task}.err"
+	ofile="tr_output/${base_model}_${lang}_${dataset}_${task}.out"
+	echo ${efile}
+	echo ${ofile}
+	echo ${base_model}
+	echo ${lang}
+	echo ${dataset}
+	# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
+	./install.sh --task train_topic_classification_lm --lang eng_Latn --dataset sib --MODEL_NAME bert
+
+fi
+
+if [[ "$task" = "predict_topic_classification_lm" ]]; then
+	lang="eng_Latn"
+	dataset="sib"
+	efile="tr_output/${base_model}_${lang}_${dataset}_${task}.err"
+	ofile="tr_output/${base_model}_${lang}_${dataset}_${task}.out"
+	echo ${efile}
+	echo ${ofile}
+	echo ${base_model}
+	echo ${lang}
+	echo ${dataset}
+	# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
+	./install.sh --task predict_topic_classification_lm --lang eng_Latn --dataset sib --MODEL_NAME bert
 
 fi
