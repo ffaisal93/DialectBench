@@ -1,0 +1,58 @@
+{
+   "zho_Hans": {
+      "lang": "Chinese (Simplified)",
+      "code": "zho_Hans",
+      "langgroup": "chinese"
+   },
+   "zho_Hant": {
+      "lang": "Chinese (Traditional)",
+      "code": "zho_Hant",
+      "langgroup": "chinese"
+   },
+   "nso_Latn": {
+      "lang": "Northern Sotho",
+      "code": "nso_Latn",
+      "langgroup": "sotho"
+   },
+   "sot_Latn": {
+      "lang": "Southern Sotho",
+      "code": "sot_Latn",
+      "langgroup": "sotho"
+   },
+   "acm_Arab": {
+      "lang": "Mesopotamian Arabic",
+      "code": "acm_Arab",
+      "langgroup": "arabic"
+   },
+   "apc_Arab": {
+      "lang": "North Levantine Arabic",
+      "code": "apc_Arab",
+      "langgroup": "arabic"
+   },
+   "arb_Arab": {
+      "lang": "MSA (Arabic)",
+      "code": "arb_Arab",
+      "langgroup": "arabic"
+   },
+   "ars_Arab": {
+      "lang": "Najdi Arabic",
+      "code": "ars_Arab",
+      "langgroup": "arabic"
+   },
+   "ary_Arab": {
+      "lang": "Moroccan Arabic",
+      "code": "ary_Arab",
+      "langgroup": "arabic"
+   },
+   "arz_Arab": {
+      "lang": "Egyptian Arabic",
+      "code": "arz_Arab",
+      "langgroup": "arabic"
+   },
+   "eng_Latn": {
+      "lang": "English",
+      "code": "eng_Latn",
+      "langgroup": "English"
+   }
+   
+}
