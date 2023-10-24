@@ -1,4 +1,5 @@
 lmo_Latn,ckb_Arab_sib,0.25,0.05714285714285715
+eng_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 ita_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 fur_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 scn_Latn,ckb_Arab_sib,0.25,0.05714285714285715
@@ -8,7 +9,7 @@ azb_Arab,ckb_Arab_sib,0.25,0.05714285714285715
 azj_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 tur_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 kmr_Latn,ckb_Arab_sib,0.25,0.05714285714285715
-ckb_Arab,ckb_Arab_sib,0.25,0.05714285714285715
+ckb_Arab,ckb_Arab_sib,0.30392156862745096,0.12381418263771206
 nno_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 nob_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 lim_Latn,ckb_Arab_sib,0.25,0.05714285714285715
@@ -31,7 +32,6 @@ oci_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 yue_Hant,ckb_Arab_sib,0.25,0.05714285714285715
 zho_Hans,ckb_Arab_sib,0.25,0.05714285714285715
 zho_Hant,ckb_Arab_sib,0.25,0.05714285714285715
-eng_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 glg_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 spa_Latn,ckb_Arab_sib,0.25,0.05714285714285715
 por_Latn,ckb_Arab_sib,0.25,0.05714285714285715
