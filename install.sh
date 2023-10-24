@@ -9,7 +9,8 @@ dataset=${dataset:-wikiann}
 prefix_text=${prefix_text:-prefix_text}
  
 # RESULT_FOLDER="/projects/antonis/fahim/DialectBench/experiments"
-RESULT_FOLDER="/projects/antonis/fahim/DialectBench/results"
+RESULT_FOLDER="/scratch/ffaisal/DialectBench/results"
+TEST_RESULT_FOLDER="/scratch/ffaisal/DialectBench/test/results"
 mkdir ${RESULT_FOLDER}
 
 
@@ -307,7 +308,7 @@ if [[ "$task" = "train_predict_did_ml" || "$task" = "all" ]]; then
 
 	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
 	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf result_file
+	rm -rf ${result_file}
 
 	python scripts/dialect_identification/classification-ml.py \
 	--datapath data/dialect-identification/arabic/MADAR/MADAR_Corpus \
@@ -330,7 +331,7 @@ if [[ "$task" = "predict_did_lm" || "$task" = "all" ]]; then
 	dev_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/dev.csv"
 	test_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/test.csv"
 	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf result_file
+	rm -rf ${result_file}
 
 	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
 
@@ -355,20 +356,31 @@ if [[ "$task" = "predict_did_lm" || "$task" = "all" ]]; then
 fi
 
 
+if [[ "$task" = "assemble_training_set_belebele" || "$task" = "all" ]]; then
+	echo "----------------------create belebele training dataset------------------------------"
+	source vnv/vnv-trns/bin/activate
+	python scripts/reading-comprehension/assemble_training_set.py \
+	--downloads_path temp \
+	--output_file data/reading-comprehension/Belebele/train.tsv
+	deactivate
+
+fi
+
 if [[ "$task" = "train_reading_comprehension" || "$task" = "all" ]]; then
 
 	echo "----------------------training reading comprehension multiple choice quesiton answering------------------------------"
 
 	source vnv/vnv-trns/bin/activate
-	train_file="data/reading-comprehension/Belebele/${lang}.jsonl"
-	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/${lang}_${dataset}"
+	train_file="data/reading-comprehension/Belebele/train.jsonl"
+	validation_file="data/reading-comprehension/Belebele/eng_Latn.jsonl"
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/all_${dataset}"
 
 
-	python scripts/run_swag.py \
+	python scripts/reading-comprehension/run_swag.py \
 	--model_name_or_path ${MODEL_PATH}\
 	--do_train \
 	--train_file ${train_file} \
-	--validation_file ${train_file} \
+	--prefix "train_combined" \
 	--learning_rate 5e-5 \
 	--num_train_epochs 5 \
 	--per_device_eval_batch_size=16 \
@@ -386,18 +398,18 @@ fi
 
 if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 
-	echo "----------------------training reading comprehension multiple choice quesiton answering------------------------------"
+	echo "----------------------predict reading comprehension multiple choice quesiton answering------------------------------"
 
 	source vnv/vnv-trns/bin/activate
 	train_file="data/reading-comprehension/Belebele/${lang}.jsonl"
-	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/${lang}_${dataset}"
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/all_${dataset}"
 
 	data_dir="data/reading-comprehension/Belebele"
-	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf result_file
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${dataset}.txt"
+	rm -rf ${result_file}
 
 
-	python scripts/run_swag.py \
+	python scripts/reading-comprehension/run_swag.py \
 	--model_name_or_path ${output_dir}\
 	--do_predict_all \
 	--train_file ${train_file} \
@@ -409,7 +421,7 @@ if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 	--per_device_eval_batch_size=16 \
 	--per_device_train_batch_size=16 \
 	--output_dir ${output_dir} \
-	--prefix ${lang}_${dataset} \
+	--prefix all \
 	--result_file ${result_file} \
 	--max_seq_length 128 \
 	--cache_dir ${CACHE_DIR}
@@ -418,42 +430,6 @@ if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 	deactivate
 fi
 
-
-if [[ "$task" = "predict_udp_test" || "$task" = "all" ]]; then
-
-	echo "----------------------training reading comprehension multiple choice quesiton answering------------------------------"
-
-	source vnv/vnv-trns/bin/activate
-	lang="eng_Latn"
-	dataset="Belebele"
-	train_file="data/reading-comprehension/Belebele/${lang}.jsonl"
-	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/${lang}_${dataset}"
-
-	data_dir="data/reading-comprehension/Belebele"
-	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf result_file
-
-
-	python scripts/run_swag.py \
-	--model_name_or_path ${output_dir}\
-	--do_predict_all \
-	--train_file ${train_file} \
-	--validation_file ${train_file} \
-	--lang_config metadata/rcmc_metadata.json \
-	--data_dir ${data_dir} \
-	--learning_rate 5e-5 \
-	--num_train_epochs 5 \
-	--per_device_eval_batch_size=16 \
-	--per_device_train_batch_size=16 \
-	--output_dir ${output_dir} \
-	--prefix ${lang}_${dataset} \
-	--result_file ${result_file} \
-	--max_seq_length 128 \
-	--cache_dir ${CACHE_DIR}
-	# --max_steps 10
-
-	deactivate
-fi
 
 if [[ "$task" = "create_sib_topic_classification" || "$task" = "all" ]]; then
 
@@ -515,7 +491,7 @@ if [[ "$task" = "train_topic_classification_lm" || "$task" = "all" ]]; then
 	    --do_eval \
 	    --max_seq_length 512 \
 	    --per_device_train_batch_size 32 \
-	    --learning_rate 1e-5 \
+	    --learning_rate 2e-5 \
 	    --num_train_epochs 5 \
 	    --cache_dir ${CACHE_DIR} \
 	    --output_dir ${output_dir} \
@@ -536,7 +512,7 @@ if [[ "$task" = "predict_topic_classification_lm" || "$task" = "all" ]]; then
 	test_file="data/topic_class/${lang}/test.csv"
 	data_dir="data/topic_class"
 	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf result_file
+	rm -rf ${result_file}
 
 	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/topic_class/${lang}_${dataset}"
 
@@ -558,6 +534,68 @@ if [[ "$task" = "predict_topic_classification_lm" || "$task" = "all" ]]; then
 	    --num_train_epochs 5 \
 	    --cache_dir ${CACHE_DIR} \
 	    --output_dir ${output_dir}
+
+	deactivate
+fi
+
+if [[ "$task" = "test" || "$task" = "all" ]]; then
+
+	echo "----------------------training reading comprehension multiple choice quesiton answering------------------------------"
+
+	lang="eng_Latn"
+	dataset="sib"
+
+	source vnv/vnv-trns/bin/activate
+	train_file="data/topic_class/${lang}/train.csv"
+	dev_file="data/topic_class/${lang}/dev.csv"
+	test_file="data/topic_class/${lang}/test.csv"
+	label_file="data/topic_class/${lang}/labels.txt"
+	data_dir="data/topic_class"
+
+	result_file="${TEST_RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
+
+	output_dir="/scratch/ffaisal/DialectBench/experiments/test/${MODEL_NAME}/topic_class/${lang}_${dataset}"
+	rm -rf ${result_file}
+
+	python scripts/test.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --train_file ${train_file} \
+	    --validation_file ${dev_file} \
+	    --shuffle_train_dataset \
+	    --metric_name accuracy \
+	    --do_train \
+	    --do_predict \
+	    --test_file ${test_file} \
+	    --do_eval \
+	    --max_seq_length 512 \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-5 \
+	    --num_train_epochs 5 \
+	    --cache_dir ${CACHE_DIR} \
+	    --output_dir ${output_dir} \
+	    --gradient_accumulation_steps 1 \
+	    --save_strategy no \
+	    --overwrite_output_dir
+
+	# python scripts/test.py \
+	#     --model_name_or_path ${output_dir} \
+	#     --train_file ${train_file} \
+	#     --validation_file ${dev_file} \
+	#     --test_file ${test_file} \
+	#     --data_dir ${data_dir} \
+	#     --shuffle_train_dataset \
+	#     --metric_name accuracy \
+	#     --prefix ${lang}_${dataset} \
+	#     --result_file ${result_file} \
+	#     --do_predict_all \
+	#     --lang_config metadata/topic_metadata.json \
+	#     --max_seq_length 512 \
+	#     --per_device_train_batch_size 32 \
+	#     --learning_rate 2e-5 \
+	#     --num_train_epochs 5 \
+	#     --cache_dir ${CACHE_DIR} \
+	#     --output_dir ${output_dir}
+	#     # --max_steps 20
 
 	deactivate
 fi
