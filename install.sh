@@ -11,6 +11,7 @@ prefix_text=${prefix_text:-prefix_text}
 # RESULT_FOLDER="/projects/antonis/fahim/DialectBench/experiments"
 RESULT_FOLDER="/scratch/ffaisal/DialectBench/results"
 TEST_RESULT_FOLDER="/scratch/ffaisal/DialectBench/test/results"
+
 mkdir ${RESULT_FOLDER}
 
 
@@ -41,7 +42,7 @@ echo ${CACHE_DIR}
 module load python/3.8.6-ff
 cd /scratch/ffaisal/DialectBench
 
-if [[ "$task" = "install_adapter_latest" || "$task" = "all" ]]; then
+if [[ "$task" = "install_adapter" || "$task" = "all" ]]; then
 	echo "------------------------------Install adapter latest------------------------------"
 	module load python/3.8.6-ff
 	rm -rf adapter-transformers-l
@@ -63,11 +64,10 @@ if [[ "$task" = "install_adapter_latest" || "$task" = "all" ]]; then
 	deactivate
 fi
 
-if [[ "$task" = "install_transformers_latest" || "$task" = "all" ]]; then
+if [[ "$task" = "install_transformers" || "$task" = "all" ]]; then
 	module load python/3.8.6-ff
 	rm -rf transformers-orig
 	rm -rf vnv/vnv-trns
-	module load python/3.8.6-ff
 	python -m venv vnv/vnv-trns
 	source vnv/vnv-trns/bin/activate
 	wget -O transformersv4.21.1.tar.gz "https://github.com/huggingface/transformers/archive/refs/tags/v4.21.1.tar.gz"
@@ -387,9 +387,10 @@ if [[ "$task" = "train_reading_comprehension" || "$task" = "all" ]]; then
 	--per_device_train_batch_size=16 \
 	--overwrite_output \
 	--output_dir ${output_dir} \
-	--max_seq_length 128 \
+	--max_seq_length 512 \
 	--cache_dir ${CACHE_DIR} \
-	--overwrite_cache
+	--overwrite_cache \
+	--save_strategy no
 	# --max_steps 10
 
 	deactivate
@@ -407,6 +408,7 @@ if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 	data_dir="data/reading-comprehension/Belebele"
 	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${dataset}.txt"
 	rm -rf ${result_file}
+	rm -rf ${output_dir}/checkpoint*
 
 
 	python scripts/reading-comprehension/run_swag.py \
@@ -423,7 +425,7 @@ if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 	--output_dir ${output_dir} \
 	--prefix all \
 	--result_file ${result_file} \
-	--max_seq_length 128 \
+	--max_seq_length 512 \
 	--cache_dir ${CACHE_DIR}
 	# --max_steps 10
 
