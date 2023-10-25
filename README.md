@@ -18,6 +18,10 @@ comment-out `module load python/3.8.6-ff` inside `install.sh` [specific to GMU c
 Basically, start running `all_commands.sh` that calls either `command-bash.sh` or `command-slurm.sh` (through `--execute`; options: [`bash`/`slurm`]) depending on whether you are running bash-script or slurm jobs. Then `command-bash.sh` loops over all the data/model and call `install.sh` to run the training/prediction code snippet.
 
 ### Topic-Classification
+- get the sib-200 data:
+  ```
+  bash install --task create_sib_topic_classification
+  ```
 - Training:
   ```
   ./all_commands.sh --action train_topic_classification --execute bash
