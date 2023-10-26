@@ -30,7 +30,7 @@ import datasets
 import numpy as np
 import torch
 import evaluate
-from datasets import load_dataset
+from datasets import load_dataset, DatasetDict
 
 import transformers
 from transformers import (
@@ -175,7 +175,7 @@ class DataTrainingArguments:
         default=None,
         metadata={"help": "Identifier to add in the results file."},
     )
-    lang_config: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
+    lang_config: str = field(default=None,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
     data_dir: Optional[str] = field(default=None, metadata={"help": "data directory for do_predict_all"})
 
     def __post_init__(self):
@@ -336,6 +336,11 @@ def main():
             cache_dir=model_args.cache_dir,
             token=model_args.token,
         )
+        if "validation" not in raw_datasets:
+            raw_datasets=raw_datasets['train'].train_test_split(test_size=0.1)
+            raw_datasets = DatasetDict({"train":raw_datasets['train'],
+                "validation":raw_datasets['test']})
+        print(raw_datasets)
     else:
         # Downloading and loading the swag dataset from the hub.
         raw_datasets = load_dataset(
@@ -449,7 +454,6 @@ def main():
                 num_proc=data_args.preprocessing_num_workers,
                 load_from_cache_file=not data_args.overwrite_cache,
             )
-            print(train_dataset)
 
     if training_args.do_eval:
         if "validation" not in raw_datasets:
@@ -559,6 +563,11 @@ def main():
         trainer.save_metrics("predict", metrics)
 
     if model_args.do_predict_all:
+        ending_names = [f"mc_answer{i}" for i in range(1,5)]
+        context_name = "flores_passage"
+        question_header_name = "question"
+        label_column_name="correct_answer_num"
+
         import json
         with open(data_args.lang_config) as json_file:
             lang_info = json.load(json_file)
@@ -569,11 +578,12 @@ def main():
 
         count=0
         for lang, info in lang_info.items():
-            # if count>4:
+            # if count>2:
             #     break
             count+=1
             print(lang, info, count)
             try:
+                data_files={}
                 data_files["test"] = os.path.join(data_args.data_dir,lang+'.jsonl')
                 predict_dataset = load_dataset(
                     "json",
