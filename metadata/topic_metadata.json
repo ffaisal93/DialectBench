@@ -4,6 +4,11 @@
       "code": "lmo_Latn",
       "langgroup": "italian"
    },
+   "eng_Latn": {
+      "lang": "English",
+      "code": "eng_Latn",
+      "langgroup": "English"
+   },
    "ita_Latn": {
       "lang": "italian",
       "code": "ita_Latn",
@@ -163,11 +168,6 @@
       "lang": "Chinese (Traditional)",
       "code": "zho_Hant",
       "langgroup": "chinese"
-   },
-   "eng_Latn": {
-      "lang": "English",
-      "code": "eng_Latn",
-      "langgroup": "English"
    },
    "glg_Latn": {
       "lang": "Galician",

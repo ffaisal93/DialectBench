@@ -1,0 +1,803 @@
+{
+   "ar": {
+      "lang": "arabic",
+      "code": "ar",
+      "langgroup": "arabic",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "arabic",
+      "train_lang": "ar"
+   },
+   "arz": {
+      "lang": "egyptian arabic",
+      "code": "arz",
+      "langgroup": "arabic",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "arabic",
+      "train_lang": "ar"
+   },
+   "kab": {
+      "lang": "kabyle",
+      "code": "kab",
+      "langgroup": "arabic",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "arabic",
+      "train_lang": "ar"
+   },
+   "kbd": {
+      "lang": "kabardian",
+      "code": "kbd",
+      "langgroup": "adyghe",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "adyghe",
+      "train_lang": "en"
+   },
+   "ady": {
+      "lang": "adyghe",
+      "code": "ady",
+      "langgroup": "adyghe",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "adyghe",
+      "train_lang": "en"
+   },
+   "az": {
+      "lang": "azerbaijani",
+      "code": "az",
+      "langgroup": "azerbaijani",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "azerbaijani",
+      "train_lang": "az"
+   },
+   "azb": {
+      "lang": "south azerbaijani",
+      "code": "azb",
+      "langgroup": "azerbaijani",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "azerbaijani",
+      "train_lang": "az"
+   },
+   "ckb": {
+      "lang": "central kurdish",
+      "code": "ckb",
+      "langgroup": "kurdish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "kurdish",
+      "train_lang": "ku"
+   },
+   "ku": {
+      "lang": "kurdish",
+      "code": "ku",
+      "langgroup": "kurdish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "kurdish",
+      "train_lang": "ku"
+   },
+   "tr": {
+      "lang": "turkish",
+      "code": "tr",
+      "langgroup": "turkish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "turkish",
+      "train_lang": "tr"
+   },
+   "crh": {
+      "lang": "crimean turkish",
+      "code": "crh",
+      "langgroup": "turkish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "turkish",
+      "train_lang": "tr"
+   },
+   "dsb": {
+      "lang": "lower sorbian",
+      "code": "dsb",
+      "langgroup": "upper sorbian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "sorbian",
+      "train_lang": "hsb"
+   },
+   "hsb": {
+      "lang": "upper sorbian",
+      "code": "hsb",
+      "langgroup": "upper sorbian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "sorbian",
+      "train_lang": "hsb"
+   },
+   "frr": {
+      "lang": "northern frisian",
+      "code": "frr",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "fy": {
+      "lang": "western frisian",
+      "code": "fy",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "stq": {
+      "lang": "saterland frisian",
+      "code": "stq",
+      "langgroup": "dutch",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "lb": {
+      "lang": "luxembourgish",
+      "code": "lb",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "li": {
+      "lang": "limburgish",
+      "code": "li",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "nl": {
+      "lang": "dutch",
+      "code": "nl",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "vls": {
+      "lang": "west flemish",
+      "code": "vls",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "zea": {
+      "lang": "zeelandic",
+      "code": "zea",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "ksh": {
+      "lang": "colognian",
+      "code": "ksh",
+      "langgroup": "dutch",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "dutch",
+      "train_lang": "nl"
+   },
+   "nrm": {
+      "lang": "nouormand",
+      "code": "nrm",
+      "langgroup": "french",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "french",
+      "train_lang": "fr"
+   },
+   "wa": {
+      "lang": "walloon",
+      "code": "wa",
+      "langgroup": "french",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "french",
+      "train_lang": "fr"
+   },
+   "fr": {
+      "lang": "french",
+      "code": "fr",
+      "langgroup": "french",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "french",
+      "train_lang": "fr"
+   },
+   "hak": {
+      "lang": "hakka chinese",
+      "code": "hak",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "wuu": {
+      "lang": "wu chinese",
+      "code": "wuu",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "zh": {
+      "lang": "chinese",
+      "code": "zh",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "zh-classical": {
+      "lang": "classical chinese",
+      "code": "zh-classical",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "zh-min-nan": {
+      "lang": "chinese (min nan)",
+      "code": "zh-min-nan",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "zh-yue": {
+      "lang": "cantonese",
+      "code": "zh-yue",
+      "langgroup": "chinese",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "chinese",
+      "train_lang": "zh"
+   },
+   "jam": {
+      "lang": "jamaican creole english",
+      "code": "jam",
+      "langgroup": "english",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "english",
+      "train_lang": "en"
+   },
+   "simple": {
+      "lang": "simple english",
+      "code": "simple",
+      "langgroup": "english",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "english",
+      "train_lang": "en"
+   },
+   "ang": {
+      "lang": "old english",
+      "code": "ang",
+      "langgroup": "english",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "english",
+      "train_lang": "en"
+   },
+   "en": {
+      "lang": "english",
+      "code": "en",
+      "langgroup": "english",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "english",
+      "train_lang": "en"
+   },
+   "koi": {
+      "lang": "komi-permyak",
+      "code": "koi",
+      "langgroup": "komi",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "komi",
+      "train_lang": "en"
+   },
+   "kv": {
+      "lang": "komi",
+      "code": "kv",
+      "langgroup": "komi",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "komi",
+      "train_lang": "en"
+   },
+   "mhr": {
+      "lang": "eastern mari",
+      "code": "mhr",
+      "langgroup": "eastern mari",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "mari",
+      "train_lang": "mhr"
+   },
+   "mrj": {
+      "lang": "western mari",
+      "code": "mrj",
+      "langgroup": "eastern mari",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "mari",
+      "train_lang": "mhr"
+   },
+   "lij": {
+      "lang": "ligurian",
+      "code": "lij",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "franco-provençal",
+      "train_lang": "it"
+   },
+   "nap": {
+      "lang": "neapolitan",
+      "code": "nap",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "scn": {
+      "lang": "sicilian",
+      "code": "scn",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "lmo": {
+      "lang": "lombard",
+      "code": "lmo",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "sc": {
+      "lang": "sardinian",
+      "code": "sc",
+      "langgroup": "italian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "co": {
+      "lang": "corsican",
+      "code": "co",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "eml": {
+      "lang": "emiliano-romagnolo",
+      "code": "eml",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "fur": {
+      "lang": "friulian",
+      "code": "fur",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "it": {
+      "lang": "italian",
+      "code": "it",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "rm": {
+      "lang": "romansh",
+      "code": "rm",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "vec": {
+      "lang": "venetian",
+      "code": "vec",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "roa-tara": {
+      "lang": "tarantino",
+      "code": "roa-tara",
+      "langgroup": "italian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "italian",
+      "train_lang": "it"
+   },
+   "kl": {
+      "lang": "kalaallisut",
+      "code": "kl",
+      "langgroup": "innuktitut",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "innuktitut",
+      "train_lang": "en"
+   },
+   "ik": {
+      "lang": "inupiaq",
+      "code": "ik",
+      "langgroup": "innuktitut",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "innuktitut",
+      "train_lang": "en"
+   },
+   "nds": {
+      "lang": "low german",
+      "code": "nds",
+      "langgroup": "german",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "nds-nl": {
+      "lang": "low saxon",
+      "code": "nds-nl",
+      "langgroup": "german",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "pfl": {
+      "lang": "palatine german",
+      "code": "pfl",
+      "langgroup": "german",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "pdc": {
+      "lang": "pennsylvania german",
+      "code": "pdc",
+      "langgroup": "german",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "de": {
+      "lang": "german",
+      "code": "de",
+      "langgroup": "german",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "bar": {
+      "lang": "bavarian",
+      "code": "bar",
+      "langgroup": "german",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "als": {
+      "lang": "alemannisch",
+      "code": "als",
+      "langgroup": "german",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "german",
+      "train_lang": "de"
+   },
+   "nso": {
+      "lang": "northern sotho",
+      "code": "nso",
+      "langgroup": "northern sotho",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "sotho",
+      "train_lang": "en"
+   },
+   "st": {
+      "lang": "southern sotho",
+      "code": "st",
+      "langgroup": "northern sotho",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "sotho",
+      "train_lang": "en"
+   },
+   "pnb": {
+      "lang": "western punjabi",
+      "code": "pnb",
+      "langgroup": "punjabi",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "punjabi",
+      "train_lang": "pa"
+   },
+   "pa": {
+      "lang": "punjabi",
+      "code": "pa",
+      "langgroup": "punjabi",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "punjabi",
+      "train_lang": "pa"
+   },
+   "es": {
+      "lang": "spanish",
+      "code": "es",
+      "langgroup": "spanish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "spanish",
+      "train_lang": "es"
+   },
+   "ext": {
+      "lang": "extremaduran",
+      "code": "ext",
+      "langgroup": "spanish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "spanish",
+      "train_lang": "es"
+   },
+   "gl": {
+      "lang": "galician",
+      "code": "gl",
+      "langgroup": "spanish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "spanish",
+      "train_lang": "es"
+   },
+   "mwl": {
+      "lang": "mirandese",
+      "code": "mwl",
+      "langgroup": "spanish",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "spanish",
+      "train_lang": "es"
+   },
+   "sh": {
+      "lang": "serbo-croatian",
+      "code": "sh",
+      "langgroup": "croatian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "croatian",
+      "train_lang": "hr"
+   },
+   "hr": {
+      "lang": "croatian",
+      "code": "hr",
+      "langgroup": "croatian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "croatian",
+      "train_lang": "hr"
+   },
+   "sr": {
+      "lang": "serbian",
+      "code": "sr",
+      "langgroup": "croatian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "croatian",
+      "train_lang": "hr"
+   },
+   "bs": {
+      "lang": "bosnian",
+      "code": "bs",
+      "langgroup": "croatian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "croatian",
+      "train_lang": "hr"
+   },
+   "frp": {
+      "lang": "arpitan",
+      "code": "frp",
+      "langgroup": "italian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "franco-provençal",
+      "train_lang": "it"
+   },
+   "oc": {
+      "lang": "occitan",
+      "code": "oc",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "franco-provençal",
+      "train_lang": "it"
+   },
+   "pms": {
+      "lang": "piedmontese",
+      "code": "pms",
+      "langgroup": "italian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "franco-provençal",
+      "train_lang": "it"
+   },
+   "ltg": {
+      "lang": "latgalian",
+      "code": "ltg",
+      "langgroup": "latvian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "latvian",
+      "train_lang": "lv"
+   },
+   "lv": {
+      "lang": "latvian",
+      "code": "lv",
+      "langgroup": "latvian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "latvian",
+      "train_lang": "lv"
+   },
+   "hi": {
+      "lang": "hindi",
+      "code": "hi",
+      "langgroup": "hindi",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "hindi",
+      "train_lang": "hi"
+   },
+   "hif": {
+      "lang": "fiji hindi",
+      "code": "hif",
+      "langgroup": "hindi",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "hindi",
+      "train_lang": "hi"
+   },
+   "mo": {
+      "lang": "moldovan",
+      "code": "mo",
+      "langgroup": "romanian",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "romanian",
+      "train_lang": "ro"
+   },
+   "ro": {
+      "lang": "romanian",
+      "code": "ro",
+      "langgroup": "romanian",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "romanian",
+      "train_lang": "ro"
+   },
+   "el": {
+      "lang": "greek",
+      "code": "el",
+      "langgroup": "greek",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "greek",
+      "train_lang": "el"
+   },
+   "pnt": {
+      "lang": "pontic",
+      "code": "pnt",
+      "langgroup": "greek",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "greek",
+      "train_lang": "el"
+   },
+   "roa-rup": {
+      "lang": "aromanian",
+      "code": "roa-rup",
+      "langgroup": "greek",
+      "huggingface": false,
+      "dataset": "wikiann",
+      "region": "greek",
+      "train_lang": "el"
+   },
+   "as": {
+      "lang": "assamese",
+      "code": "as",
+      "langgroup": "bangla",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "bangla",
+      "train_lang": "bn"
+   },
+   "bn": {
+      "lang": "bangla",
+      "code": "bn",
+      "langgroup": "bangla",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "bangla",
+      "train_lang": "bn"
+   },
+   "nob": {
+      "lang": "bokmaal",
+      "code": "nob",
+      "langgroup": "norwegian",
+      "huggingface": true,
+      "dataset": "norwegian_ner",
+      "train_lang": "bokmaal",
+      "region": "norwegian"
+   },
+   "nno": {
+      "lang": "nynorsk",
+      "code": "nno",
+      "langgroup": "norwegian",
+      "huggingface": true,
+      "dataset": "norwegian_ner",
+      "train_lang": "nynorsk",
+      "region": "norwegian"
+   },
+   "samnorsk": {
+      "lang": "samnorsk",
+      "code": "samnorsk",
+      "langgroup": "norwegian",
+      "huggingface": true,
+      "dataset": "norwegian_ner",
+      "train_lang": "samnorsk",
+      "region": "norwegian"
+   }
+}
