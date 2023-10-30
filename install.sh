@@ -9,6 +9,7 @@ dataset=${dataset:-wikiann}
 prefix_text=${prefix_text:-prefix_text}
  
 # RESULT_FOLDER="/projects/antonis/fahim/DialectBench/experiments"
+ROOT_DIR="/scratch/ffaisal/DialectBench"
 RESULT_FOLDER="/scratch/ffaisal/DialectBench/results"
 TEST_RESULT_FOLDER="/scratch/ffaisal/DialectBench/test/results"
 
@@ -34,13 +35,18 @@ if [[ "$MODEL_NAME" = "xlmr" ]]; then
 	MODEL_PATH='xlm-roberta-base'
 fi
 
+if [[ "$MODEL_NAME" = "xlmrl" ]]; then
+	MODEL_PATH='xlm-roberta-large'
+fi
+
 echo ${task}
 echo ${lang}
 echo ${MODEL_NAME}
 echo ${CACHE_DIR}
 
-module load python/3.8.6-ff
 cd /scratch/ffaisal/DialectBench
+module load git
+module load openjdk/11.0.2-qg
 
 if [[ "$task" = "install_adapter" || "$task" = "all" ]]; then
 	echo "------------------------------Install adapter latest------------------------------"
@@ -86,11 +92,87 @@ if [[ "$task" = "install_transformers_qa" || "$task" = "all" ]]; then
 	module load python/3.8.6-ff
 	rm -rf vnv/vnv-qa
 	module load python/3.8.6-ff
-	python -m venv vnv/vnv-qa
 	source vnv/vnv-qa/bin/activate
 	pip install transformers==3.4.0
 	pip install --upgrade pip
 	pip install -r requirements.txt
+	deactivate
+fi
+
+if [[ "$task" = "install_transformers_latest" || "$task" = "all" ]]; then
+	module load python/3.8.6-ff
+	module load git
+	rm -rf vnv/vnv_trans_latest
+	python -m venv vnv/vnv_trans_latest
+	source vnv/vnv_trans_latest/bin/activate
+	pip install --upgrade pip
+	ip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install ipykernel
+	pip install git+https://github.com/huggingface/transformers
+	pip install "datasets" "accelerate>=0.20.3" "evaluate" tensorboard scikit-learn bitsandbytes
+	deactivate
+
+fi
+
+if [[ "$task" = "install_translation" || "$task" = "all" ]]; then
+	module load python/3.8.6-ff
+	module load git
+	rm -rf vnv/vnv_translation
+	python -m venv vnv/vnv_translation
+	source vnv/vnv_translation/bin/activate
+	pip install --upgrade pip
+	pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install ipykernel
+	pip install transformers==4.28.0
+	pip install bitsandbytes
+	pip install "datasets" "accelerate>=0.20.3" "evaluate" tensorboard scikit-learn
+	/scratch/ffaisal/DialectBench/vnv/vnv_translation/bin/python -m ipykernel install --user --name 'transl'
+	cd scripts/translation_nli
+	git clone https://github.com/ikergarcia1996/Easy-Translate.git
+	cd ${ROOT_DIR}
+	deactivate
+
+fi
+
+if [[ "$task" = "download_xnli" || "$task" = "all" ]]; then
+	source vnv/vnv_translation/bin/activate
+	rm -rf tempdata
+	mkdir tempdata
+	python scripts/translation_nli/save_data.py
+	deactivate
+fi
+
+if [[ "$task" = "translate_nli" || "$task" = "all" ]]; then
+	##lang codes: https://github.com/facebookresearch/flores/blob/main/flores200/README.md#languages-in-flores-200
+	source vnv/vnv_translation/bin/activate
+	# rm -rf tempdata
+	# mkdir tempdata
+	# python scripts/translation_nli/save_data.py
+
+	start=`date +%s`
+	python scripts/translation_nli/Easy-Translate/translate.py \
+	--sentences_path ${dataset} \
+	--output_path tempdata/${MODEL_NAME}-${lang}.txt \
+	--source_lang eng_Latn \
+	--target_lang ${lang} \
+	--model_name  /projects/antonis/fahim/models/nllb-200-3.3B \
+	--precision 8 \
+	--starting_batch_size 128
+	
+	end=`date +%s`
+	min=60
+	runtime=$((end-start))
+	echo "runtime----------" $((runtime/min))
+
+	deactivate
+
+
+fi
+
+if [[ "$task" = "process_translate_nli" || "$task" = "all" ]]; then
+	source vnv/vnv_translation/bin/activate
+	python scripts/translation_nli/process_nli.py
+
 	deactivate
 fi
 
@@ -267,6 +349,59 @@ if [[ "$task" = "train_ner" || "$task" = "all" ]]; then
 	rm -rf ${output_dir}/checkpoint*
 fi
 
+if [[ "$task" = "predict_ner" || "$task" = "all" ]]; then
+
+	echo "------------------------------Train NER------------------------------"
+	# source vnv/vnv-adp-l/bin/activate
+	export TASK_NAME="ner"
+	# export TASK_NAME="UD_French-ParTUT"
+	source vnv/vnv-trns/bin/activate
+
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/ner"
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_all.txt"
+	rm -rf ${result_file}
+
+	###fine-tune
+	python scripts/ner/run_ner.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --dataset_name ${dataset} \
+	  --dataset_config_name en \
+	  --task_name ner \
+	  --max_seq_length 128 \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 2e-5 \
+	  --num_train_epochs 5 \
+	  --output_dir ${output_dir} \
+	  --do_predict_all \
+	  --save_strategy no \
+	  --cache_dir ${CACHE_DIR} \
+	  --lang_config metadata/ner_metadata.json \
+	  --result_file ${result_file}
+	  # --max_steps 1
+
+	###zero-shot
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_en.txt"
+	rm -rf ${result_file}
+	python scripts/ner/run_ner.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --dataset_name ${dataset} \
+	  --dataset_config_name en \
+	  --task_name ner \
+	  --max_seq_length 128 \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 2e-5 \
+	  --num_train_epochs 5 \
+	  --output_dir ${output_dir} \
+	  --do_predict_all \
+	  --save_strategy no \
+	  --cache_dir ${CACHE_DIR} \
+	  --lang_config metadata/ner_metadata.json \
+	  --result_file ${result_file} \
+	  --is_zero_shot
+	  # --max_steps 1
+	deactivate
+fi
+
 if [[ "$task" = "train_did_lm" || "$task" = "all" ]]; then
 
 	echo "------------------------------Train dialect-identification using mBERT/XLM-R------------------------------"
@@ -372,25 +507,30 @@ if [[ "$task" = "train_reading_comprehension" || "$task" = "all" ]]; then
 
 	source vnv/vnv-trns/bin/activate
 	train_file="data/reading-comprehension/Belebele/train.jsonl"
-	validation_file="data/reading-comprehension/Belebele/eng_Latn.jsonl"
 	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/rc/all_${dataset}"
 
 
 	python scripts/reading-comprehension/run_swag.py \
 	--model_name_or_path ${MODEL_PATH}\
 	--do_train \
+	--do_eval \
 	--train_file ${train_file} \
 	--prefix "train_combined" \
-	--learning_rate 5e-5 \
-	--num_train_epochs 5 \
+	--learning_rate 1e-5 \
+	--num_train_epochs 3 \
 	--per_device_eval_batch_size=16 \
 	--per_device_train_batch_size=16 \
 	--overwrite_output \
 	--output_dir ${output_dir} \
-	--max_seq_length 512 \
+	--max_seq_length 256 \
 	--cache_dir ${CACHE_DIR} \
 	--overwrite_cache \
-	--save_strategy no
+	--save_total_limit 5 \
+	--save_steps 500 \
+	--eval_steps 500 \
+	--save_strategy="steps" \
+	--evaluation_strategy="steps" \
+	--load_best_model_at_end True
 	# --max_steps 10
 
 	deactivate
@@ -418,7 +558,7 @@ if [[ "$task" = "predict_reading_comprehension" || "$task" = "all" ]]; then
 	--validation_file ${train_file} \
 	--lang_config metadata/rcmc_metadata.json \
 	--data_dir ${data_dir} \
-	--learning_rate 5e-5 \
+	--learning_rate 2e-5 \
 	--num_train_epochs 5 \
 	--per_device_eval_batch_size=16 \
 	--per_device_train_batch_size=16 \
@@ -469,6 +609,70 @@ if [[ "$task" = "create_sib_topic_classification" || "$task" = "all" ]]; then
 	rm -rf data/raw
 	rm -rf sib-200
 	deactivate
+fi
+
+if [[ "$task" = "convert_pos_dataset_to_upos" || "$task" = "all" ]]; then
+
+	echo "arabic dialects================================================"
+	rm -rf convert-qcri-4dialects
+	rm -rf dialectal_arabic_resources
+	git clone https://github.com/mainlp/convert-qcri-4dialects.git
+	cd convert-qcri-4dialects
+	git clone https://github.com/qcri/dialectal_arabic_resources.git
+	# Optional preliminary check:
+	python3 check_arabic_segmentation.py dialectal_arabic_resources/seg_plus_pos_egy.txt dialectal_arabic_resources/seg_plus_pos_lev.txt dialectal_arabic_resources/seg_plus_pos_glf.txt dialectal_arabic_resources/seg_plus_pos_mgr.txt  > arabic_preprocessing.log
+	# # The actual data conversion:
+	python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_egy.txt --out test_dar-egy_UPOS.tsv
+	python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_glf.txt --out test_dar-glf_UPOS.tsv
+	python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_lev.txt --out test_dar-lev_UPOS.tsv
+	python3 convert.py --dir dialectal_arabic_resources/ --files seg_plus_pos_mgr.txt --out test_dar-mgr_UPOS.tsv
+
+	# Optional checks:
+	python3 validate_converted_file.py test_dar-egy_UPOS.tsv tagset_upos.txt
+	python3 validate_converted_file.py test_dar-glf_UPOS.tsv tagset_upos.txt
+	python3 validate_converted_file.py test_dar-lev_UPOS.tsv tagset_upos.txt
+	python3 validate_converted_file.py test_dar-mgr_UPOS.tsv tagset_upos.txt
+
+	cd ..
+	mkdir data/pos_tagging
+	cp convert-qcri-4dialects/*.tsv data/pos_tagging/
+	rm -rf convert-qcri-4dialects
+
+
+	echo "finnish dialect================================================"
+	rm -rf convert-la-murrekorpus
+	git clone https://github.com/mainlp/convert-la-murrekorpus.git
+	cd convert-la-murrekorpus
+
+	# Retrieve the corpus
+	wget https://korp.csc.fi/download/la-murre/vrt/la-murre-vrt.zip
+	# unzip la-murre-vrt.zip
+	jar -xf la-murre-vrt.zip
+	rm la-murre-vrt.zip
+	python3 convert.py \
+	--outdir "." \
+	--groupby "region" \
+	--infiles "LA-murre-vrt/lam_*.vrt"
+
+	cd ..
+	cp convert-la-murrekorpus/*.tsv data/pos_tagging/
+	rm -rf convert-la-murrekorpus
+
+	echo "occitan================================================"
+	rm -rf convert-restaure-occitan
+	git clone https://github.com/mainlp/convert-restaure-occitan.git
+	cd convert-restaure-occitan
+	# Get the data
+	wget https://zenodo.org/record/1182949/files/CorpusRestaureOccitan.zip
+	# unzip CorpusRestaureOccitan.zip
+	jar -xf CorpusRestaureOccitan.zip
+	rm CorpusRestaureOccitan.zip
+	rm -r __MACOSX
+	python3 convert.py --glob "CorpusRestaureOccitan/*" --out "test_ROci_UPOS.tsv"
+	cd ..
+	cp convert-restaure-occitan/*.tsv data/pos_tagging/
+	rm -rf convert-restaure-occitan
+
 fi
 
 if [[ "$task" = "train_topic_classification_lm" || "$task" = "all" ]]; then
@@ -540,66 +744,146 @@ if [[ "$task" = "predict_topic_classification_lm" || "$task" = "all" ]]; then
 	deactivate
 fi
 
-if [[ "$task" = "test" || "$task" = "all" ]]; then
+if [[ "$task" = "train_nli" || "$task" = "all" ]]; 
+then
 
-	echo "----------------------training reading comprehension multiple choice quesiton answering------------------------------"
-
-	lang="eng_Latn"
-	dataset="sib"
-
+	echo "------------------------------Train Dialect NLI------------------------------"
 	source vnv/vnv-trns/bin/activate
-	train_file="data/topic_class/${lang}/train.csv"
-	dev_file="data/topic_class/${lang}/dev.csv"
-	test_file="data/topic_class/${lang}/test.csv"
-	label_file="data/topic_class/${lang}/labels.txt"
-	data_dir="data/topic_class"
 
-	result_file="${TEST_RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
 
-	output_dir="/scratch/ffaisal/DialectBench/experiments/test/${MODEL_NAME}/topic_class/${lang}_${dataset}"
+
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/nli/${lang}"
+
+	python scripts/nli/run_xnli.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --language ${lang} \
+	  --train_language ${lang} \
+	  --do_train \
+	  --dataset_script scripts/nli/dialect_nli.py \
+	  --lang_config metadata/nli_metadata.json \
+	  --prefix ${lang} \
+	  --do_eval \
+	  --per_device_train_batch_size 64 \
+	  --learning_rate 3e-5 \
+	  --num_train_epochs 5.0 \
+	  --max_seq_length 128 \
+	  --output_dir ${output_dir} \
+	  --cache_dir ${CACHE_DIR} \
+	  --overwrite_output_dir \
+	  --save_total_limit 2 \
+	  --save_steps 500 \
+	  --eval_steps 500 \
+	  --save_strategy="steps" \
+	  --evaluation_strategy="steps" \
+	  --load_best_model_at_end True
+	deactivate
+fi
+
+if [[ "$task" = "predict_nli" || "$task" = "all" ]]; 
+then
+
+	echo "------------------------------Predict Dialect NLI------------------------------"
+	source vnv/vnv-trns/bin/activate
+
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}.txt"
 	rm -rf ${result_file}
 
-	python scripts/test.py \
-	    --model_name_or_path ${MODEL_PATH} \
-	    --train_file ${train_file} \
-	    --validation_file ${dev_file} \
-	    --shuffle_train_dataset \
-	    --metric_name accuracy \
-	    --do_train \
-	    --do_predict \
-	    --test_file ${test_file} \
-	    --do_eval \
-	    --max_seq_length 512 \
-	    --per_device_train_batch_size 32 \
-	    --learning_rate 2e-5 \
-	    --num_train_epochs 5 \
-	    --cache_dir ${CACHE_DIR} \
-	    --output_dir ${output_dir} \
-	    --gradient_accumulation_steps 1 \
-	    --save_strategy no \
-	    --overwrite_output_dir
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/nli/${lang}"
 
-	# python scripts/test.py \
-	#     --model_name_or_path ${output_dir} \
-	#     --train_file ${train_file} \
-	#     --validation_file ${dev_file} \
-	#     --test_file ${test_file} \
-	#     --data_dir ${data_dir} \
-	#     --shuffle_train_dataset \
-	#     --metric_name accuracy \
-	#     --prefix ${lang}_${dataset} \
-	#     --result_file ${result_file} \
-	#     --do_predict_all \
-	#     --lang_config metadata/topic_metadata.json \
-	#     --max_seq_length 512 \
-	#     --per_device_train_batch_size 32 \
-	#     --learning_rate 2e-5 \
-	#     --num_train_epochs 5 \
-	#     --cache_dir ${CACHE_DIR} \
-	#     --output_dir ${output_dir}
-	#     # --max_steps 20
-
+	python scripts/nli/run_xnli.py \
+	  --model_name_or_path ${output_dir} \
+	  --language ${lang} \
+	  --train_language ${lang} \
+	  --dataset_script scripts/nli/dialect_nli.py \
+	  --lang_config metadata/nli_metadata.json \
+	  --result_file ${result_file} \
+	  --prefix ${lang} \
+	  --do_eval \
+	  --do_predict_all \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 3e-5 \
+	  --num_train_epochs 2.0 \
+	  --max_seq_length 128 \
+	  --output_dir ${output_dir} \
+	  --cache_dir ${CACHE_DIR}
 	deactivate
+fi
+
+if [[ "$task" = "test" || "$task" = "all" ]]; then
+
+	echo "------------------------------Train Dialect NLI------------------------------"
+	source vnv/vnv-trns/bin/activate
+	lang="eng_Latn"
+
+
+	export ALL_lr=("1e-5" "2e-5" "3e-5" "4e-5" "5e-5")
+	export ALL_seq=("128")
+	export all_batch=("64" "32")
+	for lr in ${ALL_lr[@]}; do
+		for seq in ${ALL_seq[@]}; do
+			for bat in ${all_batch[@]}; do
+			output_dir="/scratch/ffaisal/DialectBench/test/${MODEL_NAME}/nli/${lang}-${seq}-${bat}-${lr}"
+			python scripts/nli/run_xnli.py \
+			  --model_name_or_path ${MODEL_PATH} \
+			  --language ${lang} \
+			  --train_language ${lang} \
+			  --do_train \
+			  --dataset_script scripts/nli/dialect_nli.py \
+			  --lang_config metadata/nli_metadata.json \
+			  --prefix ${lang} \
+			  --do_eval \
+			  --per_device_train_batch_size ${bat} \
+			  --learning_rate ${lr} \
+			  --num_train_epochs 5.0 \
+			  --max_seq_length ${seq} \
+			  --output_dir ${output_dir} \
+			  --cache_dir ${CACHE_DIR} \
+			  --overwrite_output_dir \
+			  --save_total_limit 2 \
+			  --save_steps 500 \
+			  --eval_steps 500 \
+			  --save_strategy="steps" \
+			  --evaluation_strategy="steps" \
+			  --load_best_model_at_end True \
+			  --max_steps 1500
+			done
+		done
+	done
+	deactivate
+
+	# export ALL_lr=("1e-5" "2e-5" "3e-5" "4e-5" "5e-5")
+	# export ALL_seq=("512" "256" "128")
+	# for lr in ${ALL_lr[@]}; do
+	# 	for seq in ${ALL_seq[@]}; do
+	# 		result_file="/scratch/ffaisal/DialectBench/test//${MODEL_NAME}_sciq_belebele_${lr}_${seq}.txt"
+	# 		output_dir="/scratch/ffaisal/DialectBench/test/${MODEL_NAME}/rc/sciq_${dataset}_${lr}_${seq}"
+	# 		python scripts/test.py \
+	# 		--model_name_or_path ${MODEL_PATH}\
+	# 		--do_train \
+	# 		--do_eval \
+	# 		--do_predict_all \
+	# 		--train_file ${train_file} \
+	# 		--data_dir ${data_dir} \
+	# 		--prefix "train_combined" \
+	# 		--learning_rate ${lr} \
+	# 		--lang_config metadata/rcmc_metadata.json \
+	# 		--num_train_epochs 3 \
+	# 		--per_device_eval_batch_size=16 \
+	# 		--per_device_train_batch_size=16 \
+	# 		--overwrite_output \
+	# 		--output_dir ${output_dir} \
+	# 		--max_seq_length ${seq} \
+	# 		--result_file ${result_file} \
+	# 		--cache_dir ${CACHE_DIR} \
+	# 		--save_total_limit 2 \
+	# 		--save_steps 100 \
+	# 		--eval_steps 100 \
+	# 		--save_strategy="steps" \
+	# 		--evaluation_strategy="steps" \
+	# 		--load_best_model_at_end True
+	# 	done
+	# done
+
 fi
 
 

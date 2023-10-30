@@ -54,6 +54,21 @@ if [[ "$action" = "predict_topic_classification" ]]; then
 
 fi
 
+if [[ "$action" = "train_nli" ]]; then
+
+	echo "NLI training"
+	bash ${script} --task train_nli --MODEL_NAME bert
+	bash ${script} --task train_nli --MODEL_NAME xlmr
+fi
+
+if [[ "$action" = "predict_nli" ]]; then
+
+	echo "NLI prediction"
+	bash ${script} --task predict_nli --MODEL_NAME bert
+	bash ${script} --task predict_nli --MODEL_NAME xlmr
+fi
+
+
 
 
 if [[ "$action" = "train_reading_comprehension" ]]; then
@@ -61,6 +76,24 @@ if [[ "$action" = "train_reading_comprehension" ]]; then
 	echo "training reading comprehension multiple choice quesiton answering"
 	bash ${script} --task train_reading_comprehension --MODEL_NAME bert
 	bash ${script} --task train_reading_comprehension --MODEL_NAME xlmr
+	echo
+
+fi
+
+if [[ "$action" = "train_ner" ]]; then
+
+	echo "training named entity recognition"
+	bash ${script} --task train_ner --MODEL_NAME bert
+	bash ${script} --task train_ner --MODEL_NAME xlmr
+	echo
+
+fi
+
+if [[ "$action" = "predict_ner" ]]; then
+
+	echo "predicting named entity recognition"
+	bash ${script} --task predict_ner --MODEL_NAME bert
+	bash ${script} --task predict_ner --MODEL_NAME xlmr
 	echo
 
 fi
@@ -100,3 +133,8 @@ fi
 ###	./all_commands.sh --action train_reading_comprehension --execute slurm #done; needs A100 gpu..ow reduce batch size
 ###	./all_commands.sh --action predict_reading_comprehension --execute slurm #done
 ###	./all_commands.sh --action predict_sdqa --execute slurm #done
+
+### ./all_commands.sh --action train_ner --execute slurm # done
+### ./all_commands.sh --action predict_ner --execute slurm # done
+
+### ./all_commands.sh --action train_nli --execute bash

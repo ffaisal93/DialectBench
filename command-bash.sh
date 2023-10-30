@@ -10,8 +10,8 @@ while [ $# -gt 0 ]; do
 
    if [[ $1 == *"--"* ]]; then
         param="${1/--/}"
-        declare $param="$2"
-        echo $1 $2 #Optional to see the parameter:value result
+        declare "$param"="$2"
+        echo "$1" "$2" #Optional to see the parameter:value result
    fi
 
   shift
@@ -32,9 +32,9 @@ if [[ "$task" = "train_udp" ]]; then
 
 	# export ALL_MODELS=("UD_English-EWT")
 	
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
-		echo ${base_model}
-		echo ${MODEL_NAME}
+	for MODEL_NAME in "${ALL_MODELS[@]}"; do
+		echo "${base_model}"
+		echo "${MODEL_NAME}"
 		bash install.sh --task train_udp --lang ${MODEL_NAME} --MODEL_NAME ${base_model}
 		# bash install.sh --task train_udp --lang UD_English-EWT --MODEL_NAME xlmr
 	done
@@ -56,7 +56,7 @@ if [[ "$task" = "train_sdqa" || "$task" = "predict_sdqa" ]]; then
 
 	# export ALL_MODELS=("UD_English-EWT")
 	
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
+	for MODEL_NAME in "${ALL_MODELS[@]}"; do
 		echo ${base_model}
 		echo ${MODEL_NAME}
 		bash install.sh --task ${task} --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset dev
@@ -64,31 +64,46 @@ if [[ "$task" = "train_sdqa" || "$task" = "predict_sdqa" ]]; then
 	done
 fi
 
-if [[ "$task" = "train_ner" ]]; then
+if [[ "$task" = "train_ner" ]]; 
+then
 
 	
 	###norwegian dialects
 	export ALL_MODELS=("bokmaal" "nynorsk" "samnorsk")
 	##bokmaal:nb, ##nn:nynorsk
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
+	for MODEL_NAME in "${ALL_MODELS[@]}"; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
 		echo ${base_model}
 		echo ${MODEL_NAME}
-		bash install.sh --task ${task} --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
+		bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
 		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert
 	done
 
-	export ALL_MODELS=("ar" "ady" "az" "ku" "tr" "dsb" "nl" "fr" "zh" "en" "kv" "mhr" "it" "de" "pa" "es" "hr" "lij" "lv" "hi" "ro" "el")
-
+	export ALL_MODELS=("ar" "az" "ku" "tr" "hsb" "nl" "fr" "zh" "en" "mhr" "it" "de" "pa" "es" "hr" "lv" "hi" "ro" "el" "bn")
 	##bokmaal:nb, ##nn:nynorsk
-	for MODEL_NAME in ${ALL_MODELS[@]}; do
+	for MODEL_NAME in "${ALL_MODELS[@]}"; do
+		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+		echo ${efile}
+		echo ${ofile}
 		echo ${base_model}
 		echo ${MODEL_NAME}
-		bash install.sh --task ${task} --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset wikiann
+		bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset wikiann
 		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert --dataset wikiann
 	done
 fi
 
-if [[ "$task" = "train_did_lm" || "$task" = "predict_did_lm" ]]; then
+if [[ "$task" = "predict_ner" ]]; 
+then
+	echo ${base_model}
+	bash install.sh --task predict_ner --lang en --MODEL_NAME ${base_model} --dataset wikiann
+fi
+
+if [[ "$task" = "train_did_lm" || "$task" = "predict_did_lm" ]]; 
+then
 	lang="arabic"
 	dataset="madar"
 	echo ${base_model}
@@ -98,8 +113,6 @@ if [[ "$task" = "train_did_lm" || "$task" = "predict_did_lm" ]]; then
 	echo
 
 fi
-
-
 
 if [[ "$task" = "train_predict_did_ml" ]]; then
 	lang="arabic"
@@ -113,11 +126,24 @@ if [[ "$task" = "train_predict_did_ml" ]]; then
 
 fi
 
+if [[ "$task" = "train_nli" || "$task" = "predict_nli" ]]; then
+
+	export ALL_LANGS=("eng_Latn" "ita_Latn" "azj_Latn" "ckb_Arab" "nob_Latn" "nld_Latn" "lvs_Latn" "arb_Arab" "lij_Latn" "zho_Hans" "spa_Latn" "nso_Latn" "ben_Beng")
+	export ALL_LANGS=("eng_Latn")
+	for lang in "${ALL_LANGS[@]}"; do
+		echo ${base_model}
+		echo ${lang}
+		echo ${dataset}
+		bash install.sh --task ${task} --lang ${lang} --MODEL_NAME ${base_model}
+	done
+
+fi
+
 if [[ "$task" = "train_topic_classification_lm" || "$task" = "predict_topic_classification_lm" ]]; then
 
 	export ALL_LANGS=("eng_Latn" "ita_Latn" "azj_Latn" "ckb_Arab" "nob_Latn" "nld_Latn" "lvs_Latn" "arb_Arab" "lij_Latn" "zho_Hans" "spa_Latn" "nso_Latn")
 	dataset="sib"
-	for lang in ${ALL_LANGS[@]}; do
+	for lang in "${ALL_LANGS[@]}"; do
 		echo ${base_model}
 		echo ${lang}
 		echo ${dataset}
@@ -136,7 +162,6 @@ if [[ "$task" = "train_reading_comprehension" || "$task" = "predict_reading_comp
 	./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
 	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
 		# echo
-	done
 
 fi
 
