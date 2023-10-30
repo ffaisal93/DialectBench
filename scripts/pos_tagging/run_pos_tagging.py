@@ -218,7 +218,9 @@ class DataTrainingArguments:
     )
     lang_config: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
     result_file: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
-
+    ud_script: str = field(default=False,metadata={"help": "Universal dependency dataset builder"})
+    noisy_dl_script: str = field(default=False,metadata={"help": "noisy dialect dataset builder"})
+    noisy_data_dir: str = field(default=False,metadata={"help": "noisy dialect dataset dir"})
     def __post_init__(self):
         if self.dataset_name is None and self.train_file is None and self.validation_file is None:
             raise ValueError("Need either a dataset name or a training/validation file.")
@@ -311,7 +313,7 @@ def main():
         print(data_args.dataset_name)
         # Downloading and loading a dataset from the hub.
         raw_datasets = load_dataset(
-            data_args.dataset_name,
+            data_args.ud_script,
             data_args.dataset_config_name,
             cache_dir=model_args.cache_dir,
             token=model_args.token,
@@ -515,7 +517,10 @@ def main():
                 load_from_cache_file=not data_args.overwrite_cache,
                 desc="Running tokenizer on train dataset",
             )
-
+    if "validation" not in raw_datasets:
+        training_args.do_eval=False
+        training_args.evaluation_strategy="no"
+        training_args.save_strategy="no"
     if training_args.do_eval:
         if "validation" not in raw_datasets:
             raise ValueError("--do_eval requires a validation dataset")
@@ -587,6 +592,13 @@ def main():
                 "accuracy": results["overall_accuracy"],
             }
 
+    if training_args.do_train:
+        adjust=round((len(train_dataset)*int(training_args.num_train_epochs))/int(training_args.per_device_train_batch_size*5))
+        if adjust>500:
+            adjust=500
+        training_args.save_steps=adjust
+        training_args.eval_steps=adjust
+        print("save steps adjusted to>>>>>>>",adjust)
     # Initialize our Trainer
     trainer = Trainer(
         model=model,
@@ -665,14 +677,18 @@ def main():
 
         count=0
         for lang, info in lang_info.items():
-            # if count>5:
+            # if count>8:
             #     break
-            count+=1
+            # count+=1
             print(lang, info, count)
-            
-            train_lang=info['train_lang']
-            if info['dataset']=='wikiann' and model_args.is_zero_shot:
-                train_lang='en'
+            ## define model path (zero shot from english if trained model not available)
+            if 'train' in lang_info[lang]["split"]:
+                train_lang = lang
+            else:
+                train_lang = 'UD_English-EWT'
+            ##zero-shot-default
+            if model_args.is_zero_shot:
+                train_lang = 'UD_English-EWT'
             
             model_dir = os.path.join(training_args.output_dir, train_lang)
             if "best_model" in os.listdir(model_dir):
@@ -697,12 +713,11 @@ def main():
             trainer.model.to(training_args.device)
 
 
-            if info['dataset']=='wikiann' and info['huggingface']==True:
-                predict_dataset = load_dataset('wikiann', lang, cache_dir=model_args.cache_dir)
-            elif info['dataset']=='wikiann' and info['huggingface']==False:
-                predict_dataset = load_dataset('scripts/ner/wikiann_og.py', lang, cache_dir=model_args.cache_dir)
-            elif info['dataset']=='norwegian_ner':
-                predict_dataset = load_dataset('scripts/ner/norwegian_ner.py', lang, cache_dir=model_args.cache_dir)
+            if info['dataset']=='ud':
+                predict_dataset = load_dataset(data_args.ud_script, lang, cache_dir=model_args.cache_dir)
+            elif info['dataset']=='noisy':
+                predict_dataset = load_dataset(data_args.noisy_dl_script, lang, data_dir=data_args.noisy_data_dir,
+                 cache_dir=model_args.cache_dir)
             print(predict_dataset)
             
 
@@ -719,37 +734,37 @@ def main():
 
             predict_dataset = predict_dataset['test']
             support=predict_dataset.num_rows
-            try:
-                predict_dataset = predict_dataset.map(
-                    tokenize_and_align_labels,
-                    batched=True,
-                    num_proc=data_args.preprocessing_num_workers,
-                    load_from_cache_file=not data_args.overwrite_cache,
-                    desc="Running tokenizer on prediction dataset",
-                )
+            # try:
+            predict_dataset = predict_dataset.map(
+                tokenize_and_align_labels,
+                batched=True,
+                num_proc=data_args.preprocessing_num_workers,
+                load_from_cache_file=not data_args.overwrite_cache,
+                desc="Running tokenizer on prediction dataset",
+            )
 
-                predictions, labels, metrics = trainer.predict(predict_dataset, metric_key_prefix="predict")
-                predictions = np.argmax(predictions, axis=2)
+            predictions, labels, metrics = trainer.predict(predict_dataset, metric_key_prefix="predict")
+            predictions = np.argmax(predictions, axis=2)
 
-                # Remove ignored index (special tokens)
-                # true_predictions = [
-                #     [label_list[p] for (p, l) in zip(prediction, label) if l != -100]
-                #     for prediction, label in zip(predictions, labels)
-                # ]
-                if trainer.is_world_process_zero():
-                    logger.info("%s,%s,%s,%s,%s,%s,%s,%s\n" % (lang,info['lang'],train_lang,info['region'],
-                        support,
-                        info['dataset'],
-                        metrics['predict_accuracy'], 
-                        metrics['predict_f1']))
-                    writer.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (lang,info['lang'],train_lang,info['langgroup'],support,
-                        info['dataset'],
-                        metrics['predict_accuracy'], 
-                        metrics['predict_f1']))
-                    logger.info("prediction stat saved in %s \n" % (output_test_results_file))
-            except:
-                logger.info("#########------------------------error happened in %s----------------########" %(lang))
-                writer.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (info['code'],info['lang'],train_lang,info['langgroup'],support,info['dataset'],0,0))
+            # Remove ignored index (special tokens)
+            # true_predictions = [
+            #     [label_list[p] for (p, l) in zip(prediction, label) if l != -100]
+            #     for prediction, label in zip(predictions, labels)
+            # ]
+            if trainer.is_world_process_zero():
+                logger.info("%s,%s,%s,%s,%s,%s,%s,%s\n" % (lang,info['lang'],train_lang,info['langgroup'],
+                    support,
+                    info['dataset'],
+                    metrics['predict_accuracy'], 
+                    metrics['predict_f1']))
+                writer.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (lang,info['lang'],train_lang,info['langgroup'],support,
+                    info['dataset'],
+                    metrics['predict_accuracy'], 
+                    metrics['predict_f1']))
+                logger.info("prediction stat saved in %s \n" % (output_test_results_file))
+            # except:
+            #     logger.info("#########------------------------error happened in %s----------------########" %(lang))
+            #     writer.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (info['code'],info['lang'],train_lang,info['langgroup'],support,info['dataset'],0,0))
 
 
     # kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "token-classification"}

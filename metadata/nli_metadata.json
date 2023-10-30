@@ -1,0 +1,207 @@
+{
+   "lmo_Latn": {
+      "lang": "lombard",
+      "code": "lmo_Latn",
+      "langgroup": "italian"
+   },
+   "eng_Latn": {
+      "lang": "English",
+      "code": "eng_Latn",
+      "langgroup": "English"
+   },
+   "ita_Latn": {
+      "lang": "italian",
+      "code": "ita_Latn",
+      "langgroup": "italian"
+   },
+   "fur_Latn": {
+      "lang": "friulian",
+      "code": "fur_Latn",
+      "langgroup": "italian"
+   },
+   "scn_Latn": {
+      "lang": "sicilian",
+      "code": "scn_Latn",
+      "langgroup": "italian"
+   },
+   "srd_Latn": {
+      "lang": "sardinian",
+      "code": "srd_Latn",
+      "langgroup": "italian"
+   },
+   "vec_Latn": {
+      "lang": "venetian",
+      "code": "vec_Latn",
+      "langgroup": "italian"
+   },
+   "azb_Arab": {
+      "lang": "south",
+      "code": "azb_Arab",
+      "langgroup": "azarbaijani"
+   },
+   "azj_Latn": {
+      "lang": "north",
+      "code": "azj_Latn",
+      "langgroup": "azarbaijani"
+   },
+   "tur_Latn": {
+      "lang": "Turkish",
+      "code": "tur_Latn",
+      "langgroup": "azarbaijani"
+   },
+   "kmr_Latn": {
+      "lang": "northern",
+      "code": "kmr_Latn",
+      "langgroup": "kurdish"
+   },
+   "ckb_Arab": {
+      "lang": "central",
+      "code": "ckb_Arab",
+      "langgroup": "kurdish"
+   },
+   "nno_Latn": {
+      "lang": "nynorsk",
+      "code": "nno_Latn",
+      "langgroup": "norwegian"
+   },
+   "nob_Latn": {
+      "lang": "bokmal",
+      "code": "nob_Latn",
+      "langgroup": "norwegian"
+   },
+   "lim_Latn": {
+      "lang": "limburgish",
+      "code": "lim_Latn",
+      "langgroup": "dutch"
+   },
+   "ltz_Latn": {
+      "lang": "luxermburgish",
+      "code": "ltz_Latn",
+      "langgroup": "dutch"
+   },
+   "nld_Latn": {
+      "lang": "dutch",
+      "code": "nld_Latn",
+      "langgroup": "dutch"
+   },
+   "lvs_Latn": {
+      "lang": "standard",
+      "code": "lvs_Latn",
+      "langgroup": "latvian"
+   },
+   "ltg_Latn": {
+      "lang": "latgalian",
+      "code": "ltg_Latn",
+      "langgroup": "latvian"
+   },
+   "acm_Arab": {
+      "lang": "Mesopotamian Arabic",
+      "code": "acm_Arab",
+      "langgroup": "arabic"
+   },
+   "acq_Arab": {
+      "lang": "Ta’izzi-Adeni Arabic",
+      "code": "acq_Arab",
+      "langgroup": "arabic"
+   },
+   "aeb_Arab": {
+      "lang": "Tunisian Arabic",
+      "code": "aeb_Arab",
+      "langgroup": "arabic"
+   },
+   "ajp_Arab": {
+      "lang": "South Levantine Arabic",
+      "code": "ajp_Arab",
+      "langgroup": "arabic"
+   },
+   "apc_Arab": {
+      "lang": "North Levantine Arabic",
+      "code": "apc_Arab",
+      "langgroup": "arabic"
+   },
+   "arb_Arab": {
+      "lang": "MSA (Arabic)",
+      "code": "arb_Arab",
+      "langgroup": "arabic"
+   },
+   "ars_Arab": {
+      "lang": "Najdi Arabic",
+      "code": "ars_Arab",
+      "langgroup": "arabic"
+   },
+   "ary_Arab": {
+      "lang": "Moroccan Arabic",
+      "code": "ary_Arab",
+      "langgroup": "arabic"
+   },
+   "arz_Arab": {
+      "lang": "Egyptian Arabic",
+      "code": "arz_Arab",
+      "langgroup": "arabic"
+   },
+   "kab_Latn": {
+      "lang": "Kabyle",
+      "code": "kab_Latn",
+      "langgroup": "arabic"
+   },
+   "lij_Latn": {
+      "lang": "Ligurian",
+      "code": "lij_Latn",
+      "langgroup": "Franco-Provencal"
+   },
+   "oci_Latn": {
+      "lang": "Occitan",
+      "code": "oci_Latn",
+      "langgroup": "Franco-Provencal"
+   },
+   "yue_Hant": {
+      "lang": "Yue Chinese",
+      "code": "yue_Hant",
+      "langgroup": "chinese"
+   },
+   "zho_Hans": {
+      "lang": "Chinese (Simplified)",
+      "code": "zho_Hans",
+      "langgroup": "chinese"
+   },
+   "zho_Hant": {
+      "lang": "Chinese (Traditional)",
+      "code": "zho_Hant",
+      "langgroup": "chinese"
+   },
+   "glg_Latn": {
+      "lang": "Galician",
+      "code": "glg_Latn",
+      "langgroup": "Spanish"
+   },
+   "spa_Latn": {
+      "lang": "Spanish",
+      "code": "spa_Latn",
+      "langgroup": "Spanish"
+   },
+   "por_Latn": {
+      "lang": "Portuguese",
+      "code": "por_Latn",
+      "langgroup": "Spanish"
+   },
+   "nso_Latn": {
+      "lang": "Northern Sotho",
+      "code": "nso_Latn",
+      "langgroup": "sotho"
+   },
+   "sot_Latn": {
+      "lang": "Southern Sotho",
+      "code": "sot_Latn",
+      "langgroup": "sotho"
+   },
+   "ben_Beng": {
+      "lang": "Bengali",
+      "code": "ben_Beng",
+      "langgroup": "Beng"
+   },
+   "asm_Beng": {
+      "lang": "Assamese",
+      "code": "asm_Beng",
+      "langgroup": "Beng"
+   }
+}

@@ -49,7 +49,7 @@ from transformers.utils.versions import require_version
 
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
-check_min_version("4.35.0.dev0")
+# check_min_version("4.35.0.dev0")
 
 require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/text-classification/requirements.txt")
 
@@ -114,6 +114,19 @@ class DataTrainingArguments:
             )
         },
     )
+    dataset_script: str = field(
+        default=None, metadata={"help": "Path to dataset script"}
+    )
+    result_file: Optional[str] = field(
+        default=None,
+        metadata={"help": "Files to save combined results."},
+    )
+    prefix: Optional[str] = field(
+        default=None,
+        metadata={"help": "Identifier to add in the results file."},
+    )
+    lang_config: str = field(default=False,metadata={"help": "The identifier of the Universal Dependencies dataset to train on."})
+    data_dir: Optional[str] = field(default=None, metadata={"help": "data directory for do_predict_all"})
 
 
 @dataclass
@@ -181,6 +194,10 @@ class ModelArguments:
     ignore_mismatched_sizes: bool = field(
         default=False,
         metadata={"help": "Will enable to load a pretrained model whose head dimensions are different."},
+    )
+    do_predict_all: bool = field(
+        default=False,
+        metadata={"help": "Overwrite the cached training and evaluation sets."},
     )
 
 
@@ -254,7 +271,7 @@ def main():
     if training_args.do_train:
         if model_args.train_language is None:
             train_dataset = load_dataset(
-                "xnli",
+                data_args.dataset_script,
                 model_args.language,
                 split="train",
                 cache_dir=model_args.cache_dir,
@@ -262,7 +279,7 @@ def main():
             )
         else:
             train_dataset = load_dataset(
-                "xnli",
+                data_args.dataset_script,
                 model_args.train_language,
                 split="train",
                 cache_dir=model_args.cache_dir,
@@ -272,7 +289,7 @@ def main():
 
     if training_args.do_eval:
         eval_dataset = load_dataset(
-            "xnli",
+            data_args.dataset_script,
             model_args.language,
             split="validation",
             cache_dir=model_args.cache_dir,
@@ -282,7 +299,7 @@ def main():
 
     if training_args.do_predict:
         predict_dataset = load_dataset(
-            "xnli",
+            data_args.dataset_script,
             model_args.language,
             split="test",
             cache_dir=model_args.cache_dir,
@@ -304,7 +321,6 @@ def main():
         finetuning_task="xnli",
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
-        token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
     )
     tokenizer = AutoTokenizer.from_pretrained(
@@ -313,7 +329,6 @@ def main():
         cache_dir=model_args.cache_dir,
         use_fast=model_args.use_fast_tokenizer,
         revision=model_args.model_revision,
-        token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
     )
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -322,7 +337,6 @@ def main():
         config=config,
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
-        token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
         ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
     )
@@ -386,13 +400,16 @@ def main():
 
     # Get the metric function
     metric = evaluate.load("xnli")
+    f1_metric = evaluate.load("f1")
 
     # You can define your custom compute_metrics function. It takes an `EvalPrediction` object (a namedtuple with a
     # predictions and label_ids field) and has to return a dictionary string to float.
     def compute_metrics(p: EvalPrediction):
         preds = p.predictions[0] if isinstance(p.predictions, tuple) else p.predictions
         preds = np.argmax(preds, axis=1)
-        return metric.compute(predictions=preds, references=p.label_ids)
+        result = metric.compute(predictions=preds, references=p.label_ids)
+        result.update(f1_metric.compute(predictions=preds, references = p.label_ids, average="macro"))
+        return result
 
     # Data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
     if data_args.pad_to_max_length:
@@ -465,6 +482,43 @@ def main():
                 for index, item in enumerate(predictions):
                     item = label_list[item]
                     writer.write(f"{index}\t{item}\n")
+    if model_args.do_predict_all:
+        import json
+        with open(data_args.lang_config) as json_file:
+            lang_info = json.load(json_file)
+
+        output_test_results_file = data_args.result_file
+        if trainer.is_world_process_zero():
+            writer = open(output_test_results_file, "a")
+
+        count=0
+        for lang, info in lang_info.items():
+            # if count>4:
+            #     break
+            count+=1
+            print(lang, info, count)
+            # try:
+            predict_dataset = load_dataset(
+                data_args.dataset_script,
+                lang,
+                split="test",
+                cache_dir=model_args.cache_dir,
+                token=model_args.token,
+            )
+            label_list = predict_dataset.features["label"].names
+            predict_dataset = predict_dataset.map(
+                preprocess_function,
+                batched=True,
+                load_from_cache_file=not data_args.overwrite_cache,
+                desc="Running tokenizer on dataset",
+            )
+            predictions,labels, metrics = trainer.predict(predict_dataset, metric_key_prefix="predict")
+            logger.info("%s,%s,%s,%s\n" % (lang,data_args.prefix,metrics['predict_accuracy'],metrics['predict_f1']))
+            writer.write("%s,%s,%s,%s\n" % (lang,data_args.prefix,metrics['predict_accuracy'],metrics['predict_f1']))
+            logger.info("Predict stat saved at {}".format(output_test_results_file))
+            # except:
+            #     logger.info("#########------------------------error happened in %s----------------########" %(lang))
+            #     writer.write("%s,%s,%s,%s\n" % (lang,data_args.prefix, 0, 0))
 
 
 if __name__ == "__main__":

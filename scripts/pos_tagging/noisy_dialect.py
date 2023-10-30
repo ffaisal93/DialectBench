@@ -73,8 +73,8 @@ _TEST_FILE = "test.txt"
 
 _DATA_DIR = "../data/pos_tagging"
 
-_LANGUAGES = ("dar-egy","dar-glf", "dar-lev", "dar-mgr","murre-HAM","murre-KAA", "murre-LOU",
-    "murre-LVA","murre-POH","murre-SAV","ROci")
+_LANGUAGES = ("dar-egy","dar-glf", "dar-lev", "dar-mgr","murre-HÄM","murre-KAA", "murre-LOU",
+    "murre-LVÄ","murre-POH","murre-SAV","ROci")
 
 class MasakhanerConfig(datasets.BuilderConfig):
     """BuilderConfig for Masakhaner"""
