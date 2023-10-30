@@ -78,6 +78,70 @@ if [[ "$task" = "train_sdqa" || "$task" = "predict_sdqa" ]]; then
 	done
 fi
 
+if [[ "$task" = "translate_nli" ]]; then
+	export ALL_TARGETS=("lmo_Latn" "ita_Latn" "fur_Latn" "scn_Latn" "srd_Latn" "vec_Latn" "azb_Arab" "azj_Latn" "tur_Latn" "kmr_Latn" "ckb_Arab" "nno_Latn" "nob_Latn" "lim_Latn" "ltz_Latn" "nld_Latn" "lvs_Latn" "ltg_Latn" "acm_Arab" "acq_Arab" "aeb_Arab" "ajp_Arab" "apc_Arab" "arb_Arab" "ars_Arab" "ary_Arab" "arz_Arab" "kab_Latn" "asm_Beng" "ben_Beng" "lij_Latn" "oci_Latn" "yue_Hant" "zho_Hans" "zho_Hant" "glg_Latn" "spa_Latn" "por_Latn" "nso_Latn" "sot_Latn")
+
+	export ALL_SRC=("ita_Latn" "azj_Latn" "ckb_Arab" "nob_Latn" "nld_Latn" "lvs_Latn" "arb_Arab" "lij_Latn" "zho_Hans" "spa_Latn" "nso_Latn" "ben_Beng")
+	
+	test_hypo="tempdata/test_hypo-eng_Latn.txt"
+	test_premise="tempdata/test_premise-eng_Latn.txt"
+
+	# for TARGET_LANG in "${ALL_TARGETS[@]}"; do
+	# 	efile="tr_output/${TARGET_LANG}_${task}-test_hypo.err"
+	# 	ofile="tr_output/${TARGET_LANG}_${task}-test_hypo.out"
+	# 	echo ${efile}
+	# 	echo ${ofile}
+	# 	echo ${TARGET_LANG}
+	# 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} test_hypo ${test_hypo}
+
+		# efile="tr_output/${TARGET_LANG}_${task}-test_premise.err"
+		# ofile="tr_output/${TARGET_LANG}_${task}-test_premise.out"
+		# echo ${efile}
+		# echo ${ofile}
+		# echo ${TARGET_LANG}
+		# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} test_premise ${test_premise}
+		# # ./install.sh --task ${task} --lang ${TARGET_LANG} --MODEL_NAME test_hypo --dataset ${test_hypo}
+	# done
+
+	# validation_hypo="tempdata/validation_hypo-eng_Latn.txt"
+	# validation_premise="tempdata/validation_premise-eng_Latn.txt"
+	# for TARGET_LANG in "${ALL_SRC[@]}"; do
+	# 	efile="tr_output/${TARGET_LANG}_${task}-validation_hypo.err"
+	# 	ofile="tr_output/${TARGET_LANG}_${task}-validation_hypo.out"
+	# 	echo ${efile}
+	# 	echo ${ofile}
+	# 	echo ${TARGET_LANG}
+	# 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} validation_hypo ${validation_hypo}
+	# done
+
+	# for TARGET_LANG in "${ALL_SRC[@]}"; do
+	# 	efile="tr_output/${TARGET_LANG}_${task}-validation_premise.err"
+	# 	ofile="tr_output/${TARGET_LANG}_${task}-validation_premise.out"
+	# 	echo ${efile}
+	# 	echo ${ofile}
+	# 	echo ${TARGET_LANG}
+	# 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} validation_premise ${validation_premise}
+	# done
+
+	train_hypo="tempdata/train_hypo-eng_Latn.txt"
+	train_premise="tempdata/train_premise-eng_Latn.txt"
+	for TARGET_LANG in "${ALL_SRC[@]}"; do
+		efile="tr_output/${TARGET_LANG}_${task}-train_premise.err"
+		ofile="tr_output/${TARGET_LANG}_${task}-train_premise.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${TARGET_LANG}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} train_premise ${train_premise}
+		
+		efile="tr_output/${TARGET_LANG}_${task}-train_hypo.err"
+		ofile="tr_output/${TARGET_LANG}_${task}-train_hypo.out"
+		echo ${efile}
+		echo ${ofile}
+		echo ${TARGET_LANG}
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} train_hypo ${train_hypo}
+	done
+fi
+
 if [[ "$task" = "train_ner" ]]; then
 
 	
@@ -92,12 +156,9 @@ if [[ "$task" = "train_ner" ]]; then
 		echo ${base_model}
 		echo ${MODEL_NAME}
 		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
-		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
-		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert
 	done
 
-	export ALL_MODELS=("ar" "ady" "az" "ku" "tr" "dsb" "nl" "fr" "zh" "en" "kv" "mhr" "it" "de" "pa" "es" "hr" "lij" "lv" "hi" "ro" "el")
-	export ALL_MODELS=("mhr" "it" "de" "pa" "es" "hr" "lij" "lv" "hi" "ro" "el")
+	export ALL_MODELS=("ar" "az" "ku" "tr" "hsb" "nl" "fr" "zh" "en" "mhr" "it" "de" "pa" "es" "hr" "lv" "hi" "ro" "el" "bn")
 	##bokmaal:nb, ##nn:nynorsk
 	for MODEL_NAME in ${ALL_MODELS[@]}; do
 		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
@@ -107,9 +168,18 @@ if [[ "$task" = "train_ner" ]]; then
 		echo ${base_model}
 		echo ${MODEL_NAME}
 		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} wikiann
-		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset wikiann
-		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert --dataset wikiann
 	done
+fi
+
+if [[ "$task" = "predict_ner" ]]; 
+then
+	MODEL_NAME="en"
+	efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
+	ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
+	echo ${efile}
+	echo ${ofile}
+	echo ${base_model}
+	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${predict_ner} ${MODEL_NAME} ${base_model} wikiann
 fi
 
 if [[ "$task" = "train_did_lm" || "$task" = "predict_did_lm" ]]; then
