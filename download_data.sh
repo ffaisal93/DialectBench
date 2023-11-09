@@ -109,9 +109,9 @@ then
 
    URL="https://gmuedu-my.sharepoint.com/:u:/g/personal/ffaisal_gmu_edu/EVV0wuLTiedKos_YdFysIgwBloQbuaGNSYqCo6XHbfwPxQ?download=1"
 <<<<<<< HEAD
-
 =======
->>>>>>> 3a0937a... update data download
+
+>>>>>>> origin/main
    download_unzip_rename $URL data
    cd "$ROOT_DIR"
 fi
