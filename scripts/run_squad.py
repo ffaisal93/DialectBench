@@ -400,9 +400,11 @@ def evaluate(args, model, tokenizer, prefix=""):
 def calc_dialect_evaluation(examples,predictions):
     # Compute the F1 and exact scores.
     lang_dialects={
-    'english':['nga','usa','ind_s','aus','phl'],
-    'arabic':['dza','egy','jor','tun'],
-    'swahili':['kenya','tanzania']
+    'english':['aus','gbr','ind_n','ind_s', 'irl','kenya','nga','nzl','phl','usa','zaf'],
+    'arabic':['bhr', 'dza','egy','jor','mar','sau','tun'],
+    'swahili':['kenya','tanzania'],
+    'korean': ['korn','kors'],
+    'bengali':['dhaka','ind']
         }
 
     all_results={}
@@ -411,6 +413,7 @@ def calc_dialect_evaluation(examples,predictions):
         lang_pred=collections.OrderedDict()
         for dial in lang_dialects[lang]:
             name = '{}--{}'.format(lang,dial)
+            print("processing {}".format(name))
             new_examples=[]
             new_preds=collections.OrderedDict()
             for exam in examples:
@@ -438,12 +441,14 @@ def load_and_cache_examples(args, tokenizer, evaluate=False, output_examples=Fal
         torch.distributed.barrier()
 
     # Load data features from cache or dataset file
-    input_dir = args.data_dir if args.data_dir else "."
+    input_dir = args.cache_dir if args.cache_dir else "."
     cached_features_file = os.path.join(
         input_dir,
-        "cached_{}_{}_{}".format(
-            "dev" if evaluate else "train",
+        "cached_{}_{}_{}_{}_{}".format(
+            args.split,
+            args.model_type,
             list(filter(None, args.model_name_or_path.split("/"))).pop(),
+            args.prefix,
             str(args.max_seq_length),
         ),
     )
@@ -544,6 +549,9 @@ def main():
         + "If no data dir or train/predict files are specified, will run with tensorflow_datasets.",
     )
     parser.add_argument("--train_files",  default=None, type=str, help='cross training', required=False)
+    parser.add_argument("--result_file",  default=None, type=str, help='result file', required=False)
+    parser.add_argument("--prefix",  default=None, type=str, help='train data identifier', required=False)
+    parser.add_argument("--split",  default=None, type=str, help='train, test or dev identifier', required=False)
     parser.add_argument(
         "--predict_file",
         default=None,
@@ -562,7 +570,7 @@ def main():
     )
     parser.add_argument(
         "--cache_dir",
-        default="/scratch/nrajabi/NLP_A3",
+        default="/scratch/ffaisal/cache",
         type=str,
         help="Where do you want to store the pre-trained models downloaded from s3",
     )
@@ -846,8 +854,15 @@ def main():
             results.update(result)
 
     logger.info("Results:")
+    output_test_results_file = args.result_file
+    writer = open(output_test_results_file, "a")
     for lang_dial in results:
         logger.info("{}: \n{}".format(lang_dial, results[lang_dial]))
+        writer.write("%s,%s,%s,%s,%s\n" % (args.prefix,lang_dial,
+            results[lang_dial]["exact"],
+            results[lang_dial]["f1"],
+            results[lang_dial]["total"]))
+    logger.info("Predict stat saved at {}".format(output_test_results_file))
 
     return results
 

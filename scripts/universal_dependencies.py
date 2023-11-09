@@ -70,7 +70,12 @@ _NAMES = ["UD_Armenian-ArmTDP",
          "singlish",
          "UD_Arabic-PADT",
          "TwitterAAE",
-         "UD_English-EWT"]
+         "UD_English-EWT",
+         "UD_Catalan-AnCora",
+                 "UD_Estonian-EDT",
+                 "UD_Finnish-TDT",
+                 "UD_French-GSD",
+                 "UD_Spanish-AnCora"]
 
 _DESCRIPTIONS = {"UD_Armenian-ArmTDP": "xx",
                  "UD_Gheg-GPS": "xx",
@@ -122,7 +127,12 @@ _DESCRIPTIONS = {"UD_Armenian-ArmTDP": "xx",
                  "singlish": "xx",
                  "UD_Arabic-PADT": "xx",
                  "TwitterAAE": "xx",
-                 "UD_English-EWT": "xx"}
+                 "UD_English-EWT": "xx",
+                 "UD_Catalan-AnCora":"xx",
+                 "UD_Estonian-EDT":"xx",
+                 "UD_Finnish-TDT":"xx",
+                 "UD_French-GSD":"xx",
+                 "UD_Spanish-AnCora":"xx"}
 
 _PREFIX = "../data/parsing/"
 _UD_DATASETS = {"UD_Armenian-ArmTDP": {
@@ -282,6 +292,31 @@ _UD_DATASETS = {"UD_Armenian-ArmTDP": {
                 "dev": "UD_English-EWT/en_ewt-ud-dev.conllu",
                 "test": "UD_English-EWT/en_ewt-ud-test.conllu",
                 "train": "UD_English-EWT/en_ewt-ud-train.conllu"
+            },
+            "UD_Spanish-AnCora": {
+                "dev": "UD_Spanish-AnCora/es_ancora-ud-dev.conllu",
+                "test": "UD_Spanish-AnCora/es_ancora-ud-test.conllu",
+                "train": "UD_Spanish-AnCora/es_ancora-ud-train.conllu"
+            },
+            "UD_Finnish-TDT": {
+                "dev": "UD_Finnish-TDT/fi_tdt-ud-dev.conllu",
+                "test": "UD_Finnish-TDT/fi_tdt-ud-test.conllu",
+                "train": "UD_Finnish-TDT/fi_tdt-ud-train.conllu"
+            },
+            "UD_Estonian-EDT": {
+                "dev": "UD_Estonian-EDT/et_edt-ud-dev.conllu",
+                "test": "UD_Estonian-EDT/et_edt-ud-test.conllu",
+                "train": "UD_Estonian-EDT/et_edt-ud-train.conllu"
+            },
+            "UD_Catalan-AnCora": {
+                "dev": "UD_Catalan-AnCora/ca_ancora-ud-dev.conllu",
+                "test": "UD_Catalan-AnCora/ca_ancora-ud-test.conllu",
+                "train": "UD_Catalan-AnCora/ca_ancora-ud-train.conllu"
+            },
+            "UD_French-GSD": {
+                "dev": "UD_French-GSD/fr_gsd-ud-dev.conllu",
+                "test": "UD_French-GSD/fr_gsd-ud-test.conllu",
+                "train": "UD_French-GSD/fr_gsd-ud-train.conllu"
             }
              }
 

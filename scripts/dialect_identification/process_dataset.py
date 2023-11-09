@@ -20,6 +20,8 @@ def process_madar(datapath):
 	    df_train=df[df['split'].str.contains('corpus-26-train')]
 	    df_dev=df[df['split'].str.contains('corpus-26-dev')]
 	    df_test=df[df['split'].str.contains('corpus-26-test')]
+	    print(file, len(df_train), len(df_test), len(df_dev))
+	    
 	    train_df=pd.concat([train_df,df_train],axis=0)
 	    dev_df=pd.concat([test_df,df_dev],axis=0)
 	    test_df=pd.concat([test_df,df_test],axis=0)

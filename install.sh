@@ -123,7 +123,8 @@ if [[ "$task" = "install_translation" || "$task" = "all" ]]; then
 	pip install --upgrade pip
 	pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 -f https://download.pytorch.org/whl/torch_stable.html
 	pip install ipykernel
-	pip install transformers==4.28.0
+	pip install transformers==4.34.0
+	##pip install transformers==4.28.0##original
 	pip install bitsandbytes
 	pip install "datasets" "accelerate>=0.20.3" "evaluate" tensorboard scikit-learn
 	/scratch/ffaisal/DialectBench/vnv/vnv_translation/bin/python -m ipykernel install --user --name 'transl'
@@ -315,6 +316,117 @@ if [[ "$task" = "predict_sdqa" || "$task" = "all" ]]; then
 
 	rm -rf ${output_dir}/checkpoint*
 	deactivate
+fi
+
+if [[ "$task" = "train_pos" || "$task" = "all" ]]; 
+then
+
+	echo "------------------------------Train POS Tagging------------------------------"
+	source vnv/vnv-trns/bin/activate
+	# lang="UD_English-EWT"
+	# # lang="UD_North_Sami-Giella"
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/pos/${lang}"
+
+	python scripts/pos_tagging/run_pos_tagging.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --dataset_name ${dataset} \
+	  --ud_script scripts/universal_dependencies.py \
+	  --dataset_config_name ${lang} \
+	  --max_seq_length 128 \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 2e-5 \
+	  --num_train_epochs 5 \
+	  --output_dir ${output_dir} \
+	  --overwrite_output_dir \
+	  --do_train \
+	  --do_eval \
+	  --label_column_name upos \
+	  --text_column_name tokens \
+	  --cache_dir ${CACHE_DIR} \
+	  --overwrite_cache \
+	  --save_total_limit 2 \
+	  --save_steps 50 \
+	  --eval_steps 50 \
+	  --save_strategy="steps" \
+	  --evaluation_strategy="steps" \
+	  --load_best_model_at_end True
+
+	deactivate
+	rm -rf ${output_dir}/checkpoint*
+
+fi
+
+if [[ "$task" = "predict_pos" || "$task" = "all" ]]; 
+then
+
+	echo "------------------------------Train POS Tagging------------------------------"
+	# source vnv/vnv-adp-l/bin/activate
+	source vnv/vnv-trns/bin/activate
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_all.txt"
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/pos"
+	rm ${result_file}
+	python scripts/pos_tagging/run_pos_tagging.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --dataset_name ${dataset} \
+	  --ud_script scripts/universal_dependencies.py \
+	  --dataset_config_name ${lang} \
+	  --max_seq_length 128 \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 2e-5 \
+	  --num_train_epochs 5 \
+	  --output_dir ${output_dir} \
+	  --result_file ${result_file} \
+	  --lang_config metadata/pos_metadata.json \
+	  --ud_script scripts/universal_dependencies.py \
+	  --noisy_dl_script scripts/pos_tagging/noisy_dialect.py \
+	  --noisy_data_dir data/pos_tagging \
+	  --overwrite_output_dir \
+	  --do_predict_all \
+	  --label_column_name upos \
+	  --text_column_name tokens \
+	  --cache_dir ${CACHE_DIR} \
+	  --overwrite_cache \
+	  --save_total_limit 2 \
+	  --save_steps 500 \
+	  --eval_steps 500 \
+	  --save_strategy="steps" \
+	  --evaluation_strategy="steps" \
+	  --load_best_model_at_end True
+
+	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}.txt"
+	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/pos"
+	rm ${result_file}
+	python scripts/pos_tagging/run_pos_tagging.py \
+	  --model_name_or_path ${MODEL_PATH} \
+	  --dataset_name ${dataset} \
+	  --ud_script scripts/universal_dependencies.py \
+	  --dataset_config_name ${lang} \
+	  --max_seq_length 128 \
+	  --per_device_train_batch_size 32 \
+	  --learning_rate 2e-5 \
+	  --num_train_epochs 5 \
+	  --output_dir ${output_dir} \
+	  --result_file ${result_file} \
+	  --lang_config metadata/pos_metadata.json \
+	  --ud_script scripts/universal_dependencies.py \
+	  --noisy_dl_script scripts/pos_tagging/noisy_dialect.py \
+	  --noisy_data_dir data/pos_tagging \
+	  --overwrite_output_dir \
+	  --do_predict_all \
+	  --is_zero_shot \
+	  --label_column_name upos \
+	  --text_column_name tokens \
+	  --cache_dir ${CACHE_DIR} \
+	  --overwrite_cache \
+	  --save_total_limit 2 \
+	  --save_steps 500 \
+	  --eval_steps 500 \
+	  --save_strategy="steps" \
+	  --evaluation_strategy="steps" \
+	  --load_best_model_at_end True
+
+	deactivate
+
 fi
 
 if [[ "$task" = "train_ner" || "$task" = "all" ]]; then

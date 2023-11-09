@@ -1,4 +1,13 @@
 {
+   "en": {
+      "lang": "english",
+      "code": "en",
+      "langgroup": "english",
+      "huggingface": true,
+      "dataset": "wikiann",
+      "region": "english",
+      "train_lang": "en"
+   },
    "ar": {
       "lang": "arabic",
       "code": "ar",
@@ -299,15 +308,6 @@
    "ang": {
       "lang": "old english",
       "code": "ang",
-      "langgroup": "english",
-      "huggingface": true,
-      "dataset": "wikiann",
-      "region": "english",
-      "train_lang": "en"
-   },
-   "en": {
-      "lang": "english",
-      "code": "en",
       "langgroup": "english",
       "huggingface": true,
       "dataset": "wikiann",
@@ -773,7 +773,7 @@
       "region": "bangla",
       "train_lang": "bn"
    },
-   "nob": {
+   "bokmaal": {
       "lang": "bokmaal",
       "code": "nob",
       "langgroup": "norwegian",
@@ -782,7 +782,7 @@
       "train_lang": "bokmaal",
       "region": "norwegian"
    },
-   "nno": {
+   "nynorsk": {
       "lang": "nynorsk",
       "code": "nno",
       "langgroup": "norwegian",

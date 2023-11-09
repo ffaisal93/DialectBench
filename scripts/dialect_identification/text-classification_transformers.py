@@ -202,7 +202,7 @@ class DataTrainingArguments:
                 raise ValueError(" training/validation file or a dataset name.")
 
             train_extension = self.train_file.split(".")[-1]
-            assert train_extension in ["csv", "json"], "`train_file` should be a csv or a json file."
+            assert train_extension in ["csv", "tsv", "json"], "`train_file` should be a csv or a json file."
             validation_extension = self.validation_file.split(".")[-1]
             assert (
                 validation_extension == train_extension

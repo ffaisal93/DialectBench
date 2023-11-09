@@ -9,6 +9,11 @@
       "code": "zho_Hant",
       "langgroup": "chinese"
    },
+   "eng_Latn": {
+      "lang": "English",
+      "code": "eng_Latn",
+      "langgroup": "English"
+   },
    "nso_Latn": {
       "lang": "Northern Sotho",
       "code": "nso_Latn",
@@ -48,11 +53,6 @@
       "lang": "Egyptian Arabic",
       "code": "arz_Arab",
       "langgroup": "arabic"
-   },
-   "eng_Latn": {
-      "lang": "English",
-      "code": "eng_Latn",
-      "langgroup": "English"
    }
    
 }

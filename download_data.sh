@@ -108,7 +108,10 @@ if [[ "$task" = "sentiment_analysis" || "$task" = "all" ]];
 then
 
    URL="https://gmuedu-my.sharepoint.com/:u:/g/personal/ffaisal_gmu_edu/EVV0wuLTiedKos_YdFysIgwBloQbuaGNSYqCo6XHbfwPxQ?download=1"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a0937a... update data download
    download_unzip_rename $URL data
    cd "$ROOT_DIR"
 fi
@@ -131,6 +134,14 @@ then
    cd "$ROOT_DIR"
 fi
 
+if [[ "$task" = "machine_translation_turkish" ]]; 
+then
+
+   URL="https://gmuedu-my.sharepoint.com/:u:/g/personal/ffaisal_gmu_edu/EbUIQno-MQtLkZ4BH5Z5CisBtBMWXua-PJcOLjWJr_QS8g?download=1"
+
+   download_unzip_rename $URL data
+   cd "$ROOT_DIR"
+fi
 
 if [[ "$task" = "sentiment_analysis_raw" ]]; 
 then

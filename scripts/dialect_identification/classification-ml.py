@@ -28,9 +28,9 @@ def get_data(datapath):
 	dev_df=pd.read_csv(os.path.join(datapath,'dev.csv'))
 
 	return {
-		'train': train_df[:100],
-		'dev': dev_df[:100],
-		'test': test_df[:100]
+		'train': train_df,
+		'dev': dev_df,
+		'test': test_df
 	}
 
 	print(train_df.columns)
@@ -64,7 +64,7 @@ def train_nb(df, sent_column, label_column):
 	vectorizer_tfidf.fit(corpus)
 
 	classifier_tfidf_NB = MultinomialNB()
-	model_tfidf_NB = Pipeline([("vectorizer", vectorizer_tfidf), ("classifier", classifier_tfidf_NB)])
+	model_tfidf_NB = Pipeline([("vectorizer", vectorizer_tfidf), ("classifier", classifier_tfidf_NB)], verbose=True)
 	model_tfidf_NB.fit(X_train, y_train)
 	return model_tfidf_NB
 
@@ -87,6 +87,7 @@ def save_result(class_report, result_file, prefix):
 			else:
 				writer.write("%s,%s,%s,%s,%s,%s\n" % (prefix,k,v,0,0,0))
 			print(k,v)
+	print("results saved in %s" %(result_file))
 
 def get_arguments():
     parser = argparse.ArgumentParser()

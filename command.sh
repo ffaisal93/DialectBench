@@ -90,7 +90,7 @@ if [[ "$task" = "train_ner" ]]; then
 		echo ${ofile}
 		echo ${base_model}
 		echo ${MODEL_NAME}
-		# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
+		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${MODEL_NAME} ${base_model} scripts/ner/norwegian_ner.py
 		# bash install.sh --task train_ner --lang ${MODEL_NAME} --MODEL_NAME ${base_model} --dataset scripts/ner/norwegian_ner.py
 		# bash install.sh --task train_ner --lang bokmaal --MODEL_NAME bert
 	done

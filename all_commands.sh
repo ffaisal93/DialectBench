@@ -89,6 +89,24 @@ if [[ "$action" = "train_ner" ]]; then
 
 fi
 
+if [[ "$action" = "train_pos" ]]; then
+
+	echo "training pos tagging"
+	bash ${script} --task train_pos --MODEL_NAME bert
+	bash ${script} --task train_pos --MODEL_NAME xlmr
+	echo
+
+fi
+
+if [[ "$action" = "predict_pos" ]]; then
+
+	echo "predict pos tagging"
+	bash ${script} --task predict_pos --MODEL_NAME bert
+	bash ${script} --task predict_pos --MODEL_NAME xlmr
+	echo
+
+fi
+
 if [[ "$action" = "predict_ner" ]]; then
 
 	echo "predicting named entity recognition"
@@ -138,3 +156,6 @@ fi
 ### ./all_commands.sh --action predict_ner --execute slurm # done
 
 ### ./all_commands.sh --action train_nli --execute bash
+
+### ./all_commands.sh --action train_pos --execute bash
+### ./all_commands.sh --action predict_pos --execute bash
