@@ -1,5 +1,15 @@
 # DialectBench
 
+### download_data
+- Download all data available [except mt  and the ones loadable through huggingface]
+  ```
+  bash download_data.sh --task all
+  ```
+- Download Turkish dialectal machine translations
+  ```
+  bash download_data.sh --task machine_translation_turkish
+  ```
+
 ### installation
 comment-out `module load python/3.8.6-ff` inside `install.sh` [specific to GMU cluster]
 - Install Adapter Package `[for dependency parsing]`
