@@ -1,0 +1,5 @@
+mandarin_traditional_di,M,0.921,0.9573804573804574,0.9388379204892967,962.0
+mandarin_traditional_di,T,0.959,0.9238921001926782,0.9411187438665358,1038.0
+mandarin_traditional_di,accuracy,0.94,0,0,0
+mandarin_traditional_di,macro avg,0.94,0.9406362787865679,0.9399783321779163,2000.0
+mandarin_traditional_di,weighted avg,0.940722,0.94,0.9400216678220839,2000.0

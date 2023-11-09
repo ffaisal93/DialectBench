@@ -128,13 +128,24 @@ fi
 
 if [[ "$task" = "train_did_lm" || "$task" = "predict_did_lm" ]]; 
 then
-	lang="arabic"
-	dataset="madar"
-	echo ${base_model}
-	echo ${lang}
-	echo ${dataset}
-	bash install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
-	echo
+	# lang="arabic"
+	# dataset="madar"
+	# echo ${base_model}
+	# echo ${lang}
+	# echo ${dataset}
+	# bash install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
+	# echo
+
+	export ALL_LANGS=( "english" "greek" "mandarin_simplified" "mandarin_traditional" "portuguese" "spanish" "swiss-dialects")
+	# export ALL_LANGS=( "english" )
+	for lang in "${ALL_LANGS[@]}"; do
+		dataset="di"
+		echo ${base_model}
+		echo ${lang}
+		echo ${dataset}
+		bash install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
+		echo
+	done
 
 fi
 

@@ -519,19 +519,22 @@ if [[ "$task" = "train_did_lm" || "$task" = "all" ]]; then
 	echo "------------------------------Train dialect-identification using mBERT/XLM-R------------------------------"
 	source vnv/vnv-trns/bin/activate
 
-	train_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/train.csv"
-	dev_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/dev.csv"
 
-	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+	if [[ "$lang" = "arabic" ]]; 
+	then
+		train_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/train.csv"
+		dev_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/dev.csv"
+		output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+		do_eval=True
 
-	python scripts/dialect_identification/text-classification_transformers.py \
+		python scripts/dialect_identification/text-classification_transformers.py \
 	    --model_name_or_path ${MODEL_PATH} \
 	    --train_file ${train_file} \
 	    --validation_file ${dev_file} \
 	    --shuffle_train_dataset \
 	    --metric_name accuracy \
 	    --do_train \
-	    --do_eval \
+	    --do_eval ${do_eval}\
 	    --max_seq_length 512 \
 	    --per_device_train_batch_size 32 \
 	    --learning_rate 2e-5 \
@@ -540,6 +543,30 @@ if [[ "$task" = "train_did_lm" || "$task" = "all" ]]; then
 	    --output_dir ${output_dir} \
 	    --save_strategy no \
 	    --overwrite_output_dir
+	fi
+
+	if [[ "$lang" = "english" || "$lang" = "greek" || "$lang" = "mandarin_simplified" || "$lang" = "mandarin_traditional" || "$lang" = "portuguese" || "$lang" = "spanish" || "$lang" = "swiss-dialects" ]]; 
+	then
+		train_file="data/dialect-identification/${lang}/train.csv"
+		output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+		do_eval=False
+
+		python scripts/dialect_identification/text-classification_transformers.py \
+	    --model_name_or_path ${MODEL_PATH} \
+	    --train_file ${train_file} \
+	    --shuffle_train_dataset \
+	    --metric_name accuracy \
+	    --do_train \
+	    --do_eval ${do_eval}\
+	    --max_seq_length 512 \
+	    --per_device_train_batch_size 32 \
+	    --learning_rate 2e-5 \
+	    --num_train_epochs 5 \
+	    --cache_dir ${CACHE_DIR} \
+	    --output_dir ${output_dir} \
+	    --save_strategy no \
+	    --overwrite_output_dir
+	fi
 	deactivate
 	rm -rf ${output_dir}/checkpoint*
 fi
@@ -574,30 +601,75 @@ if [[ "$task" = "predict_did_lm" || "$task" = "all" ]]; then
 	echo "------------------------------Train dialect-identification using mBERT/XLM-R------------------------------"
 	source vnv/vnv-trns/bin/activate
 
-	train_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/train.csv"
-	dev_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/dev.csv"
-	test_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/test.csv"
-	result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
-	rm -rf ${result_file}
+	if [[ "$lang" = "arabic" ]]; 
+	then
+		train_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/train.csv"
+		dev_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/dev.csv"
+		test_file="data/dialect-identification/arabic/MADAR/MADAR_Corpus/test.csv"
+		result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
+		rm -rf ${result_file}
 
-	output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+		output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
 
-	python scripts/dialect_identification/text-classification_transformers.py \
-	    --model_name_or_path ${output_dir} \
-	    --train_file ${train_file} \
-	    --validation_file ${dev_file} \
-	    --test_file ${test_file} \
-	    --shuffle_train_dataset \
-	    --metric_name accuracy \
-	    --prefix ${lang}_${dataset} \
-	    --result_file ${result_file} \
-	    --do_predict \
-	    --max_seq_length 512 \
-	    --per_device_train_batch_size 32 \
-	    --learning_rate 2e-5 \
-	    --num_train_epochs 5 \
-	    --cache_dir ${CACHE_DIR} \
-	    --output_dir ${output_dir}
+		python scripts/dialect_identification/text-classification_transformers.py \
+		    --model_name_or_path ${output_dir} \
+		    --train_file ${train_file} \
+		    --validation_file ${dev_file} \
+		    --test_file ${test_file} \
+		    --shuffle_train_dataset \
+		    --metric_name accuracy \
+		    --prefix ${lang}_${dataset} \
+		    --result_file ${result_file} \
+		    --do_predict \
+		    --max_seq_length 512 \
+		    --per_device_train_batch_size 32 \
+		    --learning_rate 2e-5 \
+		    --num_train_epochs 5 \
+		    --cache_dir ${CACHE_DIR} \
+		    --output_dir ${output_dir}
+	fi
+
+	if [[ "$lang" = "english" || "$lang" = "mandarin_simplified" || "$lang" = "mandarin_traditional" || "$lang" = "portuguese" || "$lang" = "spanish" ]]; 
+	then
+		train_file="data/dialect-identification/${lang}/train.csv"
+		test_file="data/dialect-identification/${lang}/dev.csv"
+		result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
+		rm -rf ${result_file}
+
+		output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+
+	fi
+
+	if [[ "$lang" = "greek" || "$lang" = "swiss-dialects" ]]; 
+	then
+		train_file="data/dialect-identification/${lang}/train.csv"
+		test_file="data/dialect-identification/${lang}/test.csv"
+		result_file="${RESULT_FOLDER}/${MODEL_NAME}_${task}_${lang}_${dataset}.txt"
+		rm -rf ${result_file}
+
+		output_dir="/scratch/ffaisal/DialectBench/experiments/${MODEL_NAME}/did/${lang}_${dataset}"
+
+	fi
+
+	if [[ "$lang" = "english" || "$lang" = "greek" || "$lang" = "mandarin_simplified" || "$lang" = "mandarin_traditional" || "$lang" = "portuguese" || "$lang" = "spanish" || "$lang" = "swiss-dialects" ]]; 
+	then
+		python scripts/dialect_identification/text-classification_transformers.py \
+		    --model_name_or_path ${output_dir} \
+		    --train_file ${train_file} \
+		    --test_file ${test_file} \
+		    --shuffle_train_dataset \
+		    --metric_name accuracy \
+		    --prefix ${lang}_${dataset} \
+		    --result_file ${result_file} \
+		    --do_predict \
+		    --max_seq_length 512 \
+		    --per_device_train_batch_size 32 \
+		    --learning_rate 2e-5 \
+		    --num_train_epochs 5 \
+		    --cache_dir ${CACHE_DIR} \
+		    --output_dir ${output_dir}
+
+	fi
 
 	deactivate
 fi
