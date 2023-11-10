@@ -1,0 +1,73 @@
+[{
+    "aeb_Arab": {
+        "lang": "aeb_Arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "aeb_Latn": {
+        "lang": "aeb_Latn",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "arb_arab": {
+        "lang": "arb_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "ar-lb": {
+        "lang": "ar-lb",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "arq_arab": {
+        "lang": "arq_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "ary_arab": {
+        "lang": "ary_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "arz_arab": {
+        "lang": "arz_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "jor_arab": {
+        "lang": "jor_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+},{
+    "sau_arab": {
+        "lang": "sau_arab",
+        "langgroup": "arabic",
+        "split": ["train","test","dev"],
+        "dataset": "TSAC"
+
+    }
+}]
