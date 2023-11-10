@@ -1,0 +1,838 @@
+[{
+    "Aleppo": {
+        "lang": "Aleppo",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Aleppo-english"
+
+    }
+},{
+    "Alexandria": {
+        "lang": "Alexandria",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Alexandria-english"
+
+    }
+},{
+    "Algiers": {
+        "lang": "Algiers",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Algiers-english"
+
+    }
+},{
+    "Amman": {
+        "lang": "Amman",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Amman-english"
+
+    }
+},{
+    "Aswan": {
+        "lang": "Aswan",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Aswan-english"
+
+    }
+},{
+    "Baghdad": {
+        "lang": "Baghdad",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Baghdad-english"
+
+    }
+},{
+    "Basra": {
+        "lang": "Basra",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Basra-english"
+
+    }
+},{
+    "Beirut": {
+        "lang": "Beirut",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Beirut-english"
+
+    }
+},{
+    "Benghazi": {
+        "lang": "Benghazi",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Benghazi-english"
+
+    }
+},{
+    "Cairo": {
+        "lang": "Cairo",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Cairo-english"
+
+    }
+},{
+    "Damascus": {
+        "lang": "Damascus",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Damascus-english"
+
+    }
+},{
+    "Doha": {
+        "lang": "Doha",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Doha-english"
+
+    }
+},{
+    "Fes": {
+        "lang": "Fes",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Fes-english"
+
+    }
+},{
+    "Jeddah": {
+        "lang": "Jeddah",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Jeddah-english"
+
+    }
+},{
+    "Jerusalem": {
+        "lang": "Jerusalem",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Jerusalem-english"
+
+    }
+},{
+    "Khartoum": {
+        "lang": "Khartoum",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Khartoum-english"
+
+    }
+},{
+    "Mosul": {
+        "lang": "Mosul",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Mosul-english"
+
+    }
+},{
+    "Muscat": {
+        "lang": "Muscat",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Muscat-english"
+
+    }
+},{
+    "Rabat": {
+        "lang": "Rabat",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Rabat-english"
+
+    }
+},{
+    "Riyadh": {
+        "lang": "Riyadh",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Riyadh-english"
+
+    }
+},{
+    "Salt": {
+        "lang": "Salt",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Salt-english"
+
+    }
+},{
+    "Sanaa": {
+        "lang": "Sanaa",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Sanaa-english"
+
+    }
+},{
+    "Sfax": {
+        "lang": "Sfax",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Sfax-english"
+
+    }
+},{
+    "Arabic": {
+        "lang": "Arabic",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Arabic-english"
+
+    }
+},{
+    "Tripoli": {
+        "lang": "Tripoli",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Tripoli-english"
+
+    }
+},{
+    "Tunis": {
+        "lang": "Tunis",
+        "langgroup": "Arabic",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Tunis-english"
+
+    }
+},{
+    "Aranese": {
+        "lang": "Aranese",
+        "langgroup": "Aranese",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Aranese-english"
+
+    }
+},{
+    "Aranese": {
+        "lang": "Aranese",
+        "langgroup": "Aranese",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Aranese-english"
+
+    }
+},{
+    "Amenduze-Unaso": {
+        "lang": "Amenduze-Unaso",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Amenduze-Unaso-english"
+
+    }
+},{
+    "Azkaine": {
+        "lang": "Azkaine",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Azkaine-english"
+
+    }
+},{
+    "Baigorri": {
+        "lang": "Baigorri",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Baigorri-english"
+
+    }
+},{
+    "Barkoxe": {
+        "lang": "Barkoxe",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Barkoxe-english"
+
+    }
+},{
+    "Behorlegi": {
+        "lang": "Behorlegi",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Behorlegi-english"
+
+    }
+},{
+    "Bidarrai": {
+        "lang": "Bidarrai",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Bidarrai-english"
+
+    }
+},{
+    "Donibane-Lohizune": {
+        "lang": "Donibane-Lohizune",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Donibane-Lohizune-english"
+
+    }
+},{
+    "Garruze": {
+        "lang": "Garruze",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Garruze-english"
+
+    }
+},{
+    "Heleta": {
+        "lang": "Heleta",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Heleta-english"
+
+    }
+},{
+    "Iholdi": {
+        "lang": "Iholdi",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Iholdi-english"
+
+    }
+},{
+    "Jatsu": {
+        "lang": "Jatsu",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Jatsu-english"
+
+    }
+},{
+    "Jutsi": {
+        "lang": "Jutsi",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Jutsi-english"
+
+    }
+},{
+    "Larzabale-Arroze-Zibitze": {
+        "lang": "Larzabale-Arroze-Zibitze",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Larzabale-Arroze-Zibitze-english"
+
+    }
+},{
+    "Luhuso": {
+        "lang": "Luhuso",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Luhuso-english"
+
+    }
+},{
+    "Maule-Lextarre": {
+        "lang": "Maule-Lextarre",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Maule-Lextarre-english"
+
+    }
+},{
+    "Mugerre": {
+        "lang": "Mugerre",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Mugerre-english"
+
+    }
+},{
+    "Sara": {
+        "lang": "Sara",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Sara-english"
+
+    }
+},{
+    "Senpere": {
+        "lang": "Senpere",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Senpere-english"
+
+    }
+},{
+    "Basque": {
+        "lang": "Basque",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Basque-english"
+
+    }
+},{
+    "Suhuskune": {
+        "lang": "Suhuskune",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Suhuskune-english"
+
+    }
+},{
+    "Uharte-Garazi": {
+        "lang": "Uharte-Garazi",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Uharte-Garazi-english"
+
+    }
+},{
+    "Urruna": {
+        "lang": "Urruna",
+        "langgroup": "Basque",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Urruna-english"
+
+    }
+},{
+    "Barisal": {
+        "lang": "Barisal",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Barisal-english"
+
+    }
+},{
+    "Dhakaiya": {
+        "lang": "Dhakaiya",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Dhakaiya-english"
+
+    }
+},{
+    "Jessore": {
+        "lang": "Jessore",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Jessore-english"
+
+    }
+},{
+    "Khulna": {
+        "lang": "Khulna",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Khulna-english"
+
+    }
+},{
+    "Kushtia": {
+        "lang": "Kushtia",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Kushtia-english"
+
+    }
+},{
+    "Bengali": {
+        "lang": "Bengali",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Bengali-english"
+
+    }
+},{
+    "Bengali": {
+        "lang": "Bengali",
+        "langgroup": "Bengali",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Bengali-english"
+
+    }
+},{
+    "Dari": {
+        "lang": "Dari",
+        "langgroup": "Farsi",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Dari-english"
+
+    }
+},{
+    "Farsi": {
+        "lang": "Farsi",
+        "langgroup": "Farsi",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Farsi-english"
+
+    }
+},{
+    "Farsi": {
+        "lang": "Farsi",
+        "langgroup": "Farsi",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Farsi-english"
+
+    }
+},{
+    "Occitan": {
+        "lang": "Occitan",
+        "langgroup": "French",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Occitan-english"
+
+    }
+},{
+    "French": {
+        "lang": "French",
+        "langgroup": "French",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "French-english"
+
+    }
+},{
+    "Danube_Bavarian": {
+        "lang": "Danube_Bavarian",
+        "langgroup": "German",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Danube_Bavarian-english"
+
+    }
+},{
+    "Saxony": {
+        "lang": "Saxony",
+        "langgroup": "German",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Saxony-english"
+
+    }
+},{
+    "German": {
+        "lang": "German",
+        "langgroup": "German",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "German-english"
+
+    }
+},{
+    "Cretan": {
+        "lang": "Cretan",
+        "langgroup": "Greek",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Cretan-english"
+
+    }
+},{
+    "Greek": {
+        "lang": "Greek",
+        "langgroup": "Greek",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Greek-english"
+
+    }
+},{
+    "Griko": {
+        "lang": "Griko",
+        "langgroup": "Griko",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Griko-english"
+
+    }
+},{
+    "Griko": {
+        "lang": "Griko",
+        "langgroup": "Griko",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Griko-english"
+
+    }
+},{
+    "Mehabad": {
+        "lang": "Mehabad",
+        "langgroup": "Kurdish",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Mehabad-english"
+
+    }
+},{
+    "Sine": {
+        "lang": "Sine",
+        "langgroup": "Kurdish",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Sine-english"
+
+    }
+},{
+    "Kurdish": {
+        "lang": "Kurdish",
+        "langgroup": "Kurdish",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Kurdish-english"
+
+    }
+},{
+    "Eastern": {
+        "lang": "Eastern",
+        "langgroup": "Norwegian",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Eastern-english"
+
+    }
+},{
+    "Setesdal": {
+        "lang": "Setesdal",
+        "langgroup": "Norwegian",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Setesdal-english"
+
+    }
+},{
+    "Southwestern": {
+        "lang": "Southwestern",
+        "langgroup": "Norwegian",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Southwestern-english"
+
+    }
+},{
+    "Norwegian": {
+        "lang": "Norwegian",
+        "langgroup": "Norwegian",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Norwegian-english"
+
+    }
+},{
+    "Eritrean": {
+        "lang": "Eritrean",
+        "langgroup": "Tigrinya",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Eritrean-english"
+
+    }
+},{
+    "Ethiopian": {
+        "lang": "Ethiopian",
+        "langgroup": "Tigrinya",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Ethiopian-english"
+
+    }
+},{
+    "Tigrinya": {
+        "lang": "Tigrinya",
+        "langgroup": "Tigrinya",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Tigrinya-english"
+
+    }
+},{
+    "az-en": {
+        "lang": "az-en",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "az-en"
+
+    }
+},{
+    "az-tr": {
+        "lang": "az-tr",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "az-tr"
+
+    }
+},{
+    "ba-en": {
+        "lang": "ba-en",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "ba-en"
+
+    }
+},{
+    "ba-ru": {
+        "lang": "ba-ru",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "ba-ru"
+
+    }
+},{
+    "en-az": {
+        "lang": "en-az",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-az"
+
+    }
+},{
+    "en-ba": {
+        "lang": "en-ba",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-ba"
+
+    }
+},{
+    "en-kaa": {
+        "lang": "en-kaa",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-kaa"
+
+    }
+},{
+    "en-kk": {
+        "lang": "en-kk",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-kk"
+
+    }
+},{
+    "en-ky": {
+        "lang": "en-ky",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-ky"
+
+    }
+},{
+    "en-sah": {
+        "lang": "en-sah",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-sah"
+
+    }
+},{
+    "en-tr": {
+        "lang": "en-tr",
+        "langgroup": "Turkish",
+        "split": ["train","test","dev"],
+        "dataset": "til-mt",
+        "translation_direction": "en-tr"
+
+    }
+},{
+    "Central": {
+        "lang": "Central",
+        "langgroup": "Yoruba",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Central-english"
+
+    }
+},{
+    "Yoruba": {
+        "lang": "Yoruba",
+        "langgroup": "Yoruba",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Yoruba-english"
+
+    }
+},{
+    "Yoruba": {
+        "lang": "Yoruba",
+        "langgroup": "Yoruba",
+        "split": ["test"],
+        "dataset": "codet",
+        "translation_direction": "Yoruba-english"
+
+    }
+}]
