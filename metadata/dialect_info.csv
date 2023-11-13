@@ -1,0 +1,170 @@
+language group,variety name,ISO 639,LangId,speaker population,mBERT seen,udp,pos,ner,mt,sdqa,rcmc,nli,ti,sc,di
+adyghe,adyghe,ady,ady,-,-,-,-,tick,-,-,-,-,-,-,-
+-,kabardian,kbd,kbd,-,-,-,-,tick,-,-,-,-,-,-,-
+albanian,albanian,sqi,sqi,7500000,tick,tick,tick,-,-,-,-,-,-,-,-
+-,gheg,aln,aln,-,-,tick,tick,-,-,-,-,-,-,-,-
+arabic,Modern standard arabic,-,-,425000000,tick,tick,tick,tick,-,-,tick,tick,tick,-,-
+-,algerian arabic,arq,arq,-,-,-,-,-,-,tick,-,-,-,tick,tick
+-,arabic dar-lev,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,arabic dar-mgr,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,bahraini arabic,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,egyptian arabic,arz,arz,-,-,-,tick,tick,-,tick,tick,tick,tick,tick,tick
+-,gulf arabic,afb,afb,-,-,-,tick,-,-,-,-,-,-,-,tick
+-,jordanian arabic,-,-,-,-,-,-,-,-,tick,-,-,-,tick,-
+-,kabyle,kab,kab,-,-,-,-,tick,-,-,-,tick,tick,-,-
+-,maghrebi arabic,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,mesopotamian arabic,-,-,-,-,-,-,-,-,-,tick,tick,tick,-,tick
+-,moroccan arabic,ary,ary,-,-,-,-,-,-,tick,tick,tick,tick,tick,tick
+-,najdi arabic,ars,ars,-,-,-,-,-,-,-,tick,tick,tick,-,-
+-,north levantine arabic,-,-,-,-,-,-,-,-,-,tick,tick,tick,-,tick
+-,saudi arabian arabic,-,-,-,-,-,-,-,-,tick,-,-,-,tick,-
+-,south levantine arabic,ajp,ajp,-,-,tick,tick,-,-,-,-,tick,tick,tick,tick
+-,ta’izzi-adeni arabic,acq,acq,-,-,-,-,-,-,-,-,tick,tick,-,-
+-,tunisian Arabiei,,Tunizi,,,,,,,,,,,tick,
+-,tunisian arabic,aeb,aeb,-,-,-,-,-,-,tick,-,tick,tick,tick,tick
+-,libian arabic,,ar-lib,,-,,,,,,,,,,tick
+-,yemeni arabic,,ar-yem,,-,,,,,,,,,,tick
+armenian,armenian,-,-,6400000,tick,tick,tick,-,-,-,-,-,-,-,-
+-,western armenian,hyw,hyw,-,-,tick,tick,-,-,-,-,-,-,-,-
+azerbaijani,azerbaijani,azj,azj,28000000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,south azerbaijani,azb,azb,-,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,turkish azerbaijani,-,-,-,-,-,-,-,-,-,-,tick,tick,-,-
+bengali,bengali,ben,ben,250000000,tick,-,-,tick,-,-,-,tick,-,-,-
+-,assamese bengali,asm,asm,-,-,-,-,tick,-,-,-,tick,-,-,-
+-,dhaka bengali,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,kolkata bengali,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+catalan,catalan,cat,cat,11500000,tick,-,tick,-,-,-,-,-,-,-,-
+chinese,chinese,cmn,cmn,1026000000,-,-,-,tick,-,-,-,-,-,-,-
+-,cantonese,-,-,60000000,-,-,-,tick,-,-,-,-,-,-,-
+-,classical chinese,lzh,lzh,-,-,-,tick,tick,-,-,-,-,-,-,-
+-,hakka chinese,hak,hak,-,-,-,-,tick,-,-,-,-,-,-,-
+-,min nan chinese,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,simplified chinese,-,-,-,tick,tick,tick,-,-,-,tick,tick,tick,-,-
+-,simplified chinese-mainland,-,-,-,-,-,-,-,-,-,-,-,-,-,tick
+-,simplified chinese-taiwan,-,-,-,-,-,-,-,-,-,-,-,-,-,tick
+-,traditional chinese,-,-,-,tick,tick,tick,-,-,-,tick,tick,tick,-,-
+-,traditional chinese-mainland,-,-,-,-,-,-,-,-,-,-,-,-,-,tick
+-,traditional chinese-taiwan,-,-,-,-,-,-,-,-,-,-,-,-,-,tick
+-,wu chinese,wuu,wuu,-,-,-,-,tick,-,-,-,-,-,-,-
+-,yue chinese,yue,yue,60000000,-,-,-,-,-,-,-,tick,tick,-,-
+croatian,croatian,hrv,hrv,-,tick,-,-,tick,-,-,-,-,-,-,-
+-,bosnian,bos,bos,3500000,tick,-,-,tick,-,-,-,-,-,-,-
+-,serbian,srp,srp,-,tick,-,-,tick,-,-,-,-,-,-,-
+-,serbo-croatian,-,-,16000000,tick,-,-,tick,-,-,-,-,-,-,-
+dutch,dutch,nld,nld,22000000,tick,tick,tick,tick,-,-,-,tick,tick,-,-
+-,colognian,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,limburgish,lim,lim,-,-,-,-,tick,-,-,-,tick,tick,-,-
+-,luxembourgish,-,-,390000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,northern frisian,frr,frr,-,-,-,-,tick,-,-,-,-,-,-,-
+-,saterland frisian,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,west flemish,vls,vls,-,-,-,-,tick,-,-,-,-,-,-,-
+-,western frisian,fry,fry,470000,-,tick,tick,tick,-,-,-,-,-,-,-
+-,zeelandic,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+english,english,eng,eng,765000000,tick,tick,tick,tick,-,-,tick,tick,tick,-,tick
+,English-great Britain,eng,eng,,,,,,-,-,,,,-,tick
+,English-american,eng,eng,,,,,,-,-,,,,-,tick
+-,african american english,-,-,-,-,tick,-,-,-,-,-,-,-,-,-
+-,australian english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,filipino english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,irish english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,jamaican creole english,jam,jam,-,-,-,-,tick,-,-,-,-,-,-,-
+-,kenyan english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,new zealand english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,nigerian english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,north indian english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,old english,ang,ang,-,-,-,-,tick,-,-,-,-,-,-,-
+-,scottish english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,simple english,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,singlish,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,south african english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,south indian english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,southeast US english,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+finnish,finnish,fin,fin,5000000,tick,-,tick,-,-,-,-,-,-,-,-
+-,estonian,ekk,ekk,1200000,tick,-,tick,-,-,-,-,-,-,-,-
+-,murre-häm,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,murre-kaa,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,murre-lou,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,murre-lvä,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,murre-poh,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+-,murre-sav,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
+french,french,fra,fra,68500000,tick,tick,tick,tick,-,-,-,-,-,-,-
+-,nouormand,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,old french,fro,fro,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,walloon,wln,wln,-,-,-,-,tick,-,-,-,-,-,-,-
+german,german,deu,deu,111800000,tick,tick,tick,tick,-,-,-,-,-,-,-
+-,alemannisch,gsw,gsw,-,-,tick,tick,tick,-,-,-,-,-,-,-
+-,bavarian,bar,bar,-,tick,-,-,tick,-,-,-,-,-,-,-
+-,low german,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,low saxon,frs,frs,-,tick,tick,tick,tick,-,-,-,-,-,-,-
+-,palatine german,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,pennsylvania german,pdc,pdc,-,-,-,-,tick,-,-,-,-,-,-,-
+-,turkish german,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+,swiss German-zh,,,,,,,,,,,,,,tick
+,swiss German-be,,,,,,,,,,,,,,tick
+,swiss German-bs,,,,,,,,,,,,,,tick
+,swiss German-lu,,,,,,,,,,,,,,tick
+greek,modern greek,gre,smg,13000000,tick,-,-,tick,-,-,-,-,-,-,tick
+-,aromanian,rup,rup,-,-,-,-,tick,-,-,-,-,-,-,-
+,cypriot greek,,el-cg,,,,,,,,,,,,tick
+-,pontic,pnt,pnt,-,-,-,-,tick,-,-,-,-,-,-,-
+guarani,guarani,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,brazil guarani,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,paraguay guarani,gug,gug,-,-,tick,tick,-,-,-,-,-,-,-,-
+hindi,hindi,hin,hin,12500000,tick,-,-,tick,-,-,-,-,-,-,-
+-,fiji hindi,hif,hif,-,-,-,-,tick,-,-,-,-,-,-,-
+innuktitut,inupiaq,ipk,ipk,-,-,-,-,tick,-,-,-,-,-,-,-
+-,kalaallisut,kal,kal,-,-,-,-,tick,-,-,-,-,-,-,-
+italian,italian,ita,ita,61100000,tick,tick,tick,tick,-,-,-,tick,tick,-,-
+-,arpitan,frp,frp,-,-,-,-,tick,-,-,-,-,-,-,-
+-,corsican,cos,cos,200000,-,-,-,tick,-,-,-,-,-,-,-
+-,emiliano-romagnolo,eml,eml,-,-,-,-,tick,-,-,-,-,-,-,-
+-,friulian,fur,fur,-,-,-,-,tick,-,-,-,tick,tick,-,-
+-,ligurian,lij,lij,-,-,tick,tick,tick,-,-,-,tick,tick,-,-
+-,lombard,lmo,lmo,-,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,neapolitan,-,-,-,-,tick,tick,tick,-,-,-,-,-,-,-
+-,piedmontese,-,-,-,tick,-,-,tick,-,-,-,-,-,-,-
+-,sardinian,-,-,-,-,-,-,tick,-,-,-,tick,tick,-,-
+-,sicilian,scn,scn,-,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,tarantino,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,ubrian,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,venetian,vec,vec,-,-,-,-,tick,-,-,-,tick,tick,-,-
+kiswahili,kenyan kiswahili,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+-,tanzanian kiswahili,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+komi,komi,kom,kom,-,-,-,-,tick,-,-,-,-,-,-,-
+-,komi-permyak,koi,koi,-,-,tick,tick,tick,-,-,-,-,-,-,-
+-,komi-zyrian,kpv,kpv,-,-,tick,tick,-,-,-,-,-,-,-,-
+korean,korean,kor,kor,66400000,tick,-,-,-,-,tick,-,-,-,-,-
+-,southern korean,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
+kurdish,kurdish,kur,kur,30000000,-,-,-,tick,-,-,-,-,-,-,-
+-,central kurdish,ckb,ckb,7250000,-,-,-,tick,-,-,-,tick,tick,-,-
+-,northern kurdish,kmr,kmr,-,-,-,-,-,-,-,-,tick,tick,-,-
+latvian,latvian,lav,lav,1700000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,latgalian,-,-,-,-,-,-,tick,-,-,-,tick,tick,-,-
+mari,eastern mari,mhr,mhr,-,-,-,-,tick,-,-,-,-,-,-,-
+-,western mari,mrj,mrj,-,-,-,-,tick,-,-,-,-,-,-,-
+norwegian,bokmaal,nob,nob,-,-,-,-,tick,-,-,-,tick,tick,-,-
+-,nynorsk,nno,nno,-,-,tick,tick,tick,-,-,-,tick,tick,-,-
+-,samnorsk,-,-,-,-,tick,tick,tick,-,-,-,-,-,-,-
+-,old nynorsk,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+occitan,occitan,oci,oci,-,tick,-,-,tick,-,-,-,tick,tick,-,-
+portuguese,european portuguese,por,por,217000000,tick,tick,tick,-,-,-,-,tick,tick,-,tick
+-,brazilian portuguese,-,-,217000000,-,tick,tick,-,-,-,-,-,-,-,tick
+punjabi,punjabi,pan,pan,29500000,tick,-,-,tick,-,-,-,-,-,-,-
+-,western punjabi,pnb,pnb,-,tick,-,-,tick,-,-,-,-,-,-,-
+romanian,romanian,ron,ron,23000000,tick,-,-,tick,-,-,-,-,-,-,-
+-,moldovan,-,-,23000000,-,-,-,tick,-,-,-,-,-,-,-
+romansh,romansh,roh,roh,-,-,-,-,tick,-,-,-,-,-,-,-
+sami,north sami,sme,sme,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,skolt sami,sms,sms,-,-,tick,tick,-,-,-,-,-,-,-,-
+sorbian,lower sorbian,dsb,dsb,-,-,-,-,tick,-,-,-,-,-,-,-
+-,upper sorbian,hsb,hsb,-,-,-,-,tick,-,-,-,-,-,-,-
+sotho,northern sotho,-,-,-,-,-,-,tick,-,-,tick,tick,tick,-,-
+-,southern sotho,sot,sot,5600000,-,-,-,tick,-,-,tick,tick,tick,-,-
+spanish,spanish,spa,spa,466000000,tick,-,-,tick,-,-,-,tick,tick,-,-
+,Spanish-peninsular,,,,,,,,,,,,,,tick
+,spanish-argentinian,,,,,,,,,,,,,,tick
+-,extremaduran,ext,ext,-,-,-,-,tick,-,-,-,-,-,-,-
+-,galician,glg,glg,2400000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,mirandese,mwl,mwl,-,-,-,-,tick,-,-,-,-,-,-,-
+turkish,turkish,tur,tur,50700000,tick,-,-,tick,-,-,-,-,-,-,-
+-,crimean turkish,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
