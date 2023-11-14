@@ -80,7 +80,9 @@ finnish,finnish,fin,fin,5000000,tick,-,tick,-,-,-,-,-,-,-,-
 -,murre-poh,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
 -,murre-sav,-,-,-,-,-,tick,-,-,-,-,-,-,-,-
 french,french,fra,fra,68500000,tick,tick,tick,tick,-,-,-,-,-,-,-
+-,arpitan*,frp,frp,157000,-,-,-,tick,-,-,-,-,-,-,-
 -,norman*,nrf,nrf,20000,-,-,-,tick,-,-,-,-,-,-,-
+-,occitan*,oci,oci,200000,tick,-,-,tick,-,-,-,tick,tick,-,-
 -,old french,fro,fro,antiquated,-,tick,tick,-,-,-,-,-,-,-,-
 -,walloon*,wln,wln,600000,-,-,-,tick,-,-,-,-,-,-,-
 frisian,western frisian,fry,fry,470000,-,tick,tick,tick,-,-,-,-,-,-,-
@@ -94,11 +96,11 @@ german,german,deu,deu,111800000,tick,tick,tick,tick,-,-,-,-,-,-,-
 -,luxembourgish,ltz,ltz,390000,tick,-,-,tick,-,-,-,,,-,-
 -,palatine german,-,-,400000,-,-,-,tick,-,-,-,-,-,-,-
 -,pennsylvania german,pdc,pdc,300000,-,-,-,tick,-,-,-,-,-,-,-
--,turkish german,-,-,,-,tick,tick,-,-,-,-,-,-,-,-
--,swiss german-zh,,,,,,,,,,,,,,tick
--,swiss german-be,,,,,,,,,,,,,,tick
--,swiss german-bs,,,,,,,,,,,,,,tick
--,swiss german-lu,,,,,,,,,,,,,,tick
+-,turkish german,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,swiss german-zh,,,-,,,,,,,,,,,tick
+-,swiss german-be,,,-,,,,,,,,,,,tick
+-,swiss german-bs,,,-,,,,,,,,,,,tick
+-,swiss german-lu,,,-,,,,,,,,,,,tick
 greek,modern greek,ell,ell,13000000,tick,-,-,tick,-,-,-,-,-,-,tick
 -,cypriot greek,,el-cg,700000,,,,,,,,,,,tick
 -,pontic,pnt,pnt,778000,-,-,-,tick,-,-,-,-,-,-,-
@@ -110,57 +112,55 @@ hindi,hindi,hin,hin,592000000,tick,-,-,tick,-,-,-,-,-,-,-
 inuit,inupiaq,ipk,ipk,1250,-,-,-,tick,-,-,-,-,-,-,-
 -,kalaallisut,kal,kal,50000,-,-,-,tick,-,-,-,-,-,-,-
 italian,italian,ita,ita,61100000,tick,tick,tick,tick,-,-,-,tick,tick,-,-
--,arpitan,frp,frp,-,-,-,-,tick,-,-,-,-,-,-,-
--,corsican,cos,cos,200000,-,-,-,tick,-,-,-,-,-,-,-
--,emiliano-romagnolo,eml,eml,-,-,-,-,tick,-,-,-,-,-,-,-
--,friulian,fur,fur,-,-,-,-,tick,-,-,-,tick,tick,-,-
--,ligurian,lij,lij,-,-,tick,tick,tick,-,-,-,tick,tick,-,-
--,lombard,lmo,lmo,-,tick,-,-,tick,-,-,-,tick,tick,-,-
--,neapolitan,-,-,-,-,tick,tick,tick,-,-,-,-,-,-,-
--,piedmontese,-,-,-,tick,-,-,tick,-,-,-,-,-,-,-
--,sardinian,-,-,-,-,-,-,tick,-,-,-,tick,tick,-,-
--,sicilian,scn,scn,-,tick,-,-,tick,-,-,-,tick,tick,-,-
--,tarantino,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
--,ubrian,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
--,venetian,vec,vec,-,-,-,-,tick,-,-,-,tick,tick,-,-
-kiswahili,kenyan kiswahili,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
--,tanzanian kiswahili,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
-komi,komi,kom,kom,-,-,-,-,tick,-,-,-,-,-,-,-
--,komi-permyak,koi,koi,-,-,tick,tick,tick,-,-,-,-,-,-,-
--,komi-zyrian,kpv,kpv,-,-,tick,tick,-,-,-,-,-,-,-,-
+-,corsican,cos,cos,150000,-,-,-,tick,-,-,-,-,-,-,-
+-,emiliano-romagnolo*,egl,egl,4400000,-,-,-,tick,-,-,-,-,-,-,-
+-,friulian*,fur,fur,420000,-,-,-,tick,-,-,-,tick,tick,-,-
+-,ligurian*,lij,lij,500000,-,tick,tick,tick,-,-,-,tick,tick,-,-
+-,lombard*,lmo,lmo,3800000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,neapolitan,nap,nap,5700000,-,tick,tick,tick,-,-,-,-,-,-,-
+-,piedmontese*,pms,pms,2000000,tick,-,-,tick,-,-,-,-,-,-,-
+-,sardinian*,srd,srd,1000000,-,-,-,tick,-,-,-,tick,tick,-,-
+-,sicilian,scn,scn,4700000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,tarantino,-,-,220000,-,-,-,tick,-,-,-,-,-,-,-
+-,umbrian*,xum,xum,antiquated,-,tick,tick,-,-,-,-,-,-,-,-
+-,venetian*,vec,vec,3900000,-,-,-,tick,-,-,-,tick,tick,-,-
+kiswahili,kenyan kiswahili,-,-,1000000,-,-,-,-,-,tick,-,-,-,-,-
+-,tanzanian kiswahili,-,-,15000000,-,-,-,-,-,tick,-,-,-,-,-
+komi,komi,kom,kom,1000000,-,-,-,tick,-,-,-,-,-,-,-
+-,komi-permyak,koi,koi,63000,-,tick,tick,tick,-,-,-,-,-,-,-
+-,komi-zyrian,kpv,kpv,99609,-,tick,tick,-,-,-,-,-,-,-,-
 korean,korean,kor,kor,66400000,tick,-,-,-,-,tick,-,-,-,-,-
 -,southern korean,-,-,-,-,-,-,-,-,tick,-,-,-,-,-
 kurdish,kurdish,kur,kur,30000000,-,-,-,tick,-,-,-,-,-,-,-
 -,central kurdish,ckb,ckb,7250000,-,-,-,tick,-,-,-,tick,tick,-,-
--,northern kurdish,kmr,kmr,-,-,-,-,-,-,-,-,tick,tick,-,-
+-,northern kurdish,kmr,kmr,15000000,-,-,-,-,-,-,-,tick,tick,-,-
 latvian,latvian,lav,lav,1700000,tick,-,-,tick,-,-,-,tick,tick,-,-
--,latgalian,-,-,-,-,-,-,tick,-,-,-,tick,tick,-,-
-mari,eastern mari,mhr,mhr,-,-,-,-,tick,-,-,-,-,-,-,-
--,western mari,mrj,mrj,-,-,-,-,tick,-,-,-,-,-,-,-
-norwegian,bokmaal,nob,nob,-,-,-,-,tick,-,-,-,tick,tick,-,-
--,nynorsk,nno,nno,-,-,tick,tick,tick,-,-,-,tick,tick,-,-
--,samnorsk,-,-,-,-,tick,tick,tick,-,-,-,-,-,-,-
--,old nynorsk,-,-,-,-,tick,tick,-,-,-,-,-,-,-,-
-occitan,occitan,oci,oci,-,tick,-,-,tick,-,-,-,tick,tick,-,-
-portuguese,european portuguese,por,por,217000000,tick,tick,tick,-,-,-,-,tick,tick,-,tick
--,brazilian portuguese,-,-,217000000,-,tick,tick,-,-,-,-,-,-,-,tick
-punjabi,punjabi,pan,pan,29500000,tick,-,-,tick,-,-,-,-,-,-,-
--,western punjabi,pnb,pnb,-,tick,-,-,tick,-,-,-,-,-,-,-
+-,latgalian,ltg,ltg,200000,-,-,-,tick,-,-,-,tick,tick,-,-
+mari,eastern mari,mhr,mhr,470000,-,-,-,tick,-,-,-,-,-,-,-
+-,western mari,mrj,mrj,30000,-,-,-,tick,-,-,-,-,-,-,-
+norwegian,bokmaal,nob,nob,written only,-,-,-,tick,-,-,-,tick,tick,-,-
+-,nynorsk,nno,nno,written only,-,tick,tick,tick,-,-,-,tick,tick,-,-
+-,samnorsk,-,-,antiquated,-,tick,tick,tick,-,-,-,-,-,-,-
+-,old nynorsk,non,non,antiquated,-,tick,tick,-,-,-,-,-,-,-,-
+portuguese,european portuguese,por,por,40000000,tick,tick,tick,-,-,-,-,tick,tick,-,tick
+-,brazilian portuguese,-,-,203062512,-,tick,tick,-,-,-,-,-,-,-,tick
+-,mirandese*,mwl,mwl,15000,-,-,-,tick,-,-,-,-,-,-,-
+punjabi,punjabi,pan,pan,113000000,tick,-,-,tick,-,-,-,-,-,-,-
+-,western punjabi,pnb,pnb,80540000,tick,-,-,tick,-,-,-,-,-,-,-
 romanian,romanian,ron,ron,23000000,tick,-,-,tick,-,-,-,-,-,-,-
--,aromanian,rup,rup,210000,-,-,-,tick,-,-,-,-,-,-,-
+-,aromanian*,rup,rup,210000,-,-,-,tick,-,-,-,-,-,-,-
 -,moldovan,-,-,23000000,-,-,-,tick,-,-,-,-,-,-,-
-romansh,romansh,roh,roh,-,-,-,-,tick,-,-,-,-,-,-,-
-sami,north sami,sme,sme,-,-,tick,tick,-,-,-,-,-,-,-,-
--,skolt sami,sms,sms,-,-,tick,tick,-,-,-,-,-,-,-,-
-sorbian,lower sorbian,dsb,dsb,-,-,-,-,tick,-,-,-,-,-,-,-
--,upper sorbian,hsb,hsb,-,-,-,-,tick,-,-,-,-,-,-,-
-sotho,northern sotho,-,-,-,-,-,-,tick,-,-,tick,tick,tick,-,-
+romansh,romansh,roh,roh,60000,-,-,-,tick,-,-,-,-,-,-,-
+sami,north sami,sme,sme,25000,-,tick,tick,-,-,-,-,-,-,-,-
+-,skolt sami,sms,sms,330,-,tick,tick,-,-,-,-,-,-,-,-
+sorbian,lower sorbian,dsb,dsb,6900,-,-,-,tick,-,-,-,-,-,-,-
+-,upper sorbian,hsb,hsb,13000,-,-,-,tick,-,-,-,-,-,-,-
+sotho,northern sotho,nso,nso,13800000,-,-,-,tick,-,-,tick,tick,tick,-,-
 -,southern sotho,sot,sot,5600000,-,-,-,tick,-,-,tick,tick,tick,-,-
 spanish,spanish,spa,spa,466000000,tick,-,-,tick,-,-,-,tick,tick,-,-
--,argentinian spanish,,,,,,,,,,,,,,tick
--,extremaduran,ext,ext,-,-,-,-,tick,-,-,-,-,-,-,-
--,galician,glg,glg,2400000,tick,-,-,tick,-,-,-,tick,tick,-,-
--,mirandese,mwl,mwl,-,-,-,-,tick,-,-,-,-,-,-,-
--,peninsular spanish,,,,,,,,,,,,,,tick
-turkish,turkish,tur,tur,50700000,tick,-,-,tick,-,-,-,-,-,-,-
--,crimean turkish,-,-,-,-,-,-,tick,-,-,-,-,-,-,-
+-,argentinian spanish,,,41700000,,,,,,,,,,,tick
+-,extremaduran*,ext,ext,200000,-,-,-,tick,-,-,-,-,-,-,-
+-,galician*,glg,glg,2400000,tick,-,-,tick,-,-,-,tick,tick,-,-
+-,peninsular spanish,,,40000000,,,,,,,,,,,tick
+turkish,turkish,tur,tur,90000000,tick,-,-,tick,-,-,-,-,-,-,-
+-,crimean tatar*,crh,crh,580000,-,-,-,tick,-,-,-,-,-,-,-
