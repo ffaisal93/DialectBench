@@ -18,7 +18,7 @@ while [ $# -gt 0 ]; do
 done
 
 
-if [[ "$action" = "slurm" ]]; then
+if [[ "$action" = "cluster" ]]; then
    module load git
    module load zip
    module load openjdk/11.0.2-qg
@@ -46,12 +46,22 @@ download_unzip_rename() {
 
   wget -O "$zipname" "$url"
 
-  unzip "$zipname" -x __MACOSX/*
+  if [[ "$action" = "cluster" ]]; 
+  then
+   jar -xf "$zipname"
+  fi
 
-  local extracted=$(unzip -l "$zipname" | awk '/ extracting: /{print $2}')
+  if [[ "$action" = "bash" ]]; 
+  then
+   unzip "$zipname" -x __MACOSX/*
+
+   local extracted=$(unzip -l "$zipname" | awk '/ extracting: /{print $2}')
+  fi
   
   rm "$zipname"
-
+  find . -type d -name '__MACOSX*' -prune -exec rm -rf {} +
+  find . -type d -name '.DS_Store*' -prune -exec rm -rf {} +
+  find . -type d -name '._*' -prune -exec rm -rf {} +
 }
 
 # Set directory name 
@@ -108,10 +118,6 @@ if [[ "$task" = "sentiment_analysis" || "$task" = "all" ]];
 then
 
    URL="https://gmuedu-my.sharepoint.com/:u:/g/personal/ffaisal_gmu_edu/EVV0wuLTiedKos_YdFysIgwBloQbuaGNSYqCo6XHbfwPxQ?download=1"
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
    download_unzip_rename $URL data
    cd "$ROOT_DIR"
 fi
