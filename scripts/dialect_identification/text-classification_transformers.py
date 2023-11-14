@@ -196,17 +196,17 @@ class DataTrainingArguments:
         metadata={"help": "Identifier to add in the results file."},
     )
 
-    def __post_init__(self):
-        if self.dataset_name is None:
-            if self.train_file is None or self.validation_file is None:
-                raise ValueError(" training/validation file or a dataset name.")
+    # def __post_init__(self):
+    #     if self.dataset_name is None:
+    #         if self.train_file is None or self.validation_file is None:
+    #             raise ValueError(" training/validation file or a dataset name.")
 
-            train_extension = self.train_file.split(".")[-1]
-            assert train_extension in ["csv", "tsv", "json"], "`train_file` should be a csv or a json file."
-            validation_extension = self.validation_file.split(".")[-1]
-            assert (
-                validation_extension == train_extension
-            ), "`validation_file` should have the same extension (csv or json) as `train_file`."
+    #         train_extension = self.train_file.split(".")[-1]
+    #         assert train_extension in ["csv", "tsv", "json"], "`train_file` should be a csv or a json file."
+    #         validation_extension = self.validation_file.split(".")[-1]
+    #         assert (
+    #             validation_extension == train_extension
+    #         ), "`validation_file` should have the same extension (csv or json) as `train_file`."
 
 
 @dataclass
@@ -366,7 +366,10 @@ def main():
     else:
         # Loading a dataset from your local files.
         # CSV/JSON training and evaluation files are needed.
-        data_files = {"train": data_args.train_file, "validation": data_args.validation_file}
+        if data_args.train_file is not None:
+            data_files = {"train": data_args.train_file}
+        if data_args.validation_file is not None:
+            data_files["validation"] =data_args.validation_file
 
         # Get the test dataset: you can provide your own CSV/JSON test file
         if training_args.do_predict:
@@ -469,7 +472,7 @@ def main():
         # We have to deal with common cases that labels appear in the training set but not in the validation/test set.
         # So we build the label list from the union of labels in train/val/test.
         label_list = get_label_list(raw_datasets, split="train")
-        print(raw_datasets["train"])
+        print(raw_datasets["train"][0])
         for split in ["validation", "test"]:
             if split in raw_datasets:
                 val_or_test_labels = get_label_list(raw_datasets, split=split)
@@ -581,6 +584,9 @@ def main():
                 for i in range(len(examples[column])):
                     examples["sentence"][i] += data_args.text_column_delimiter + examples[column][i]
         # Tokenize the texts
+        sentences=examples["sentence"].copy()
+        examples["sentence"]=[x if x is not None else "[UNK]" for x in sentences]
+        # print(examples["sentence"],examples["label"])
         result = tokenizer(examples["sentence"], padding=padding, max_length=max_seq_length, truncation=True)
         if label_to_id is not None and "label" in examples:
             if is_multi_label:
