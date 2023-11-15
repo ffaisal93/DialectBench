@@ -1,0 +1,31 @@
+text,label,pred,match
+ليلى متمكنة برشا من المسرح,positive,"label: positive
+
+sentence: انا احب ان",1.0
+Rajillllll,positive,"label: negative
+
+sentence: انا احب ان",0.0
+Kalb kalb kalb;>,negative,"label: negative
+
+sentence: انا احب ان",1.0
+وليد التونسي راجل ولد راجل تونسي أب عن جد,positive,"label: negative
+
+sentence: انا احب ان",0.0
+Ma7leha,positive,"label: negative
+
+sentence: انا احب ان",0.0
+Ensen tefah ch5aleh mahabech ye7ki m3a chakib 3arfou bech y5arjou min ghir sabatou hhhhhh,negative,"label: negative
+
+sentence: انا احب ان",1.0
+Thabel,positive,"label: negative
+
+sentence: انا احب ان",0.0
+Boulisiyya kleb emmas5in 5ommej.tfih 3alli essis w kewwin fihom sel3a zbela kill om li jebithom.kil bled li 5addmithom,negative,"label: negative
+
+sentence: انا احب ان",1.0
+"""كافون : ماسط و دمك رزين و مافيك ما يعجب هههههههههه ",negative,"label: negative
+
+sentence: انا احب ان",1.0
+المنظر الأحرف,negative,"label: negative
+
+sentence: انا احب ان",1.0

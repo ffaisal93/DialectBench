@@ -1,0 +1,1 @@
+{"lang": "arb_arab", "model": "mistral", "seed": 42, "fs_per_label": 4, "temperature": 1.0, "save_dir": "results/icl/sentiment_analysis/", "overwrite_cache": true, "debug": false, "metrics": {"test_acc": 0.6572410147991543}}
