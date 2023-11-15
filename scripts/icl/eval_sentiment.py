@@ -32,6 +32,7 @@ def load_datasets(lang):
         print(f"{split} size: {len(datasets[split])}")
 
     datasets = DatasetDict(datasets)
+    return datasets
 
 
 def get_few_shot_examples(dataset, fs_per_label=4, seed=42):
