@@ -1,0 +1,32 @@
+text,label,pred,match
+شنوة صار ؟؟تفووووه عليكم ملاّ تفاهات .,negative,"label: negative
+
+sentence: انا احب ان",1.0
+Bent chebba,positive,"label: negative
+
+sentence: انا احب ان",0.0
+Ti bara rawe7777777,negative,"label: negative
+
+sentence: انا احب ان",1.0
+Achref we7ed fel 9a3da elkol,positive,"label: negative
+
+sentence: انا احب ان",0.0
+♥♥♥,positive,"label: positive
+
+sentence: انا احبك وا",1.0
+محلاك يا راضية ,positive,"label: positive
+
+sentence: انا احبك وا",1.0
+ماسط لاسط,negative,"label: negative
+
+sentence: انا احب ان",1.0
+شكيب نقص شويا من الكلام #الفارغ,negative,"label: negative
+
+sentence: انا احب ان",1.0
+Ahsen halka.,positive,"label: positive
+
+sentence: احسن فنان
+label",1.0
+ya bayrammm yéssrrr massettt wallit,negative,"label: negative
+
+sentence: انا احب ان",1.0

@@ -1,6 +1,7 @@
 #Some directories to ignore
 promptsource/
 data/
+wandb/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

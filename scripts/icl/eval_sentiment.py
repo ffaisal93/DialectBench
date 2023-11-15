@@ -10,6 +10,9 @@ import pandas as pd
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from datasets import load_dataset, Dataset, DatasetDict
+from transformers import logging
+
+logging.set_verbosity_error()
 
 CACHE_DIR = "/gscratch/argon/kahuja/.cache/"
 DATA_DIR = "data/sentiment_analysis/arabic/"
@@ -32,6 +35,8 @@ def load_datasets(lang):
         print(f"{split} size: {len(datasets[split])}")
 
     datasets = DatasetDict(datasets)
+    return datasets
+
     return datasets
 
 
@@ -68,10 +73,14 @@ def get_neg_log_prob(model, tokenizer, prompt, device):
 def generate(model, tokenizer, prompt, device, max_tokens=20, temperature=1.0):
     tokenized_out = tokenizer(prompt, return_tensors="pt")
     input_ids = tokenized_out["input_ids"].to(device)
+    attn_mask = tokenized_out["attention_mask"].to(device)
     labels = tokenized_out["input_ids"].to(device)
     with torch.no_grad():
         output = model.generate(
-            input_ids, max_new_tokens=max_tokens, temperature=temperature
+            input_ids,
+            attention_mask=attn_mask,
+            max_new_tokens=max_tokens,
+            temperature=temperature,
         )
     generated_text = tokenizer.batch_decode(output, skip_special_tokens=True)[0]
     prefix_to_remove = prompt
@@ -85,7 +94,7 @@ def generate(model, tokenizer, prompt, device, max_tokens=20, temperature=1.0):
 def evaluate_model_nll(model, tokenizer, test_prompts):
     preds = []
     acc = 0
-    for test_prompt in tqdm(test_prompts):
+    for test_prompt in tqdm(test_prompts, total=len(test_prompts)):
         neg_log_probA = get_neg_log_prob(
             model, tokenizer, test_prompt["correct_prompt"]
         )
@@ -112,18 +121,76 @@ def evaluate_generation(generated_text, label):
     return float(process_generation(generated_text) == process_text(label))
 
 
-def evaluate_model_gen(model, tokenizer, test_prompts, device):
+def prepare_out_file(dataset, preds, correct_or_not, split, save_dir):
+    for idx, (example, pred, match) in enumerate(zip(dataset, preds, correct_or_not)):
+        text = example["text"]
+        label = example["label"]
+        with open(os.path.join(save_dir, f"{split}_out.csv"), "w") as f:
+            csv_writer = csv.writer(f)
+            if idx == 0:
+                csv_writer.writerow(["text", "label", "pred", "match"])
+            csv_writer.writerow([text, label, pred, match])
+
+
+def evaluate_model_gen(
+    model, tokenizer, test_prompts, device, save_file=None, overwrite_cache=False
+):
+    if save_file is not None and os.path.exists(save_file) and not overwrite_cache:
+        cached_out = pd.read_csv(save_file)
+        preds_cache = cached_out["pred"].tolist()
+        correct_or_not_cache = cached_out["match"].tolist()
+
+    else:
+        preds_cache = []
+        correct_or_not_cache = []
+
+    if save_file is not None:
+        f = open(save_file, "w" if overwrite_cache else "a")
+        cache_writer = csv.writer(f)
+        cache_writer.writerow(["text", "label", "pred", "match"])
+    else:
+        cache_writer = None
+
     preds = []
     correct_or_not = []
     accs = 0
-    for test_prompt in tqdm(test_prompts):
-        generated_text = generate(
-            model, tokenizer, test_prompt["prompt"], device=device
-        )
-        preds.append(process_text(generated_text))
-        correct_or_not.append(evaluate_generation(generated_text, test_prompt["label"]))
+    cache_size = len(preds_cache)
+    try:
+        for idx, test_prompt in tqdm(enumerate(test_prompts)):
+            if idx < cache_size:
+                preds.append(preds_cache[idx])
+                correct_or_not.append(correct_or_not_cache[idx])
+            else:
+                generated_text = generate(
+                    model,
+                    tokenizer,
+                    test_prompt["prompt"],
+                    device=device,
+                )
+                preds.append(process_generation(generated_text))
+                correct_or_not.append(
+                    evaluate_generation(generated_text, test_prompt["label"])
+                )
 
-    return np.mean(correct_or_not), preds, correct_or_not
+            if save_file is not None:
+                if idx >= cache_size:
+                    cache_writer.writerow(
+                        [
+                            test_prompt["text"],
+                            test_prompt["label"],
+                            preds[-1],
+                            correct_or_not[-1],
+                        ]
+                    )
+        if save_file is not None:
+            f.close()
+
+        return np.mean(correct_or_not), preds, correct_or_not
+
+    except Exception as e:
+        if save_file is not None:
+            f.close()
+        raise e
 
 
 def construct_prompt(test_example, fs_examples, prompt_for_each_label=False, labels=[]):
@@ -159,32 +226,35 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 
-def prepare_out_file(dataset, preds, correct_or_not, split, save_dir):
-    for idx, (example, pred, match) in enumerate(zip(dataset, preds, correct_or_not)):
-        text = example["text"]
-        label = example["label"]
-        pred_ppd = process_generation(pred)
-        with open(os.path.join(save_dir, f"{split}_out.csv"), "w") as f:
-            csv_writer = csv.writer(f)
-            if idx == 0:
-                csv_writer.writerow(["text", "label", "pred", "pred_ppd", "match"])
-            csv_writer.writerow([text, label, pred, pred_ppd, match])
-
-
-def eval(dataset, fs_examples, split, model, tokenizer, device, save_dir=None):
+def eval(
+    dataset,
+    fs_examples,
+    split,
+    model,
+    tokenizer,
+    device,
+    save_dir=None,
+    overwrite_cache=False,
+):
     test_prompts = [
         {
             "prompt": construct_prompt(test_example, fs_examples),
+            "text": test_example["text"],
             "label": test_example["label"],
         }
         for test_example in dataset
     ]
 
     acc, preds, correct_or_not = evaluate_model_gen(
-        model, tokenizer, test_prompts, device=device
+        model,
+        tokenizer,
+        test_prompts,
+        device=device,
+        save_file=os.path.join(save_dir, f"{split}_out.csv"),
+        overwrite_cache=overwrite_cache,
     )
-    if save_dir is not None:
-        prepare_out_file(dataset, preds, correct_or_not, split, save_dir)
+    # if save_dir is not None:
+    #     prepare_out_file(dataset, preds, correct_or_not, split, save_dir)
 
     return acc
 
@@ -200,40 +270,51 @@ def main(args):
         f"t{args.temperature}",
         f"s{args.seed}",
     )
+    if args.debug:
+        save_dir = os.path.join(save_dir, "debug")
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
     datasets = load_datasets(args.lang)
-    model = AutoModelForCausalLM.from_pretrained(args.model, cache_dir=CACHE_DIR)
-    tokenizer = AutoTokenizer.from_pretrained(args.model, cache_dir=CACHE_DIR)
+    tokenizer = AutoTokenizer.from_pretrained(
+        MODEL2HFSTR[args.model], cache_dir=CACHE_DIR
+    )
+    tokenizer.pad_token_id = tokenizer.eos_token_id
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL2HFSTR[args.model], cache_dir=CACHE_DIR
+    )
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model.to(device)
 
     fs_examples = get_few_shot_examples(datasets["train"], args.fs_per_label, args.seed)
-    print("Evaluating on validation set")
-    val_acc = eval(
-        datasets["validation"],
-        fs_examples,
-        "validation",
-        model,
-        tokenizer,
-        device,
-        save_dir=save_dir,
-    )
+    # print("Evaluating on validation set")
+    # val_acc = eval(
+    #     datasets["validation"]
+    #     if not args.debug
+    #     else datasets["validation"].select(range(10)),
+    #     fs_examples,
+    #     "validation",
+    #     model,
+    #     tokenizer,
+    #     device,
+    #     save_dir=save_dir,
+    #     overwrite_cache=args.overwrite_cache,
+    # )
     print("Evaluating on test set")
     test_acc = eval(
-        datasets["test"],
+        datasets["test"] if not args.debug else datasets["test"].select(range(10)),
         fs_examples,
         "test",
         model,
         tokenizer,
         device,
         save_dir=save_dir,
+        overwrite_cache=args.overwrite_cache,
     )
 
     config = vars(args)
     config["metrics"] = {
-        "val_acc": val_acc,
+        # "val_acc": val_acc,
         "test_acc": test_acc,
     }
     with open(os.path.join(save_dir, "results.json"), "w") as f:
@@ -241,7 +322,7 @@ def main(args):
 
     wandb.log(
         {
-            "val_acc": val_acc,
+            # "val_acc": val_acc,
             "test_acc": test_acc,
         }
     )
@@ -271,6 +352,8 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--fs_per_label", default=4, type=int)
     parser.add_argument("-t", "--temperature", default=1.0, type=float)
     parser.add_argument("--save_dir", default="results/icl/sentiment_analysis/")
+    parser.add_argument("--overwrite_cache", action="store_true")
+    parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
 
     wandb.init(
