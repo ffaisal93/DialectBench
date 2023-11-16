@@ -1,0 +1,1 @@
+{"lang": "korean-korn", "model": "mistral", "save_dir": "results/qa", "few_shot_size": 2, "temperature": 1.0, "seed": 42, "gpu_id": 1, "metrics": {"f1": 65.79017452587246, "em": 58.69565217391305}}

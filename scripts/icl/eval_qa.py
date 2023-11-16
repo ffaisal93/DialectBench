@@ -11,6 +11,10 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from datasets import load_dataset, Dataset, DatasetDict
 from evaluate import load
+from transformers import logging
+
+logging.set_verbosity_error()
+
 
 squad_metric = load("squad")
 
@@ -20,10 +24,11 @@ DATA_DIR = "data/Question-Answering/SDQA-gold-task"
 MODEL2HFSTR = {"mistral": "mistralai/Mistral-7B-v0.1"}
 
 
-def load_datasets(lang):
+def load_datasets(tgt_lang, src_lang):
     datasets = {}
-    for split in ["train", "test", "validation"]:
-        filename = f"{DATA_DIR}/sdqa_{split}_{lang}.json"
+    for split in ["train", "test", "dev"]:
+        lang = src_lang if split == "train" else tgt_lang
+        filename = f"{DATA_DIR}/sdqa-{split}-{lang}.json"
         with open(filename) as f:
             dataset = json.load(f)["data"]
         rows = []
@@ -64,7 +69,7 @@ def generate(model, tokenizer, prompt, device, max_tokens=20, temperature=1.0):
     tokenized_out = tokenizer(prompt, return_tensors="pt")
     input_ids = tokenized_out["input_ids"].to(device)
     with torch.no_grad():
-        output = model(input_ids, max_new_tokens=max_tokens, temperature=temperature)
+        output = model.generate(input_ids, max_new_tokens=max_tokens, temperature=temperature)
     generated_text = tokenizer.batch_decode(output, skip_special_tokens=True)[0]
     prefix_to_remove = prompt
     if generated_text.startswith(prefix_to_remove):
@@ -118,14 +123,19 @@ def evaluate_model(model, tokenizer, test_prompts, device):
     preds = []
     f1s = []
     ems = []
-    for test_prompt in tqdm(test_prompts):
-        generated_text = generate(
-            model, tokenizer, test_prompt["prompt"], device=device
-        )
-        preds.append(process_text(generated_text))
-        result = evaluate_generation(generated_text, test_prompt["example"])
-        f1s.append(result["f1"])
-        ems.append(result["exact"])
+    with tqdm(total=len(test_prompts)) as pbar:
+        for test_prompt in (test_prompts):
+            generated_text = generate(
+                model, tokenizer, test_prompt["prompt"], device=device
+            )
+            generated_text = process_generation(generated_text)
+            preds.append(process_text(generated_text))
+            result = evaluate_generation(generated_text, test_prompt["example"])
+            f1s.append(result["f1"])
+            ems.append(result["exact_match"])
+            pbar.set_description("F1: %.2f, EM: %.2f" % (np.mean(f1s), np.mean(ems)))
+            pbar.update(1)
+            wandb.log({"f1": np.mean(f1s), "em": np.mean(ems)})
 
     return np.mean(f1s), np.mean(ems), preds, f1s, ems
 
@@ -170,18 +180,18 @@ def main(args):
         args.save_dir,
         args.lang,
         args.model,
-        f"k_{args.k}",
+        f"k_{args.few_shot_size}",
         f"temperature_{args.temperature}",
         f"seed_{args.seed}",
     )
 
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
-    datasets = load_datasets(args.lang)
-    model = AutoModelForCausalLM.from_pretrained(args.model, cache_dir=CACHE_DIR)
-    tokenizer = AutoTokenizer.from_pretrained(args.model, cache_dir=CACHE_DIR)
+    datasets = load_datasets(args.lang, src_lang=args.lang.split("-")[0])
+    model = AutoModelForCausalLM.from_pretrained(MODEL2HFSTR[args.model], cache_dir=CACHE_DIR)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL2HFSTR[args.model], cache_dir=CACHE_DIR)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "cpu"
     model.to(device)
 
     fs_examples = get_few_shot_examples(
@@ -238,8 +248,15 @@ if __name__ == "__main__":
             "english-irl",
             "english-usa",
             "english-kenya",
+            "english",
+            "arabic",
+            "bengali",
+            "filipino",
+            "korean",
+            "swahili"
+            
         ],
-        default="en",
+        default="english-gbr",
     )
     parser.add_argument(
         "-m", "--model", type=str, default="mistral", choices=MODEL2HFSTR.keys()
@@ -248,6 +265,7 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--few_shot_size", type=int, default=2)
     parser.add_argument("-t", "--temperature", type=float, default=1.0)
     parser.add_argument("-s", "--seed", type=int, default=42)
+    parser.add_argument("--gpu-id", type=int, default=0)
     args = parser.parse_args()
 
     wandb.init(

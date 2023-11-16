@@ -1,0 +1,1 @@
+{"lang": "english-phl", "model": "mistral", "save_dir": "results/qa", "few_shot_size": 2, "temperature": 1.0, "seed": 42, "gpu_id": 0, "metrics": {"f1": 70.11511573775137, "em": 55.45454545454545}}
