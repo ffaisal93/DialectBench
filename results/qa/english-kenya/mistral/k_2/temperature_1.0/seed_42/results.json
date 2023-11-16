@@ -1,0 +1,1 @@
+{"lang": "english-kenya", "model": "mistral", "save_dir": "results/qa", "few_shot_size": 2, "temperature": 1.0, "seed": 42, "gpu_id": 0, "metrics": {"f1": 64.90845420260551, "em": 51.13636363636363}}

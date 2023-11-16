@@ -1,0 +1,1 @@
+{"lang": "english-gbr", "model": "mistral", "save_dir": "results/qa", "few_shot_size": 2, "temperature": 1.0, "seed": 42, "metrics": {"f1": 70.1793265666023, "em": 55.68181818181818}}

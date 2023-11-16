@@ -1,0 +1,1 @@
+{"lang": "bengali-dhaka", "model": "mistral", "save_dir": "results/qa", "few_shot_size": 2, "temperature": 1.0, "seed": 42, "gpu_id": 0, "metrics": {"f1": 51.73198482932996, "em": 27.43362831858407}}
