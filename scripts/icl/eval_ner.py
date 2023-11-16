@@ -18,7 +18,7 @@ logging.set_verbosity_error()
 
 CACHE_DIR = "/gscratch/argon/kahuja/.cache/"
 DATA_DIR = "data/NER"
-
+MODEL2HFSTR = {"mistral": "mistralai/Mistral-7B-v0.1"}
 METADATA = json.load(open("metadata/ner_metadata.json"))
 
 WIKIANN_TAGS = [
@@ -170,34 +170,135 @@ def evaluate_model(model, tokenizer, test_prompts, device):
     predictions = []
     references = []
     f1s, precisions, recalls = [], [], []
-    for test_prompt in tqdm(test_prompts):
-        # Generate
-        generated_text = generate(
-            model,
-            tokenizer,
-            test_prompt,
-            device,
-            max_tokens=20,
-            temperature=1.0,
-        )
-        # Process
-        generated_tags = process_generation(generated_text)
-        predictions.append(generated_tags)
-        references.append(test_prompt["ner_tags"])
-        results = evaluate_predictions(predictions, references)
-        f1, precision, recall = (
-            results["overall_f1"],
-            results["overall_precision"],
-            results["overall_recall"],
-        )
-        f1s.append(f1)
-        precisions.append(precision)
-        recalls.append(recall)
+    with tqdm(total=len(test_prompts)) as pbar:
+        for test_prompt in test_prompts:
+            # Generate
+            generated_text = generate(
+                model,
+                tokenizer,
+                test_prompt,
+                device,
+                max_tokens=20,
+                temperature=1.0,
+            )
+            # Process
+            generated_tags = process_generation(generated_text)
+            predictions.append(generated_tags)
+            references.append(test_prompt["ner_tags"])
+            results = evaluate_predictions(predictions, references)
+            f1, precision, recall = (
+                results["overall_f1"],
+                results["overall_precision"],
+                results["overall_recall"],
+            )
+            f1s.append(f1)
+            precisions.append(precision)
+            recalls.append(recall)
+            pbar.set_description(
+                f"F1: {f1:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}"
+            )
+            pbar.update(1)
+            wandb.log(
+                {
+                    "f1": f1,
+                    "precision": precision,
+                    "recall": recall,
+                }
+            )
 
-    final_results = {
-        "f1": f1s[-1],
-        "precision": precisions[-1],
-        "recall": recalls[-1],
-    }
+    return evaluate_predictions(predictions, references), predictions
 
-    return evaluate_predictions(predictions, references)
+
+def prepare_out_file(texts, tags, preds, save_dir):
+    out_file = os.path.join(save_dir, "predictions.csv")
+    with open(out_file, "w") as f:
+        writer = csv.writer(f)
+        writer.writerow(["text", "tags", "preds"])
+        for text, tag, pred in zip(texts, tags, preds):
+            writer.writerow([text, tag, pred])
+    return out_file
+
+
+def eval(dataset, fs_examples, split, model, tokenizer, device, save_dir=None):
+    test_prompts = [
+        {
+            "prompt": construct_prompt(test_example, fs_examples),
+            "ner_tags": test_example["ner_tags"],
+        }
+        for test_example in dataset[split]
+    ]
+
+    final_results, preds = evaluate_model(model, tokenizer, test_prompts, device=device)
+    texts = [" ".join(test_example["tokens"]) for test_example in dataset[split]]
+    tags = [" ".join(test_example["ner_tags"]) for test_example in dataset[split]]
+    preds = [" ".join(pred) for pred in preds]
+    out_file = prepare_out_file(texts, tags, preds, save_dir)
+    return final_results, out_file
+
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+
+def main(args):
+    set_seed(args.seed)
+    save_dir = os.path.join(
+        args.save_dir,
+        args.lang,
+        args.model,
+        f"k_{args.k}",
+        f"temperature_{args.temperature}",
+        f"seed_{args.seed}",
+    )
+
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    datasets = load_datasets(args.lang)
+
+    # For languages without any training data use English training data
+    if "train" not in datasets:
+        datasets["train"] = load_datasets("en")["train"]
+
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL2HFSTR[args.model], cache_dir=CACHE_DIR
+    )
+    tokenizer = AutoTokenizer.from_pretrained(
+        MODEL2HFSTR[args.model], cache_dir=CACHE_DIR
+    )
+
+    device = f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+
+    fs_examples = get_few_shot_examples(datasets["train"], k=args.k, seed=args.seed)
+
+    print("Evaluating on test data")
+    final_results, out_file = eval(
+        datasets, fs_examples, "test", model, tokenizer, device, save_dir=save_dir
+    )
+    print(final_results)
+    print(f"Saved predictions to {out_file}")
+    config = vars(args)
+    config["metrics"] = final_results
+
+    with open(os.path.join(save_dir, "results.json"), "w") as f:
+        json.dump(config, f, indent=4)
+
+    wandb.log(final_results)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-l", "--lang", type=str, default="arz")
+    parser.add_argument("-m", "--model", type=str, default="mistral")
+    parser.add_argument("-k", "--k", type=int, default=2)
+    parser.add_argument("-t", "--temperature", type=float, default=1.0)
+    parser.add_argument("-s", "--seed", type=int, default=42)
+    parser.add_argument("--gpu_id", type=int, default=0)
+    parser.add_argument("--save_dir", type=str, default="results/ner")
+    args = parser.parse_args()
+    wandb.init(project="few-shot-ner", config=args)
+    main(args)
