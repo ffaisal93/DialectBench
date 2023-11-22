@@ -1,0 +1,195 @@
+language group,variety name,new_name,ISO 639,LangId,# of speakers,mBERT seen,udp,pos,ner,mt,sdqa,rcmc,nli,tc,sc,di
+albanian,albanian,albanian/albanian,sqi,sqi,7500000,tick,UD_Albanian-TSA,UD_Albanian-TSA,-,-,-,-,-,-,-,-
+albanian,gheg,albanian/gheg,aln,aln,4100000,-,UD_Gheg-GPS,UD_Gheg-GPS,-,-,-,-,-,-,-,-
+arabic,modern standard arabic,arabic/modern standard,arb,arb,425000000,tick,UD_Arabic-PADT,UD_Arabic-PADT,ar,-,-,arb_Arab,arb_Arab,arb_Arab,-,arabic:msa
+arabic,algerian arabic,arabic/algerian,arq,arq,41700000,-,-,-,-,-,arabic--dza,-,-,-,arq_arab,arabic:alg
+arabic,arabic dar-lev~,arabic/levantine,-,-,-,-,-,dar-lev,-,-,-,-,-,-,-,-
+arabic,bahraini arabic,arabic/bahraini,-,-,70000,-,-,-,-,-,arabic--bhr,-,-,-,-,-
+arabic,egyptian arabic,arabic/egyptian,arz,arz,102000000,-,-,dar-egy,arz,-,arabic--egy,arz_Arab,arz_Arab,arz_Arab,arz_arab,-
+arabic,egyptian arabic,arabic/egyptian/cai,arz,arz,-,-,-,-,-,-,-,-,-,-,-,arabic:cai
+arabic,egyptian arabic,arabic/egyptian/alx,arz,arz,-,-,-,-,-,-,-,-,-,-,-,arabic:alx
+arabic,egyptian arabic,arabic/egyptian/asw,arz,arz,-,-,-,-,-,-,-,-,-,-,-,arabic:asw
+arabic,egyptian arabic,arabic/egyptian/kha,arz,arz,-,-,-,-,-,-,-,-,-,-,-,arabic:kha
+arabic,gulf arabic,arabic/gulf,afb,afb,11000000,-,-,dar-glf,-,-,-,-,-,-,-,-
+arabic,gulf arabic,arabic/gulf/jed,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:jed
+arabic,gulf arabic,arabic/gulf/doh,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:doh
+arabic,gulf arabic,arabic/gulf/mus,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:mus
+arabic,gulf arabic,arabic/gulf/riy,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:riy
+arabic,jordanian arabic,arabic/jordanian,-,-,6240000,-,-,-,-,-,arabic--jor,-,-,-,jor_arab,-
+arabic,kabyle*,arabic/kabyle,kab,kab,7500000,-,-,-,kab,-,-,-,kab_Latn,kab_Latn,-,-
+arabic,libian arabic,arabic/libian,-,ar-lib,5400000,-,-,-,-,-,-,-,-,-,-,-
+arabic,libian arabic,Arabic/libian/tri,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:tri
+arabic,libian arabic,arabic/libian/ben,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:ben
+arabic,maghrebi arabic,arabic/maghrebi,-,-,70000000,-,UD_Maghrebi_Arabic_French-Arabizi,UD_Maghrebi_Arabic_French-Arabizi,-,-,-,-,-,-,-,-
+arabic,mesopotamian arabic,arabic/mesopotamian,-,acm-ayp,29000000,-,-,-,-,-,-,acm_Arab,acm_Arab,acm_Arab,-,-
+arabic,mesopotamian arabic,arabic/mesopotamian/mos,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:mos
+arabic,mesopotamian arabic,arabic/mesopotamian/bag,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:bag
+arabic,mesopotamian arabic,arabic/mesopotamian/bas,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:bas
+arabic,moroccan arabic,arabic/moroccan,ary,ary,39000000,-,-,-,-,-,arabic--mar,ary_Arab,ary_Arab,ary_Arab,ary_arab,-
+arabic,moroccan arabic,arabic/moroccan/rab,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:rab
+arabic,moroccan arabic,arabic/moroccan/fes,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:fes
+arabic,najdi arabic,arabic/najdi,ars,ars,18000000,-,-,-,-,-,-,ars_Arab,ars_Arab,ars_Arab,-,-
+arabic,north levantine arabic,arabic/levantine/north,-,-,14200000,-,-,-,-,-,-,apc_Arab,apc_Arab,apc_Arab,-,-
+arabic,north levantine arabic,arabic/levantine/north/bei,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:bei
+arabic,north levantine arabic,arabic/levantine/north/dam,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:dam
+arabic,north levantine arabic,arabic/levantine/north/ale,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:ale
+arabic,saudi arabian arabic (najdi+hijazi),arabic/saudi arabian,-,-,30770375,-,-,-,-,-,arabic--sau,-,-,-,sau_arab,-
+arabic,south levantine arabic,arabic/levantine/south,ajp,ajp,6200000,-,UD_South_Levantine_Arabic-MADAR,UD_South_Levantine_Arabic-MADAR,-,-,-,-,ajp_Arab,ajp_Arab,ar-lb,-
+arabic,south levantine arabic,arabic/levantine/south/jer,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:jer
+arabic,south levantine arabic,arabic/levantine/south/amm,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:amm
+arabic,south levantine arabic,arabic/levantine/south/sal,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:sal
+arabic,ta’izzi-adeni arabic,arabic/ta’izzi-adeni,acq,acq,12000000,-,-,-,-,-,-,-,acq_Arab,acq_Arab,-,-
+arabic,tunisian Arabizi,arabic/tunisian arabizi,-,Tunizi,-,-,-,-,-,-,-,-,-,-,aeb_Latn,-
+arabic,tunisian arabic,arabic/tunisian,aeb,aeb,12000000,-,-,-,-,-,arabic--tun,-,aeb_Arab,aeb_Arab,aeb_Arab,-
+arabic,tunisian arabic,arabic/tunisian/tun,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:tun
+arabic,tunisian arabic,arabic/tunisian/sfx,-,-,-,-,-,-,-,-,-,-,-,-,-,arabic:sfx
+arabic,yemeni arabic,arabic/yemeni,-,ar-yem,29500000,-,-,-,-,-,-,-,-,-,-,arabic:san
+armenian,armenian,armenian/armenian,hy,hy,5300000,tick,UD_Armenian-ArmTDP,UD_Armenian-ArmTDP,-,-,-,-,-,-,-,-
+armenian,western armenian,armenian/western,hyw,hyw,1600000,-,UD_Western_Armenian-ArmTDP,UD_Western_Armenian-ArmTDP,-,-,-,-,-,-,-,-
+azerbaijani,azerbaijani,azerbaijani/north,azj,azj,24000000,tick,-,-,az,-,-,-,azj_Latn,azj_Latn,-,-
+azerbaijani,south azerbaijani,azerbaijani/south,azb,azb,14640650,tick,-,-,azb,-,-,-,azb_Arab,azb_Arab,-,-
+azerbaijani,turkish azerbaijani~,azerbaijani/turkish,-,-,-,-,-,-,-,-,-,-,tur_Latn,tur_Latn,-,-
+bengali,bengali,bengali/bengali,ben,ben,273000000,tick,-,-,bn,-,-,-,ben_Beng,-,-,-
+bengali,assamese bengali,bengali/assamese,asm,asm,6094274,-,-,-,as,-,-,-,asm_Beng,-,-,-
+bengali,dhaka bengali,bengali/dhaka,-,-,22400000,-,-,-,-,-,bengali--dhaka,-,-,-,-,-
+bengali,west bengal - bengali,bengali/west bengal,-,-,78698852,-,-,-,-,-,bengali--ind,-,-,-,-,-
+catalan,catalan,catalan/catalan,cat,cat,11500000,tick,-,UD_Catalan-AnCora,-,-,-,-,-,-,-,-
+chinese,chinese,chinese/chinese,cmn,cmn,1350000000,-,-,-,zh,-,-,-,-,-,-,-
+chinese,mainland traditional chinese,chinese/mandarin/mainland,-,-,-,-,-,-,-,-,-,-,-,-,-,"mandarin_traditional:M,mandarin_simplified:M"
+chinese,taiwanese traditional chinese,chinese/mandarin/taiwanese,-,-,-,-,-,-,-,-,-,-,-,-,-,"mandarin_traditional:T, mandarin_simplified:T"
+chinese,mandarin traditional,chinese/mandarin/tradiitonal,-,-,-,-,-,-,-,-,-,-,-,-,-,"mandarin_traditional:M, mandarin_traditional:T"
+chinese,mandarin simplified,chinese/mandarin/simplified,-,-,-,-,-,-,-,-,-,-,-,-,-,"mandarin_simplified:M, mandarin_simplified:T"
+chinese,cantonese (yue chinese),chinese/cantonese,yue,yue,60000000,-,-,-,zh-yue,-,-,-,yue_Hant,yue_Hant,-,-
+chinese,hakka chinese,chinese/hakka,hak,hak,47800000,-,-,-,hak,-,-,-,-,-,-,-
+chinese,min nan chinese,chinese/min nan,-,-,48000000,-,-,-,zh-min-nan,-,-,-,-,-,-,-
+chinese,wu chinese,chinese/wu,wuu,wuu,80000000,-,-,-,wuu,-,-,-,-,-,-,-
+chinese,simplified chinese,chinese/simplified,-,-,written only,tick,UD_Chinese-GSDSimp,UD_Chinese-GSDSimp,-,-,-,zho_Hans,zho_Hans,zho_Hans,-,-
+chinese,traditional chinese,chinese/traditional,-,-,written only,tick,UD_Classical_Chinese-Kyoto,UD_Classical_Chinese-Kyoto,zh-classical,-,-,zho_Hant,zho_Hant,zho_Hant,-,-
+chinese,traditional chinese,chinese/traditional/hongkong,-,-,written only,-,UD_Chinese-HK,UD_Chinese-HK,-,-,-,-,-,-,-,-
+circassian,adyghe,circassian/adyghe,ady,ady,500000,-,-,-,ady,-,-,-,-,-,-,-
+circassian,kabardian,circassian/kabardian,kbd,kbd,1000000,-,-,-,kbd,-,-,-,-,-,-,-
+croatian,croatian,croatian/croatian,hrv,hrv,7000000,tick,-,-,hr,-,-,-,-,-,-,-
+croatian,bosnian,croatian/bosnian,bos,bos,2500000,tick,-,-,bs,-,-,-,-,-,-,-
+croatian,serbian,croatian/serbian,srp,srp,12000000,tick,-,-,sr,-,-,-,-,-,-,-
+croatian,serbo-croatian,croatian/serbo-croatian,-,-,19000000,tick,-,-,sh,-,-,-,-,-,-,-
+dutch,dutch,dutch/dutch,nld,nld,25000000,tick,UD_Dutch-Alpino,UD_Dutch-Alpino,nl,-,-,-,nld_Latn,nld_Latn,-,-
+dutch,limburgish,dutch/limburgish,lim,lim,1300000,-,-,-,li,-,-,-,lim_Latn,lim_Latn,-,-
+dutch,west flemish,dutch/west flemish,vls,vls,1400000,-,-,-,vls,-,-,-,-,-,-,-
+dutch,zeelandic,dutch/zeelandic,zea,zea,220000,-,-,-,zea,-,-,-,-,-,-,-
+english,english,english/english,eng,eng,1350000000,tick,UD_English-EWT,UD_English-EWT,en,-,-,eng_Latn,eng_Latn,eng_Latn,-,english:EN
+english,african american english,english/american/african,-,aae,30000000,-,TwitterAAE,-,-,-,-,-,-,-,-,-
+english,australian english,english/australian,-,-,21715910,-,-,-,-,-,english--aus,-,-,-,-,-
+english,filipino english,english/filipino,-,-,64025890,-,-,-,-,-,english--phl,-,-,-,-,-
+english,irish english,english/irish,-,-,4350000,-,-,-,-,-,english--irl,-,-,-,-,-
+english,jamaican patois,english/jamaican patois,jam,jam,3200000,-,-,-,jam,-,-,-,-,-,-,-
+english,kenyan english,english/kenyan,-,-,8100000,-,-,-,-,-,english--kenya,-,-,-,-,-
+english,new zealand english,english/new zealand,-,-,4181902,-,-,-,-,-,english--nzl,-,-,-,-,-
+english,nigerian english,english/nigerian,-,-,125039680,-,-,-,-,-,english--nga,-,-,-,-,-
+english,north indian english,english/indian/north,-,-,-,-,-,-,-,-,english--ind_n,-,-,-,-,-
+english,old english,english/old,ang,ang,antiquated,-,-,-,ang,-,-,-,-,-,-,-
+english,scottish english,english/scottish,-,-,5463300,-,-,-,-,-,english--gbr,-,-,-,-,-
+english,simple english~,english/simple,-,-,-,-,-,-,simple,-,-,-,-,-,-,-
+english,singlish,english/singlish,-,-,3900000,-,singlish,singlish,-,-,-,-,-,-,-,-
+english,south african english,english/south african,-,-,16424417,-,-,-,-,-,english--zaf,-,-,-,-,-
+english,south indian english,english/indian/south,-,-,-,-,-,-,-,-,english--ind_s,-,-,-,-,-
+english,southeast US english,english/american/southeast,-,-,79200000,-,-,-,-,-,english--usa,-,-,-,-,-
+english,standard american english,english/american/standard,eng,eng,316107532,-,-,-,-,-,-,-,-,-,-,english:EN-US
+english,standard british english,english/standard british,eng,eng,62912000,-,-,-,-,-,-,-,-,-,-,english:EN-GB
+finnish,finnish,finnish/finnish,fin,fin,5000000,tick,-,UD_Finnish-TDT,-,-,-,-,-,-,-,-
+finnish,estonian,finnish/estonian,ekk,ekk,1200000,tick,-,UD_Estonian-EDT,-,-,-,-,-,-,-,-
+finnish,murre-häm,finnish/murre-häm,-,-,-,-,-,murre-HÄM,-,-,-,-,-,-,-,-
+finnish,murre-kaa,finnish/murre-kaa,-,-,-,-,-,murre-KAA,-,-,-,-,-,-,-,-
+finnish,murre-lou,finnish/murre-lou,-,-,-,-,-,murre-LOU,-,-,-,-,-,-,-,-
+finnish,murre-lvä,finnish/murre-lvä,-,-,-,-,-,murre-LVÄ,-,-,-,-,-,-,-,-
+finnish,murre-poh,finnish/murre-poh,-,-,-,-,-,murre-POH,-,-,-,-,-,-,-,-
+finnish,murre-sav,finnish/murre-sav,-,-,-,-,-,murre-SAV,-,-,-,-,-,-,-,-
+french,french,french/french,fra,fra,68500000,tick,UD_French-ParTUT,UD_French-ParTUT,fr,-,-,-,-,-,-,-
+french,French Parisian,french/french/parisian,fra,fra,2160000,-,UD_French-ParisStories,UD_French-ParisStories,-,-,-,-,-,-,-,-
+french,arpitan*,french/arpitan,frp,frp,157000,-,-,-,frp,-,-,-,-,-,-,-
+french,norman*,french/norman,nrf,nrf,20000,-,-,-,tick,-,-,-,-,-,-,-
+french,occitan*,french/occitan,oci,oci,200000,tick,-,ROci,oc,-,-,-,oci_Latn,oci_Latn,-,-
+french,old french,french/old,fro,fro,antiquated,-,UD_Old_French-SRCMF,UD_Old_French-SRCMF,-,-,-,-,-,-,-,-
+french,walloon*,french/walloon,wln,wln,600000,-,-,-,wa,-,-,-,-,-,-,-
+frisian,western frisian,frisian/western,fry,fry,470000,-,-,-,fy,-,-,-,-,-,-,-
+frisian,northern frisian,frisian/northern,frr,frr,10000,-,-,-,frr,-,-,-,-,-,-,-
+frisian,saterland frisian,frisian/saterland,-,-,2250,-,-,-,stq,-,-,-,-,-,-,-
+german,low german*,german/low german,nds,-,5000000,tick,UD_Low_Saxon-LSDC,UD_Low_Saxon-LSDC,nds,-,-,-,-,-,-,-
+german,german,german/german,deu,deu,111800000,tick,UD_German-LIT,UD_German-LIT,de,-,-,-,-,-,-,-
+german,alemannisch,german/alemannisch,gsw,gsw,10000000,-,-,-,als,-,-,-,-,-,-,-
+german,bavarian,german/bavarian,bar,bar,12000000,tick,-,-,bar,-,-,-,-,-,-,-
+german,colognian,german/colognian,ksh,ksh,250000,-,-,-,ksh,-,-,-,-,-,-,-
+german,luxembourgish,german/luxembourgish,ltz,ltz,390000,tick,-,-,lb,-,-,-,-,-,-,-
+german,palatine german,german/palatine,-,-,400000,-,-,-,pfl,-,-,-,-,-,-,-
+german,pennsylvania german,german/pennsylvania,pdc,pdc,300000,-,-,-,pdc,-,-,-,-,-,-,-
+german,swiss german-zh,german/swiss german/zh,-,-,-,-,UD_Swiss_German-UZH,UD_Swiss_German-UZH,-,-,-,-,-,-,-,swiss-dialects:ZH
+german,swiss german-be,german/swiss german/be,-,-,-,-,-,-,-,-,-,-,-,-,-,swiss-dialects:BE
+german,swiss german-bs,german/swiss german/bs,-,-,-,-,-,-,-,-,-,-,-,-,-,swiss-dialects:BS
+german,swiss german-lu,german/swiss german/lu,-,-,-,-,-,-,-,-,-,-,-,-,-,swiss-dialects:LU
+greek,modern greek,greek/modern,ell,ell,13000000,tick,-,-,el,-,-,-,-,-,-,"greek:smg_twitter,greek:smg_fb,greek:smg_other"
+greek,cypriot greek,greek/cypriot,-,el-cg,700000,-,-,-,-,-,-,-,-,-,-,"greek:cg_twitter,greek:cg_fb,greek:cg_other"
+greek,pontic,greek/pontic,pnt,pnt,778000,-,-,-,pnt,-,-,-,-,-,-,-
+guarani,guarani,guarani/guarani,-,-,6500000,-,UD_Guarani-OldTuDeT,UD_Guarani-OldTuDeT,-,-,-,-,-,-,-,-
+guarani,brazil guarani,guarani/brazil,-,-,51000,-,UD_Mbya_Guarani-Dooley,UD_Mbya_Guarani-Dooley,-,-,-,-,-,-,-,-
+guarani,paraguay guarani,guarani/paraguay,gug,gug,5250000,-,UD_Mbya_Guarani-Thomas,UD_Mbya_Guarani-Thomas,-,-,-,-,-,-,-,-
+hindi,hindi,hindi/hindi,hin,hin,592000000,tick,-,-,hi,-,-,-,-,-,-,-
+hindi,fiji hindi,hindi/fiji,hif,hif,380000,-,-,-,hif,-,-,-,-,-,-,-
+inuit,inupiaq,inuit/inupiaq,ipk,ipk,1250,-,-,-,ik,-,-,-,-,-,-,-
+inuit,kalaallisut,inuit/kalaallisut,kal,kal,50000,-,-,-,kl,-,-,-,-,-,-,-
+italian,italian,italian/italian,ita,ita,61100000,tick,UD_Italian-PUD,UD_Italian-PUD,it,-,-,-,ita_Latn,ita_Latn,-,-
+italian,italian tweet,italian/italian/tweet,ita,ita,61100000,tick,UD_Italian-PoSTWITA,UD_Italian-PoSTWITA,-,-,-,-,-,-,-,-
+italian,italian essay,italian/italian/essay,ita,ita,61100000,tick,UD_Italian-MarkIT,UD_Italian-MarkIT,-,-,-,-,-,-,-,-
+italian,corsican,italian/corsican,cos,cos,150000,-,-,-,co,-,-,-,-,-,-,-
+italian,emiliano-romagnolo*,italian/emiliano-romagnolo,egl,egl,4400000,-,-,-,eml,-,-,-,-,-,-,-
+italian,friulian*,italian/friulian,fur,fur,420000,-,-,-,fur,-,-,-,fur_Latn,fur_Latn,-,-
+italian,ligurian*,italian/ligurian,lij,lij,500000,-,UD_Ligurian-GLT,UD_Ligurian-GLT,lij,-,-,-,lij_Latn,lij_Latn,-,-
+italian,lombard*,italian/lombard,lmo,lmo,3800000,tick,-,-,lmo,-,-,-,lmo_Latn,lmo_Latn,-,-
+italian,neapolitan,italian/neapolitan,nap,nap,5700000,-,UD_Neapolitan-RB,UD_Neapolitan-RB,nap,-,-,-,-,-,-,-
+italian,piedmontese*,italian/piedmontese,pms,pms,2000000,tick,-,-,pms,-,-,-,-,-,-,-
+italian,sardinian*,italian/sardinian,srd,srd,1000000,-,-,-,sc,-,-,-,srd_Latn,srd_Latn,-,-
+italian,sicilian,italian/sicilian,scn,scn,4700000,tick,-,-,scn,-,-,-,scn_Latn,scn_Latn,-,-
+italian,tarantino,italian/tarantino,-,-,220000,-,-,-,roa-tara,-,-,-,-,-,-,-
+italian,umbrian*,italian/umbrian,xum,xum,antiquated,-,UD_Umbrian-IKUVINA,UD_Umbrian-IKUVINA,-,-,-,-,-,-,-,-
+italian,venetian*,italian/venetian,vec,vec,3900000,-,-,-,vec,-,-,-,vec_Latn,vec_Latn,-,-
+italian,romansh,italian/romansh,roh,roh,60000,-,-,-,rm,-,-,-,-,-,-,-
+kiswahili,kenyan kiswahili,kiswahili/kenyan,-,-,1000000,-,-,-,-,-,swahili--kenya,-,-,-,-,-
+kiswahili,tanzanian kiswahili,kiswahili/tanzanian,-,-,15000000,-,-,-,-,-,swahili--tanzania,-,-,-,-,-
+komi,komi,komi/komi,kom,kom,1000000,-,-,-,kv,-,-,-,-,-,-,-
+komi,komi-permyak,komi/permyak,koi,koi,63000,-,UD_Komi_Permyak-UH,UD_Komi_Permyak-UH,koi,-,-,-,-,-,-,-
+komi,komi-zyrian,komi/zyrian/written,kpv,kpv,99609,-,UD_Komi_Zyrian-Lattice,UD_Komi_Zyrian-Lattice,-,-,-,-,-,-,-,-
+komi,komi-zyrian,komi/zyrian/dialectal,kpv,kpv,99609,-,UD_Komi_Zyrian-IKDP,UD_Komi_Zyrian-IKDP,-,-,-,-,-,-,-,-
+korean,korean,korean/korean,kor,kor,66400000,tick,-,-,-,-,korean--korn,-,-,-,-,-
+korean,southern korean,korean/southern,-,-,-,-,-,-,-,-,korean--kors,-,-,-,-,-
+kurdish,kurdish,kurdish/kurdish,kur,kur,30000000,-,-,-,ku,-,-,-,-,-,-,-
+kurdish,central kurdish,kurdish/central,ckb,ckb,7250000,-,-,-,ckb,-,-,-,ckb_Arab,ckb_Arab,-,-
+kurdish,northern kurdish,kurdish/northern,kmr,kmr,15000000,-,-,-,-,-,-,-,kmr_Latn,kmr_Latn,-,-
+latvian,latvian,latvian/latvian,lav,lav,1700000,tick,-,-,lv,-,-,-,lvs_Latn,lvs_Latn,-,-
+latvian,latgalian,latvian/latgalian,ltg,ltg,200000,-,-,-,ltg,-,-,-,ltg_Latn,ltg_Latn,-,-
+mari,eastern mari,mari/eastern,mhr,mhr,470000,-,-,-,mhr,-,-,-,-,-,-,-
+mari,western mari,mari/western,mrj,mrj,30000,-,-,-,mrj,-,-,-,-,-,-,-
+norwegian,bokmaal,norwegian/bokmaal,nob,nob,written only,-,UD_Norwegian-Bokmaal,UD_Norwegian-Bokmaal,bokmaal,-,-,-,nob_Latn,nob_Latn,-,-
+norwegian,nynorsk,norwegian/nynorsk,nno,nno,written only,-,UD_Norwegian-Nynorsk,UD_Norwegian-Nynorsk,nynorsk,-,-,-,nno_Latn,nno_Latn,-,-
+norwegian,samnorsk,norwegian/samnorsk,-,-,antiquated,-,-,-,samnorsk,-,-,-,-,-,-,-
+norwegian,old nynorsk,norwegian/nynorsk/old,non,non,antiquated,-,UD_Norwegian-NynorskLIA,UD_Norwegian-NynorskLIA,-,-,-,-,-,-,-,-
+portuguese,written,portuguese/written,-,-,-,-,UD_Portuguese-CINTIL,UD_Portuguese-CINTIL,-,-,-,-,-,-,-,portuguese:PT
+portuguese,european portuguese,portuguese/european,por,por,40000000,tick,UD_Portuguese-PUD,UD_Portuguese-PUD,-,-,-,-,por_Latn,por_Latn,-,portuguese:PT-PT
+portuguese,brazilian portuguese,portuguese/brazilian,-,-,203062512,-,UD_Portuguese-GSD,UD_Portuguese-GSD,-,-,-,-,-,-,-,portuguese:PT-BR
+portuguese,european and brazilian mixed,portuguese/mix,-,-,-,-,UD_Portuguese-Bosque,UD_Portuguese-Bosque,-,-,-,-,-,-,-,-
+punjabi,punjabi,punjabi/punjabi,pan,pan,113000000,tick,-,-,pa,-,-,-,-,-,-,-
+punjabi,western punjabi,punjabi/western,pnb,pnb,80540000,tick,-,-,pnb,-,-,-,-,-,-,-
+romanian,romanian,romanian/romanian,ron,ron,23000000,tick,-,-,ro,-,-,-,-,-,-,-
+romanian,aromanian*,romanian/aromanian,rup,rup,210000,-,-,-,roa-rup,-,-,-,-,-,-,-
+romanian,moldovan,romanian/moldovan,-,-,23000000,-,-,-,mo,-,-,-,-,-,-,-
+sami,north sami,sami/north,sme,sme,25000,-,UD_North_Sami-Giella,UD_North_Sami-Giella,-,-,-,-,-,-,-,-
+sami,skolt sami,sami/skolt,sms,sms,330,-,UD_Skolt_Sami-Giellagas,UD_Skolt_Sami-Giellagas,-,-,-,-,-,-,-,-
+sorbian,lower sorbian,sorbian/lower,dsb,dsb,6900,-,-,-,dsb,-,-,-,-,-,-,-
+sorbian,upper sorbian,sorbian/upper,hsb,hsb,13000,-,-,-,hsb,-,-,-,-,-,-,-
+sotho,northern sotho,sotho/northern,nso,nso,13800000,-,-,-,nso,-,-,nso_Latn,nso_Latn,nso_Latn,-,-
+sotho,southern sotho,sotho/southern,sot,sot,5600000,-,-,-,st,-,-,sot_Latn,sot_Latn,sot_Latn,-,-
+spanish,spanish,spanish/spanish,spa,spa,466000000,tick,-,-,es,-,-,-,spa_Latn,spa_Latn,-,spanish:ES
+spanish,argentinian spanish,spanish/argentinian,-,-,41700000,-,-,-,-,-,-,-,-,-,-,spanish:ES-AR
+spanish,extremaduran*,spanish/extremaduran,ext,ext,200000,-,-,-,ext,-,-,-,-,-,-,-
+spanish,galician*,spanish/galician,glg,glg,2400000,tick,-,-,gl,-,-,-,glg_Latn,glg_Latn,-,-
+spanish,peninsular spanish,spanish/peninsular,-,-,40000000,-,-,-,-,-,-,-,-,-,-,spanish:ES-ES
+spanish,mirandese*,spanish/mirandese,mwl,mwl,15000,-,-,-,mwl,-,-,-,-,-,-,-
+turkish,turkish,turkish/turkish,tur,tur,90000000,tick,-,-,tr,-,-,-,-,-,-,-
+turkish,crimean tatar*,turkish/crimean tatar,crh,crh,580000,-,-,-,crh,-,-,-,-,-,-,-
