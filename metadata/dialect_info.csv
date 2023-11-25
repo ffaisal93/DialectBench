@@ -74,7 +74,7 @@ dutch,dutch,dutch/dutch,nld,25000000,tick,UD_Dutch-Alpino,UD_Dutch-Alpino,nl,-,-
 dutch,limburgish,dutch/limburgish,lim,1300000,-,-,-,li,-,-,-,lim_Latn,lim_Latn,-,-
 dutch,west flemish,dutch/west flemish,vls,1400000,-,-,-,vls,-,-,-,-,-,-,-
 dutch,zeelandic,dutch/zeelandic,zea,220000,-,-,-,zea,-,-,-,-,-,-,-
-english,english,english/english,eng,1350000000,tick,UD_English-EWT,UD_English-EWT,en,-,-,eng_Latn,eng_Latn,eng_Latn,-,english:EN
+english,english,english/standard,eng,1350000000,tick,UD_English-EWT,UD_English-EWT,en,-,-,eng_Latn,eng_Latn,eng_Latn,-,english:EN
 english,african american english,english/american/african,-,30000000,-,TwitterAAE,-,-,-,-,-,-,-,-,-
 english,australian english,english/australian,-,21715910,-,-,-,-,-,english--aus,-,-,-,-,-
 english,filipino english,english/filipino,-,64025890,-,-,-,-,-,english--phl,-,-,-,-,-
