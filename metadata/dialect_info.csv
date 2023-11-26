@@ -49,8 +49,7 @@ armenian,western armenian,armenian/western,hyw,1600000,-,UD_Western_Armenian-Arm
 azerbaijani,azerbaijani,azerbaijani/north,azj,24000000,tick,-,-,az,-,-,-,azj_Latn,azj_Latn,-,-
 azerbaijani,south azerbaijani,azerbaijani/south,azb,14640650,tick,-,-,azb,-,-,-,azb_Arab,azb_Arab,-,-
 azerbaijani,turkish azerbaijani~,azerbaijani/turkish,-,-,-,-,-,-,-,-,-,tur_Latn,tur_Latn,-,-
-bengali,bengali,bengali/bengali,ben,273000000,tick,-,-,bn,-,-,-,ben_Beng,-,-,-
-bengali,assamese bengali,bengali/assamese,asm,6094274,-,-,-,as,-,-,-,asm_Beng,-,-,-
+bengali,bengali\textsuperscript{MT},bengali/bengali,ben,273000000,tick,-,-,bn,-,-,-,-,-,-,-
 bengali,dhaka bengali,bengali/dhaka,-,22400000,-,-,-,-,-,bengali--dhaka,-,-,-,-,-
 bengali,west bengal - bengali,bengali/west bengal,-,78698852,-,-,-,-,-,bengali--ind,-,-,-,-,-
 catalan,catalan,catalan/catalan,cat,11500000,tick,-,UD_Catalan-AnCora,-,-,-,-,-,-,-,-
