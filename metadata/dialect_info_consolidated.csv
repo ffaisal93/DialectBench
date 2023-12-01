@@ -1,7 +1,7 @@
 language group,variety name,new_name,ISO 639-3,# of speakers,mBERT seen,UDP,POS,NER,MT,SDQA,RCMC,NLI,TC,SC,DI,MT
 albanian,albanian,albanian/albanian,sqi,7500000,tick,UD_Albanian-TSA,UD_Albanian-TSA,-,-,-,-,-,-,-,-,-
 albanian,gheg,albanian/gheg,aln,4100000,-,UD_Gheg-GPS,UD_Gheg-GPS,-,-,-,-,-,-,-,-,-
-arabic,modern standard arabic\textsuperscript{MT},arabic/modern standard,arb,425000000,tick,UD_Arabic-PADT,UD_Arabic-PADT,ar,-,-,arb_Arab,arb_Arab,arb_Arab,-,arabic:msa,tick
+arabic,modern standard arabic\textsuperscript{MT},arabic/modern standard,arb,425000000,tick,UD_Arabic-PADT,UD_Arabic-PADT,ar,-,-,arb_Arab,arb_Arab,arb_Arab,arb_arab,arabic:msa,tick
 arabic,algerian arabic,arabic/algerian,arq,41700000,-,-,-,-,-,arabic--dza,-,-,-,arq_arab,arabic:alg,-
 arabic,bahraini arabic,arabic/bahraini,-,70000,-,-,-,-,-,arabic--bhr,-,-,-,-,-,-
 arabic,egyptian arabic\textsuperscript{DI},arabic/egyptian,arz,102000000,-,-,dar-egy,arz,-,arabic--egy,arz_Arab,arz_Arab,arz_Arab,arz_arab,tick,-
@@ -39,7 +39,8 @@ chinese,hakka chinese,chinese/hakka,hak,47800000,-,-,-,hak,-,-,-,-,-,-,-,-
 chinese,min nan chinese,chinese/min nan,-,48000000,-,-,-,zh-min-nan,-,-,-,-,-,-,-,-
 chinese,wu chinese,chinese/wu,wuu,80000000,-,-,-,wuu,-,-,-,-,-,-,-,-
 chinese,simplified chinese,chinese/simplified,-,written,tick,UD_Chinese-GSDSimp,UD_Chinese-GSDSimp,-,-,-,zho_Hans,zho_Hans,zho_Hans,-,"mandarin_traditional:M, mandarin_traditional:T",-
-chinese,traditional chinese,chinese/traditional,-,written,tick,UD_Classical_Chinese-Kyoto,UD_Classical_Chinese-Kyoto,zh-classical,-,-,zho_Hant,zho_Hant,zho_Hant,-,"mandarin_simplified:M, mandarin_simplified:T",-
+chinese,classical chinese,chinese/classical,-,historical,-,UD_Classical_Chinese-Kyoto,UD_Classical_Chinese-Kyoto,zh-classical,-,-,-,-,-,-,-,-
+chinese,traditional chinese,chinese/traditional,-,written,tick,-,-,-,-,-,zho_Hant,zho_Hant,zho_Hant,-,"mandarin_simplified:M, mandarin_simplified:T",-
 chinese,traditional chinese,chinese/traditional/hongkong,-,written,-,UD_Chinese-HK,UD_Chinese-HK,-,-,-,-,-,-,-,-,-
 circassian,adyghe,circassian/adyghe,ady,500000,-,-,-,ady,-,-,-,-,-,-,-,-
 circassian,kabardian,circassian/kabardian,kbd,1000000,-,-,-,kbd,-,-,-,-,-,-,-,-
