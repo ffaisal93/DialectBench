@@ -11,7 +11,7 @@
   ```
 
 ### installation
-comment-out `module load python/3.8.6-ff` inside `install.sh` [specific to GMU cluster]
+comment-out `module load python/3.8.6-ff` inside `install.sh` [specific to cluster]
 - Install Adapter Package `[for dependency parsing]`
   ```
   bash install.sh --task install_adapter
