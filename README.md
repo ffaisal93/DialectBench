@@ -9,6 +9,21 @@
   ```
   bash download_data.sh --task machine_translation_turkish
   ```
+## Task Specific Training and Evaluation
+
+### Dependency Parsing
+- Install Adapter Package `[for dependency parsing]`
+  ```
+  bash install.sh --task install_adapter
+  ```
+- Finetune all available language-specific models on pretrained mBERT and XLMR at once
+  ```
+  ./all_commands.sh --action train_udp --execute bash
+  ```
+- Finetune one single available language-specific model
+  ```
+  bash install.sh --task train_udp --lang UD_English-EWT --MODEL_NAME mbert
+  ```
 
 ### installation
 comment-out `module load python/3.8.6-ff` inside `install.sh` [specific to cluster]
