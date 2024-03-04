@@ -1,10 +1,13 @@
 #!/bin/bash
 task=${task:-none}
+execute=${execute:-'bash'}
 lang=${lang:-eng}
 lang2=${lang2:-eng}
 lang3=${lang3:-eng}
 MODEL_NAME=${MODEL_NAME:-bert}
 CACHE_DIR=${CACHE_DIR:-'/scratch/ffaisal/hug_cache/datasets/DialectBench'}
+OUTPUT_DIR=${OUTPUT_DIR:-none}
+ROOT_DIR=${ROOT_DIR:-none}
 dataset=${dataset:-wikiann}
 prefix_text=${prefix_text:-prefix_text}
  
@@ -39,18 +42,79 @@ if [[ "$MODEL_NAME" = "xlmrl" ]]; then
 	MODEL_PATH='xlm-roberta-large'
 fi
 
-echo ${task}
-echo ${lang}
-echo ${MODEL_NAME}
-echo ${CACHE_DIR}
+if [[ "$execute" = "bash" ]]; then
 
-cd /scratch/ffaisal/DialectBench
-module load git
-module load openjdk/11.0.2-qg
+	if [[ "$ROOT_DIR" = none ]]; then
+		ROOT_DIR=${PWD}
+	fi
+	
+	if [[ "$OUTPUT_DIR" = none ]]; then
+		OUTPUT_DIR="${ROOT_DIR}/experiments"
+		mkdir ${OUTPUT_DIR}
+	fi
+
+	if [[ "$CACHE_DIR" = none ]]; then
+		CACHE_DIR="cache"
+		mkdir ${CACHE_DIR}
+	fi
+
+	RESULT_FOLDER="${ROOT_DIR}/results"
+	TEST_FOLDER="${ROOT_DIR}/test"
+	TEST_RESULT_FOLDER="${ROOT_DIR}/test/results"
+
+	mkdir ${RESULT_FOLDER}
+	mkdir ${TEST_FOLDER}
+	mkdir ${TEST_RESULT_FOLDER}
+
+	cd ${ROOT_DIR}
+
+fi
+
+if [[ "$execute" = "gmu_cluster" ]]; then
+
+	if [[ "$ROOT_DIR" = none ]]; then
+		ROOT_DIR="/scratch/ffaisal/DialectBench"
+	fi
+
+	if [[ "$OUTPUT_DIR" = none ]]; then
+		OUTPUT_DIR="/projects/antonis/fahim/DialectBench/experiments"
+		mkdir ${OUTPUT_DIR}
+	fi
+
+	if [[ "$CACHE_DIR" = none ]]; then
+		CACHE_DIR="/scratch/ffaisal/hug_cache/datasets/DialectBench"
+		mkdir ${CACHE_DIR}
+	fi
+
+	RESULT_FOLDER="${ROOT_DIR}/results"
+	TEST_FOLDER="${ROOT_DIR}/test"
+	TEST_RESULT_FOLDER="${ROOT_DIR}/test/results"
+
+	mkdir ${RESULT_FOLDER}
+	mkdir ${TEST_FOLDER}
+	mkdir ${TEST_RESULT_FOLDER}
+
+	cd ${ROOT_DIR}
+
+	module load git
+	module load openjdk/11.0.2-qg
+	module load python/3.8.6-ff
+
+fi
+
+
+echo "task: ${task}"
+echo "lang: ${lang}"
+echo "model name: ${MODEL_NAME}"
+echo "root dir: ${ROOT_DIR}"
+echo "cache dir: ${CACHE_DIR}"
+echo "result dir: ${RESULT_FOLDER}"
+echo "test result dir: ${TEST_RESULT_FOLDER}"
+echo "output dir: ${OUTPUT_DIR}"
+
 
 if [[ "$task" = "install_adapter" || "$task" = "all" ]]; then
 	echo "------------------------------Install adapter latest------------------------------"
-	module load python/3.8.6-ff
 	rm -rf adapter-transformers-l
 	rm -rf vnv/vnv-adp-l
 	python -m venv vnv/vnv-adp-l
@@ -58,20 +122,17 @@ if [[ "$task" = "install_adapter" || "$task" = "all" ]]; then
 	wget -O adapters3.1.0.tar.gz https://github.com/adapter-hub/adapter-transformers/archive/refs/tags/adapters3.1.0.tar.gz
 	tar -xf adapters3.1.0.tar.gz
 	rm adapters3.1.0.tar.gz
-	mv adapter-transformers-adapters3.1.0 adapter-transformers-l
+	mv adapters-adapters3.1.0 adapter-transformers-l
 	cd adapter-transformers-l
-	#cp ../scripts/ad_l_trans_trainer.py src/transformers/trainer.py
-	pip install .
 	../vnv/vnv-adp-l/bin/python -m pip install --upgrade pip
+	##cp ../scripts/ad_l_trans_trainer.py src/transformers/trainer.py
+	pip install .
 	cd ..
-	pip install --upgrade pip
 	pip3 install -r requirements.txt
-	##for A100 gpu
 	deactivate
 fi
 
 if [[ "$task" = "install_transformers" || "$task" = "all" ]]; then
-	module load python/3.8.6-ff
 	rm -rf transformers-orig
 	rm -rf vnv/vnv-trns
 	python -m venv vnv/vnv-trns
@@ -89,7 +150,6 @@ if [[ "$task" = "install_transformers" || "$task" = "all" ]]; then
 fi
 
 if [[ "$task" = "install_transformers_qa" || "$task" = "all" ]]; then
-	module load python/3.8.6-ff
 	rm -rf vnv/vnv-qa
 	module load python/3.8.6-ff
 	source vnv/vnv-qa/bin/activate
@@ -100,7 +160,6 @@ if [[ "$task" = "install_transformers_qa" || "$task" = "all" ]]; then
 fi
 
 if [[ "$task" = "install_transformers_latest" || "$task" = "all" ]]; then
-	module load python/3.8.6-ff
 	module load git
 	rm -rf vnv/vnv_trans_latest
 	python -m venv vnv/vnv_trans_latest
@@ -115,7 +174,6 @@ if [[ "$task" = "install_transformers_latest" || "$task" = "all" ]]; then
 fi
 
 if [[ "$task" = "install_translation" || "$task" = "all" ]]; then
-	module load python/3.8.6-ff
 	module load git
 	rm -rf vnv/vnv_translation
 	python -m venv vnv/vnv_translation
@@ -194,7 +252,7 @@ if [[ "$task" = "train_udp" || "$task" = "all" ]]; then
 	    --num_train_epochs 5 \
 	    --max_seq_length 256 \
 	    --cache_dir ${CACHE_DIR} \
-	    --output_dir /projects/antonis/fahim/DialectBench/experiments/${MODEL_NAME}/$TASK_NAME \
+	    --output_dir ${OUTPUT_DIR}/${MODEL_NAME}/$TASK_NAME \
 	    --overwrite_output_dir \
 	    --store_best_model \
 	    --evaluation_strategy epoch \
@@ -1097,26 +1155,26 @@ if [[ "$task" = "download_ner_train" || "$task" = "all" ]]; then
 fi
 
 
-function download_panx {
-    echo "Download panx NER dataset"
-    if [ -f $DIR/AmazonPhotos.zip ]; then
-        base_dir=$DIR/panx_dataset/
-        unzip -qq -j $DIR/AmazonPhotos.zip -d $base_dir
-        cd $base_dir
-        langs=(ar he vi id jv ms tl eu ml ta te af nl en de el bn hi mr ur fa fr it pt es bg ru ja ka ko th sw yo my zh kk tr et fi hu qu pl uk az lt pa gu ro)
-        for lg in ${langs[@]}; do
-            tar xzf $base_dir/${lg}.tar.gz
-            for f in dev test train; do mv $base_dir/$f $base_dir/${lg}-${f}; done
-        done
-        cd ..
-        python $REPO/utils_preprocess.py \
-            --data_dir $base_dir \
-            --output_dir $DIR/panx \
-            --task panx
-        rm -rf $base_dir
-        echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
-    else
-        echo "Please download the AmazonPhotos.zip file on Amazon Cloud Drive manually and save it to $DIR/AmazonPhotos.zip"
-        echo "https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN"
-    fi
-}
+# function download_panx {
+#     echo "Download panx NER dataset"
+#     if [ -f $DIR/AmazonPhotos.zip ]; then
+#         base_dir=$DIR/panx_dataset/
+#         unzip -qq -j $DIR/AmazonPhotos.zip -d $base_dir
+#         cd $base_dir
+#         langs=(ar he vi id jv ms tl eu ml ta te af nl en de el bn hi mr ur fa fr it pt es bg ru ja ka ko th sw yo my zh kk tr et fi hu qu pl uk az lt pa gu ro)
+#         for lg in ${langs[@]}; do
+#             tar xzf $base_dir/${lg}.tar.gz
+#             for f in dev test train; do mv $base_dir/$f $base_dir/${lg}-${f}; done
+#         done
+#         cd ..
+#         python $REPO/utils_preprocess.py \
+#             --data_dir $base_dir \
+#             --output_dir $DIR/panx \
+#             --task panx
+#         rm -rf $base_dir
+#         echo "Successfully downloaded data at $DIR/panx" >> $DIR/download.log
+#     else
+#         echo "Please download the AmazonPhotos.zip file on Amazon Cloud Drive manually and save it to $DIR/AmazonPhotos.zip"
+#         echo "https://www.amazon.com/clouddrive/share/d3KGCRCIYwhKJF0H3eWA26hjg2ZCRhjpEQtDL70FSBN"
+#     fi
+# }

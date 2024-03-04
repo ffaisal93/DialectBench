@@ -22,6 +22,13 @@ if [[ "$execute" = "slurm" ]]; then
 fi
 
 
+if [[ "$action" = "train_udp" ]]; then
+
+	echo "dialect identification: (only madar at this point)"
+	bash ${script} --task train_udp --MODEL_NAME bert
+	bash ${script} --task train_udp --MODEL_NAME xlmr
+fi
+
 if [[ "$action" = "train_did" ]]; then
 
 	echo "dialect identification: (only madar at this point)"
