@@ -314,29 +314,32 @@ def main():
                     model.set_active_adapters(task_name)
                 model.to(training_args.device)
             else:
-                print(training_args.output_dir)
-                labels = UD_HEAD_LABELS
-                # if data_args.task_name=='singlish' or model_args.use_singlish:
-                #     labels=UD_HEAD_LABELS_singlish
-                # elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
-                #     labels=UD_HEAD_LABELS_TwitterAAE
-                label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
-                num_labels = len(labels)
+                output_dir=os.path.join(training_args.output_dir, "best_model")
+        else:
+            output_dir=training_args.output_dir
+        print(output_dir)
+        labels = UD_HEAD_LABELS
+        # if data_args.task_name=='singlish' or model_args.use_singlish:
+        #     labels=UD_HEAD_LABELS_singlish
+        # elif data_args.task_name=='TwitterAAE' or model_args.use_TwitterAAE:
+        #     labels=UD_HEAD_LABELS_TwitterAAE
+        label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
+        num_labels = len(labels)
 
-                config = AutoConfig.from_pretrained(
-                    training_args.output_dir,
-                    num_labels=num_labels,
-                    id2label=label_map,
-                    label2id={label: i for i, label in enumerate(labels)},
-                    cache_dir=model_args.cache_dir,
-                    pad_token_id=-1,
-                )
-                trainer.model = AutoAdapterModel.from_pretrained(
-                    os.path.join(training_args.output_dir, "best_model"),
-                    from_tf=bool(".ckpt" in model_args.model_name_or_path),
-                    config=config,
-                    cache_dir=model_args.cache_dir,
-                ).to(training_args.device)
+        config = AutoConfig.from_pretrained(
+            training_args.output_dir,
+            num_labels=num_labels,
+            id2label=label_map,
+            label2id={label: i for i, label in enumerate(labels)},
+            cache_dir=model_args.cache_dir,
+            pad_token_id=-1,
+        )
+        trainer.model = AutoAdapterModel.from_pretrained(
+            output_dir,
+            from_tf=bool(".ckpt" in model_args.model_name_or_path),
+            config=config,
+            cache_dir=model_args.cache_dir,
+        ).to(training_args.device)
 
         predictions, _, metrics = trainer.predict(dataset["test"])
 
@@ -365,66 +368,66 @@ def main():
             # count+=1
             print(lang, info, count)
             
-            try:
+            # try:
                ## define model path (zero shot from english if trained model not available)
-                if 'train' in lang_info[lang]["split"]:
-                    train_lang = lang
-                else:
-                    train_lang = 'UD_English-EWT'
-                ##zero-shot-default
-                if model_args.use_train_lang:
-                    train_lang = 'UD_English-EWT'
+            if 'train' in lang_info[lang]["split"]:
+                train_lang = lang
+            else:
+                train_lang = 'UD_English-EWT'
+            ##zero-shot-default
+            if model_args.use_train_lang:
+                train_lang = data_args.task_name
 
-                model_dir = os.path.join(training_args.output_dir, train_lang)
-                if "best_model" in os.listdir(model_dir):
-                    model_dir = os.path.join(model_dir, "best_model")
+            model_dir = os.path.join(training_args.output_dir, train_lang)
+            if "best_model" in os.listdir(model_dir):
+                model_dir = os.path.join(model_dir, "best_model")
 
-                print("-------------------- %s ----------------------" %(model_dir))
+            print("-------------------- %s ----------------------" %(model_dir))
 
 
-                # Prepare for UD dependency parsing task
-                labels = UD_HEAD_LABELS
-                # if lang=='singlish' and model_args.use_train_lang==False:
-                #     labels=UD_HEAD_LABELS_singlish
-                label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
-                num_labels = len(labels)
+            # Prepare for UD dependency parsing task
+            labels = UD_HEAD_LABELS
+            # if lang=='singlish' and model_args.use_train_lang==False:
+            #     labels=UD_HEAD_LABELS_singlish
+            label_map: Dict[int, str] = {i: label for i, label in enumerate(labels)}
+            num_labels = len(labels)
 
-                config = AutoConfig.from_pretrained(
+            config = AutoConfig.from_pretrained(
+                model_dir,
+                num_labels=num_labels,
+                id2label=label_map,
+                label2id={label: i for i, label in enumerate(labels)},
+                cache_dir=model_args.cache_dir,
+                pad_token_id=-1,
+            )
+
+            trainer.model = AutoAdapterModel.from_pretrained(
                     model_dir,
-                    num_labels=num_labels,
-                    id2label=label_map,
-                    label2id={label: i for i, label in enumerate(labels)},
+                    from_tf=bool(".ckpt" in model_args.model_name_or_path),
+                    config=config,
                     cache_dir=model_args.cache_dir,
-                    pad_token_id=-1,
                 )
+            trainer.model.to(training_args.device)
 
-                trainer.model = AutoAdapterModel.from_pretrained(
-                        model_dir,
-                        from_tf=bool(".ckpt" in model_args.model_name_or_path),
-                        config=config,
-                        cache_dir=model_args.cache_dir,
-                    )
-                trainer.model.to(training_args.device)
+            ##load predict dataset
+            dataset = load_dataset("scripts/universal_dependencies.py", lang,
+                split=['test'], cache_dir=model_args.cache_dir)
+            dataset = DatasetDict({"test":dataset[0]})
+            dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
+            ##prediction
+            predictions, _, metrics = trainer.predict(dataset["test"])
+            ##save results
+            if trainer.is_world_process_zero():
+                    logger.info("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
+                        metrics['uas'], 
+                        metrics['las']))
+                    writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
+                        metrics['uas'], 
+                        metrics['las'])) 
 
-                ##load predict dataset
-                dataset = load_dataset("scripts/universal_dependencies.py", lang,
-                    split=['test'], cache_dir=model_args.cache_dir)
-                dataset = DatasetDict({"test":dataset[0]})
-                dataset = preprocess_dataset(dataset, tokenizer, labels, data_args, pad_token_id=-1)
-                ##prediction
-                predictions, _, metrics = trainer.predict(dataset["test"])
-                ##save results
-                if trainer.is_world_process_zero():
-                        logger.info("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
-                            metrics['uas'], 
-                            metrics['las']))
-                        writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'],
-                            metrics['uas'], 
-                            metrics['las'])) 
-
-            except:
-                logger.info("#########------------------------error happened in %s----------------########" %(lang))
-                writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'], 0, 0))
+            # except:
+            #     logger.info("#########------------------------error happened in %s----------------########" %(lang))
+            #     writer.write("%s,%s,%s,%s,%s,%s\n" % (lang,train_lang,info['code'],info['langgroup'], 0, 0))
 
 
     return results

@@ -388,7 +388,6 @@ def main():
         token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
     )
-
     tokenizer_name_or_path = model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path
     if config.model_type in {"bloom", "gpt2", "roberta"}:
         tokenizer = AutoTokenizer.from_pretrained(
@@ -401,6 +400,7 @@ def main():
             add_prefix_space=True,
         )
     else:
+        print(tokenizer_name_or_path, model_args.cache_dir)
         tokenizer = AutoTokenizer.from_pretrained(
             tokenizer_name_or_path,
             cache_dir=model_args.cache_dir,
@@ -409,7 +409,7 @@ def main():
             token=model_args.token,
             trust_remote_code=model_args.trust_remote_code,
         )
-
+    print(tokenizer_name_or_path, model_args.cache_dir)
     model = AutoModelForTokenClassification.from_pretrained(
         model_args.model_name_or_path,
         from_tf=bool(".ckpt" in model_args.model_name_or_path),
@@ -677,9 +677,9 @@ def main():
 
         count=0
         for lang, info in lang_info.items():
-            # if count>8:
-            #     break
-            # count+=1
+            if count>4:
+                break
+            count+=1
             print(lang, info, count)
             ## define model path (zero shot from english if trained model not available)
             if 'train' in lang_info[lang]["split"]:

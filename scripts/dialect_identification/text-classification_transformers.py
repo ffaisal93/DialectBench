@@ -386,11 +386,13 @@ def main():
         for key in data_files.keys():
             logger.info(f"load a local file for {key}: {data_files[key]}")
 
+
         if data_args.train_file.endswith(".csv"):
             # Loading a dataset from local csv files
             raw_datasets = load_dataset(
                 "csv",
                 data_files=data_files,
+                on_bad_lines='skip',
                 cache_dir=model_args.cache_dir,
                 token=model_args.token,
             )
@@ -545,7 +547,8 @@ def main():
 
     # for training ,we will update the config with label infos,
     # if do_train is not set, we will use the label infos in the config
-    if training_args.do_train and not is_regression:  # classification, training
+
+    if (training_args.do_train or training_args.do_predict) and not is_regression:  # classification, training
         label_to_id = {v: i for i, v in enumerate(label_list)}
         # update config with label infos
         if model.config.label2id != label_to_id:
@@ -764,6 +767,7 @@ def main():
                         writer.write(f"{index}\t{item}\n")
             
             class_report = classification_report(y_pred, y_act,labels=label_list,output_dict=True)
+            print(class_report)
             with open(output_test_results_file, "w") as writer:
                 for k,v in class_report.items():
                     if type(v)==dict:
