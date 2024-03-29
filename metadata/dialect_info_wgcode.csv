@@ -1,0 +1,282 @@
+language group,variety name,new_name,glottocode,# of speakers,mBERT seen,UDP,POS,NER,SDQA,RCMC,NLI,TC,SC,DI,MT
+albanian,albanian,albanian/albanian,alba1267,7500000,tick,UD_Albanian-TSA,UD_Albanian-TSA,-,-,-,-,-,-,-,-
+albanian,gheg albanian,albanian/gheg,gheg1238,4100000,-,UD_Gheg-GPS,UD_Gheg-GPS,-,-,-,-,-,-,-,-
+anglic,african american vernacular english,english/american/african,afri1276,30000000,-,TwitterAAE,-,-,-,-,-,-,-,-,-
+anglic,australian english,english/australian,aust1314,21715910,-,-,-,-,english--aus,-,-,-,-,-,-
+anglic,english,english/standard,stan1293,1350000000,tick,UD_English-EWT,UD_English-EWT,en,-,eng_Latn,eng_Latn,eng_Latn,-,english:EN,-
+anglic,english (a:scotland),english/scottish,stan1293,5463300,-,-,-,-,english--gbr,-,-,-,-,-,-
+anglic,english (a:uk),english/standard british,stan1293,62912000,-,-,-,-,-,-,-,-,-,english:EN-GB,-
+anglic,english (o:controlled),english/simple,stan1293,-,-,-,-,simple,-,-,-,-,-,-,-
+anglic,indian english (a:north),english/indian/north,indi1255,-,-,-,-,-,english--ind_n,-,-,-,-,-,-
+anglic,indian english (a:south),english/indian/south,indi1255,-,-,-,-,-,english--ind_s,-,-,-,-,-,-
+anglic,irish english,english/irish,iris1255,4350000,-,-,-,-,english--irl,-,-,-,-,-,-
+anglic,jamaican creole english,english/jamaican patois,jama1262,3200000,-,-,-,jam,-,-,-,-,-,-,-
+anglic,kenyan english,english/kenyan,keny1281,8100000,-,-,-,-,english--kenya,-,-,-,-,-,-
+anglic,new zealand english,english/new zealand,newz1240,4181902,-,-,-,-,english--nzl,-,-,-,-,-,-
+anglic,nigerian english,english/nigerian,nige1260,125039680,-,-,-,-,english--nga,-,-,-,-,-,-
+anglic,north american english,english/american/standard,nort3314,316107532,-,-,-,-,-,-,-,-,-,english:EN-US,-
+anglic,old english (ca. 450-1100),english/old,olde1238,antiquated,-,-,-,ang,-,-,-,-,-,-,-
+anglic,philippine english,english/filipino,phil1246,64025890,-,-,-,-,english--phl,-,-,-,-,-,-
+anglic,singlish,english/singlish,sing1272,3900000,-,singlish,singlish,-,-,-,-,-,-,-,-
+anglic,southeast american english,english/american/southeast,sout3300,79200000,-,-,-,-,english--usa,-,-,-,-,-,-
+anglic,southern african english,english/south african,sout3331,16424417,-,-,-,-,english--zaf,-,-,-,-,-,-
+arabic,aleppo,Aleppo,alep1241,-,-,-,-,-,-,-,-,-,-,arabic:ale,Aleppo
+arabic,algerian arabic,arabic/algerian,alge1239,41700000,-,-,-,-,arabic--dza,-,-,-,arq_arab,arabic:alg,Algiers
+arabic,arabian peninsula arabic (a:yemen),arabic/yemeni,arab1393,29500000,-,-,-,-,-,-,-,-,-,arabic:san,Sanaa
+arabic,arabic (a:bahrain),arabic/bahraini,-,70000,-,-,-,-,arabic--bhr,-,-,-,-,-,-
+arabic,arabic (a:jordan),arabic/jordanian,-,6240000,-,-,-,-,arabic--jor,-,-,-,jor_arab,-,-
+arabic,arabic (a:saudi-arabia),arabic/saudi arabian,-,30770375,-,-,-,-,arabic--sau,-,-,-,sau_arab,-,-
+arabic,egyptian arabic,arabic/egyptian,egyp1253,102000000,-,-,dar-egy,arz,arabic--egy,arz_Arab,arz_Arab,arz_Arab,arz_arab,-,-
+arabic,egyptian arabic (a:alx),arabic/egyptian/alx,egyp1253,154706,-,-,-,-,-,-,-,-,-,arabic:alx,Alexandria
+arabic,egyptian arabic (a:asw),arabic/egyptian/asw,egyp1253,1568000,-,-,-,-,-,-,-,-,-,arabic:asw,Aswan
+arabic,egyptian arabic (a:cai),arabic/egyptian/cai,egyp1253,9540000,-,-,-,-,-,-,-,-,-,arabic:cai,Cairo
+arabic,egyptian arabic (a:kha),arabic/egyptian/kha,egyp1253,639598,-,-,-,-,-,-,-,-,-,arabic:kha,Khartoum
+arabic,fez. meknes,arabic/moroccan/fes,fezm1238,-,-,-,-,-,-,-,-,-,-,arabic:fes,Fes
+arabic,gilit mesopotamian arabic,arabic/mesopotamian/bag,meso1252,18000000,-,-,-,-,-,-,-,-,-,arabic:bag,Baghdad
+arabic,gulf arabic,arabic/gulf,gulf1241,11000000,-,-,dar-glf,-,-,-,-,-,-,-,-
+arabic,gulf arabic (a:doh),arabic/gulf/doh,gulf1241,2382000,-,-,-,-,-,-,-,-,-,arabic:doh,Doha
+arabic,gulf arabic (a:jed),arabic/gulf/jed,gulf1241,3976000,-,-,-,-,-,-,-,-,-,arabic:jed,Jeddah
+arabic,gulf arabic (a:mus),arabic/gulf/mus,gulf1241,1676000,-,-,-,-,-,-,-,-,-,arabic:mus,Muscat
+arabic,gulf arabic (a:riy),arabic/gulf/riy,gulf1241,7677000,-,-,-,-,-,-,-,-,-,arabic:riy,Riyadh
+arabic,levantine arabic,arabic/levantine,nort3139,48000000,-,-,dar-lev,-,-,-,-,-,-,-,-
+arabic,levantine arabic (a:north),arabic/levantine/north,nort3139,14200000,-,-,-,-,-,apc_Arab,apc_Arab,apc_Arab,-,-,-
+arabic,levantine arabic (a:north-dam),arabic/levantine/north/dam,nort3139,-,-,-,-,-,-,-,-,-,-,arabic:dam,Damascus
+arabic,libyan arabic,arabic/libian,liby1240,5400000,-,-,-,-,-,-,-,-,-,-,-
+arabic,libyan arabic (a:ben),arabic/libian/ben,liby1240,-,-,-,-,-,-,-,-,-,-,arabic:ben,Benghazi
+arabic,moroccan arabic,arabic/moroccan,moro1292,39000000,-,-,-,-,arabic--mar,ary_Arab,ary_Arab,ary_Arab,ary_arab,-,-
+arabic,najdi arabic,arabic/najdi,najd1235,18000000,-,-,-,-,-,ars_Arab,ars_Arab,ars_Arab,-,-,-
+arabic,north african arabic,arabic/maghrebi,nort3191,70000000,-,UD_Maghrebi_Arabic_French-Arabizi,UD_Maghrebi_Arabic_French-Arabizi,-,-,-,-,-,-,-,-
+arabic,north mesopotamian arabic,arabic/mesopotamian,nort3142,29000000,-,-,-,-,-,acm_Arab,acm_Arab,acm_Arab,-,-,-
+arabic,north mesopotamian arabic (a:bas),arabic/mesopotamian/bas,nort3142,-,-,-,-,-,-,-,-,-,-,arabic:bas,Basra
+arabic,north mesopotamian arabic (a:mos),arabic/mesopotamian/mos,nort3142,-,-,-,-,-,-,-,-,-,-,arabic:mos,Mosul
+arabic,rabat-casablanca arabic,arabic/moroccan/rab,raba1252,-,-,-,-,-,-,-,-,-,-,arabic:rab,Rabat
+arabic,sfax,arabic/tunisian/sfx,sfax1238,330440,-,-,-,-,-,-,-,-,-,arabic:sfx,Sfax
+arabic,south levantine arabic,arabic/levantine/south,sout3123,6200000,-,UD_South_Levantine_Arabic-MADAR,UD_South_Levantine_Arabic-MADAR,-,-,-,ajp_Arab,ajp_Arab,ar-lb,-,-
+arabic,south levantine arabic (a:south-amm),Amman,sout3123,-,-,-,-,-,-,-,-,-,-,arabic:amm,Amman
+arabic,south levantine arabic (a:south-jer),arabic/levantine/south/jer,sout3123,-,-,-,-,-,-,-,-,-,-,arabic:jer,Jerusalem
+arabic,south levantine arabic (a:south-sal),arabic/levantine/south/sal,sout3123,-,-,-,-,-,-,-,-,-,-,arabic:sal,Salt
+arabic,standard arabic,arabic/modern standard,stan1318,425000000,tick,UD_Arabic-PADT,UD_Arabic-PADT,ar,-,arb_Arab,arb_Arab,arb_Arab,arb_arab,arabic:msa,-
+arabic,sunni beiruti arabic,arabic/levantine/north/bei,sunn1238,-,-,-,-,-,-,-,-,-,-,arabic:bei,Beirut
+arabic,ta'izzi-adeni arabic,arabic/ta’izzi-adeni,taiz1242,12000000,-,-,-,-,-,-,acq_Arab,acq_Arab,-,-,-
+arabic,tripolitanian arabic,arabic/libian/tri,trip1239,-,-,-,-,-,-,-,-,-,-,arabic:tri,Tripoli
+arabic,tunisian arabic,arabic/tunisian,tuni1259,12000000,-,-,-,-,arabic--tun,-,aeb_Arab,aeb_Arab,aeb_Arab,-,-
+arabic,tunisian arabic (a:tun),arabic/tunisian/tun,tuni1259,-,-,-,-,-,-,-,-,-,-,arabic:tun,Tunis
+arabic,tunisian arabic (r:casual),arabic/tunisian arabizi,tuni1259,written,-,-,-,-,-,-,-,-,aeb_Latn,-,-
+basque,basque (a:amenduze),Amenduze,basq1248,-,tick,-,-,-,-,-,-,-,-,-,Amenduze
+basque,basque (a:azkaine),Azkaine,basq1248,-,-,-,-,-,-,-,-,-,-,-,Azkaine
+basque,basque (a:baigorri),Baigorri,basq1248,-,-,-,-,-,-,-,-,-,-,-,Baigorri
+basque,basque (a:barkoxe),Barkoxe,basq1248,-,-,-,-,-,-,-,-,-,-,-,Barkoxe
+basque,basque (a:donibane),Donibane,basq1248,-,-,-,-,-,-,-,-,-,-,-,Donibane
+basque,basque (a:garruze),Garruze,basq1248,-,-,-,-,-,-,-,-,-,-,-,Garruze
+basque,basque (a:iholdi),Iholdi,basq1248,-,-,-,-,-,-,-,-,-,-,-,Iholdi
+basque,basque (a:jatsu),Jatsu,basq1248,-,-,-,-,-,-,-,-,-,-,-,Jatsu
+basque,basque (a:jutsi),Jutsi,basq1248,-,-,-,-,-,-,-,-,-,-,-,Jutsi
+basque,basque (a:larzabale),Larzabale,basq1248,-,-,-,-,-,-,-,-,-,-,-,Larzabale
+basque,basque (a:luhuso),Luhuso,basq1248,-,-,-,-,-,-,-,-,-,-,-,Luhuso
+basque,basque (a:sara),Sara,basq1248,-,-,-,-,-,-,-,-,-,-,-,Sara
+basque,basque (a:senpere),Senpere,basq1248,-,-,-,-,-,-,-,-,-,-,-,Senpere
+basque,basque (a:suhuskune),Suhuskune,basq1248,-,-,-,-,-,-,-,-,-,-,-,Suhuskune
+basque,basque (a:uharte),Uharte,basq1248,-,-,-,-,-,-,-,-,-,-,-,Uharte
+basque,navarro-labourdin basque (a:behorlegi),Behorlegi,basq1249,-,-,-,-,-,-,-,-,-,-,-,Behorlegi
+basque,navarro-labourdin basque (a:bidarrai),Bidarrai,basq1249,-,-,-,-,-,-,-,-,-,-,-,Bidarrai
+basque,navarro-labourdin basque (a:helete),Heleta,basq1249,-,-,-,-,-,-,-,-,-,-,-,Heleta
+basque,navarro-labourdin basque (a:mugerre),Mugerre,basq1249,-,-,-,-,-,-,-,-,-,-,-,Mugerre
+basque,navarro-labourdin basque (a:urruna),Urruna,basq1249,-,-,-,-,-,-,-,-,-,-,-,Urruna
+basque,souletin (a:maule),Maule,basq1250,-,-,-,-,-,-,-,-,-,-,-,Maule
+bengali,vanga (a:barisal),Barisal,vang1242,549031,-,-,-,-,-,-,-,-,-,-,Barisal
+bengali,vanga (a:dhaka),Dhakaiya,vang1242,"44,215,107",tick,-,-,-,bengali--dhaka,-,-,-,-,-,Dhakaiya
+bengali,vanga (a:jessore),Jessore,vang1242,3076144,-,-,-,-,-,-,-,-,-,-,Jessore
+bengali,vanga (a:khulna),Khulna,vang1242,2984000,-,-,-,-,-,-,-,-,-,-,Khulna
+bengali,vanga (a:kushtia),Kushtia,vang1242,2367000,-,-,-,-,-,-,-,-,-,-,Kushtia
+bengali,vanga (a:west bengal),bengali/west bengal,vang1242,"80,176,197",tick,-,-,-,bengali--ind,-,-,-,-,-,-
+circassian,adyghe,circassian/adyghe,adyg1241,500000,-,-,-,ady,-,-,-,-,-,-,-
+circassian,kabardian,circassian/kabardian,kaba1278,1000000,-,-,-,kbd,-,-,-,-,-,-,-
+common turkic,bashkir,ba,bash1264,1200000,tick,-,-,-,-,-,-,-,-,-,ba
+common turkic,central oghuz,az,azer1255,-,-,-,-,-,-,-,-,-,-,-,az
+common turkic,central oghuz (m:spoken),azerbaijani/turkish,azer1255,-,-,-,-,-,-,-,tur_Latn,tur_Latn,-,-,-
+common turkic,crimean tatar,turkish/crimean tatar,crim1257,580000,-,-,-,crh,-,-,-,-,-,-,-
+common turkic,kara-kalpak,kaa,kara1467,5800000,-,-,-,-,-,-,-,-,-,-,kaa
+common turkic,kazakh,kk,kaza1248,-,tick,-,-,-,-,-,-,-,-,-,kk
+common turkic,kirghiz,ky,kirg1245,17000000,tick,-,-,-,-,-,-,-,-,-,ky
+common turkic,north azerbaijani,azerbaijani/north,nort2697,24000000,tick,-,-,az,-,-,azj_Latn,azj_Latn,-,-,-
+common turkic,sakha,sah,yaku1245,480000,-,-,-,-,-,-,-,-,-,-,sah
+common turkic,south azerbaijani,azerbaijani/south,sout2697,14640650,tick,-,-,azb,-,-,azb_Arab,azb_Arab,-,-,-
+common turkic,turkish,turkish/turkish,nucl1301,90000000,tick,-,-,tr,-,-,-,-,-,-,tr
+common turkic,uzbek,uz,uzbe1247,31000000,tick,-,-,-,-,-,-,-,-,-,uz
+eastern romance,aromanian,romanian/aromanian,arom1237,210000,-,-,-,roa-rup,-,-,-,-,-,-,-
+eastern romance,moldavian,romanian/moldovan,mold1248,23000000,-,-,-,mo,-,-,-,-,-,-,-
+eastern romance,romanian,romanian/romanian,roma1327,23000000,tick,-,-,ro,-,-,-,-,-,-,-
+eastern-western armenian,eastern armenian,armenian/armenian,nucl1235,5300000,tick,UD_Armenian-ArmTDP,UD_Armenian-ArmTDP,-,-,-,-,-,-,-,-
+eastern-western armenian,western armenian,armenian/western,homs1234,1600000,-,UD_Western_Armenian-ArmTDP,UD_Western_Armenian-ArmTDP,-,-,-,-,-,-,-,-
+farsic,dari,Dari,dari1249,10000000,-,-,-,-,-,-,-,-,-,-,Dari
+frisian,ems-weser frisian,frisian/saterland,sate1242,2250,-,-,-,stq,-,-,-,-,-,-,-
+frisian,northern frisian,frisian/northern,nort2626,10000,-,-,-,frr,-,-,-,-,-,-,-
+frisian,western frisian,frisian/western,west2354,470000,tick,-,-,fy,-,-,-,-,-,-,-
+gallo-italian,emiliano-romagnolo,italian/emiliano-romagnolo,emil1243,4400000,-,-,-,eml,-,-,-,-,-,-,-
+gallo-italian,ligurian,italian/ligurian,ligu1248,500000,-,UD_Ligurian-GLT,UD_Ligurian-GLT,lij,-,-,lij_Latn,lij_Latn,-,-,-
+gallo-italian,lombard,italian/lombard,lomb1257,3800000,tick,-,-,lmo,-,-,lmo_Latn,lmo_Latn,-,-,-
+gallo-italian,piemontese,italian/piedmontese,piem1238,2000000,tick,-,-,pms,-,-,-,-,-,-,-
+gallo-italian,venetian,italian/venetian,vene1258,3900000,-,-,-,vec,-,-,vec_Latn,vec_Latn,-,-,-
+gallo-rhaetian,anglo-norman,french/norman,angl1258,20000,-,-,-,nrm,-,-,-,-,-,-,-
+gallo-rhaetian,arpitan,italian/arpitan,fran1260,157000,-,-,-,frp,-,-,-,-,-,-,-
+gallo-rhaetian,french,french/french,stan1290,68500000,tick,UD_French-ParTUT,UD_French-ParTUT,fr,-,-,-,-,-,-,-
+gallo-rhaetian,french (a:paris),french/parisian,stan1290,2160000,-,UD_French-ParisStories,UD_French-ParisStories,-,-,-,-,-,-,-,-
+gallo-rhaetian,friulian,italian/friulian,friu1240,420000,-,-,-,fur,-,-,fur_Latn,fur_Latn,-,-,-
+gallo-rhaetian,old french (842-ca. 1400),french/old,oldf1239,antiquated,-,UD_Old_French-SRCMF,UD_Old_French-SRCMF,-,-,-,-,-,-,-,-
+gallo-rhaetian,romansh,italian/romansh,roma1326,60000,-,-,-,rm,-,-,-,-,-,-,-
+gallo-rhaetian,walloon,french/walloon,wall1255,600000,-,-,-,wa,-,-,-,-,-,-,-
+greater panjabic,eastern panjabi,punjabi/punjabi,panj1256,113000000,tick,-,-,pa,-,-,-,-,-,-,-
+greater panjabic,western panjabi,punjabi/western,west2386,80540000,tick,-,-,pnb,-,-,-,-,-,-,-
+greek,apulian greek,Griko,apul1237,20000,-,-,-,-,-,-,-,-,-,-,Griko
+greek,cretan,greek/cretan,cret1244,500000,-,-,-,-,-,-,-,-,-,-,Cretan
+greek,cypriot greek,greek/cypriot,cypr1249,700000,-,-,-,-,-,-,-,-,-,-,-
+greek,"cypriot greek (r:casual, m:written, i:fb)",greek/cypriot/fb,cypr1249,-,-,-,-,-,-,-,-,-,-,greek:cg_fb,-
+greek,"cypriot greek (r:casual, m:written, i:other)",greek/cypriot/other,cypr1249,-,-,-,-,-,-,-,-,-,-,greek:cg_other,-
+greek,"cypriot greek (r:casual, m:written, i:twitter)",greek/cypriot/twitter,cypr1249,-,-,-,-,-,-,-,-,-,-,greek:cg_twitter,-
+greek,modern greek,greek/modern,mode1248,13000000,tick,-,-,el,-,-,-,-,-,-,-
+greek,"modern greek (r:casual, m:written, i:fb)",greek/modern/fb,mode1248,-,-,-,-,-,-,-,-,-,-,greek:smg_fb,-
+greek,"modern greek (r:casual, m:written, i:other)",greek/modern/other,mode1248,-,-,-,-,-,-,-,-,-,-,greek:smg_other,-
+greek,"modern greek (r:casual, m:written, i:twitter)",greek/modern/twitter,mode1248,-,-,-,-,-,-,-,-,-,-,greek:smg_twitter,-
+greek,pontic,greek/pontic,pont1253,778000,-,-,-,pnt,-,-,-,-,-,-,-
+high german,bavarian,german/bavarian,bava1246,12000000,tick,-,-,bar,-,-,-,-,-,-,-
+high german,central alemannic,german/swiss german,swis1247,10000000,-,-,-,als,-,-,-,-,-,-,-
+high german,central alemannic (a:ag),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,AG
+high german,central alemannic (a:ai),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,AI
+high german,central alemannic (a:ar),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,AR
+high german,central alemannic (a:be),german/swiss german/be,swis1247,-,-,-,-,-,-,-,-,-,-,swiss-dialects:BE,BE
+high german,central alemannic (a:bl),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,BL
+high german,central alemannic (a:bs),german/swiss german/bs,swis1247,-,-,-,-,-,-,-,-,-,-,swiss-dialects:BS,BS
+high german,central alemannic (a:fr),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,FR
+high german,central alemannic (a:gl),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,GL
+high german,central alemannic (a:gr),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,GR
+high german,central alemannic (a:lu),german/swiss german/lu,swis1247,-,-,-,-,-,-,-,-,-,-,swiss-dialects:LU,LU
+high german,central alemannic (a:nw),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,NW
+high german,central alemannic (a:ow),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,OW
+high german,central alemannic (a:sg),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,SG
+high german,central alemannic (a:sh),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,SH
+high german,central alemannic (a:so),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,SO
+high german,central alemannic (a:sz),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,SZ
+high german,central alemannic (a:tg),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,TG
+high german,central alemannic (a:ur),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,UR
+high german,central alemannic (a:vs),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,VS
+high german,central alemannic (a:zg),-,swis1247,-,-,-,-,-,-,-,-,-,-,-,ZG
+high german,central alemannic (a:zh),german/swiss german/zh,swis1247,-,-,UD_Swiss_German-UZH,UD_Swiss_German-UZH,-,-,-,-,-,-,swiss-dialects:ZH,ZH
+high german,central bavarian,Danube_Bavarian,cent1967,-,-,-,-,-,-,-,-,-,-,-,Danube_Bavarian
+high german,german,german/german,stan1295,111800000,tick,UD_German-LIT,UD_German-LIT,de,-,-,-,-,-,-,-
+high german,kölsch,dutch/colognian,kols1241,250000,-,-,-,ksh,-,-,-,-,-,-,-
+high german,limburgan,dutch/limburgish,limb1263,1300000,-,-,-,li,-,-,lim_Latn,lim_Latn,-,-,-
+high german,luxemburgish,dutch/luxembourgish,luxe1243,390000,tick,-,-,lb,-,-,ltz_Latn,ltz_Latn,-,-,-
+high german,pennsylvania german,german/pennsylvania,penn1240,300000,-,-,-,pdc,-,-,-,-,-,-,-
+high german,pfaelzisch-lothringisch,german/palatine,pala1330,400000,-,-,-,pfl,-,-,-,-,-,-,-
+high german,upper saxon,Saxony,uppe1465,2000000,-,-,-,-,-,-,-,-,-,-,Saxony
+hindustani,fiji hindi,hindi/fiji,fiji1242,380000,-,-,-,hif,-,-,-,-,-,-,-
+hindustani,hindi,hindi/hindi,hind1269,592000000,tick,-,-,hi,-,-,-,-,-,-,-
+inuit,alaskan inupiaq,inuit/inupiaq,inup1234,1250,-,-,-,ik,-,-,-,-,-,-,-
+inuit,kalaallisut,inuit/kalaallisut,kala1399,50000,-,-,-,kl,-,-,-,-,-,-,-
+italian romance,continental southern italian,italian/neapolitan,neap1235,5700000,-,UD_Neapolitan-RB,UD_Neapolitan-RB,nap,-,-,-,-,-,-,-
+italian romance,italian,italian/italian,ital1282,61100000,tick,UD_Italian-PUD,UD_Italian-PUD,it,-,-,ita_Latn,ita_Latn,-,-,-
+italian romance,italian (a:abruzzo),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Abruzzo
+italian romance,italian (a:basilicata),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Basilicata
+italian romance,italian (a:calabria),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Calabria
+italian romance,italian (a:campania),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Campania
+italian romance,italian (a:emilia-romagna),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Emilia-Romagna
+italian romance,italian (a:friuli-venezia giulia),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Friuli-Venezia Giulia
+italian romance,italian (a:lazio),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Lazio
+italian romance,italian (a:liguria),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Liguria
+italian romance,italian (a:lombardia),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Lombardia
+italian romance,italian (a:marche),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Marche
+italian romance,italian (a:molise),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Molise
+italian romance,italian (a:piemonte),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Piemonte
+italian romance,italian (a:puglia),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Puglia
+italian romance,italian (a:sardegna),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Sardegna
+italian romance,italian (a:sicilia),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Sicilia
+italian romance,italian (a:toscana),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Toscana
+italian romance,italian (a:trentino-alto adige/südtirol),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Trentino-Alto Adige/Südtirol
+italian romance,italian (a:umbria),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Umbria
+italian romance,italian (a:unknown),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Unknown
+italian romance,italian (a:veneto),-,ital1282,-,-,-,-,-,-,-,-,-,-,-,Veneto
+italian romance,"italian (r:casual, m:written, i:tweet)",italian/italian/tweet,ital1282,-,tick,UD_Italian-PoSTWITA,UD_Italian-PoSTWITA,-,-,-,-,-,-,-,-
+italian romance,"italian (r:formal, m:written, i:essay)",italian/italian/essay,ital1282,-,tick,UD_Italian-MarkIT,UD_Italian-MarkIT,-,-,-,-,-,-,-,-
+italian romance,"italian romance (a:apulia, m:spoken, i:tarantino)",italian/tarantino,-,220000,-,-,-,roa-tara,-,-,-,-,-,-,-
+italian romance,sicilian,italian/sicilian,sici1248,4700000,tick,-,-,scn,-,-,scn_Latn,scn_Latn,-,-,-
+komi,komi,komi/komi,komi1267,1000000,-,-,-,kv,-,-,-,-,-,-,-
+komi,komi-permyak,komi/permyak,komi1269,63000,-,UD_Komi_Permyak-UH,UD_Komi_Permyak-UH,koi,-,-,-,-,-,-,-
+komi,komi-zyrian (m:spoken),komi/zyrian/dialectal,komi1268,99609,-,UD_Komi_Zyrian-IKDP,UD_Komi_Zyrian-IKDP,-,-,-,-,-,-,-,-
+komi,komi-zyrian (m:written),komi/zyrian/written,komi1268,99609,-,UD_Komi_Zyrian-Lattice,UD_Komi_Zyrian-Lattice,-,-,-,-,-,-,-,-
+korean,"korean (a:south-eastern, m:spoken)",korean/southern,kore1280,13000000,-,-,-,-,korean--kors,-,-,-,-,-,-
+korean,seoul (m:spoken),korean/seoul,seou1239,"51,757,637",tick,-,-,-,korean--korn,-,-,-,-,-,-
+kurdish,central kurdish,kurdish/central,cent1972,7250000,-,-,-,ckb,-,-,ckb_Arab,ckb_Arab,-,-,-
+kurdish,kurdish,kurdish/kurdish,kurd1259,30000000,-,-,-,ku,-,-,-,-,-,-,-
+kurdish,northern kurdish,kurdish/northern,nort2641,15000000,-,-,-,-,-,-,kmr_Latn,kmr_Latn,-,-,-
+kurdish,sine'i,Sine,sine1239,-,-,-,-,-,-,-,-,-,-,-,Sine
+kurdish,sorani,Mehabad,sora1257,-,-,-,-,-,-,-,-,-,-,-,Mehabad
+latvian,east latvian,latvian/latgalian,east2282,200000,-,-,-,ltg,-,-,ltg_Latn,ltg_Latn,-,-,-
+latvian,latvian,latvian/latvian,latv1249,1700000,tick,-,-,lv,-,-,lvs_Latn,lvs_Latn,-,-,-
+mari,eastern mari,mari/eastern,east2328,470000,-,-,-,mhr,-,-,-,-,-,-,-
+mari,western mari,mari/western,west2392,30000,-,-,-,mrj,-,-,-,-,-,-,-
+modern dutch,dutch,dutch/dutch,dutc1256,25000000,tick,-,-,nl,-,-,nld_Latn,nld_Latn,-,-,-
+modern dutch,western flemish,dutch/west flemish,vlaa1240,1400000,-,-,-,vls,-,-,-,-,-,-,-
+modern dutch,zeeuws,dutch/zeelandic,zeeu1238,220000,-,-,-,zea,-,-,-,-,-,-,-
+neva,central and north pohjanmaa (a:ostrobothnian),finnish/murre-poh,cent1985,-,-,-,murre-POH,-,-,-,-,-,-,-,-
+neva,estonian,finnish/estonian,esto1258,1200000,tick,-,UD_Estonian-EDT,-,-,-,-,-,-,-,-
+neva,finnish,finnish/finnish,finn1318,5000000,tick,-,UD_Finnish-TDT,-,-,-,-,-,-,-,-
+neva,häme (a:tavastian),finnish/murre-häm,hame1240,-,-,-,murre-HÄM,-,-,-,-,-,-,-,-
+neva,neva (a:south-west trans),finnish/murre-lou,-,-,-,-,murre-LOU,-,-,-,-,-,-,-,-
+neva,savo (a:savonian),finnish/murre-sav,savo1254,-,-,-,murre-SAV,-,-,-,-,-,-,-,-
+neva,southeastern finnish (a:south-east),finnish/murre-kaa,sout1743,-,-,-,murre-KAA,-,-,-,-,-,-,-,-
+neva,southwestern finnish (a:south-west),finnish/murre-lvä,sout2677,-,-,-,murre-LVÄ,-,-,-,-,-,-,-,-
+norwegian,norwegian,norwegian/norwegian,norw1258,4320000,tick,-,-,-,-,-,-,-,-,-,-
+norwegian,norwegian (a:eastern),Eastern,norw1258,-,-,-,-,-,-,-,-,-,-,-,Eastern
+norwegian,norwegian (a:setesdal),Setesdal,norw1258,-,-,-,-,-,-,-,-,-,-,-,Setesdal
+norwegian,norwegian (a:southwestern),Southwestern,norw1258,-,-,-,-,-,-,-,-,-,-,-,Southwestern
+norwegian,"norwegian (m:written, i:samnorsk)",norwegian/samnorsk,-,antiquated,-,-,-,samnorsk,-,-,-,-,-,-,-
+norwegian,norwegian bokmål (m:written),norwegian/bokmaal,norw1259,written only,tick,UD_Norwegian-Bokmaal,UD_Norwegian-Bokmaal,bokmaal,-,-,nob_Latn,nob_Latn,-,-,-
+norwegian,norwegian nynorsk (m:written),norwegian/nynorsk,norw1262,written only,tick,UD_Norwegian-Nynorsk,UD_Norwegian-Nynorsk,nynorsk,-,-,nno_Latn,nno_Latn,-,-,-
+norwegian,"norwegian nynorsk (m:written, i:old)",norwegian/nynorsk/old,norw1262,antiquated,-,UD_Norwegian-NynorskLIA,UD_Norwegian-NynorskLIA,-,-,-,-,-,-,-,-
+saami,north saami,sami/north,nort2671,25000,-,UD_North_Sami-Giella,UD_North_Sami-Giella,-,-,-,-,-,-,-,-
+saami,skolt saami,sami/skolt,skol1241,330,-,UD_Skolt_Sami-Giellagas,UD_Skolt_Sami-Giellagas,-,-,-,-,-,-,-,-
+sabellic,umbrian,italian/umbrian,umbr1253,antiquated,-,UD_Umbrian-IKUVINA,UD_Umbrian-IKUVINA,-,-,-,-,-,-,-,-
+sardo-corsican,corsican,italian/corsican,cors1241,150000,-,-,-,co,-,-,-,-,-,-,-
+sardo-corsican,sardinian,italian/sardinian,sard1257,1000000,-,-,-,sc,-,-,srd_Latn,srd_Latn,-,-,-
+serbian-croatian-bosnian,bosnian standard,croatian/bosnian,bosn1245,2500000,tick,-,-,bs,-,-,-,-,-,-,-
+serbian-croatian-bosnian,croatian standard,croatian/croatian,croa1245,7000000,tick,-,-,hr,-,-,-,-,-,-,-
+serbian-croatian-bosnian,serbian standard,croatian/serbian,serb1264,12000000,tick,-,-,sr,-,-,-,-,-,-,-
+serbian-croatian-bosnian,serbian-croatian-bosnian,croatian/serbo-croatian,sout1528,19000000,tick,-,-,sh,-,-,-,-,-,-,-
+sinitic,cantonese,chinese/cantonese,cant1236,60000000,-,-,-,zh-yue,-,-,yue_Hant,yue_Hant,-,-,-
+sinitic,classical chinese,chinese/classical,lite1248,historical,-,UD_Classical_Chinese-Kyoto,UD_Classical_Chinese-Kyoto,zh-classical,-,-,-,-,-,-,-
+sinitic,"classical-middle-modern sinitic (a:hongkong, o:traditional)",chinese/traditional/hongkong,clas1255,written only,-,UD_Chinese-HK,UD_Chinese-HK,-,-,-,-,-,-,-,-
+sinitic,classical-middle-modern sinitic (o:simplified),chinese/simplified,clas1255,written only,tick,UD_Chinese-GSDSimp,UD_Chinese-GSDSimp,-,-,zho_Hans,zho_Hans,zho_Hans,-,-,-
+sinitic,classical-middle-modern sinitic (o:traditional),chinese/traditional,clas1255,written only,tick,-,-,-,-,zho_Hant,zho_Hant,zho_Hant,-,-,-
+sinitic,hakka chinese,chinese/hakka,hakk1236,47800000,-,-,-,hak,-,-,-,-,-,-,-
+sinitic,mandarin chinese,chinese/chinese,mand1415,1350000000,-,-,-,zh,-,-,-,-,-,-,-
+sinitic,"mandarin chinese (a:mainland, o:simplified)",chinese/mandarin/mainland/simplified,mand1415,1000000000,-,-,-,-,-,-,-,-,-,mandarin_simplified:M,-
+sinitic,"mandarin chinese (a:mainland, o:traditional, i:synthetic)",chinese/mandarin/mainland/traditional,mand1415,1000000000,-,-,-,-,-,-,-,-,-,mandarin_traditional:M,-
+sinitic,"mandarin chinese (a:taiwan, o:simplified)",chinese/mandarin/taiwanese/simplified,mand1415,19600000,-,-,-,-,-,-,-,-,-,mandarin_simplified:T,-
+sinitic,"mandarin chinese (a:taiwan, o:traditional, i:synthetic)",chinese/mandarin/taiwanese/traditional,mand1415,19600000,-,-,-,-,-,-,-,-,-,mandarin_traditional:T,-
+sinitic,min nan chinese,chinese/min nan,minn1241,48000000,-,-,-,zh-min-nan,-,-,-,-,-,-,-
+sinitic,wu chinese,chinese/wu,wuch1236,80000000,-,-,-,wuu,-,-,-,-,-,-,-
+sorbian,lower sorbian,sorbian/lower,lowe1385,6900,-,-,-,dsb,-,-,-,-,-,-,-
+sorbian,upper sorbian,sorbian/upper,uppe1395,13000,-,-,-,hsb,-,-,-,-,-,-,-
+sotho-tswana (s.30),northern sotho,sotho/northern,nort3233,13800000,-,-,-,nso,-,nso_Latn,nso_Latn,nso_Latn,-,-,-
+sotho-tswana (s.30),southern sotho,sotho/southern,sout2807,5600000,-,-,-,st,-,sot_Latn,sot_Latn,sot_Latn,-,-,-
+southwestern shifted romance,brazilian portuguese,portuguese/brazilian,braz1246,203062512,-,UD_Portuguese-GSD,UD_Portuguese-GSD,-,-,-,-,-,-,portuguese:PT-BR,-
+southwestern shifted romance,extremaduran,spanish/extremaduran,extr1243,200000,-,-,-,ext,-,-,-,-,-,-,-
+southwestern shifted romance,galician,spanish/galician,gali1258,2400000,tick,-,-,gl,-,-,glg_Latn,glg_Latn,-,-,-
+southwestern shifted romance,latin american spanish,spanish/argentinian,amer1254,41700000,-,-,-,-,-,-,-,-,-,spanish:ES-AR,-
+southwestern shifted romance,mirandese,spanish/mirandese,mira1251,15000,-,-,-,mwl,-,-,-,-,-,-,-
+southwestern shifted romance,occitan,Occitan,occi1239,200000,tick,-,ROci,oc,-,-,oci_Latn,oci_Latn,-,-,Occitan
+southwestern shifted romance,portuguese (a:european),portuguese/european,port1283,40000000,-,UD_Portuguese-PUD,UD_Portuguese-PUD,-,-,-,por_Latn,por_Latn,-,portuguese:PT-PT,-
+southwestern shifted romance,portuguese (i:mix),portuguese/mix,port1283,-,-,UD_Portuguese-Bosque,UD_Portuguese-Bosque,-,-,-,-,-,-,-,-
+southwestern shifted romance,portuguese (m:written),portuguese/written,port1283,written,tick,UD_Portuguese-CINTIL,UD_Portuguese-CINTIL,-,-,-,-,-,-,portuguese:PT,-
+southwestern shifted romance,spanish,spanish/spanish,stan1288,466000000,tick,-,-,es,-,-,spa_Latn,spa_Latn,-,spanish:ES,-
+southwestern shifted romance,spanish (a:europe),spanish/peninsular,stan1288,40000000,-,-,-,-,-,-,-,-,-,spanish:ES-ES,-
+swahili,swahili,swahili/swahili,swah1253,73000000,tick,-,-,-,-,-,-,-,-,-,-
+swahili,swahili (a:kenya),swahili/kenyan,swah1253,1000000,-,-,-,-,swahili--kenya,-,-,-,-,-,-
+swahili,swahili (a:tanzania),swahili/tanzanian,swah1253,15000000,-,-,-,-,swahili--tanzania,-,-,-,-,-,-
+tigrinya,tigrinya (a:eritrea),Eritrean,tigr1271,3500000,-,-,-,-,-,-,-,-,-,-,Eritrean
+tigrinya,tigrinya (a:ethiopia),Ethiopian,tigr1271,5000000,-,-,-,-,-,-,-,-,-,-,Ethiopian
+tupi-guarani subgroup i.a,mbyá guaraní (a:brazil),guarani/brazil,mbya1239,51000,-,UD_Mbya_Guarani-Dooley,UD_Mbya_Guarani-Dooley,-,-,-,-,-,-,-,-
+tupi-guarani subgroup i.a,mbyá guaraní (a:paraguay),guarani/paraguay,mbya1239,5250000,-,UD_Mbya_Guarani-Thomas,UD_Mbya_Guarani-Thomas,-,-,-,-,-,-,-,-
+tupi-guarani subgroup i.a,old guarani,guarani/guarani,oldp1258,6500000,-,UD_Guarani-OldTuDeT,UD_Guarani-OldTuDeT,-,-,-,-,-,-,-,-
+west low german,west low german,german/low german,west2357,5000000,tick,UD_Low_Saxon-LSDC,UD_Low_Saxon-LSDC,nds,-,-,-,-,-,-,-
+yoruba,yoruba (a:central nigeria),Central,yoru1245,44000000,tick,-,-,-,-,-,-,-,-,-,Central
