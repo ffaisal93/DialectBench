@@ -5,21 +5,23 @@ lang2=${lang2:-eng}
 lang3=${lang3:-eng}
 MODEL_NAME=${MODEL_NAME:-bert}
 dataset=${dataset:-wikiann}
+subtask=${subtask:-nli}
+prompt_lang=${prompt_lang:-zeroshot}
 
 while [ $# -gt 0 ]; do
 
-   if [[ $1 == *"--"* ]]; then
-        param="${1/--/}"
-        declare $param="$2"
-        echo $1 $2 #Optional to see the parameter:value result
-   fi
+	if [[ $1 == *"--"* ]]; then
+		param="${1/--/}"
+		declare $param="$2"
+		echo $1 $2 #Optional to see the parameter:value result
+	fi
 
-  shift
+	shift
 done
 
 declare -a base_models=("bert" "xlmr")
 if [[ "$MODEL_NAME" = "bert" ]]; then
-		base_model=${base_models[0]}
+	base_model=${base_models[0]}
 fi
 
 if [[ "$MODEL_NAME" = "xlmr" ]]; then
@@ -31,7 +33,7 @@ if [[ "$task" = "train_udp" ]]; then
 	export ALL_MODELS=("UD_Armenian-ArmTDP" "UD_Norwegian-Nynorsk" "UD_Portuguese-Bosque" "UD_Italian-PoSTWITA" "UD_Old_French-SRCMF" "UD_North_Sami-Giella" "UD_Norwegian-Bokmaal" "UD_French-ParisStories" "UD_Italian-MarkIT" "UD_Chinese-GSDSimp" "UD_English-EWT" "UD_French-Rhapsodie" "UD_French-ParTUT" "UD_Classical_Chinese-Kyoto" "UD_Norwegian-NynorskLIA" "UD_Arabic-NYUAD" "UD_Portuguese-PetroGold" "UD_Italian-TWITTIRO" "UD_Turkish_German-SAGT" "UD_Maghrebi_Arabic_French-Arabizi" "UD_Portuguese-CINTIL" "UD_Ligurian-GLT" "UD_Dutch-Alpino" "UD_Western_Armenian-ArmTDP" "UD_Portuguese-GSD" "singlish" "UD_Arabic-PADT")
 
 	# export ALL_MODELS=("UD_English-EWT")
-	
+
 	for MODEL_NAME in ${ALL_MODELS[@]}; do
 		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
 		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
@@ -44,7 +46,6 @@ if [[ "$task" = "train_udp" ]]; then
 		# bash install.sh --task train_udp --lang UD_English-EWT --MODEL_NAME xlmr
 	done
 fi
-
 
 if [[ "$task" = "predict_udp" ]]; then
 	efile="tr_output/${base_model}_${task}.err"
@@ -63,7 +64,7 @@ if [[ "$task" = "train_sdqa" || "$task" = "predict_sdqa" ]]; then
 	export ALL_MODELS=("all" "arabic" "bengali" "english" "finnish" "indonesian" "korean" "russian" "swahili" "telugu")
 
 	# export ALL_MODELS=("UD_English-EWT")
-	
+
 	for MODEL_NAME in ${ALL_MODELS[@]}; do
 		efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
 		ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
@@ -82,7 +83,7 @@ if [[ "$task" = "translate_nli" ]]; then
 	export ALL_TARGETS=("lmo_Latn" "ita_Latn" "fur_Latn" "scn_Latn" "srd_Latn" "vec_Latn" "azb_Arab" "azj_Latn" "tur_Latn" "kmr_Latn" "ckb_Arab" "nno_Latn" "nob_Latn" "lim_Latn" "ltz_Latn" "nld_Latn" "lvs_Latn" "ltg_Latn" "acm_Arab" "acq_Arab" "aeb_Arab" "ajp_Arab" "apc_Arab" "arb_Arab" "ars_Arab" "ary_Arab" "arz_Arab" "kab_Latn" "asm_Beng" "ben_Beng" "lij_Latn" "oci_Latn" "yue_Hant" "zho_Hans" "zho_Hant" "glg_Latn" "spa_Latn" "por_Latn" "nso_Latn" "sot_Latn")
 
 	export ALL_SRC=("ita_Latn" "azj_Latn" "ckb_Arab" "nob_Latn" "nld_Latn" "lvs_Latn" "arb_Arab" "lij_Latn" "zho_Hans" "spa_Latn" "nso_Latn" "ben_Beng")
-	
+
 	test_hypo="tempdata/test_hypo-eng_Latn.txt"
 	test_premise="tempdata/test_premise-eng_Latn.txt"
 
@@ -94,13 +95,13 @@ if [[ "$task" = "translate_nli" ]]; then
 	# 	echo ${TARGET_LANG}
 	# 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} test_hypo ${test_hypo}
 
-		# efile="tr_output/${TARGET_LANG}_${task}-test_premise.err"
-		# ofile="tr_output/${TARGET_LANG}_${task}-test_premise.out"
-		# echo ${efile}
-		# echo ${ofile}
-		# echo ${TARGET_LANG}
-		# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} test_premise ${test_premise}
-		# # ./install.sh --task ${task} --lang ${TARGET_LANG} --MODEL_NAME test_hypo --dataset ${test_hypo}
+	# efile="tr_output/${TARGET_LANG}_${task}-test_premise.err"
+	# ofile="tr_output/${TARGET_LANG}_${task}-test_premise.out"
+	# echo ${efile}
+	# echo ${ofile}
+	# echo ${TARGET_LANG}
+	# sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} test_premise ${test_premise}
+	# # ./install.sh --task ${task} --lang ${TARGET_LANG} --MODEL_NAME test_hypo --dataset ${test_hypo}
 	# done
 
 	# validation_hypo="tempdata/validation_hypo-eng_Latn.txt"
@@ -132,7 +133,7 @@ if [[ "$task" = "translate_nli" ]]; then
 		echo ${ofile}
 		echo ${TARGET_LANG}
 		sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${TARGET_LANG} train_premise ${train_premise}
-		
+
 		efile="tr_output/${TARGET_LANG}_${task}-train_hypo.err"
 		ofile="tr_output/${TARGET_LANG}_${task}-train_hypo.out"
 		echo ${efile}
@@ -144,7 +145,6 @@ fi
 
 if [[ "$task" = "train_ner" ]]; then
 
-	
 	###norwegian dialects
 	export ALL_MODELS=("bokmaal" "nynorsk" "samnorsk")
 	##bokmaal:nb, ##nn:nynorsk
@@ -171,8 +171,7 @@ if [[ "$task" = "train_ner" ]]; then
 	done
 fi
 
-if [[ "$task" = "predict_ner" ]]; 
-then
+if [[ "$task" = "predict_ner" ]]; then
 	MODEL_NAME="en"
 	efile="tr_output/${base_model}_${MODEL_NAME}_${task}.err"
 	ofile="tr_output/${base_model}_${MODEL_NAME}_${task}.out"
@@ -213,7 +212,6 @@ fi
 
 # fi
 
-
 if [[ "$task" = "train_predict_did_ml" ]]; then
 	lang="arabic"
 	dataset="madar"
@@ -228,7 +226,6 @@ if [[ "$task" = "train_predict_did_ml" ]]; then
 	echo
 
 fi
-
 
 if [[ "$task" = "train_topic_classification_lm" || "$task" = "predict_topic_classification_lm" ]]; then
 
@@ -262,10 +259,56 @@ if [[ "$task" = "train_reading_comprehension" || "$task" = "predict_reading_comp
 	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${lang} ${base_model} ${dataset}
 	# ./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
 	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
-		# echo
+	# echo
 
 fi
 
+if [[ "$task" = "llm_evaluation" ]]; then
+
+	efile="tr_output/aya-${subtask}-${prompt_lang}.err"
+	ofile="tr_output/aya-${subtask}-${prompt_lang}.out"
+	echo ${efile}
+	echo ${ofile}
+	sbatch -o ${ofile} -e ${efile} slurm/run_udp.slurm ${task} ${subtask} ${MODEL_NAME} ${prompt_lang}
+	# ./command-slurm.sh --task llm_evaluation --subtask topic --MODEL_NAME aya --prompt_lang zeroshot
+	# ./command-slurm.sh --task llm_evaluation --subtask topic --MODEL_NAME aya --prompt_lang in_lang
+	# ./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
+	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
+	# echo
+
+fi
+
+if [[ "$task" = "llm_evaluation_gpt" ]]; then
+
+	efile="tr_output/gpt-${subtask}.err"
+	ofile="tr_output/gpt-${subtask}.out"
+	echo ${efile}
+	echo ${ofile}
+	sbatch -o ${ofile} -e ${efile} slurm/run_normal.slurm ${task} ${subtask} ${MODEL_NAME} ${prompt_lang}
+	# ./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
+	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
+	# echo
+
+fi
+
+if [[ "$task" = "llm_evaluation_async_gpt4" ]]; then
+
+	efile="tr_output/gpt4-${subtask}-${prompt_lang}.err"
+	ofile="tr_output/gpt4-${subtask}-${prompt_lang}.out"
+	echo ${efile}
+	echo ${ofile}
+	sbatch -o ${ofile} -e ${efile} slurm/run_normal.slurm ${task} ${subtask} ${MODEL_NAME} ${prompt_lang}
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask topic --MODEL_NAME gpt4 --prompt_lang zeroshot
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask topic --MODEL_NAME gpt4 --prompt_lang in_language
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask belebele --MODEL_NAME gpt4 --prompt_lang combined
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sdqa --MODEL_NAME gpt4 --prompt_lang zeroshot
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sdqa --MODEL_NAME gpt4 --prompt_lang combined
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sentiment --MODEL_NAME gpt4 --prompt_lang in_language
+	# ./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
+	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
+	# echo
+
+fi
 
 # if [[ "$task" = "predict_topic_classification_lm" ]]; then
 # 	lang="eng_Latn"

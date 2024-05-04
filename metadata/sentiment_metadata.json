@@ -1,68 +1,67 @@
-[{
+{
     "aeb_Arab": {
         "lang": "aeb_Arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "TSAC_tunzi"
 
-    }
-},{
+    },
     "aeb_Latn": {
         "lang": "aeb_Latn",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "TSAC_tunzi"
 
-    }
-},{
+    },
+
     "arb_arab": {
         "lang": "arb_arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "astd_MSA"
 
-    }
-},{
+    },
+
     "ar-lb": {
         "lang": "ar-lb",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "OCLAR_lebanese"
 
-    }
-},{
+    },
+
     "arq_arab": {
         "lang": "arq_arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "DzSenti_algerian"
 
-    }
-},{
+    },
+
     "ary_arab": {
         "lang": "ary_arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "MAC_morroco"
 
-    }
-},{
+    },
+
     "arz_arab": {
         "lang": "arz_arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "_egyptian"
 
-    }
-},{
+    },
+
     "jor_arab": {
         "lang": "jor_arab",
         "langgroup": "arabic",
         "split": ["train","test","dev"],
         "dataset": "AJGT_jordanian_MSA"
 
-    }
-},{
+    },
+
     "sau_arab": {
         "lang": "sau_arab",
         "langgroup": "arabic",
@@ -70,4 +69,5 @@
         "dataset": "SaudiBank"
 
     }
-}]
+}
+

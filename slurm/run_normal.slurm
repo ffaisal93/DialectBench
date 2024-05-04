@@ -1,13 +1,14 @@
 #!/bin/bash
-#SBATCH --partition=contrib-gpuq                    # the DGX only belongs in the 'gpu'  partition
-#SBATCH --qos=gpu                           # need to select 'gpu' QoS
+#SBATCH --partition=normal                    # the DGX only belongs in the 'gpu'  partition
+##SBATCH --qos=gpu                           # need to select 'gpu' QoS
 #SBATCH --job-name=python-gpu
 ##SBATCH --output=../tr_output/udp_all.out
 ##SBATCH --error=../tr_output/udp_all.err
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1                 # up to 128;
-#SBATCH --gres=gpu:A100.80gb:1              # up to 8; only request what you need
-#SBATCH --mem-per-cpu=90G                 # memory per CORE; total memory is 1 TB (1,000,000 MB)
+##SBATCH --gres=gpu:A100.80gb:1              # up to 8; only request what you need
+#SBATCH --cpus-per-task=48            # Request n   cores per node
+#SBATCH --mem-per-cpu=2GB             # Request nGB RAM per core
 #SBATCH --export=ALL
 #SBATCH --time=3-01:00:00                   # set to 1hr; please choose carefully
 
@@ -70,5 +71,13 @@ if [[ "$task" = "translate_nli" ]]; then
 fi
 
 if [[ "$task" = "llm_evaluation" ]]; then
+	bash install.sh --task ${task} --subtask ${lang} --MODEL_NAME ${MODEL_NAME} --prompt_lang ${DATASET}
+fi
+
+if [[ "$task" = "llm_evaluation_gpt" ]]; then
+	bash install.sh --task ${task} --subtask ${lang} --MODEL_NAME ${MODEL_NAME} --prompt_lang ${DATASET}
+fi
+
+if [[ "$task" = "llm_evaluation_async_gpt4" ]]; then
 	bash install.sh --task ${task} --subtask ${lang} --MODEL_NAME ${MODEL_NAME} --prompt_lang ${DATASET}
 fi

@@ -10,6 +10,8 @@ OUTPUT_DIR=${OUTPUT_DIR:-none}
 ROOT_DIR=${ROOT_DIR:-none}
 dataset=${dataset:-wikiann}
 prefix_text=${prefix_text:-prefix_text}
+subtask=${subtask:-nli}
+prompt_lang=${prompt_lang:-zeroshot}
 
 # RESULT_FOLDER="/projects/antonis/fahim/DialectBench/experiments"
 ROOT_DIR="/scratch/ffaisal/DialectBench"
@@ -109,6 +111,69 @@ echo "result dir: ${RESULT_FOLDER}"
 echo "test result dir: ${TEST_RESULT_FOLDER}"
 echo "output dir: ${OUTPUT_DIR}"
 
+install_datasets() {
+	task=$1
+
+	if [ "$task" == "ner" ]; then
+		required_version="2.4.0"
+	else
+		required_version="2.11.0"
+	fi
+
+	echo "Installing datasets version $required_version..."
+
+	pip install datasets==$required_version
+
+	if [ $? -eq 0 ]; then
+		echo "Successfully installed datasets version $required_version"
+
+		# Print the installed version of datasets
+		installed_version=$(python -c "import datasets; print(datasets.__version__)")
+		echo "Installed datasets version: $installed_version"
+
+		# Check if the installed version matches the required version
+		if [ "$installed_version" != "$required_version" ]; then
+			echo "Warning: Installed datasets version ($installed_version) does not match the required version ($required_version)."
+		fi
+	else
+		echo "Error occurred while installing datasets."
+		exit 1 # Exit the script with a non-zero status code to indicate an error
+	fi
+}
+
+if [[ "$task" = "llm_evaluation" || "$task" = "all" ]]; then
+
+	echo "----------------------llm evaluation------------------------------"
+
+	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	install_datasets "${subtask}"
+	python scripts/aya_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
+
+	deactivate
+fi
+
+if [[ "$task" = "llm_evaluation_gpt" || "$task" = "all" ]]; then
+
+	echo "----------------------llm evaluation------------------------------"
+
+	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	install_datasets "${subtask}"
+	python scripts/gpt_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
+
+	deactivate
+fi
+
+if [[ "$task" = "llm_evaluation_async_gpt4" || "$task" = "all" ]]; then
+
+	echo "----------------------llm evaluation------------------------------"
+
+	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	install_datasets "${subtask}"
+	python scripts/async_gpt_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
+
+	deactivate
+fi
+
 if [[ "$task" = "install_adapter" || "$task" = "all" ]]; then
 	echo "------------------------------Install adapter latest------------------------------"
 	rm -rf adapter-transformers-l
@@ -184,6 +249,60 @@ if [[ "$task" = "install_translation" || "$task" = "all" ]]; then
 	/scratch/ffaisal/DialectBench/vnv/vnv_translation/bin/python -m ipykernel install --user --name 'transl'
 	cd scripts/translation_nli
 	git clone https://github.com/ikergarcia1996/Easy-Translate.git
+	cd ${ROOT_DIR}
+	deactivate
+
+fi
+
+if [[ "$task" = "install_llm" || "$task" = "all" ]]; then
+	module load git
+	module load cuda/12.2.0.1
+	module load gnu10/10.3.0-ya
+	module load python/3.9.9-jh
+	python -m venv vnv/llm
+	source vnv/llm/bin/activate
+	pip install --upgrade pip
+	pip install transformers==4.31.0
+	pip install peft==0.4.0
+	pip install accelerate==0.21.0
+	# pip install torch==2.2.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install bitsandbytes==0.40.2
+	pip install fsspec==2023.6.0
+	pip install datasets==2.4.0
+	pip install trl==0.7.11
+	pip install scipy
+	pip install sentencepiece
+	pip install protobuf
+	pip install --upgrade openai
+	pip install ipykernel
+	python -m ipykernel install --user --name llm --display-name "llm"
+	cd ${ROOT_DIR}
+	deactivate
+
+fi
+
+if [[ "$task" = "install_llm_ds_211" || "$task" = "all" ]]; then
+	module load git
+	module load cuda/12.2.0.1
+	module load gnu10/10.3.0-ya
+	module load python/3.9.9-jh
+	python -m venv vnv/llm_ds211
+	source vnv/llm_ds211/bin/activate
+	pip install --upgrade pip
+	pip install transformers==4.31.0
+	pip install peft==0.4.0
+	pip install accelerate==0.21.0
+	# pip install torch==2.2.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install bitsandbytes==0.40.2
+	pip install fsspec==2023.6.0
+	pip install datasets==2.11.0
+	pip install trl==0.7.11
+	pip install scipy
+	pip install sentencepiece
+	pip install protobuf
+	pip install --upgrade openai
+	pip install ipykernel
+	python -m ipykernel install --user --name llm_ds211 --display-name "llm_ds211"
 	cd ${ROOT_DIR}
 	deactivate
 
