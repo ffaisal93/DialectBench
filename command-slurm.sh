@@ -304,6 +304,7 @@ if [[ "$task" = "llm_evaluation_async_gpt4" ]]; then
 	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sdqa --MODEL_NAME gpt4 --prompt_lang zeroshot
 	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sdqa --MODEL_NAME gpt4 --prompt_lang combined
 	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask sentiment --MODEL_NAME gpt4 --prompt_lang in_language
+	# ./command-slurm.sh --task llm_evaluation_async_gpt4 --subtask udp --MODEL_NAME gpt4 --prompt_lang zeroshot
 	# ./install.sh --task ${task} --lang ${lang} --dataset ${dataset} --MODEL_NAME ${base_model}
 	# ./install.sh --task train_reading_comprehension --lang eng_Latn --dataset Belebele --MODEL_NAME bert
 	# echo

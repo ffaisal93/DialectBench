@@ -28,10 +28,9 @@ Answer as concisely as possible in the same format as the examples below:
 """,
 
 "udp": """Instruction:
-Given a sentence, its lemmas predict the dependency relation and head index for each token in the sentence.
+Given a sentence, its lemmas (if available, otherwise '_') predict the dependency relation and head index for each token in the sentence.
 A list of dependency relations is given below:
 Deprel_list = = {deprel_list}
-
 Input format:
 Sentence: <space-separated tokens>
 Lemmas: <space-separated lemmas>
@@ -45,7 +44,6 @@ n    <tokenn>    <lemman>    <predicted_depreln>    <predicted_headn>
 "pos": """Instruction:
 Given a sentence as space-separatd tokens, predict the Part of Speech (PoS) tags for each token. You will need to use the tags defined below:
 TAGS: {upos_list}
-
 Input format:
 Sentence: <space-separated tokens>
 Output format:
@@ -58,7 +56,6 @@ n    <tokenn>    <predicted_tagn>
 "ner": """Instruction:
 Given a sentence as space-separatd tokens, predict the Named Entity Recogniton (NER) tags for each token. You will need to use the tags defined below:
 TAGS: {ner_list}
-
 Input format:
 Sentence: <space-separated tokens>
 Output format:

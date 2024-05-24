@@ -233,17 +233,24 @@ def main(args):
                 print(test_labels[0])
 
                 all_response=generate_result(prompted_test_examples,gen_config)
-                results[lang]={
-                    'response': all_response,
-                    'true_labels': test_labels
-                }
-                print("---------------------------------------------------------\n")
-                print(all_response[:10])
-                print(test_labels[:10])
+                if len(all_response)==len(test_labels):
+                    results[lang]={
+                        'response': all_response,
+                        'true_labels': test_labels
+                    }
+                    print("---------------------------------------------------------\n")
+                    print(all_response[:10])
+                    print(test_labels[:10])
 
-                # Save the dictionary to the pickle file
-                with open(result_file_path, "wb") as file:
-                    pickle.dump(results, file)
+                    # Save the dictionary to the pickle file
+                    with open(result_file_path, "wb") as file:
+                        pickle.dump(results, file)
+                    print(f'{task} lang:{lang} results saved in {result_file_path}')
+                else:
+                    print(len(all_response),len(test_labels))
+                    print(all_response[-10:])
+                    print(test_labels[-10:])
+                    print("mismatch true label count and response count")
 
 
     def predict_sdqa():
@@ -254,12 +261,21 @@ def main(args):
         result_file_path = os.path.join(result_path, f"{task}.pkl")
         results=get_result_dict(result_file_path, task)
 
+        if args.prompt_lang=='zeroshot':
+            zeroshot_lang='english'
+            zeroshot_train_dataset = all_dataset[zeroshot_lang]['train']
+            zeroshot_train_dataset = zeroshot_train_dataset.map(PromptAdder.add_prompted_sdqa, batched=False, load_from_cache_file=False)
+            train_dataset = zeroshot_train_dataset
+        elif args.prompt_lang=='combined':
+            combined_lang='all'
+            combined_train_dataset = all_dataset[combined_lang]['train']
+            combined_train_dataset = combined_train_dataset.map(PromptAdder.add_prompted_sdqa, batched=False, load_from_cache_file=False)
+            train_dataset= combined_train_dataset
         preamble = PreambleCreator.create_preamble_sdqa()
+        count=0
 
         for lang in langs:
             if lang not in results:
-                train_dataset = all_dataset['english']['train']
-                train_dataset = train_dataset.map(PromptAdder.add_prompted_sdqa, batched=False, load_from_cache_file=False)
                 results[lang]={}
                 for variety in all_dataset:
                     if variety.startswith(lang) and variety != lang:
@@ -276,17 +292,24 @@ def main(args):
                         print(test_labels[0])
 
                         all_response=generate_result(prompted_test_examples,gen_config)
-                        results[lang][variety]={
-                            'response': all_response,
-                            'true_labels': test_labels
-                        }
-                        print("---------------------------------------------------------\n")
-                        print(all_response[:10])
-                        print(test_labels[:10])
+                        if len(all_response)==len(test_labels):
+                            results[lang][variety]={
+                                'response': all_response,
+                                'true_labels': test_labels
+                            }
+                            print("---------------------------------------------------------\n")
+                            print(all_response[:10])
+                            print(test_labels[:10])
 
-                        # Save the dictionary to the pickle file
-                        with open(result_file_path, "wb") as file:
-                            pickle.dump(results, file)
+                            # Save the dictionary to the pickle file
+                            with open(result_file_path, "wb") as file:
+                                pickle.dump(results, file)
+                            print(f'{task} variety:{variety}, results saved in {result_file_path}')
+                        else:
+                            print(len(all_response),len(test_labels))
+                            print(all_response[-10:])
+                            print(test_labels[-10:])
+                            print("mismatch true label count and response count")
 
     def predict_udp():
         metadata_filepath='metadata/udp_metadata.json'

@@ -223,21 +223,30 @@ class KShotExamplePreparer:
             'nli':'Instruction: ',
             'sib':'Instruction:\n',
             'belebele':'Instruction:\n',
-            'sdqa':'Instruction:\n'
+            'sdqa':'Instruction:\n',
+            'udp': 'Instruction:\n',
+            'pos': 'Instruction:\n',
+            'ner': 'Instruction:\n'
         }
         user_to_replace={
             'sentiment':'Sentence: ',
             'nli':'Relationship: ',
             'sib':'Sentence: ',
             'belebele':'',
-            'sdqa':''
+            'sdqa':'',
+            'udp':'Input:\n',
+            'pos':'Input:\n',
+            'ner': 'Input:\n'
         }
         assistant_to_replace={
             'sentiment':'Sentiment: ',
             'nli':'',
             'sib':'Topic: ',
             'belebele':'',
-            'sdqa':''
+            'sdqa':'',
+            'udp':'Output:\n',
+            'pos':'Output:\n',
+            'ner': 'Output:\n'
         }
 
 
@@ -267,6 +276,15 @@ class KShotExamplePreparer:
                     else:
                         result.append({"role": "user", "content": parts[0]})
                         result.append({"role": "assistant", "content": parts[1]})
+                elif task=='udp' or task=='pos' or task=='ner':
+                    parts = item.split('Output:\n')
+                    if i == len(data) - 1:
+                        # Last item: add only the user question
+                        result.append({"role": "user", "content": parts[0].replace(user_to_replace[task],'').strip()})
+                    else:
+                        # Other items: add user question and assistant response
+                        result.append({"role": "user", "content": parts[0].replace(user_to_replace[task],'').strip()})
+                        result.append({"role": "assistant", "content": parts[1].replace(assistant_to_replace[task],'').strip()})
                 else:
                     parts = item.split('\n')
 

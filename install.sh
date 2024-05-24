@@ -144,9 +144,11 @@ install_datasets() {
 if [[ "$task" = "llm_evaluation" || "$task" = "all" ]]; then
 
 	echo "----------------------llm evaluation------------------------------"
-
-	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
-	install_datasets "${subtask}"
+	if [ "$task" == "ner" ]; then
+		source /scratch/ffaisal/DialectBench/vnv/llm_ds4/bin/activate
+	else
+		source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	fi
 	python scripts/aya_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
 
 	deactivate
@@ -156,8 +158,12 @@ if [[ "$task" = "llm_evaluation_gpt" || "$task" = "all" ]]; then
 
 	echo "----------------------llm evaluation------------------------------"
 
-	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
-	install_datasets "${subtask}"
+	if [ "$task" == "ner" ]; then
+		source /scratch/ffaisal/DialectBench/vnv/llm_ds4/bin/activate
+	else
+		source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	fi
+	# install_datasets "${subtask}"
 	python scripts/gpt_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
 
 	deactivate
@@ -167,8 +173,11 @@ if [[ "$task" = "llm_evaluation_async_gpt4" || "$task" = "all" ]]; then
 
 	echo "----------------------llm evaluation------------------------------"
 
-	source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
-	install_datasets "${subtask}"
+	if [ "$task" == "ner" ]; then
+		source /scratch/ffaisal/DialectBench/vnv/llm_ds4/bin/activate
+	else
+		source /scratch/ffaisal/DialectBench/vnv/llm/bin/activate
+	fi
 	python scripts/async_gpt_task_prediction.py --task ${subtask} --model ${MODEL_NAME} --prompt_lang ${prompt_lang}
 
 	deactivate
@@ -298,11 +307,40 @@ if [[ "$task" = "install_llm_ds_211" || "$task" = "all" ]]; then
 	pip install datasets==2.11.0
 	pip install trl==0.7.11
 	pip install scipy
+	pip install conllu
 	pip install sentencepiece
 	pip install protobuf
 	pip install --upgrade openai
 	pip install ipykernel
 	python -m ipykernel install --user --name llm_ds211 --display-name "llm_ds211"
+	cd ${ROOT_DIR}
+	deactivate
+
+fi
+
+if [[ "$task" = "install_llm_ds_24" || "$task" = "all" ]]; then
+	module load git
+	module load cuda/12.2.0.1
+	module load gnu10/10.3.0-ya
+	module load python/3.9.9-jh
+	python -m venv vnv/llm_ds4
+	source vnv/llm_ds4/bin/activate
+	pip install --upgrade pip
+	pip install transformers==4.31.0
+	pip install peft==0.4.0
+	pip install accelerate==0.21.0
+	# pip install torch==2.2.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+	pip install bitsandbytes==0.40.2
+	pip install fsspec==2023.6.0
+	pip install datasets==2.4
+	pip install trl==0.7.11
+	pip install scipy
+	pip install conllu
+	pip install sentencepiece
+	pip install protobuf
+	pip install --upgrade openai
+	pip install ipykernel
+	python -m ipykernel install --user --name llm_ds24 --display-name "llm_ds211"
 	cd ${ROOT_DIR}
 	deactivate
 
