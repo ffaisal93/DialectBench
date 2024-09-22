@@ -15,6 +15,8 @@ INSTRUCTIONS = {
     "sa": """Instruction:\nGiven a sentence, predict its sentiment as either """,
     "sib":"""Instruction:
 Given a sentence, predict its topic from one of the following categories: """,
+    "did":"""Instruction:
+Given a sentence, predict in which dialect it is written. The options are: """,
 # ...
     "belebele": """Instruction:
 Given a passage and a question, select the correct answer from the provided options. Read the passage carefully and choose the option that best answers the question based on the information given in the passage. Answer as concisely as possible in the same format as the examples below:
@@ -70,6 +72,9 @@ EXAMPLE_PROMPTS={
 
 "sa": """Sentence: {input_sentence}
 Sentiment: """,
+
+"did": """Sentence: {input_sentence}
+Dialect: """,
 
 "nli": """Premise: {premise}
 Hypothesis: {hypothesis}

@@ -27,6 +27,18 @@ class PreambleCreator:
         return preamble
 
     @staticmethod
+    def create_preamble_did(dataset):
+        labels = set(dataset['label'])
+        prompt = INSTRUCTIONS['did']
+        for i, label in enumerate(labels):
+            if i < len(labels) - 1:
+                prompt += f"{label}, "
+            else:
+                prompt += f"{label}.\n"
+        preamble = prompt
+        return preamble
+
+    @staticmethod
     def create_preamble_belebele(dataset):
         preamble = INSTRUCTIONS['belebele']
         return preamble
@@ -136,6 +148,11 @@ class PromptAdder:
         return {"text": prompted_text}
 
     @staticmethod
+    def add_prompted_did(example, dataset):
+        prompted_text = (EXAMPLE_PROMPTS['did'].format(**{'input_sentence': example['sentence']}))
+        return {"text": prompted_text}
+
+    @staticmethod
     def add_prompted_nli(example, dataset):
         labels_dict = {0: 'entailment', 1: 'neutral', 2: 'contradiction'}
         prompted_text = (EXAMPLE_PROMPTS['nli'].format(**{'premise': example['premise'],
@@ -174,8 +191,8 @@ class KShotExamplePreparer:
                     if label not in label_examples:
                         label_examples[label] = []
                     label_examples[label].append(example)
-
-                k = min(k, sum(len(examples) for examples in label_examples.values()))
+                k = max(k, sum(1 for examples in label_examples.values()))
+                print(k)
 
                 kshot_examples = []
                 for label, examples in label_examples.items():
