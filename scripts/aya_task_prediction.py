@@ -548,28 +548,7 @@ def main(args):
         os.makedirs(result_path)
 
 
-    # all_response_raw,all_response=generate_result(all_val_prompts,gen_config,'aya')
-    
-    # acc=eval_result(all_response,all_val_labels)
-    # res={
-    #     'name':f'{eval_type}-{dfile}',
-    #     'test_accuracy': acc,
-    #     'test_loss': 0,
-    #     'test_runtime': 0,
-    #     'test_samples_per_second': 0,
-    #     'test_steps_per_second': 0
-    # }
-    # all_results.append(res)
-
-
-    # predict_sentiment()
-    # predict_nli()
-    # predict_sib()
-    # predict_belebele()
-    # predict_sdqa()
-    # predict_udp()
-    # predict_pos()
-    # predict_ner()
+    ##=======================================================================================
     task=args.task
     # Assuming you have parsed the command-line arguments and stored the task in `args.task`
     shot=args.shot
