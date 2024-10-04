@@ -153,6 +153,11 @@ class PromptAdder:
         return {"text": prompted_text}
 
     @staticmethod
+    def add_prompted_did_ablation_ara_1(example, dataset):
+        prompted_text = (INSTRUCTIONS['did_instruction_arabic'].format(**{'input_sentence': example['sentence']}))
+        return {"text": prompted_text}
+
+    @staticmethod
     def add_prompted_nli(example, dataset):
         labels_dict = {0: 'entailment', 1: 'neutral', 2: 'contradiction'}
         prompted_text = (EXAMPLE_PROMPTS['nli'].format(**{'premise': example['premise'],

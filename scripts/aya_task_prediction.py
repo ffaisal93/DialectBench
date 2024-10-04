@@ -259,6 +259,66 @@ def main(args):
                     print(test_labels[-10:])
                     print("mismatch true label count and response count")
 
+    def predict_did_ablation_ara_1():
+        datapaths={'arabic':'data/dialect-identification/arabic/MADAR/MADAR_Corpus',
+          'other':'data/dialect-identification'}
+        all_dataset = load_did(datapaths)
+        # Specify the file path for the pickle file
+        result_file_path = os.path.join(result_path, f"{task}.pkl")
+        results=get_result_dict(result_file_path, task)
+
+
+        for lang in all_dataset:
+            if lang not in results and lang=='arabic':
+
+                # train_dataset = train_dataset.map(PromptAdder.add_prompted_did, fn_kwargs={"dataset": train_dataset}, batched=False, load_from_cache_file=False)
+                
+                preamble = INSTRUCTIONS['did_instruction_arabic']
+                print(preamble)
+                
+                if 'test' in all_dataset[lang].keys():
+                    test_split='test'
+                else:
+                    test_split='dev'    
+                test_dataset = all_dataset[lang][test_split]
+                test_dataset = test_dataset.filter(lambda example: example["label"] is not None)
+                test_dataset = test_dataset.map(PromptAdder.add_prompted_did_ablation_ara_1, fn_kwargs={"dataset": test_dataset}, batched=False, load_from_cache_file=False)
+
+                kshot=0
+                prompted_test_examples = []
+                for example in test_dataset:
+                    text = example["text"]
+                    prompted_test_examples.append(text)
+                test_labels=test_dataset['label']
+                    
+                # shot = 1
+                # kshot, prompted_test_examples, test_labels = KShotExamplePreparer.prepare_kshot(preamble, train_dataset, test_dataset, 'label', shot)
+                    
+                print(lang)
+                print(kshot)
+                print(prompted_test_examples[0])
+                print(test_labels[0])
+
+                all_response=generate_result(prompted_test_examples,gen_config)
+                if len(all_response)==len(test_labels):
+                    results[lang]={
+                        'response': all_response,
+                        'true_labels': test_labels
+                    }
+                    print("---------------------------------------------------------\n")
+                    print(all_response[:10])
+                    print(test_labels[:10])
+
+                    # Save the dictionary to the pickle file
+                    with open(result_file_path, "wb") as file:
+                        pickle.dump(results, file)
+                    print(f'{task} lang:{lang} results saved in {result_file_path}')
+                else:
+                    print(len(all_response),len(test_labels))
+                    print(all_response[-10:])
+                    print(test_labels[-10:])
+                    print("mismatch true label count and response count")
+
 
     def predict_belebele():
         datapaths = 'data/reading-comprehension/Belebele'
@@ -526,7 +586,7 @@ def main(args):
     max_token=5
     if args.task in ['udp','pos','ner']:
     	max_token=500
-    elif args.task in ['sdqa']:
+    elif args.task in ['sdqa','did_ablation_ara_1','did']:
     	max_token=15
     gen_config = {
                 "temperature": 0.7,
@@ -570,6 +630,8 @@ def main(args):
         predict_ner()
     elif task == 'did':
         predict_did()
+    elif task == 'did_ablation_ara_1':
+        predict_did_ablation_ara_1()
     else:
         print("Invalid task argument.")
     

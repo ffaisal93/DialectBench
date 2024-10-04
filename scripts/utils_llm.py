@@ -1,3 +1,5 @@
+import re
+
 def compute_uas_las(output, true_deprels, true_heads):
     # Parse the output
     predictions = []
@@ -38,9 +40,41 @@ def eval_result_sa(all_preds,all_true_labels,choices):
                 indx.append(res)
     acc=count/len(all_preds)
     # print(acc, count, len(all_preds), len(all_true_labels), not_true,indx)
-    return 
+    return acc
 
+def extract_pos_tags(input_text):
+    pos_tags = []
+    
+    # Handle None input
+    if input_text is None:
+        return pos_tags
 
+    # Convert to list if it's a string
+    if isinstance(input_text, str):
+        input_text = input_text.split()
+    
+    # If it's not a list by now, return empty list
+    if not isinstance(input_text, list):
+        return pos_tags
+
+    i = 0
+    while i < len(input_text):
+        # Check if the current item is a digit or starts with a digit
+        if input_text[i].isdigit() or (input_text[i][0].isdigit() and not input_text[i].isdigit()):
+            # If it's a pure digit, take the 3rd item
+            if input_text[i].isdigit() and i + 2 < len(input_text):
+                pos_tags.append(input_text[i + 2])
+                i += 3
+            # If it's a digit with punctuation, take the next item
+            elif i + 1 < len(input_text):
+                pos_tags.append(input_text[i + 1])
+                i += 2
+            else:
+                i += 1
+        else:
+            i += 1
+    
+    return pos_tags
 
 def compute_accuracy(all_preds, all_true_labels, choices):
     all_true_labels=[str(x).lower() for x in all_true_labels]
@@ -112,7 +146,9 @@ def compute_f1(all_preds, all_true_labels, choices, task='nli'):
     
     macro_f1 = sum(class_f1_scores.values()) / len(choices)
     
-    return macro_f1
+    return macro_f1,class_f1_scores
+
+
 
 def compute_f1_multi_reference(all_preds, all_true_labels, task='qa'):
     def calculate_f1(pred, true_set):

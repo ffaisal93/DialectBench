@@ -66,6 +66,172 @@ Output format:
 ...
 n    <tokenn>    <predicted_tagn>
 """,
+
+"did_instruction_arabic" : """
+Instruction: Given a sentence, identify the Arabic city-level dialect. The options are: SAN, ALX, JED, RIY, ALG, BAG, DAM, BEN, BEI, RAB, AMM, JER, MUS, SFX, TUN, MOS, FES, CAI, DOH, TRI, KHA, ALE, BAS, MSA, ASW, SAL.
+
+Example Sentences:
+
+1. **SAN**:
+   - Sentence: عفوا، لكن اشتي اسير للفندق حقي.
+   - Sentence: شا اخرج حوالي الساعه تسع.
+   - Sentence: لو كنت استسلمت احسن.
+   **Explanation**: "اشتي" and "اشل" are unique to Yemeni.
+
+2. **ALX**:
+   - Sentence: القطر هيوصل الساعم كام؟
+   - Sentence: أنا استمتعت بإقامتى.
+   - Sentence: ممكن تبدل الكراسى معايا؟
+   **Explanation**: "هيوصل" and "معايا" are Alexandrian.
+
+3. **JED**:
+   - Sentence: ابا دونات، لو سمحت.
+   - Sentence: وريني ساعات رجالية لو سمحت.
+   - Sentence: أبا شيء جديد.
+   **Explanation**: "أبا" (I want) is specific to Jeddah.
+
+4. **RIY**:
+   - Sentence: طيب سيدي. وش تبغى للحلى؟
+   - Sentence: انت فاضي السبت الجاي؟
+   - Sentence: شفت أسعار بهالرخص؟
+   **Explanation**: "وش" and "تبغى" are Najdi expressions.
+
+5. **ALG**:
+   - Sentence: كي نشوف الأسعار ناقصة.
+   - Sentence: راه ماشي ديركت لهناك.
+   - Sentence: تبانلي سخافة نشري أي حاجة.
+   **Explanation**: "راه" and "كي" are typical in Algerian Arabic.
+
+6. **BAG**:
+   - Sentence: ممكن نشوف محافظ جلدية؟
+   - Sentence: ما تشتغل، مو؟
+   - Sentence: تكدر تنتقل للمعقد الشاغر؟
+   **Explanation**: "تكدر" and "مو" are markers of Baghdadi.
+
+7. **DAM**:
+   - Sentence: الطرف التاني عالخط.
+   - Sentence: ما فيك تفوت ألعاب نارية.
+   - Sentence: هاد آخر شي؟
+   **Explanation**: "عالخط" and "هاد" are Damascene.
+
+8. **BEN**:
+   - Sentence: نقدر نستعمل تليفونك؟
+   - Sentence: ممكن تعطيني علم قبل ما نوصل؟
+   - Sentence: أنا من اسبانيا.
+   **Explanation**: "تعطيني علم" is common in Benghazi.
+
+9. **BEI**:
+   - Sentence: أياهن أهم بالنسبة إلكن؟
+   - Sentence: رفيئي زحط.
+   - Sentence: رح يكون في شوي تاخير.
+   **Explanation**: "رفيئي" and "إلكن" are used in Beirut.
+
+10. **RAB**:
+    - Sentence: فاياش مختصين؟
+    - Sentence: إينا نوع دالعصير بغيتي؟
+    - Sentence: مرحبا. كي داير؟
+    **Explanation**: "بغيتي" and "كي داير" are Moroccan expressions.
+
+11. **AMM**:
+    - Sentence: بدي كريم ليلي.
+    - Sentence: بدي كرسي مريح.
+    - Sentence: في بنك بالمنطقة؟
+    **Explanation**: "بدي" is unique to Amman’s dialect.
+
+12. **JER**:
+    - Sentence: بتحب أخليه يرجع يحكي؟
+    - Sentence: رح أضل لبكرا.
+    - Sentence: بكون مبسوط.
+    **Explanation**: "بكون" and "مبسوط" are specific to Jerusalem.
+
+13. **MUS**:
+    - Sentence: عرفت شو هو الغلط.
+    - Sentence: هل يميل الكثير إلى نسيان؟
+    - Sentence: انزين، خلنا نذهب.
+    **Explanation**: "خلنا" and "انزين" are used in Muscat.
+
+14. **SFX**:
+    - Sentence: انجم نمشي بالميترو؟
+    - Sentence: العفو.
+    - Sentence: نحتوا حوايجنا.
+    **Explanation**: "انجم" and "حوايج" are typical in Sfax.
+
+15. **TUN**:
+    - Sentence: البوابة اسابعة.
+    - Sentence: باش نخرج.
+    - Sentence: تنجم تبعث حمال؟
+    **Explanation**: "باش" and "تنجم" are Tunisian.
+
+16. **MOS**:
+    - Sentence: هو سباطعش ايه؟
+    - Sentence: اوه، انا اسف.
+    - Sentence: اخاف اكو خطأ.
+    **Explanation**: "اخاف" is distinct to Mosul.
+
+17. **FES**:
+    - Sentence: غي شوية ديال الناس.
+    - Sentence: راه كاين فنواحي.
+    - Sentence: عطيني جوج تذكيرات.
+    **Explanation**: "غي" and "راه" are from Fes dialect.
+
+18. **CAI**:
+    - Sentence: بنسافر تلات مرات.
+    - Sentence: ممكن تضيقلي الفستان؟
+    - Sentence: عشر دولارات للتاكسي؟
+    **Explanation**: "تلات" and "حيكفي" are used in Cairo.
+
+19. **DOH**:
+    - Sentence: ورني واحد حق حرمة.
+    - Sentence: بترجع بيتكم؟
+    - Sentence: بغيتك تنظف.
+    **Explanation**: "حق" and "بغيتك" are from Doha.
+
+20. **TRI**:
+    - Sentence: مكان واعر تلقاه.
+    - Sentence: قعمز و استنى.
+    - Sentence: نرجعلك توا.
+    **Explanation**: "قعمز" and "توا" are unique to Tripoli.
+
+21. **KHA**:
+    - Sentence: ح أحضر المدرسة.
+    - Sentence: ممكن احصل على رقم؟
+    - Sentence: دايرين طربيزة جنب المنصة.
+    **Explanation**: "ح" and "طربيزة" are specific to Khartoum.
+
+22. **ALE**:
+    - Sentence: ممكن أقترح وحدة؟
+    - Sentence: وين موقف الباص؟
+    - Sentence: ما منظرك أكبر.
+    **Explanation**: "تبع" and "في عنا" are Aleppine.
+
+23. **BAS**:
+    - Sentence: هاي الاحذية قوية؟
+    - Sentence: اريد ارتاح.
+    - Sentence: اكو حد يساعدني.
+    **Explanation**: "اكو" and "اريد" are from Basra.
+
+24. **MSA**:
+    - Sentence: هل هناك صناديق بريد؟
+    - Sentence: هل تمانع اذا؟
+    - Sentence: تشغل أشخاصاً جدد.
+    **Explanation**: Standard Arabic.
+
+25. **ASW**:
+    - Sentence: خدني لطريق.
+    - Sentence: متلمسنيش.
+    - Sentence: هاخد سبرايت.
+    **Explanation**: "هاخد" and "متلمسنيش" are Aswani.
+
+26. **SAL**:
+    - Sentence: أي واحد بتفضل؟
+    - Sentence: رقم غرفتي.
+    - Sentence: من الصبح.
+    **Explanation**: "بتقدر" and "غسيلي" are from Salalah.
+
+Sentence: {input_sentence}  
+Dialect:
+"""
+
 }
 
 EXAMPLE_PROMPTS={
