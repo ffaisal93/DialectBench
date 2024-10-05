@@ -153,8 +153,8 @@ class PromptAdder:
         return {"text": prompted_text}
 
     @staticmethod
-    def add_prompted_did_ablation_ara_1(example, dataset):
-        prompted_text = (INSTRUCTIONS['did_instruction_arabic'].format(**{'input_sentence': example['sentence']}))
+    def add_prompted_did_ablation_ara(example, key):
+        prompted_text = (INSTRUCTIONS[key].format(**{'input_sentence': example['sentence']}))
         return {"text": prompted_text}
 
     @staticmethod

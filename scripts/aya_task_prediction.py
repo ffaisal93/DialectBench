@@ -259,7 +259,7 @@ def main(args):
                     print(test_labels[-10:])
                     print("mismatch true label count and response count")
 
-    def predict_did_ablation_ara_1():
+    def predict_did_ablation_ara(instruction_key):
         datapaths={'arabic':'data/dialect-identification/arabic/MADAR/MADAR_Corpus',
           'other':'data/dialect-identification'}
         all_dataset = load_did(datapaths)
@@ -273,7 +273,7 @@ def main(args):
 
                 # train_dataset = train_dataset.map(PromptAdder.add_prompted_did, fn_kwargs={"dataset": train_dataset}, batched=False, load_from_cache_file=False)
                 
-                preamble = INSTRUCTIONS['did_instruction_arabic']
+                preamble = INSTRUCTIONS[instruction_key]
                 print(preamble)
                 
                 if 'test' in all_dataset[lang].keys():
@@ -282,9 +282,9 @@ def main(args):
                     test_split='dev'    
                 test_dataset = all_dataset[lang][test_split]
                 test_dataset = test_dataset.filter(lambda example: example["label"] is not None)
-                test_dataset = test_dataset.map(PromptAdder.add_prompted_did_ablation_ara_1, fn_kwargs={"dataset": test_dataset}, batched=False, load_from_cache_file=False)
+                test_dataset = test_dataset.map(PromptAdder.add_prompted_did_ablation_ara, fn_kwargs={"key": instruction_key}, batched=False, load_from_cache_file=False)
 
-                kshot=0
+                kshot=3
                 prompted_test_examples = []
                 for example in test_dataset:
                     text = example["text"]
@@ -299,6 +299,8 @@ def main(args):
                 print(prompted_test_examples[0])
                 print(test_labels[0])
 
+                # prompted_test_examples=prompted_test_examples[:10]
+                # test_labels=test_labels[:10]
                 all_response=generate_result(prompted_test_examples,gen_config)
                 if len(all_response)==len(test_labels):
                     results[lang]={
@@ -318,6 +320,15 @@ def main(args):
                     print(all_response[-10:])
                     print(test_labels[-10:])
                     print("mismatch true label count and response count")
+
+    def predict_did_ablation_ara_1():
+        instruction_key="did_instruction_arabic_1"
+        predict_did_ablation_ara(instruction_key)
+
+    def predict_did_ablation_ara_2():
+        instruction_key="did_instruction_arabic_2"
+        predict_did_ablation_ara(instruction_key)
+        
 
 
     def predict_belebele():
@@ -586,7 +597,7 @@ def main(args):
     max_token=5
     if args.task in ['udp','pos','ner']:
     	max_token=500
-    elif args.task in ['sdqa','did_ablation_ara_1','did']:
+    elif args.task in ['sdqa']:
     	max_token=15
     gen_config = {
                 "temperature": 0.7,
@@ -632,6 +643,8 @@ def main(args):
         predict_did()
     elif task == 'did_ablation_ara_1':
         predict_did_ablation_ara_1()
+    elif task == 'did_ablation_ara_2':
+        predict_did_ablation_ara_2()
     else:
         print("Invalid task argument.")
     
