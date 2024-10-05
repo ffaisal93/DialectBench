@@ -228,6 +228,17 @@ Example Sentences:
     - Sentence: من الصبح.
     **Explanation**: "بتقدر" and "غسيلي" are from Salalah.
 
+Now look at thefew-shot examples and predict.
+
+Sentence: هاي الاحذية قوية؟  
+Dialect: BAS
+
+Sentence: ممكن أقترح وحدة؟
+Dialect: ALE
+
+Sentence: هل هناك صناديق بريد؟
+Dialect: MSA
+
 Sentence: {input_sentence}  
 Dialect:
 """
