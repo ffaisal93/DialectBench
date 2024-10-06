@@ -114,6 +114,7 @@ Dialect: MSA
 Sentence: {input_sentence}  
 Dialect: """,
 
+## learning from 3 example
 "did_instruction_arabic_2": """
 Given a sentence, identify the Arabic city-level dialect. Each dialect has unique linguistic features such as vocabulary, phonetic variations, or sentence structure that distinguish it from others. Consider the following descriptions and examples to guide your selection:
 
@@ -159,7 +160,186 @@ Sentence: هل هناك صناديق بريد؟
 Dialect: MSA
 
 Sentence: {input_sentence}  
-Dialect: """
+Dialect: """,
+
+## learning from 10 example
+"did_instruction_arabic_10": """
+Instruction: Given a sentence, identify the Arabic city-level dialect based on distinctive vocabulary and sentence structure cues. Below are some characteristics for each dialect:
+
+- KHA: Uses terms like "ح" for future tense, "زول" for person, and phrases such as "ممكن ترسل حمال؟" for service requests.
+- RAB: Moroccan Arabic with expressions like "عافاك" (please), "بغيت" (want), and "كاين" (there is).
+- ALG: Algerian Arabic features "واش" (what), "راني" (I am), and heavy use of French-influenced phrases.
+- JED: Hejazi Arabic marked by "أبا" (I want), "فين" (where), and common use of polite forms.
+- CAI: Egyptian Arabic with "عايز" (want), "مش" (not), and distinct negation patterns.
+- MOS: Iraqi Arabic, using "غاح" for future and "ماشي" for okay. Soft consonant pronunciations.
+- ALE: Northern Syrian Arabic using "شقد" (how much) and "بدي" (I want).
+- SFX: Tunisian Arabic with "تنجم" (can) and "نحب" (want), showing unique local vocabulary.
+- BEN: Libyan Arabic marked by "توا" (now), "نبي" (want), and "شن" (what).
+- BAG: Central Iraqi Arabic using "اكو" (there is), "شلون" (how), and phrases like "ماكو" (none).
+- RIY: Najdi dialect featuring "وش" (what), "تبغى" (want), and a Bedouin-influenced style.
+- BEI: Lebanese Arabic with "عم" for progressive, "إزا" (if), and mixed French/English terms.
+- MSA: Modern Standard Arabic, formal and lacking colloquial elements. Used in official contexts.
+- ASW: Upper Egyptian Arabic with unique elongated vowels and specific expressions like "همشي" (I will go).
+- TRI: Libyan dialect using "قداش" (how much), "نبي" (want), and distinct local vocabulary.
+- FES: Moroccan dialect with phrases like "فين" (where) and "راه" (is), specific to the Fes region.
+- BAS: Southern Iraqi Arabic using "اكو" (there is), "شلون" (how), and softer pronunciation.
+- MUS: Omani Arabic with "أبغا" (want) and "وايد" (a lot), more formal in tone.
+- TUN: Tunisian Arabic with "باش" (will) and "نحب" (want), with a mix of French and local words.
+- JER: Palestinian Arabic using "بدي" (want), "كتير" (a lot), with strong Levantine influence.
+- SAL: Southern Omani Arabic using "قديش" (how much) and "بتقدر" (can you).
+- AMM: Jordanian Arabic featuring "بدي" (want) and "شو" (what), distinct from Palestinian intonation.
+- ALX: Egyptian Arabic from Alexandria, using "أيوة" (yes), "عايز" (want), with local flavor.
+- DAM: Syrian Arabic marked by "كتير" (a lot), "بدك" (you want), and softened consonants.
+- DOH: Qatari Arabic with "بغيت" (want) and "يصير" (can), typical of Gulf Arabic.
+- SAN: Yemeni Arabic using "اشتي" (I want) and phrases like "عيقدر" (can), with unique phonetics.
+
+Options: SAN, ALX, JED, RIY, ALG, BAG, DAM, BEN, BEI, RAB, AMM, JER, MUS, SFX, TUN, MOS, FES, CAI, DOH, TRI, KHA, ALE, BAS, MSA, ASW, SAL.
+
+Question: Given the unique features of each dialect, identify which one matches the sentence below.
+
+Sentence: هاي الاحذية قوية؟  
+Dialect: BAS
+
+Sentence: ممكن أقترح وحدة؟
+Dialect: ALE
+
+Sentence: هل هناك صناديق بريد؟
+Dialect: MSA
+
+Sentence: {input_sentence}  
+Dialect: """,
+
+## learning from 30 example
+"did_instruction_arabic_30": """
+Instruction: Given a sentence, identify the Arabic city-level dialect based on distinctive vocabulary, grammar, phonetic features, and cultural context. Consider the following:
+
+- Vocabulary Specificity: Observe unique word choices and their variations, like "بغيت" (RAB) vs. "داير" (KHA) for "want."
+- Grammar and Sentence Structure: Pay attention to omitted or included auxiliary verbs, connectors, and sentence patterns.
+- Expressions and Idioms: Identify regional expressions and idioms, e.g., "شنو" (FES) vs. "شن" (BEN).
+- Politeness and Request Forms: Look for politeness markers and how they are positioned in a sentence, like "عافاك" (RAB) or "من فضلك" (CAI).
+- Loanwords and Language Influence: Recognize loanwords and mixed lexicons, such as French in ALG, SFX, and RAB.
+- Formal vs. Informal Register: Note whether the sentence sounds formal or casual based on its word choice and structure.
+- Pronunciation Markers: Identify dialect-specific pronunciation cues like "چ" (BAG), "گ" (MOS), or "ت" instead of "ث" (CAI).
+- Unique Contextual Markers: Consider common topics and context-specific phrases relevant to certain regions, like references to food, transport, or family.
+
+Here are some dialect markers for each region:
+
+- KHA (Khartoum): Sudanese Arabic with "داير" (want), "عفواً" (excuse me), and a focus on polite, formal expressions.
+- RAB (Rabat): Moroccan Arabic featuring "عافاك" (please), "واخا" (okay), and phrases with "بغيت" (want).
+- ALG (Algiers): Algerian Arabic using "واش" (what), "راني" (I am), and frequent French loanwords.
+- JED (Jeddah): Hejazi Arabic with "أبغا" (want), "فين" (where), and soft Bedouin intonations.
+- CAI (Cairo): Egyptian Arabic marked by "عايز" (want), "إيه" (what), and informal, humorous tone.
+- MOS (Mosul): Iraqi Arabic with "غاح" (will), "اتطيق" (can), and local pronunciation nuances like "چ" and "گ".
+- ALE (Aleppo): Northern Syrian Arabic using "بدي" (I want), "قديش" (how much), and frequent Turkish borrowings.
+- SFX (Sfax): Tunisian Arabic with "باش" (will), "نحب" (want), and French influences in daily speech.
+- BEN (Benghazi): Libyan Arabic with "توا" (now), "نبي" (want), and expressions like "شن" (what).
+- BAG (Baghdad): Central Iraqi Arabic marked by "شلون" (how), "اكو" (there is), and "ماكو" (none).
+- RIY (Riyadh): Najdi dialect using "وش" (what), "تبغى" (want), and strong, formal tones.
+- BEI (Beirut): Lebanese Arabic with "عم" (progressive), "إزا" (if), and a mix of French/English terms.
+- MSA (Modern Standard Arabic): Formal Arabic used in official contexts, news, and academic discourse.
+- ASW (Aswan): Upper Egyptian Arabic with distinct phrases like "همشي" (I will go) and local modifications.
+- TRI (Tripoli): Libyan dialect with "قداش" (how much), "نبي" (want), and unique phrasing.
+- FES (Fes): Moroccan dialect with "فين" (where), "راه" (is), and distinctive sentence endings.
+- BAS (Basra): Southern Iraqi Arabic with softer pronunciation and "اكو" (there is).
+- MUS (Muscat): Omani Arabic featuring "أبغا" (want), "وايد" (a lot), and formal-sounding requests.
+- TUN (Tunis): Tunisian Arabic marked by "باش" (will), "نحب" (want), and local French vocabulary.
+- JER (Jerusalem): Palestinian Arabic with "بدي" (want), "كتير" (a lot), and a melodious intonation.
+- SAL (Salalah): Southern Omani Arabic using "قديش" (how much), "بتقدر" (can you), and distinctive phrasing.
+- AMM (Amman): Jordanian Arabic with "بدي" (want), "شو" (what), and more formal Levantine tone.
+- ALX (Alexandria): Egyptian Arabic with "أيوة" (yes), "عايز" (want), and Alexandrian pronunciation.
+- DAM (Damascus): Syrian Arabic with "كتير" (a lot), "بدك" (you want), and softer, extended vowels.
+- DOH (Doha): Qatari Arabic using "بغيت" (want), "يصير" (can), and Gulf-influenced speech.
+- SAN (Sanaa): Yemeni Arabic with "اشتي" (I want) and unique contextual references.
+
+
+Options: SAN, ALX, JED, RIY, ALG, BAG, DAM, BEN, BEI, RAB, AMM, JER, MUS, SFX, TUN, MOS, FES, CAI, DOH, TRI, KHA, ALE, BAS, MSA, ASW, SAL.
+
+Question: Given the unique features of each dialect, identify which one matches the sentence below.
+
+Sentence: هاي الاحذية قوية؟  
+Dialect: BAS
+
+Sentence: ممكن أقترح وحدة؟
+Dialect: ALE
+
+Sentence: هل هناك صناديق بريد؟
+Dialect: MSA
+
+Sentence: {input_sentence}  
+Dialect: """,
+
+## learning from 50 example
+"did_instruction_arabic_50": """
+Instruction: Given a sentence, identify the Arabic city-level dialect based on refined distinctions in vocabulary, grammar, pronunciation, formality, and cultural context. Consider the following:
+
+1. Vocabulary & Word Usage:
+   - Identify regional preferences in word choice and semantics.
+   - Distinguish phrases with nuanced differences like "بغيت" (RAB, TRI) vs. "عايز" (CAI) or "داير" (KHA).
+   
+2. Grammar & Sentence Structure:
+   - Consider omitted or added auxiliaries, distinct use of sentence connectors, and grammatical patterns.
+
+3. Cultural Markers & Idioms:
+   - Look for culturally specific idioms, proverbs, or regional markers indicating local customs.
+   - Examples: DAM tends to use phrases emphasizing family, while FES focuses on politeness in negotiation.
+
+4. Pronunciation Cues:
+   - Pay close attention to phonetic variations like "چ" (BAG), "گ" (MOS), or "ت" for "ث" (CAI).
+   - Note any systematic consonant or vowel shifts reflecting regional accents.
+
+5. Formality and Context:
+   - Observe shifts in tone, politeness markers, or directness based on context (formal, casual, professional).
+
+6. Loanwords & External Influence:
+   - Note heavy use of French (ALG, SFX) or English (RIY, DOH) borrowings.
+   - Examples: "سي دي" (CD), "كازينو" (casino), "فوتر" (voucher).
+
+7. Expressions Indicating Social Hierarchy:
+   - Politeness, honorifics, or phrases indicating social standing are more frequent in certain dialects like RAB and BEI.
+
+### Dialect-Specific Markers:
+- KHA (Khartoum): Sudanese Arabic featuring "داير" (want), local terms like "متين" (when), and polite formal requests.
+- RAB (Rabat): Moroccan Arabic using "عافاك" (please), "بغيت" (want), and intricate negotiation-related terms.
+- ALG (Algiers): Algerian Arabic marked by "واش" (what), French terms like "شحال" (how much), and mixed linguistic patterns.
+- JED (Jeddah): Hejazi Arabic with "أبغا" (want), "فين" (where), and hospitality-driven expressions.
+- CAI (Cairo): Egyptian Arabic with "عايز" (want), "فين" (where), and humor-tinged colloquialisms.
+- MOS (Mosul): Iraqi Arabic with "چ" (ch sound), "گ" (g sound), and local vocabulary.
+- ALE (Aleppo): Northern Syrian Arabic with "بدي" (I want), "قديش" (how much), and Turkish loanwords.
+- SFX (Sfax): Tunisian Arabic featuring "باش" (will), "نحب" (want), and French-infused expressions.
+- BEN (Benghazi): Libyan Arabic with "شن" (what), "توا" (now), and "نبي" (want).
+- BAG (Baghdad): Central Iraqi Arabic marked by "شلون" (how), "ماكو" (none), and pronounced local pronunciation.
+- RIY (Riyadh): Najdi dialect using "وش" (what), "تبغى" (want), and direct, formal phrasing.
+- BEI (Beirut): Lebanese Arabic with "عم" (progressive), "إزا" (if), and blended French and English terms.
+- MSA (Modern Standard Arabic): Formal Arabic used in media, academic, and professional settings.
+- ASW (Aswan): Upper Egyptian Arabic with distinct local expressions and tonal shifts.
+- TRI (Tripoli): Libyan Arabic with "قداش" (how much), "نبي" (want), and negotiation-focused terms.
+- FES (Fes): Moroccan Arabic marked by negotiation and politeness nuances.
+- BAS (Basra): Southern Iraqi Arabic with a softer pronunciation, using "اكو" and "ماكو".
+- MUS (Muscat): Omani Arabic featuring formal and polite phrases like "أبغا" (want) and "يصير" (can).
+- TUN (Tunis): Tunisian Arabic with French influences and context-sensitive terms.
+- JER (Jerusalem): Palestinian Arabic using "بدي" (want), melodic intonations, and social context markers.
+- SAL (Salalah): Southern Omani Arabic using "قديش" (how much), and distinctive phrasing.
+- AMM (Amman): Jordanian Arabic with more formal Levantine tones.
+- ALX (Alexandria): Egyptian Arabic with humor-infused phrases and local twists.
+- DAM (Damascus): Syrian Arabic using "بدك" (you want), formal phrasing, and softer intonations.
+- DOH (Doha): Qatari Arabic using "بغيت" (want), and Gulf-inflected vocabulary.
+- SAN (Sanaa): Yemeni Arabic with unique local references and vocabulary.
+
+Options: SAN, ALX, JED, RIY, ALG, BAG, DAM, BEN, BEI, RAB, AMM, JER, MUS, SFX, TUN, MOS, FES, CAI, DOH, TRI, KHA, ALE, BAS, MSA, ASW, SAL.
+
+Question: Given the unique features of each dialect, identify which one matches the sentence below.
+
+Sentence: هاي الاحذية قوية؟  
+Dialect: BAS
+
+Sentence: ممكن أقترح وحدة؟
+Dialect: ALE
+
+Sentence: هل هناك صناديق بريد؟
+Dialect: MSA
+
+Sentence: {input_sentence}  
+Dialect: """,
 
 }
 

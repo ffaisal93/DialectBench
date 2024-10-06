@@ -328,6 +328,18 @@ def main(args):
     def predict_did_ablation_ara_2():
         instruction_key="did_instruction_arabic_2"
         predict_did_ablation_ara(instruction_key)
+
+    def predict_did_ablation_ara_10():
+        instruction_key="did_instruction_arabic_10"
+        predict_did_ablation_ara(instruction_key)
+
+    def predict_did_ablation_ara_30():
+        instruction_key="did_instruction_arabic_30"
+        predict_did_ablation_ara(instruction_key)
+
+    def predict_did_ablation_ara_50():
+        instruction_key="did_instruction_arabic_50"
+        predict_did_ablation_ara(instruction_key)
         
 
 
@@ -645,6 +657,12 @@ def main(args):
         predict_did_ablation_ara_1()
     elif task == 'did_ablation_ara_2':
         predict_did_ablation_ara_2()
+    elif task == 'did_ablation_ara_10':
+        predict_did_ablation_ara_10()
+    elif task == 'did_ablation_ara_30':
+        predict_did_ablation_ara_30()
+    elif task == 'did_ablation_ara_50':
+        predict_did_ablation_ara_50()
     else:
         print("Invalid task argument.")
     
