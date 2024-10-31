@@ -21,7 +21,13 @@ import pickle
 #datasets 2.4.0
 #pandas 1.4.3
 
+import openai
 
+# Load the API key from a text file
+with open("/home/ffaisal/my_key.txt", "r") as file:
+    api_key = file.read().strip()
+
+# Now you can use openai.api_key with the OpenAI API
 
 
 
@@ -39,28 +45,47 @@ def main(args):
             results={}
         return results
 
-    def generate_result(prompts,gen_config,model_name='aya',bs=4):
-        all_response=[]
-        all_response_raw=[]
-        end=len(prompts)
-        count=0
-        for start in tqdm(range(0,end,bs)):
-            count+=1
-            stop=min(start+bs,len(prompts))
-            if start<stop:
-                prompts_batch=prompts[start:stop]
-                encodings=tokenizer(prompts_batch, return_tensors="pt",  padding=True,truncation=True, max_length=3000).to("cuda")
+    def generate_result(prompts, gen_config, model_name='aya', batch_size=4):
+        all_responses = []
+        
+        if model_name == 'aya':
+            # Use local model for "aya"
+            end = len(prompts)
+            for start in tqdm(range(0, end, batch_size)):
+                stop = min(start + batch_size, end)
+                prompts_batch = prompts[start:stop]
+                encodings = tokenizer(prompts_batch, return_tensors="pt", padding=True, truncation=True, max_length=3000).to("cuda")
                 with torch.no_grad():
                     output_ids = model.generate(**encodings, **gen_config)
-                    # Move the output_ids tensor to CPU
-                    output_ids = output_ids.cpu()
-                    responses=tokenizer.batch_decode(output_ids, skip_special_tokens=True)
-                    all_response.extend(responses)
-                # Clear the GPU memory used by sub_encodings
-                    del encodings
-                    torch.cuda.empty_cache()
-                    
-        return all_response
+                    responses = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
+                    all_responses.extend(responses)
+                
+                # Clear GPU memory
+                del encodings
+                torch.cuda.empty_cache()
+
+        elif model_name == 'gpt4':
+            # Initialize the OpenAI client
+            client = openai.OpenAI(api_key=api_key)
+            
+            # Process each prompt individually for GPT-4
+            for prompt in tqdm(prompts, desc="Generating with GPT-4"):
+                try:
+                    # Create chat completion for each individual prompt
+                    response = client.chat.completions.create(
+                        model="gpt-4",
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=gen_config.get("temperature", 0.7),
+                        max_tokens=gen_config.get("max_new_tokens", 3000),
+                    )
+                    # Extract content from response
+                    all_responses.append(response.choices[0].message.content)
+                except Exception as e:
+                    print(f"Error generating response: {e}")
+                    all_responses.append("")  # Append empty string if there is an error
+
+
+        return all_responses
 
     def predict_sentiment():
         sa_datapath = 'data/sentiment_analysis/'
@@ -239,7 +264,7 @@ def main(args):
                 print(prompted_test_examples[0])
                 print(test_labels[0])
 
-                all_response=generate_result(prompted_test_examples,gen_config)
+                all_response=generate_result(prompted_test_examples,gen_config,model_name=args.model)
                 if len(all_response)==len(test_labels):
                     results[lang]={
                         'response': all_response,
@@ -601,34 +626,34 @@ def main(args):
                     pickle.dump(results, file)
 
 
-    # load base LLM model and tokenizer
-    model_name="/projects/antonis/models/aya-101"
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, cache_dir='/scratch/ffaisal/cache/models',  load_in_8bit=True, device_map={"":0})
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # Load model and tokenizer if using "aya"
+    if args.model == "aya":
+        model_name = "/projects/antonis/models/aya-101"
+        model = AutoModelForSeq2SeqLM.from_pretrained(model_name, cache_dir='/scratch/ffaisal/cache/models', load_in_8bit=True, device_map={"": 0})
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    max_token=5
-    if args.task in ['udp','pos','ner']:
-    	max_token=500
+    # Generation configuration
+    max_token = 5
+    if args.task in ['udp', 'pos', 'ner']:
+        max_token = 500
     elif args.task in ['sdqa']:
-    	max_token=15
+        max_token = 15
+
     gen_config = {
-                "temperature": 0.7,
-                "top_p": 0.1,
-                "repetition_penalty": 1.18,
-                "top_k": 5,
-                "do_sample": True,
-                "max_new_tokens": max_token,
-                "pad_token_id": tokenizer.eos_token_id
-                    }
-    print(gen_config)
-    tokenizer.pad_token_id = tokenizer.eos_token_id
+        "temperature": 0.7,
+        "top_p": 0.1,
+        "repetition_penalty": 1.18,
+        "top_k": 5,
+        "do_sample": True,
+        "max_new_tokens": max_token,
+        "pad_token_id": None if args.model == "gpt4" else tokenizer.eos_token_id
+    }
+    if args.model == "aya":
+        tokenizer.pad_token_id = tokenizer.eos_token_id
 
-    # Specify the directory path
+    # Specify the result directory path
     result_path = f"./llm_results/{args.model}/{args.prompt_lang}"
-
-    # Create the directory if it doesn't exist
-    if not os.path.exists(result_path):
-        os.makedirs(result_path)
+    os.makedirs(result_path, exist_ok=True)
 
 
     ##=======================================================================================
